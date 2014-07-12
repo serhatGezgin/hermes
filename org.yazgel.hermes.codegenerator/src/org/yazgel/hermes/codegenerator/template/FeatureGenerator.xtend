@@ -49,11 +49,11 @@ class FeatureGenerator extends BaseGenerator {
 		}
 	'''
 
-	def gettername(DataType dt) {
-		'get' + dt.name.toFirstUpper
+	def gettername(Feature f) {
+		'get' + f.name.toFirstUpper
 	}
 
-	def settername(DataType dt) {
-		'set' + dt.name.toFirstUpper
+	def settername(Feature f) {
+		'set' + f.name.toFirstUpper
 	}
 }
