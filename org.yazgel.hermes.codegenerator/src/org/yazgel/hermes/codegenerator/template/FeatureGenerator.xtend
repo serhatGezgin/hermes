@@ -2,20 +2,18 @@ package org.yazgel.hermes.codegenerator.template
 
 import org.yazgel.hermes.DataType
 import org.yazgel.hermes.Feature
+import org.yazgel.hermes.Ref
 
 class FeatureGenerator extends BaseGenerator {
 
-	def dispatch generateFeature(Feature d) {
-	}
-
-	def dispatch generateFeature(DataType d) {
+	def generateFeature(Feature d) {
 		d.featureAnnotation + d.featureContent
 	}
 
-	def featureAnnotation(DataType d) {
+	def featureAnnotation(Feature f) {
 		var sb = new StringBuilder
 
-		for (fa : d.annotations) {
+		for (fa : f.annotations) {
 			sb.append('@' + fa.toString)
 			sb.append('\n')
 		}
@@ -23,8 +21,19 @@ class FeatureGenerator extends BaseGenerator {
 		sb.toString
 	}
 
-	def featureContent(DataType d) '''
+	def dispatch featureContent(Feature f) {
+	}
+
+	def dispatch featureContent(DataType d) '''
 		private «d.type» «d.name»;
+	'''
+
+	def dispatch featureContent(Ref r) '''
+		«IF r.many»
+			private java.util.List<Ref<«r.refTo.name»>> «r.name»;
+		«ELSE»
+			private Ref<«r.refTo.name»> «r.name»;
+		«ENDIF»
 	'''
 
 	def dispatch generateGetterSetter(Feature f) {
