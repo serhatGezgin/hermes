@@ -6,13 +6,6 @@
 
 <plugin>
 
-   <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated entity -->
-      <package
-            uri="http://yazgel.org/hermes"
-            class="org.yazgel.hermes.EntityPackage"
-            genModel="model/hermes.genmodel"/>
-   </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated hermes -->
