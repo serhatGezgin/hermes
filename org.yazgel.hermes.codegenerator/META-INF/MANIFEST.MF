@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Codegenerator
+Bundle-SymbolicName: org.yazgel.hermes.codegenerator
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: YAZGEL
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: com.google.guava,
+ org.eclipse.xtend.lib,
+ org.eclipse.xtext.xbase.lib,
+ org.eclipse.emf;bundle-version="2.6.0",
+ org.eclipse.emf.mwe2.launch;bundle-version="2.6.0",
+ org.apache.log4j;bundle-version="1.2.15",
+ org.apache.commons.logging;bundle-version="1.1.1",
+ org.yazgel.hermes;bundle-version="0.1.0"
+Export-Package: org.yazgel.hermes.codegenerator.mwe,
+ org.yazgel.hermes.codegenerator.template
+

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="" modelDirectory="/org.yazgel.hermes/src" editDirectory="/org.yazgel.hermes.edit/src"
+    editorDirectory="/org.yazgel.hermes.editor/src" modelPluginID="org.yazgel.hermes"
+    modelName="Entity" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
+    copyrightFields="false" editPluginID="org.yazgel.hermes.edit" editorPluginID="org.yazgel.hermes.editor">
+  <foreignModel>hermes.ecore</foreignModel>
+  <genPackages prefix="Hermes" basePackage="org.yazgel" disposableProviderFactory="true"
+      ecorePackage="hermes.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="hermes.ecore#//DataTypes">
+      <genEnumLiterals ecoreEnumLiteral="hermes.ecore#//DataTypes/String"/>
+      <genEnumLiterals ecoreEnumLiteral="hermes.ecore#//DataTypes/Integer"/>
+      <genEnumLiterals ecoreEnumLiteral="hermes.ecore#//DataTypes/Boolean"/>
+      <genEnumLiterals ecoreEnumLiteral="hermes.ecore#//DataTypes/Long"/>
+      <genEnumLiterals ecoreEnumLiteral="hermes.ecore#//DataTypes/Double"/>
+      <genEnumLiterals ecoreEnumLiteral="hermes.ecore#//DataTypes/Object"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="hermes.ecore#//EntityAnnotation">
+      <genEnumLiterals ecoreEnumLiteral="hermes.ecore#//EntityAnnotation/Cache"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="hermes.ecore#//FetureAnnotation">
+      <genEnumLiterals ecoreEnumLiteral="hermes.ecore#//FetureAnnotation/Index"/>
+      <genEnumLiterals ecoreEnumLiteral="hermes.ecore#//FetureAnnotation/Id"/>
+      <genEnumLiterals ecoreEnumLiteral="hermes.ecore#//FetureAnnotation/Load"/>
+      <genEnumLiterals ecoreEnumLiteral="hermes.ecore#//FetureAnnotation/Ignore"/>
+    </genEnums>
+    <genClasses ecoreClass="hermes.ecore#//Package">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hermes.ecore#//Package/ownedEntity"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hermes.ecore#//Package/subPackage"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="hermes.ecore#//NamedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hermes.ecore#//NamedElement/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hermes.ecore#//NamedElement/description"/>
+    </genClasses>
+    <genClasses ecoreClass="hermes.ecore#//Entity">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hermes.ecore#//Entity/ownedFeature"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hermes.ecore#//Entity/superEntity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hermes.ecore#//Entity/annotations"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="hermes.ecore#//Feature">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hermes.ecore#//Feature/many"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hermes.ecore#//Feature/annotations"/>
+    </genClasses>
+    <genClasses ecoreClass="hermes.ecore#//Ref">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hermes.ecore#//Ref/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hermes.ecore#//Ref/refTo"/>
+    </genClasses>
+    <genClasses ecoreClass="hermes.ecore#//DataType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hermes.ecore#//DataType/type"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

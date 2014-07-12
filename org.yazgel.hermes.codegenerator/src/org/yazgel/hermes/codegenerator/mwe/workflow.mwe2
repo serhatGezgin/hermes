@@ -1,0 +1,28 @@
+module org.yazgel.hermes.codegenerator.mwe.workflow
+
+var targetDir = "src-gen"
+var modelPath = "model"
+
+Workflow {
+	bean = org.eclipse.emf.mwe.utils.StandaloneSetup {
+		registerGeneratedEPackage = "org.yazgel.hermes.HermesPackage"
+	}
+	component = org.eclipse.emf.mwe.utils.DirectoryCleaner {
+		directory = targetDir
+	}
+	component = EntityGeneratorSupport {}
+	component = org.eclipse.xtext.mwe.Reader {
+		path = modelPath
+		register = EntityGeneratorSetup {}
+		loadResource = {
+			slot = "model"
+		}
+	}
+	component = org.eclipse.xtext.generator.GeneratorComponent {
+		register = EntityGeneratorSetup {}
+		slot = 'model'
+		outlet = {
+			path = targetDir
+		}
+	}
+}

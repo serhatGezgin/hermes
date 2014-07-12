@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated hermes -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.yazgel.hermes.presentation.HermesModelWizardID"
+            name="%_UI_HermesModelWizard_label"
+            class="org.yazgel.hermes.presentation.HermesModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/HermesModelFile.gif">
+         <description>%_UI_HermesModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated hermes -->
+      <editor
+            id="org.yazgel.hermes.presentation.HermesEditorID"
+            name="%_UI_HermesEditor_label"
+            icon="icons/full/obj16/HermesModelFile.gif"
+            extensions="hermes"
+            class="org.yazgel.hermes.presentation.HermesEditor"
+            contributorClass="org.yazgel.hermes.presentation.HermesActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
