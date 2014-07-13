@@ -45,7 +45,7 @@ public class HermesParser extends AbstractContentAssistParser {
 					put(grammarAccess.getPackageAccess().getGroup_5(), "rule__Package__Group_5__0");
 					put(grammarAccess.getPackageAccess().getGroup_6(), "rule__Package__Group_6__0");
 					put(grammarAccess.getEntityAccess().getGroup(), "rule__Entity__Group__0");
-					put(grammarAccess.getEntityAccess().getGroup_4(), "rule__Entity__Group_4__0");
+					put(grammarAccess.getEntityAccess().getGroup_3(), "rule__Entity__Group_3__0");
 					put(grammarAccess.getEntityAccess().getGroup_5(), "rule__Entity__Group_5__0");
 					put(grammarAccess.getEntityAccess().getGroup_6(), "rule__Entity__Group_6__0");
 					put(grammarAccess.getEntityAccess().getGroup_7(), "rule__Entity__Group_7__0");
@@ -62,10 +62,10 @@ public class HermesParser extends AbstractContentAssistParser {
 					put(grammarAccess.getPackageAccess().getSubPackageAssignment_6_0(), "rule__Package__SubPackageAssignment_6_0");
 					put(grammarAccess.getPackageAccess().getSubPackageAssignment_6_1(), "rule__Package__SubPackageAssignment_6_1");
 					put(grammarAccess.getEntityAccess().getNameAssignment_2(), "rule__Entity__NameAssignment_2");
-					put(grammarAccess.getEntityAccess().getDescriptionAssignment_4_2(), "rule__Entity__DescriptionAssignment_4_2");
-					put(grammarAccess.getEntityAccess().getAnnotationsAssignment_5_0(), "rule__Entity__AnnotationsAssignment_5_0");
-					put(grammarAccess.getEntityAccess().getAnnotationsAssignment_5_1(), "rule__Entity__AnnotationsAssignment_5_1");
-					put(grammarAccess.getEntityAccess().getSuperEntityAssignment_6_2(), "rule__Entity__SuperEntityAssignment_6_2");
+					put(grammarAccess.getEntityAccess().getSuperEntityAssignment_3_1(), "rule__Entity__SuperEntityAssignment_3_1");
+					put(grammarAccess.getEntityAccess().getDescriptionAssignment_5_2(), "rule__Entity__DescriptionAssignment_5_2");
+					put(grammarAccess.getEntityAccess().getAnnotationsAssignment_6_0(), "rule__Entity__AnnotationsAssignment_6_0");
+					put(grammarAccess.getEntityAccess().getAnnotationsAssignment_6_1(), "rule__Entity__AnnotationsAssignment_6_1");
 					put(grammarAccess.getEntityAccess().getOwnedFeatureAssignment_7_0(), "rule__Entity__OwnedFeatureAssignment_7_0");
 					put(grammarAccess.getEntityAccess().getOwnedFeatureAssignment_7_1(), "rule__Entity__OwnedFeatureAssignment_7_1");
 					put(grammarAccess.getRefAccess().getNameAssignment_1(), "rule__Ref__NameAssignment_1");

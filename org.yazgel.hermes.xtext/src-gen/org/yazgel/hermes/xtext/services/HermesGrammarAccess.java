@@ -139,23 +139,22 @@ public class HermesGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cEntityKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cNameIDTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
-		private final Keyword cDescriptionKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
-		private final Keyword cEqualsSignKeyword_4_1 = (Keyword)cGroup_4.eContents().get(1);
-		private final Assignment cDescriptionAssignment_4_2 = (Assignment)cGroup_4.eContents().get(2);
-		private final RuleCall cDescriptionSTRINGTerminalRuleCall_4_2_0 = (RuleCall)cDescriptionAssignment_4_2.eContents().get(0);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cColonKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cSuperEntityAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final CrossReference cSuperEntityEntityCrossReference_3_1_0 = (CrossReference)cSuperEntityAssignment_3_1.eContents().get(0);
+		private final RuleCall cSuperEntityEntityIDTerminalRuleCall_3_1_0_1 = (RuleCall)cSuperEntityEntityCrossReference_3_1_0.eContents().get(1);
+		private final Keyword cLeftCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
-		private final Assignment cAnnotationsAssignment_5_0 = (Assignment)cGroup_5.eContents().get(0);
-		private final RuleCall cAnnotationsEntityAnnotationEnumRuleCall_5_0_0 = (RuleCall)cAnnotationsAssignment_5_0.eContents().get(0);
-		private final Assignment cAnnotationsAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
-		private final RuleCall cAnnotationsEntityAnnotationEnumRuleCall_5_1_0 = (RuleCall)cAnnotationsAssignment_5_1.eContents().get(0);
+		private final Keyword cDescriptionKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
+		private final Keyword cEqualsSignKeyword_5_1 = (Keyword)cGroup_5.eContents().get(1);
+		private final Assignment cDescriptionAssignment_5_2 = (Assignment)cGroup_5.eContents().get(2);
+		private final RuleCall cDescriptionSTRINGTerminalRuleCall_5_2_0 = (RuleCall)cDescriptionAssignment_5_2.eContents().get(0);
 		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
-		private final Keyword cSuperEntityKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
-		private final Keyword cColonKeyword_6_1 = (Keyword)cGroup_6.eContents().get(1);
-		private final Assignment cSuperEntityAssignment_6_2 = (Assignment)cGroup_6.eContents().get(2);
-		private final CrossReference cSuperEntityEntityCrossReference_6_2_0 = (CrossReference)cSuperEntityAssignment_6_2.eContents().get(0);
-		private final RuleCall cSuperEntityEntityIDTerminalRuleCall_6_2_0_1 = (RuleCall)cSuperEntityEntityCrossReference_6_2_0.eContents().get(1);
+		private final Assignment cAnnotationsAssignment_6_0 = (Assignment)cGroup_6.eContents().get(0);
+		private final RuleCall cAnnotationsEntityAnnotationEnumRuleCall_6_0_0 = (RuleCall)cAnnotationsAssignment_6_0.eContents().get(0);
+		private final Assignment cAnnotationsAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
+		private final RuleCall cAnnotationsEntityAnnotationEnumRuleCall_6_1_0 = (RuleCall)cAnnotationsAssignment_6_1.eContents().get(0);
 		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
 		private final Assignment cOwnedFeatureAssignment_7_0 = (Assignment)cGroup_7.eContents().get(0);
 		private final RuleCall cOwnedFeatureFeatureParserRuleCall_7_0_0 = (RuleCall)cOwnedFeatureAssignment_7_0.eContents().get(0);
@@ -164,14 +163,12 @@ public class HermesGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
 		//Entity:
-		//	{Entity} "Entity" name=ID "{" ("description" "=" description=STRING)? (annotations+=EntityAnnotation
-		//	annotations+=EntityAnnotation*)? ("superEntity" ":" superEntity=[Entity])? (ownedFeature+=Feature
-		//	ownedFeature+=Feature*)? "}";
+		//	{Entity} "Entity" name=ID (":" superEntity=[Entity])? "{" ("description" "=" description=STRING)?
+		//	(annotations+=EntityAnnotation annotations+=EntityAnnotation*)? (ownedFeature+=Feature ownedFeature+=Feature*)? "}";
 		public ParserRule getRule() { return rule; }
 
-		//{Entity} "Entity" name=ID "{" ("description" "=" description=STRING)? (annotations+=EntityAnnotation
-		//annotations+=EntityAnnotation*)? ("superEntity" ":" superEntity=[Entity])? (ownedFeature+=Feature
-		//ownedFeature+=Feature*)? "}"
+		//{Entity} "Entity" name=ID (":" superEntity=[Entity])? "{" ("description" "=" description=STRING)?
+		//(annotations+=EntityAnnotation annotations+=EntityAnnotation*)? (ownedFeature+=Feature ownedFeature+=Feature*)? "}"
 		public Group getGroup() { return cGroup; }
 
 		//{Entity}
@@ -186,56 +183,53 @@ public class HermesGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_2_0() { return cNameIDTerminalRuleCall_2_0; }
 
-		//"{"
-		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
-
-		//("description" "=" description=STRING)?
-		public Group getGroup_4() { return cGroup_4; }
-
-		//"description"
-		public Keyword getDescriptionKeyword_4_0() { return cDescriptionKeyword_4_0; }
-
-		//"="
-		public Keyword getEqualsSignKeyword_4_1() { return cEqualsSignKeyword_4_1; }
-
-		//description=STRING
-		public Assignment getDescriptionAssignment_4_2() { return cDescriptionAssignment_4_2; }
-
-		//STRING
-		public RuleCall getDescriptionSTRINGTerminalRuleCall_4_2_0() { return cDescriptionSTRINGTerminalRuleCall_4_2_0; }
-
-		//(annotations+=EntityAnnotation annotations+=EntityAnnotation*)?
-		public Group getGroup_5() { return cGroup_5; }
-
-		//annotations+=EntityAnnotation
-		public Assignment getAnnotationsAssignment_5_0() { return cAnnotationsAssignment_5_0; }
-
-		//EntityAnnotation
-		public RuleCall getAnnotationsEntityAnnotationEnumRuleCall_5_0_0() { return cAnnotationsEntityAnnotationEnumRuleCall_5_0_0; }
-
-		//annotations+=EntityAnnotation*
-		public Assignment getAnnotationsAssignment_5_1() { return cAnnotationsAssignment_5_1; }
-
-		//EntityAnnotation
-		public RuleCall getAnnotationsEntityAnnotationEnumRuleCall_5_1_0() { return cAnnotationsEntityAnnotationEnumRuleCall_5_1_0; }
-
-		//("superEntity" ":" superEntity=[Entity])?
-		public Group getGroup_6() { return cGroup_6; }
-
-		//"superEntity"
-		public Keyword getSuperEntityKeyword_6_0() { return cSuperEntityKeyword_6_0; }
+		//(":" superEntity=[Entity])?
+		public Group getGroup_3() { return cGroup_3; }
 
 		//":"
-		public Keyword getColonKeyword_6_1() { return cColonKeyword_6_1; }
+		public Keyword getColonKeyword_3_0() { return cColonKeyword_3_0; }
 
 		//superEntity=[Entity]
-		public Assignment getSuperEntityAssignment_6_2() { return cSuperEntityAssignment_6_2; }
+		public Assignment getSuperEntityAssignment_3_1() { return cSuperEntityAssignment_3_1; }
 
 		//[Entity]
-		public CrossReference getSuperEntityEntityCrossReference_6_2_0() { return cSuperEntityEntityCrossReference_6_2_0; }
+		public CrossReference getSuperEntityEntityCrossReference_3_1_0() { return cSuperEntityEntityCrossReference_3_1_0; }
 
 		//ID
-		public RuleCall getSuperEntityEntityIDTerminalRuleCall_6_2_0_1() { return cSuperEntityEntityIDTerminalRuleCall_6_2_0_1; }
+		public RuleCall getSuperEntityEntityIDTerminalRuleCall_3_1_0_1() { return cSuperEntityEntityIDTerminalRuleCall_3_1_0_1; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_4() { return cLeftCurlyBracketKeyword_4; }
+
+		//("description" "=" description=STRING)?
+		public Group getGroup_5() { return cGroup_5; }
+
+		//"description"
+		public Keyword getDescriptionKeyword_5_0() { return cDescriptionKeyword_5_0; }
+
+		//"="
+		public Keyword getEqualsSignKeyword_5_1() { return cEqualsSignKeyword_5_1; }
+
+		//description=STRING
+		public Assignment getDescriptionAssignment_5_2() { return cDescriptionAssignment_5_2; }
+
+		//STRING
+		public RuleCall getDescriptionSTRINGTerminalRuleCall_5_2_0() { return cDescriptionSTRINGTerminalRuleCall_5_2_0; }
+
+		//(annotations+=EntityAnnotation annotations+=EntityAnnotation*)?
+		public Group getGroup_6() { return cGroup_6; }
+
+		//annotations+=EntityAnnotation
+		public Assignment getAnnotationsAssignment_6_0() { return cAnnotationsAssignment_6_0; }
+
+		//EntityAnnotation
+		public RuleCall getAnnotationsEntityAnnotationEnumRuleCall_6_0_0() { return cAnnotationsEntityAnnotationEnumRuleCall_6_0_0; }
+
+		//annotations+=EntityAnnotation*
+		public Assignment getAnnotationsAssignment_6_1() { return cAnnotationsAssignment_6_1; }
+
+		//EntityAnnotation
+		public RuleCall getAnnotationsEntityAnnotationEnumRuleCall_6_1_0() { return cAnnotationsEntityAnnotationEnumRuleCall_6_1_0; }
 
 		//(ownedFeature+=Feature ownedFeature+=Feature*)?
 		public Group getGroup_7() { return cGroup_7; }
@@ -658,9 +652,8 @@ public class HermesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Entity:
-	//	{Entity} "Entity" name=ID "{" ("description" "=" description=STRING)? (annotations+=EntityAnnotation
-	//	annotations+=EntityAnnotation*)? ("superEntity" ":" superEntity=[Entity])? (ownedFeature+=Feature
-	//	ownedFeature+=Feature*)? "}";
+	//	{Entity} "Entity" name=ID (":" superEntity=[Entity])? "{" ("description" "=" description=STRING)?
+	//	(annotations+=EntityAnnotation annotations+=EntityAnnotation*)? (ownedFeature+=Feature ownedFeature+=Feature*)? "}";
 	public EntityElements getEntityAccess() {
 		return (pEntity != null) ? pEntity : (pEntity = new EntityElements());
 	}

@@ -67,9 +67,9 @@ public abstract class AbstractHermesSemanticSequencer extends AbstractDelegating
 	 * Constraint:
 	 *     (
 	 *         name=ID 
+	 *         superEntity=[Entity|ID]? 
 	 *         description=STRING? 
 	 *         (annotations+=EntityAnnotation annotations+=EntityAnnotation*)? 
-	 *         superEntity=[Entity|ID]? 
 	 *         (ownedFeature+=Feature ownedFeature+=Feature*)?
 	 *     )
 	 */

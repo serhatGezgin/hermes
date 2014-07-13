@@ -20,11 +20,10 @@ Feature returns Feature:
 Entity returns Entity:
 	{Entity}
 	'Entity'
-	name=ID
+	name = ID (':' superEntity=[Entity|ID])? 
 	'{'
 		('description' '=' description=STRING)? 
 		(annotations+=EntityAnnotation (annotations+=EntityAnnotation)*)? 
-		('superEntity' ':' superEntity=[Entity|ID])? 
 		(ownedFeature+=Feature (ownedFeature+=Feature)*)?
 	'}';
 
