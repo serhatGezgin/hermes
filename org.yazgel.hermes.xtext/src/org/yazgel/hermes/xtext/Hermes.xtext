@@ -36,22 +36,22 @@ enum FetureAnnotation returns FetureAnnotation:
 Ref returns Ref:
 	'Ref'
 	name=ID
+	refTo=[Entity|ID]
+	many?=('[]')?
 	'{'
-		(many?='many')?
 		('description' description=STRING)?
 		(annotations+=FetureAnnotation (annotations+=FetureAnnotation)*)?	
 		'source' '=' source=[Entity|ID]
-		'refTo'  '=' refTo=[Entity|ID]
 	'}';
 
 DataType returns DataType:
 	'DataType'
 	name=ID
+	type=DataTypes	
+	many?=('[]')?
 	'{'
-		(many?='many')?
 		('description' description=STRING)?
 		(annotations+=FetureAnnotation (annotations+=FetureAnnotation)*)?
-		'type' '=' type=DataTypes	
 	'}';
 
 enum DataTypes returns DataTypes:

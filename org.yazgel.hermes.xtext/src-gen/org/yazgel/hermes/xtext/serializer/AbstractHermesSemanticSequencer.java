@@ -56,7 +56,7 @@ public abstract class AbstractHermesSemanticSequencer extends AbstractDelegating
 	
 	/**
 	 * Constraint:
-	 *     (name=ID many?='many'? description=STRING? (annotations+=FetureAnnotation annotations+=FetureAnnotation*)? type=DataTypes)
+	 *     (name=ID type=DataTypes many?='[]'? description=STRING? (annotations+=FetureAnnotation annotations+=FetureAnnotation*)?)
 	 */
 	protected void sequence_DataType(EObject context, DataType semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -91,11 +91,11 @@ public abstract class AbstractHermesSemanticSequencer extends AbstractDelegating
 	 * Constraint:
 	 *     (
 	 *         name=ID 
-	 *         many?='many'? 
+	 *         refTo=[Entity|ID] 
+	 *         many?='[]'? 
 	 *         description=STRING? 
 	 *         (annotations+=FetureAnnotation annotations+=FetureAnnotation*)? 
-	 *         source=[Entity|ID] 
-	 *         refTo=[Entity|ID]
+	 *         source=[Entity|ID]
 	 *     )
 	 */
 	protected void sequence_Ref(EObject context, Ref semanticObject) {
