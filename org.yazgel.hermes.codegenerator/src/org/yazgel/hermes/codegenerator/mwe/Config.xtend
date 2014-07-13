@@ -18,11 +18,11 @@ import org.yazgel.hermes.codegenerator.template.CodeGenerator
 class EntityGeneratorModule extends AbstractGenericResourceRuntimeModule {
 
 	override String getLanguageName() {
-		return "com.mdd4cca.entity.EntityEditorID";
+		return "org.yazgel.hermes.HermesEditorID";
 	}
 
 	override String getFileExtensions() {
-		return "entity";
+		return "hermes";
 	}
 
 	def Class<? extends IGenerator> bindIGenerator() {
