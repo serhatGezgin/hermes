@@ -8,3 +8,5 @@
 /EntityGenerator.java
 /FeatureGenerator.java
 /PackageGenerator.java
+/.EntityControllerGenerator.java._trace
+/.ObjectifyRegistryGenerator.java._trace

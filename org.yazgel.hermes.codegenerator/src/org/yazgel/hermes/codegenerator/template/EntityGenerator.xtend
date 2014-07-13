@@ -11,30 +11,6 @@ class EntityGenerator extends BaseGenerator {
 		fsa.generateFile(e.filename, e.entityContent)
 	}
 
-	def filename(Entity e) {
-		val p = e.packageNameList
-		p.add('model')
-		p.join('/') + '/' + e.name + '.java'
-	}
-
-	def packagename(Entity e) {
-		val p = e.packageNameList
-		p.add('model')
-		p.join('.')
-	}
-
-	def private packageNameList(Entity e) {
-		var list = newArrayList
-		var pack = e.eContainer as org.yazgel.hermes.Package
-
-		do {
-			list.add(0, pack.name)
-			pack = pack.eContainer as org.yazgel.hermes.Package
-		} while (pack != null && pack instanceof org.yazgel.hermes.Package);
-
-		list
-	}
-
 	def entityContent(Entity e) '''
 		package «e.packagename»;
 		
