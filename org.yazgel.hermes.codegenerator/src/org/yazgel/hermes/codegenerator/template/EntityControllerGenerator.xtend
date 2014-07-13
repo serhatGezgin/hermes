@@ -65,7 +65,7 @@ class EntityControllerGenerator extends BaseGenerator {
 	'''
 
 	def methodDelete(Entity e) '''
-		public void delete(Long id) {
+		public static void delete(Long id) {
 			com.googlecode.objectify.ObjectifyService.ofy().delete().type(«e.qualifiedname».class).id(id).now();
 		}
 	'''

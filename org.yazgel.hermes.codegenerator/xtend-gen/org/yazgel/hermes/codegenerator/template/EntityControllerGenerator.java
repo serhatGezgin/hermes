@@ -192,7 +192,7 @@ public class EntityControllerGenerator extends BaseGenerator {
   
   public CharSequence methodDelete(final Entity e) {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("public void delete(Long id) {");
+    _builder.append("public static void delete(Long id) {");
     _builder.newLine();
     _builder.append("\t");
     _builder.append("com.googlecode.objectify.ObjectifyService.ofy().delete().type(");
