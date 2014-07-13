@@ -34,10 +34,8 @@ class EntityGenerator extends BaseGenerator {
 	def entityContent(Entity e) '''
 		package «e.packagename»;
 		
-		import com.googlecode.objectify.annotation.*;
-		
 		«e.entityAnnotations»
-		@Entity
+		@com.googlecode.objectify.annotation.Entity
 		public class «e.name» {
 			«FOR f : e.ownedFeature»
 				«f.generateFeature»
@@ -54,8 +52,7 @@ class EntityGenerator extends BaseGenerator {
 
 		for (a : e.annotations) {
 			if (a == EntityAnnotation.CACHE) {
-				annotations.append('@Cached')
-				annotations.append(' ')
+				annotations.append('@com.googlecode.objectify.annotation.Cache')
 			}
 		}
 
