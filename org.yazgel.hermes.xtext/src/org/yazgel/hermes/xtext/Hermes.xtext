@@ -14,7 +14,8 @@ Module returns Module:
 Package returns Package:
 	{Package}
 	'Package'
-	(superPackage=[Package|ID] '.')? name=ID 
+	(superPackage+=[Package|ID] '.'(superPackage+=[Package|ID] '.')*)?
+	 name=ID 
 	'{'
 		(ownedEntity+=Entity (ownedEntity+=Entity)*)?
 	'}';

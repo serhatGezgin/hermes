@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.yazgel.hermes.Entity;
@@ -45,14 +46,14 @@ public class PackageImpl extends NamedElementImpl implements org.yazgel.hermes.P
 	protected EList<Entity> ownedEntity;
 
 	/**
-	 * The cached value of the '{@link #getSuperPackage() <em>Super Package</em>}' reference.
+	 * The cached value of the '{@link #getSuperPackage() <em>Super Package</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getSuperPackage()
 	 * @generated
 	 * @ordered
 	 */
-	protected org.yazgel.hermes.Package superPackage;
+	protected EList<org.yazgel.hermes.Package> superPackage;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -90,37 +91,11 @@ public class PackageImpl extends NamedElementImpl implements org.yazgel.hermes.P
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public org.yazgel.hermes.Package getSuperPackage() {
-		if (superPackage != null && superPackage.eIsProxy()) {
-			InternalEObject oldSuperPackage = (InternalEObject)superPackage;
-			superPackage = (org.yazgel.hermes.Package)eResolveProxy(oldSuperPackage);
-			if (superPackage != oldSuperPackage) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, HermesPackage.PACKAGE__SUPER_PACKAGE, oldSuperPackage, superPackage));
-			}
+	public EList<org.yazgel.hermes.Package> getSuperPackage() {
+		if (superPackage == null) {
+			superPackage = new EObjectResolvingEList<org.yazgel.hermes.Package>(org.yazgel.hermes.Package.class, this, HermesPackage.PACKAGE__SUPER_PACKAGE);
 		}
 		return superPackage;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public org.yazgel.hermes.Package basicGetSuperPackage() {
-		return superPackage;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setSuperPackage(org.yazgel.hermes.Package newSuperPackage) {
-		org.yazgel.hermes.Package oldSuperPackage = superPackage;
-		superPackage = newSuperPackage;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, HermesPackage.PACKAGE__SUPER_PACKAGE, oldSuperPackage, superPackage));
 	}
 
 	/**
@@ -148,8 +123,7 @@ public class PackageImpl extends NamedElementImpl implements org.yazgel.hermes.P
 			case HermesPackage.PACKAGE__OWNED_ENTITY:
 				return getOwnedEntity();
 			case HermesPackage.PACKAGE__SUPER_PACKAGE:
-				if (resolve) return getSuperPackage();
-				return basicGetSuperPackage();
+				return getSuperPackage();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -168,7 +142,8 @@ public class PackageImpl extends NamedElementImpl implements org.yazgel.hermes.P
 				getOwnedEntity().addAll((Collection<? extends Entity>)newValue);
 				return;
 			case HermesPackage.PACKAGE__SUPER_PACKAGE:
-				setSuperPackage((org.yazgel.hermes.Package)newValue);
+				getSuperPackage().clear();
+				getSuperPackage().addAll((Collection<? extends org.yazgel.hermes.Package>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -186,7 +161,7 @@ public class PackageImpl extends NamedElementImpl implements org.yazgel.hermes.P
 				getOwnedEntity().clear();
 				return;
 			case HermesPackage.PACKAGE__SUPER_PACKAGE:
-				setSuperPackage((org.yazgel.hermes.Package)null);
+				getSuperPackage().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -203,7 +178,7 @@ public class PackageImpl extends NamedElementImpl implements org.yazgel.hermes.P
 			case HermesPackage.PACKAGE__OWNED_ENTITY:
 				return ownedEntity != null && !ownedEntity.isEmpty();
 			case HermesPackage.PACKAGE__SUPER_PACKAGE:
-				return superPackage != null;
+				return superPackage != null && !superPackage.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

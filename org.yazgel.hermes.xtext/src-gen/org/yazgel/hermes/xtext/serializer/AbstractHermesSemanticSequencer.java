@@ -95,7 +95,7 @@ public abstract class AbstractHermesSemanticSequencer extends AbstractDelegating
 	
 	/**
 	 * Constraint:
-	 *     (superPackage=[Package|ID]? name=ID (ownedEntity+=Entity ownedEntity+=Entity*)?)
+	 *     ((superPackage+=[Package|ID] superPackage+=[Package|ID]*)? name=ID (ownedEntity+=Entity ownedEntity+=Entity*)?)
 	 */
 	protected void sequence_Package(EObject context, org.yazgel.hermes.Package semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

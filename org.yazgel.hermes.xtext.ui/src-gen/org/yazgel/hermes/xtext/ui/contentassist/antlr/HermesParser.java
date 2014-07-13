@@ -44,6 +44,7 @@ public class HermesParser extends AbstractContentAssistParser {
 					put(grammarAccess.getModuleAccess().getGroup_3(), "rule__Module__Group_3__0");
 					put(grammarAccess.getPackageAccess().getGroup(), "rule__Package__Group__0");
 					put(grammarAccess.getPackageAccess().getGroup_2(), "rule__Package__Group_2__0");
+					put(grammarAccess.getPackageAccess().getGroup_2_2(), "rule__Package__Group_2_2__0");
 					put(grammarAccess.getPackageAccess().getGroup_5(), "rule__Package__Group_5__0");
 					put(grammarAccess.getEntityAccess().getGroup(), "rule__Entity__Group__0");
 					put(grammarAccess.getEntityAccess().getGroup_1(), "rule__Entity__Group_1__0");
@@ -60,6 +61,7 @@ public class HermesParser extends AbstractContentAssistParser {
 					put(grammarAccess.getModuleAccess().getPackagesAssignment_3_0(), "rule__Module__PackagesAssignment_3_0");
 					put(grammarAccess.getModuleAccess().getPackagesAssignment_3_1(), "rule__Module__PackagesAssignment_3_1");
 					put(grammarAccess.getPackageAccess().getSuperPackageAssignment_2_0(), "rule__Package__SuperPackageAssignment_2_0");
+					put(grammarAccess.getPackageAccess().getSuperPackageAssignment_2_2_0(), "rule__Package__SuperPackageAssignment_2_2_0");
 					put(grammarAccess.getPackageAccess().getNameAssignment_3(), "rule__Package__NameAssignment_3");
 					put(grammarAccess.getPackageAccess().getOwnedEntityAssignment_5_0(), "rule__Package__OwnedEntityAssignment_5_0");
 					put(grammarAccess.getPackageAccess().getOwnedEntityAssignment_5_1(), "rule__Package__OwnedEntityAssignment_5_1");

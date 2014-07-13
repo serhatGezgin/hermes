@@ -190,11 +190,28 @@ rulePackage returns [EObject current=null]
     {
     	newLeafNode(otherlv_3, grammarAccess.getPackageAccess().getFullStopKeyword_2_1());
     }
-)?(
+((
 (
-		lv_name_4_0=RULE_ID
 		{
-			newLeafNode(lv_name_4_0, grammarAccess.getPackageAccess().getNameIDTerminalRuleCall_3_0()); 
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getPackageRule());
+	        }
+        }
+	otherlv_4=RULE_ID
+	{
+		newLeafNode(otherlv_4, grammarAccess.getPackageAccess().getSuperPackagePackageCrossReference_2_2_0_0()); 
+	}
+
+)
+)	otherlv_5='.' 
+    {
+    	newLeafNode(otherlv_5, grammarAccess.getPackageAccess().getFullStopKeyword_2_2_1());
+    }
+)*)?(
+(
+		lv_name_6_0=RULE_ID
+		{
+			newLeafNode(lv_name_6_0, grammarAccess.getPackageAccess().getNameIDTerminalRuleCall_3_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -203,28 +220,28 @@ rulePackage returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"name",
-        		lv_name_4_0, 
+        		lv_name_6_0, 
         		"ID");
 	    }
 
 )
-)	otherlv_5='{' 
+)	otherlv_7='{' 
     {
-    	newLeafNode(otherlv_5, grammarAccess.getPackageAccess().getLeftCurlyBracketKeyword_4());
+    	newLeafNode(otherlv_7, grammarAccess.getPackageAccess().getLeftCurlyBracketKeyword_4());
     }
 ((
 (
 		{ 
 	        newCompositeNode(grammarAccess.getPackageAccess().getOwnedEntityEntityParserRuleCall_5_0_0()); 
 	    }
-		lv_ownedEntity_6_0=ruleEntity		{
+		lv_ownedEntity_8_0=ruleEntity		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getPackageRule());
 	        }
        		add(
        			$current, 
        			"ownedEntity",
-        		lv_ownedEntity_6_0, 
+        		lv_ownedEntity_8_0, 
         		"Entity");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -235,22 +252,22 @@ rulePackage returns [EObject current=null]
 		{ 
 	        newCompositeNode(grammarAccess.getPackageAccess().getOwnedEntityEntityParserRuleCall_5_1_0()); 
 	    }
-		lv_ownedEntity_7_0=ruleEntity		{
+		lv_ownedEntity_9_0=ruleEntity		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getPackageRule());
 	        }
        		add(
        			$current, 
        			"ownedEntity",
-        		lv_ownedEntity_7_0, 
+        		lv_ownedEntity_9_0, 
         		"Entity");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)*)?	otherlv_8='}' 
+)*)?	otherlv_10='}' 
     {
-    	newLeafNode(otherlv_8, grammarAccess.getPackageAccess().getRightCurlyBracketKeyword_6());
+    	newLeafNode(otherlv_10, grammarAccess.getPackageAccess().getRightCurlyBracketKeyword_6());
     }
 )
 ;
