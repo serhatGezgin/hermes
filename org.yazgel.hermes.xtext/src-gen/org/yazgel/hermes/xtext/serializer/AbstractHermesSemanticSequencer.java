@@ -56,7 +56,7 @@ public abstract class AbstractHermesSemanticSequencer extends AbstractDelegating
 	
 	/**
 	 * Constraint:
-	 *     (name=ID type=DataTypes many?='[]'? description=STRING? (annotations+=FetureAnnotation annotations+=FetureAnnotation*)?)
+	 *     (name=ID type=DataTypes many?='[]'? (annotations+=FetureAnnotation annotations+=FetureAnnotation*)?)
 	 */
 	protected void sequence_DataType(EObject context, DataType semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -68,7 +68,6 @@ public abstract class AbstractHermesSemanticSequencer extends AbstractDelegating
 	 *     (
 	 *         name=ID 
 	 *         superEntity=[Entity|ID]? 
-	 *         description=STRING? 
 	 *         (annotations+=EntityAnnotation annotations+=EntityAnnotation*)? 
 	 *         (ownedFeature+=Feature ownedFeature+=Feature*)?
 	 *     )
@@ -80,7 +79,7 @@ public abstract class AbstractHermesSemanticSequencer extends AbstractDelegating
 	
 	/**
 	 * Constraint:
-	 *     (name=ID description=STRING? (ownedEntity+=Entity ownedEntity+=Entity*)? (subPackage+=Package subPackage+=Package*)?)
+	 *     (name=ID (ownedEntity+=Entity ownedEntity+=Entity*)? (subPackage+=Package subPackage+=Package*)?)
 	 */
 	protected void sequence_Package(EObject context, org.yazgel.hermes.Package semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -89,7 +88,7 @@ public abstract class AbstractHermesSemanticSequencer extends AbstractDelegating
 	
 	/**
 	 * Constraint:
-	 *     (name=ID refTo=[Entity|ID] many?='[]'? description=STRING? (annotations+=FetureAnnotation annotations+=FetureAnnotation*)?)
+	 *     (name=ID refTo=[Entity|ID] many?='[]'? (annotations+=FetureAnnotation annotations+=FetureAnnotation*)?)
 	 */
 	protected void sequence_Ref(EObject context, Ref semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

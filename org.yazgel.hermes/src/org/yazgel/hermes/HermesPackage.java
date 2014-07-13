@@ -77,22 +77,13 @@ public interface HermesPackage extends EPackage {
 	int NAMED_ELEMENT__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NAMED_ELEMENT__DESCRIPTION = 1;
-
-	/**
 	 * The number of structural features of the '<em>Named Element</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NAMED_ELEMENT_FEATURE_COUNT = 2;
+	int NAMED_ELEMENT_FEATURE_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link org.yazgel.hermes.impl.PackageImpl <em>Package</em>}' class.
@@ -112,15 +103,6 @@ public interface HermesPackage extends EPackage {
 	 * @ordered
 	 */
 	int PACKAGE__NAME = NAMED_ELEMENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PACKAGE__DESCRIPTION = NAMED_ELEMENT__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Owned Entity</b></em>' containment reference list.
@@ -167,15 +149,6 @@ public interface HermesPackage extends EPackage {
 	 * @ordered
 	 */
 	int ENTITY__NAME = NAMED_ELEMENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY__DESCRIPTION = NAMED_ELEMENT__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Owned Feature</b></em>' containment reference list.
@@ -233,15 +206,6 @@ public interface HermesPackage extends EPackage {
 	int FEATURE__NAME = NAMED_ELEMENT__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FEATURE__DESCRIPTION = NAMED_ELEMENT__DESCRIPTION;
-
-	/**
 	 * The feature id for the '<em><b>Many</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -286,15 +250,6 @@ public interface HermesPackage extends EPackage {
 	 * @ordered
 	 */
 	int REF__NAME = FEATURE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REF__DESCRIPTION = FEATURE__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Many</b></em>' attribute.
@@ -350,15 +305,6 @@ public interface HermesPackage extends EPackage {
 	 * @ordered
 	 */
 	int DATA_TYPE__NAME = FEATURE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATA_TYPE__DESCRIPTION = FEATURE__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Many</b></em>' attribute.
@@ -479,17 +425,6 @@ public interface HermesPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getNamedElement_Name();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.yazgel.hermes.NamedElement#getDescription <em>Description</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Description</em>'.
-	 * @see org.yazgel.hermes.NamedElement#getDescription()
-	 * @see #getNamedElement()
-	 * @generated
-	 */
-	EAttribute getNamedElement_Description();
 
 	/**
 	 * Returns the meta object for class '{@link org.yazgel.hermes.Entity <em>Entity</em>}'.
@@ -703,14 +638,6 @@ public interface HermesPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute NAMED_ELEMENT__NAME = eINSTANCE.getNamedElement_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute NAMED_ELEMENT__DESCRIPTION = eINSTANCE.getNamedElement_Description();
 
 		/**
 		 * The meta object literal for the '{@link org.yazgel.hermes.impl.EntityImpl <em>Entity</em>}' class.

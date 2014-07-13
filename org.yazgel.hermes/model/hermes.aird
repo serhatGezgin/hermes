@@ -6,11 +6,11 @@
     <ownedRepresentations xmi:type="diagram:DSemanticDiagram" xmi:id="_3frBUAkcEeSR0ur97RmRzA" name="ecore class diagram">
       <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_3froYAkcEeSR0ur97RmRzA" source="GMF_DIAGRAMS">
         <data xmi:type="notation:Diagram" xmi:id="_3froYQkcEeSR0ur97RmRzA" type="Sirius" element="_3frBUAkcEeSR0ur97RmRzA" measurementUnit="Pixel">
-          <children xmi:type="notation:Node" xmi:id="_3froYwkcEeSR0ur97RmRzA" type="2001" element="_AdDokArJEeS82L87koHxQQ">
+          <children xmi:type="notation:Node" xmi:id="_3froYwkcEeSR0ur97RmRzA" type="2001" element="_tRGUkArJEeS82L87koHxQQ">
             <children xmi:type="notation:Node" xmi:id="_3fsPcAkcEeSR0ur97RmRzA" type="5002">
               <layoutConstraint xmi:type="notation:Location" xmi:id="_3fsPcQkcEeSR0ur97RmRzA" y="5"/>
             </children>
-            <children xmi:type="notation:Node" xmi:id="_3ftdkAkcEeSR0ur97RmRzA" type="3005" element="_AdH6AArJEeS82L87koHxQQ">
+            <children xmi:type="notation:Node" xmi:id="_3ftdkAkcEeSR0ur97RmRzA" type="3005" element="_tRGUkQrJEeS82L87koHxQQ">
               <styles xmi:type="notation:ShapeStyle" xmi:id="_3ftdkQkcEeSR0ur97RmRzA" fontName="Segoe UI"/>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3ftdkgkcEeSR0ur97RmRzA"/>
             </children>
@@ -20,13 +20,13 @@
           <styles xmi:type="notation:DiagramStyle" xmi:id="_3froYgkcEeSR0ur97RmRzA"/>
         </data>
       </ownedAnnotationEntries>
-      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_AdDokArJEeS82L87koHxQQ" width="-1" height="-1">
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_tRGUkArJEeS82L87koHxQQ" width="-1" height="-1">
         <target xmi:type="ecore:EPackage" href="http://www.eclipse.org/emf/2002/Ecore#/"/>
         <semanticElements xmi:type="ecore:EPackage" href="http://www.eclipse.org/emf/2002/Ecore#/"/>
-        <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_AdH6AArJEeS82L87koHxQQ" showIcon="false" labelPosition="node" workspacePath="/org.eclipse.emf.ecoretools.design/icons/full/back/empty.svg">
-          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_AdH6AQrJEeS82L87koHxQQ"/>
+        <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_tRGUkQrJEeS82L87koHxQQ" showIcon="false" labelPosition="node" workspacePath="/org.eclipse.emf.ecoretools.design/icons/full/back/empty.svg">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_tRG7oArJEeS82L87koHxQQ"/>
           <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@nodeMappings[name='Empty%20Diagram']/@style"/>
-          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_AdH6AgrJEeS82L87koHxQQ"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_tRG7oQrJEeS82L87koHxQQ"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@nodeMappings[name='Empty%20Diagram']"/>
       </ownedDiagramElements>

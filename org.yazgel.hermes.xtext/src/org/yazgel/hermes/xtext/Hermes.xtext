@@ -8,7 +8,6 @@ Package returns Package:
 	'Package'
 	name=ID
 	'{'
-		('description' description=STRING)?
 		(ownedEntity+=Entity (ownedEntity+=Entity)*)?
 		(subPackage+=Package (subPackage+=Package)*)?
 	'}';
@@ -22,7 +21,6 @@ Entity returns Entity:
 	'Entity'
 	name = ID (':' superEntity=[Entity|ID])? 
 	'{'
-		('description' '=' description=STRING)? 
 		(annotations+=EntityAnnotation (annotations+=EntityAnnotation)*)? 
 		(ownedFeature+=Feature (ownedFeature+=Feature)*)?
 	'}';
@@ -39,7 +37,6 @@ Ref returns Ref:
 	refTo=[Entity|ID]
 	many?=('[]')?
 	'{'
-		('description' description=STRING)?
 		(annotations+=FetureAnnotation (annotations+=FetureAnnotation)*)?	
 	'}';
 
@@ -49,7 +46,6 @@ DataType returns DataType:
 	type=DataTypes	
 	many?=('[]')?
 	'{'
-		('description' description=STRING)?
 		(annotations+=FetureAnnotation (annotations+=FetureAnnotation)*)?
 	'}';
 

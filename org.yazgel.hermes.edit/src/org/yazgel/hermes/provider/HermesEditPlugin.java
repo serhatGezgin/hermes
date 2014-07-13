@@ -7,7 +7,7 @@ import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
 
 /**
- * This is the central singleton for the Entity edit plugin.
+ * This is the central singleton for the Hermes edit plugin.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
