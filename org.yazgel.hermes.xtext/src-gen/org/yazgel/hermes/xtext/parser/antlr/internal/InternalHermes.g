@@ -393,9 +393,9 @@ ruleRef returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(	otherlv_0='Ref' 
+(	otherlv_0='var' 
     {
-    	newLeafNode(otherlv_0, grammarAccess.getRefAccess().getRefKeyword_0());
+    	newLeafNode(otherlv_0, grammarAccess.getRefAccess().getVarKeyword_0());
     }
 (
 (
@@ -508,9 +508,9 @@ ruleDataType returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(	otherlv_0='DataType' 
+(	otherlv_0='var' 
     {
-    	newLeafNode(otherlv_0, grammarAccess.getDataTypeAccess().getDataTypeKeyword_0());
+    	newLeafNode(otherlv_0, grammarAccess.getDataTypeAccess().getVarKeyword_0());
     }
 (
 (

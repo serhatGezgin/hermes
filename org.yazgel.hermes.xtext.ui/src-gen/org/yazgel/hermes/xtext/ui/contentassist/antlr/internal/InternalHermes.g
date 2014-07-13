@@ -1173,11 +1173,11 @@ rule__Ref__Group__0__Impl
     }
 :
 (
-{ before(grammarAccess.getRefAccess().getRefKeyword_0()); }
+{ before(grammarAccess.getRefAccess().getVarKeyword_0()); }
 
-	'Ref' 
+	'var' 
 
-{ after(grammarAccess.getRefAccess().getRefKeyword_0()); }
+{ after(grammarAccess.getRefAccess().getVarKeyword_0()); }
 )
 
 ;
@@ -1456,11 +1456,11 @@ rule__DataType__Group__0__Impl
     }
 :
 (
-{ before(grammarAccess.getDataTypeAccess().getDataTypeKeyword_0()); }
+{ before(grammarAccess.getDataTypeAccess().getVarKeyword_0()); }
 
-	'DataType' 
+	'var' 
 
-{ after(grammarAccess.getDataTypeAccess().getDataTypeKeyword_0()); }
+{ after(grammarAccess.getDataTypeAccess().getVarKeyword_0()); }
 )
 
 ;

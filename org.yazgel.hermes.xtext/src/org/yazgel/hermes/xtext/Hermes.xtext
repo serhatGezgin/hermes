@@ -32,7 +32,7 @@ enum FetureAnnotation returns FetureAnnotation:
 				Index = 'Index' | Id = 'Id' | Load = 'Load' | Ignore = 'Ignore';
 
 Ref returns Ref:
-	'Ref'
+	'var'
 	name=ID
 	refTo=[Entity|ID]
 	many?=('[]')?
@@ -41,7 +41,7 @@ Ref returns Ref:
 	'}';
 
 DataType returns DataType:
-	'DataType'
+	'var'
 	name=ID
 	type=DataTypes	
 	many?=('[]')?

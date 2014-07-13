@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalHermesParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Cache'", "'Index'", "'Id'", "'Load'", "'Ignore'", "'String'", "'Integer'", "'Boolean'", "'Long'", "'Double'", "'Object'", "'Package'", "'{'", "'}'", "'Entity'", "':'", "'Ref'", "'DataType'", "'[]'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Cache'", "'Index'", "'Id'", "'Load'", "'Ignore'", "'String'", "'Integer'", "'Boolean'", "'Long'", "'Double'", "'Object'", "'Package'", "'{'", "'}'", "'Entity'", "':'", "'var'", "'[]'"
     };
     public static final int RULE_STRING=6;
     public static final int RULE_SL_COMMENT=8;
@@ -43,7 +43,6 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
     public static final int T__27=27;
     public static final int T__28=28;
     public static final int RULE_INT=5;
-    public static final int T__29=29;
     public static final int T__22=22;
     public static final int RULE_ML_COMMENT=7;
     public static final int T__23=23;
@@ -623,10 +622,30 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
             int LA1_0 = input.LA(1);
 
             if ( (LA1_0==27) ) {
-                alt1=1;
-            }
-            else if ( (LA1_0==28) ) {
-                alt1=2;
+                int LA1_1 = input.LA(2);
+
+                if ( (LA1_1==RULE_ID) ) {
+                    int LA1_2 = input.LA(3);
+
+                    if ( ((LA1_2>=16 && LA1_2<=21)) ) {
+                        alt1=2;
+                    }
+                    else if ( (LA1_2==RULE_ID) ) {
+                        alt1=1;
+                    }
+                    else {
+                        NoViableAltException nvae =
+                            new NoViableAltException("", 1, 2, input);
+
+                        throw nvae;
+                    }
+                }
+                else {
+                    NoViableAltException nvae =
+                        new NoViableAltException("", 1, 1, input);
+
+                    throw nvae;
+                }
             }
             else {
                 NoViableAltException nvae =
@@ -2516,7 +2535,7 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
             int alt10=2;
             int LA10_0 = input.LA(1);
 
-            if ( ((LA10_0>=27 && LA10_0<=28)) ) {
+            if ( (LA10_0==27) ) {
                 alt10=1;
             }
             switch (alt10) {
@@ -3102,7 +3121,7 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
                 int alt12=2;
                 int LA12_0 = input.LA(1);
 
-                if ( ((LA12_0>=27 && LA12_0<=28)) ) {
+                if ( (LA12_0==27) ) {
                     alt12=1;
                 }
 
@@ -3186,21 +3205,21 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Ref__Group__0__Impl"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1170:1: rule__Ref__Group__0__Impl : ( 'Ref' ) ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1170:1: rule__Ref__Group__0__Impl : ( 'var' ) ;
     public final void rule__Ref__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1174:1: ( ( 'Ref' ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1175:1: ( 'Ref' )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1174:1: ( ( 'var' ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1175:1: ( 'var' )
             {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1175:1: ( 'Ref' )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1176:1: 'Ref'
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1175:1: ( 'var' )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1176:1: 'var'
             {
-             before(grammarAccess.getRefAccess().getRefKeyword_0()); 
+             before(grammarAccess.getRefAccess().getVarKeyword_0()); 
             match(input,27,FollowSets000.FOLLOW_27_in_rule__Ref__Group__0__Impl2353); 
-             after(grammarAccess.getRefAccess().getRefKeyword_0()); 
+             after(grammarAccess.getRefAccess().getVarKeyword_0()); 
 
             }
 
@@ -3448,7 +3467,7 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
             int alt13=2;
             int LA13_0 = input.LA(1);
 
-            if ( (LA13_0==29) ) {
+            if ( (LA13_0==28) ) {
                 alt13=1;
             }
             switch (alt13) {
@@ -3951,21 +3970,21 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DataType__Group__0__Impl"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1453:1: rule__DataType__Group__0__Impl : ( 'DataType' ) ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1453:1: rule__DataType__Group__0__Impl : ( 'var' ) ;
     public final void rule__DataType__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1457:1: ( ( 'DataType' ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1458:1: ( 'DataType' )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1457:1: ( ( 'var' ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1458:1: ( 'var' )
             {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1458:1: ( 'DataType' )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1459:1: 'DataType'
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1458:1: ( 'var' )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1459:1: 'var'
             {
-             before(grammarAccess.getDataTypeAccess().getDataTypeKeyword_0()); 
-            match(input,28,FollowSets000.FOLLOW_28_in_rule__DataType__Group__0__Impl2914); 
-             after(grammarAccess.getDataTypeAccess().getDataTypeKeyword_0()); 
+             before(grammarAccess.getDataTypeAccess().getVarKeyword_0()); 
+            match(input,27,FollowSets000.FOLLOW_27_in_rule__DataType__Group__0__Impl2914); 
+             after(grammarAccess.getDataTypeAccess().getVarKeyword_0()); 
 
             }
 
@@ -4213,7 +4232,7 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
             int alt16=2;
             int LA16_0 = input.LA(1);
 
-            if ( (LA16_0==29) ) {
+            if ( (LA16_0==28) ) {
                 alt16=1;
             }
             switch (alt16) {
@@ -5224,7 +5243,7 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
             // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1936:1: '[]'
             {
              before(grammarAccess.getRefAccess().getManyLeftSquareBracketRightSquareBracketKeyword_3_0()); 
-            match(input,29,FollowSets000.FOLLOW_29_in_rule__Ref__ManyAssignment_33873); 
+            match(input,28,FollowSets000.FOLLOW_28_in_rule__Ref__ManyAssignment_33873); 
              after(grammarAccess.getRefAccess().getManyLeftSquareBracketRightSquareBracketKeyword_3_0()); 
 
             }
@@ -5429,7 +5448,7 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
             // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2019:1: '[]'
             {
              before(grammarAccess.getDataTypeAccess().getManyLeftSquareBracketRightSquareBracketKeyword_3_0()); 
-            match(input,29,FollowSets000.FOLLOW_29_in_rule__DataType__ManyAssignment_34041); 
+            match(input,28,FollowSets000.FOLLOW_28_in_rule__DataType__ManyAssignment_34041); 
              after(grammarAccess.getDataTypeAccess().getManyLeftSquareBracketRightSquareBracketKeyword_3_0()); 
 
             }
@@ -5614,13 +5633,13 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
         public static final BitSet FOLLOW_rule__Entity__Group__3__Impl_in_rule__Entity__Group__31635 = new BitSet(new long[]{0x0000000004800000L});
         public static final BitSet FOLLOW_rule__Entity__Group__4_in_rule__Entity__Group__31638 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Entity__Group_3__0_in_rule__Entity__Group__3__Impl1665 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Entity__Group__4__Impl_in_rule__Entity__Group__41696 = new BitSet(new long[]{0x0000000019000800L});
+        public static final BitSet FOLLOW_rule__Entity__Group__4__Impl_in_rule__Entity__Group__41696 = new BitSet(new long[]{0x0000000009000800L});
         public static final BitSet FOLLOW_rule__Entity__Group__5_in_rule__Entity__Group__41699 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_23_in_rule__Entity__Group__4__Impl1727 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Entity__Group__5__Impl_in_rule__Entity__Group__51758 = new BitSet(new long[]{0x0000000019000800L});
+        public static final BitSet FOLLOW_rule__Entity__Group__5__Impl_in_rule__Entity__Group__51758 = new BitSet(new long[]{0x0000000009000800L});
         public static final BitSet FOLLOW_rule__Entity__Group__6_in_rule__Entity__Group__51761 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Entity__Group_5__0_in_rule__Entity__Group__5__Impl1788 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Entity__Group__6__Impl_in_rule__Entity__Group__61819 = new BitSet(new long[]{0x0000000019000800L});
+        public static final BitSet FOLLOW_rule__Entity__Group__6__Impl_in_rule__Entity__Group__61819 = new BitSet(new long[]{0x0000000009000800L});
         public static final BitSet FOLLOW_rule__Entity__Group__7_in_rule__Entity__Group__61822 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Entity__Group_6__0_in_rule__Entity__Group__6__Impl1849 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Entity__Group__7__Impl_in_rule__Entity__Group__71880 = new BitSet(new long[]{0x0000000000000002L});
@@ -5635,21 +5654,21 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
         public static final BitSet FOLLOW_rule__Entity__AnnotationsAssignment_5_0_in_rule__Entity__Group_5__0__Impl2108 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Entity__Group_5__1__Impl_in_rule__Entity__Group_5__12138 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Entity__AnnotationsAssignment_5_1_in_rule__Entity__Group_5__1__Impl2165 = new BitSet(new long[]{0x0000000000000802L});
-        public static final BitSet FOLLOW_rule__Entity__Group_6__0__Impl_in_rule__Entity__Group_6__02200 = new BitSet(new long[]{0x0000000018000000L});
+        public static final BitSet FOLLOW_rule__Entity__Group_6__0__Impl_in_rule__Entity__Group_6__02200 = new BitSet(new long[]{0x0000000008000000L});
         public static final BitSet FOLLOW_rule__Entity__Group_6__1_in_rule__Entity__Group_6__02203 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Entity__OwnedFeatureAssignment_6_0_in_rule__Entity__Group_6__0__Impl2230 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Entity__Group_6__1__Impl_in_rule__Entity__Group_6__12260 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Entity__OwnedFeatureAssignment_6_1_in_rule__Entity__Group_6__1__Impl2287 = new BitSet(new long[]{0x0000000018000002L});
+        public static final BitSet FOLLOW_rule__Entity__OwnedFeatureAssignment_6_1_in_rule__Entity__Group_6__1__Impl2287 = new BitSet(new long[]{0x0000000008000002L});
         public static final BitSet FOLLOW_rule__Ref__Group__0__Impl_in_rule__Ref__Group__02322 = new BitSet(new long[]{0x0000000000000010L});
         public static final BitSet FOLLOW_rule__Ref__Group__1_in_rule__Ref__Group__02325 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_27_in_rule__Ref__Group__0__Impl2353 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Ref__Group__1__Impl_in_rule__Ref__Group__12384 = new BitSet(new long[]{0x0000000000000010L});
         public static final BitSet FOLLOW_rule__Ref__Group__2_in_rule__Ref__Group__12387 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Ref__NameAssignment_1_in_rule__Ref__Group__1__Impl2414 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Ref__Group__2__Impl_in_rule__Ref__Group__22444 = new BitSet(new long[]{0x0000000020800000L});
+        public static final BitSet FOLLOW_rule__Ref__Group__2__Impl_in_rule__Ref__Group__22444 = new BitSet(new long[]{0x0000000010800000L});
         public static final BitSet FOLLOW_rule__Ref__Group__3_in_rule__Ref__Group__22447 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Ref__RefToAssignment_2_in_rule__Ref__Group__2__Impl2474 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Ref__Group__3__Impl_in_rule__Ref__Group__32504 = new BitSet(new long[]{0x0000000020800000L});
+        public static final BitSet FOLLOW_rule__Ref__Group__3__Impl_in_rule__Ref__Group__32504 = new BitSet(new long[]{0x0000000010800000L});
         public static final BitSet FOLLOW_rule__Ref__Group__4_in_rule__Ref__Group__32507 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Ref__ManyAssignment_3_in_rule__Ref__Group__3__Impl2534 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Ref__Group__4__Impl_in_rule__Ref__Group__42565 = new BitSet(new long[]{0x000000000100F000L});
@@ -5667,14 +5686,14 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
         public static final BitSet FOLLOW_rule__Ref__AnnotationsAssignment_5_1_in_rule__Ref__Group_5__1__Impl2848 = new BitSet(new long[]{0x000000000000F002L});
         public static final BitSet FOLLOW_rule__DataType__Group__0__Impl_in_rule__DataType__Group__02883 = new BitSet(new long[]{0x0000000000000010L});
         public static final BitSet FOLLOW_rule__DataType__Group__1_in_rule__DataType__Group__02886 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_28_in_rule__DataType__Group__0__Impl2914 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_27_in_rule__DataType__Group__0__Impl2914 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__DataType__Group__1__Impl_in_rule__DataType__Group__12945 = new BitSet(new long[]{0x00000000003F0000L});
         public static final BitSet FOLLOW_rule__DataType__Group__2_in_rule__DataType__Group__12948 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__DataType__NameAssignment_1_in_rule__DataType__Group__1__Impl2975 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__DataType__Group__2__Impl_in_rule__DataType__Group__23005 = new BitSet(new long[]{0x0000000020800000L});
+        public static final BitSet FOLLOW_rule__DataType__Group__2__Impl_in_rule__DataType__Group__23005 = new BitSet(new long[]{0x0000000010800000L});
         public static final BitSet FOLLOW_rule__DataType__Group__3_in_rule__DataType__Group__23008 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__DataType__TypeAssignment_2_in_rule__DataType__Group__2__Impl3035 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__DataType__Group__3__Impl_in_rule__DataType__Group__33065 = new BitSet(new long[]{0x0000000020800000L});
+        public static final BitSet FOLLOW_rule__DataType__Group__3__Impl_in_rule__DataType__Group__33065 = new BitSet(new long[]{0x0000000010800000L});
         public static final BitSet FOLLOW_rule__DataType__Group__4_in_rule__DataType__Group__33068 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__DataType__ManyAssignment_3_in_rule__DataType__Group__3__Impl3095 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__DataType__Group__4__Impl_in_rule__DataType__Group__43126 = new BitSet(new long[]{0x000000000100F000L});
@@ -5703,12 +5722,12 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
         public static final BitSet FOLLOW_ruleFeature_in_rule__Entity__OwnedFeatureAssignment_6_13767 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_RULE_ID_in_rule__Ref__NameAssignment_13798 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_RULE_ID_in_rule__Ref__RefToAssignment_23833 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_29_in_rule__Ref__ManyAssignment_33873 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_28_in_rule__Ref__ManyAssignment_33873 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleFetureAnnotation_in_rule__Ref__AnnotationsAssignment_5_03912 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleFetureAnnotation_in_rule__Ref__AnnotationsAssignment_5_13943 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_RULE_ID_in_rule__DataType__NameAssignment_13974 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleDataTypes_in_rule__DataType__TypeAssignment_24005 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_29_in_rule__DataType__ManyAssignment_34041 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_28_in_rule__DataType__ManyAssignment_34041 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleFetureAnnotation_in_rule__DataType__AnnotationsAssignment_5_04080 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleFetureAnnotation_in_rule__DataType__AnnotationsAssignment_5_14111 = new BitSet(new long[]{0x0000000000000002L});
     }

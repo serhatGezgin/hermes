@@ -217,7 +217,7 @@ public class HermesGrammarAccess extends AbstractGrammarElementFinder {
 	public class RefElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Ref");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cRefKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cVarKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Assignment cRefToAssignment_2 = (Assignment)cGroup.eContents().get(2);
@@ -234,14 +234,14 @@ public class HermesGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//Ref:
-		//	"Ref" name=ID refTo=[Entity] many?="[]"? "{" (annotations+=FetureAnnotation annotations+=FetureAnnotation*)? "}";
+		//	"var" name=ID refTo=[Entity] many?="[]"? "{" (annotations+=FetureAnnotation annotations+=FetureAnnotation*)? "}";
 		public ParserRule getRule() { return rule; }
 
-		//"Ref" name=ID refTo=[Entity] many?="[]"? "{" (annotations+=FetureAnnotation annotations+=FetureAnnotation*)? "}"
+		//"var" name=ID refTo=[Entity] many?="[]"? "{" (annotations+=FetureAnnotation annotations+=FetureAnnotation*)? "}"
 		public Group getGroup() { return cGroup; }
 
-		//"Ref"
-		public Keyword getRefKeyword_0() { return cRefKeyword_0; }
+		//"var"
+		public Keyword getVarKeyword_0() { return cVarKeyword_0; }
 
 		//name=ID
 		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
@@ -289,7 +289,7 @@ public class HermesGrammarAccess extends AbstractGrammarElementFinder {
 	public class DataTypeElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "DataType");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cDataTypeKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cVarKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Assignment cTypeAssignment_2 = (Assignment)cGroup.eContents().get(2);
@@ -305,15 +305,14 @@ public class HermesGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//DataType:
-		//	"DataType" name=ID type=DataTypes many?="[]"? "{" (annotations+=FetureAnnotation annotations+=FetureAnnotation*)?
-		//	"}";
+		//	"var" name=ID type=DataTypes many?="[]"? "{" (annotations+=FetureAnnotation annotations+=FetureAnnotation*)? "}";
 		public ParserRule getRule() { return rule; }
 
-		//"DataType" name=ID type=DataTypes many?="[]"? "{" (annotations+=FetureAnnotation annotations+=FetureAnnotation*)? "}"
+		//"var" name=ID type=DataTypes many?="[]"? "{" (annotations+=FetureAnnotation annotations+=FetureAnnotation*)? "}"
 		public Group getGroup() { return cGroup; }
 
-		//"DataType"
-		public Keyword getDataTypeKeyword_0() { return cDataTypeKeyword_0; }
+		//"var"
+		public Keyword getVarKeyword_0() { return cVarKeyword_0; }
 
 		//name=ID
 		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
@@ -576,7 +575,7 @@ public class HermesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Ref:
-	//	"Ref" name=ID refTo=[Entity] many?="[]"? "{" (annotations+=FetureAnnotation annotations+=FetureAnnotation*)? "}";
+	//	"var" name=ID refTo=[Entity] many?="[]"? "{" (annotations+=FetureAnnotation annotations+=FetureAnnotation*)? "}";
 	public RefElements getRefAccess() {
 		return (pRef != null) ? pRef : (pRef = new RefElements());
 	}
@@ -586,8 +585,7 @@ public class HermesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//DataType:
-	//	"DataType" name=ID type=DataTypes many?="[]"? "{" (annotations+=FetureAnnotation annotations+=FetureAnnotation*)?
-	//	"}";
+	//	"var" name=ID type=DataTypes many?="[]"? "{" (annotations+=FetureAnnotation annotations+=FetureAnnotation*)? "}";
 	public DataTypeElements getDataTypeAccess() {
 		return (pDataType != null) ? pDataType : (pDataType = new DataTypeElements());
 	}
