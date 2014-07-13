@@ -79,12 +79,4 @@ class FeatureGenerator extends BaseGenerator {
 			}
 		«ENDIF»
 		'''
-
-	def gettername(Feature f) {
-		'get' + f.name.toFirstUpper
-	}
-
-	def settername(Feature f) {
-		'set' + f.name.toFirstUpper
-	}
 }

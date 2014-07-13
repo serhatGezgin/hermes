@@ -3,6 +3,7 @@ package org.yazgel.hermes.codegenerator.template
 import java.util.List
 import java.util.Stack
 import org.yazgel.hermes.Entity
+import org.yazgel.hermes.Feature
 import org.yazgel.hermes.NamedElement
 import org.yazgel.hermes.Package
 
@@ -45,6 +46,14 @@ class BaseGenerator {
 		p.join('.')
 	}
 
+	protected def variablename(Entity e) {
+		'_' + e.name.toLowerCase
+	}
+
+	protected def qualifiedname(Entity e) {
+		e.packagename + '.' + e.name
+	}
+
 	protected def controllerpackagename(Entity e) {
 		val p = e.packageNameList
 		p.add('controller')
@@ -80,5 +89,13 @@ class BaseGenerator {
 		}
 
 		list
+	}
+
+	protected def gettername(Feature f) {
+		'get' + f.name.toFirstUpper
+	}
+
+	protected def settername(Feature f) {
+		'set' + f.name.toFirstUpper
 	}
 }
