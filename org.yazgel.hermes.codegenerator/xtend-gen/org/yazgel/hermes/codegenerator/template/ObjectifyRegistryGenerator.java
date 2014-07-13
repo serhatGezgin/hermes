@@ -1,6 +1,6 @@
 package org.yazgel.hermes.codegenerator.template;
 
-import java.util.Set;
+import java.util.List;
 import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.generator.IFileSystemAccess;
 import org.yazgel.hermes.Entity;
@@ -8,15 +8,16 @@ import org.yazgel.hermes.codegenerator.template.BaseGenerator;
 
 @SuppressWarnings("all")
 public class ObjectifyRegistryGenerator extends BaseGenerator {
-  public void generateFile(final IFileSystemAccess fsa) {
+  public void generateFile(final org.yazgel.hermes.Package p, final IFileSystemAccess fsa) {
     String _objectifyRegistryQName = this.objectifyRegistryQName();
     String _replace = _objectifyRegistryQName.replace(".", "/");
     String _plus = (_replace + ".java");
-    CharSequence _objectifyRegistryContent = this.objectifyRegistryContent(BaseGenerator.entityList);
+    List<Entity> _allEntities = this.allEntities(p);
+    CharSequence _objectifyRegistryContent = this.objectifyRegistryContent(_allEntities);
     fsa.generateFile(_plus, _objectifyRegistryContent);
   }
   
-  public CharSequence objectifyRegistryContent(final Set<Entity> entities) {
+  public CharSequence objectifyRegistryContent(final List<Entity> entities) {
     StringConcatenation _builder = new StringConcatenation();
     _builder.append("package ");
     String _objectifyRegistryPackage = this.objectifyRegistryPackage();

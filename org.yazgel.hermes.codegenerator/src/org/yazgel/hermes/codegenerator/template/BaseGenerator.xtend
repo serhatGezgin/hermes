@@ -1,15 +1,18 @@
 package org.yazgel.hermes.codegenerator.template
 
-import java.util.Set
+import java.util.List
+import java.util.Stack
 import org.yazgel.hermes.Entity
+import org.yazgel.hermes.NamedElement
 import org.yazgel.hermes.Package
 
 class BaseGenerator {
-	protected static var basePackage = ''
-	protected static val Set<Entity> entityList = newHashSet
+
+	/* Base Package hatirlanmasi gerek. */
+	protected static Package basePackage;
 
 	protected def objectifyRegistryPackage() {
-		basePackage + '.controller.util'
+		basePackage.name + '.controller.util'
 	}
 
 	protected def objectifyRegistryName() {
@@ -56,6 +59,25 @@ class BaseGenerator {
 			list.add(0, pack.name)
 			pack = pack.eContainer as Package
 		} while (pack != null && pack instanceof Package);
+
+		list
+	}
+
+	protected def List<Entity> allEntities(Package p) {
+		val list = newArrayList
+		var Stack<NamedElement> stack = new Stack
+		stack.push(p)
+
+		while (!stack.isEmpty) {
+			var item = stack.pop
+
+			if (item instanceof Package) {
+				stack.addAll(item.subPackage)
+				stack.addAll(item.ownedEntity)
+			} else if (item instanceof Entity) {
+				list.add(item)
+			}
+		}
 
 		list
 	}

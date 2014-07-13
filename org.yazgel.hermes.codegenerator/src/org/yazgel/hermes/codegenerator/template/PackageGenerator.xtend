@@ -1,7 +1,6 @@
 package org.yazgel.hermes.codegenerator.template
 
 import org.eclipse.xtext.generator.IFileSystemAccess
-import org.yazgel.hermes.Entity
 import org.yazgel.hermes.Package
 
 class PackageGenerator extends BaseGenerator {
@@ -11,26 +10,15 @@ class PackageGenerator extends BaseGenerator {
 
 	def generateFile(Package p, IFileSystemAccess fsa) {
 
-		/* Base package adini kaydet. */
-		basePackage = p.name
+		/* Base package kaydet. */
+		basePackage = p
 
-		p.subPackage.forEach[iteratePackage(fsa)]
-		p.ownedEntity.forEach[iterateEntity(fsa)]
+		p.allEntities.forEach [
+			entityGenerator.generateFile(it, fsa)
+			entityControllerGenerator.generateFile(it, fsa)
+		]
 
 		/* Entity siniflarini kayit eden yapiyi uret. */
-		objectifyRegistryGenerator.generateFile(fsa)
-	}
-
-	def void iteratePackage(Package p, IFileSystemAccess fsa) {
-		p.subPackage.forEach[iteratePackage(fsa)]
-		p.ownedEntity.forEach[iterateEntity(fsa)]
-	}
-
-	def void iterateEntity(Entity e, IFileSystemAccess fsa) {
-		entityGenerator.generateFile(e, fsa)
-		entityControllerGenerator.generateFile(e, fsa)
-
-		/* Entity'leri topla. */
-		entityList.add(e)
+		objectifyRegistryGenerator.generateFile(p, fsa)
 	}
 }

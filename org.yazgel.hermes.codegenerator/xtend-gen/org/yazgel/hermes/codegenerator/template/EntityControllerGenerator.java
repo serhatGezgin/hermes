@@ -29,7 +29,7 @@ public class EntityControllerGenerator extends BaseGenerator {
     _builder.append("\t");
     _builder.newLine();
     _builder.append("\t");
-    _builder.append("static{");
+    _builder.append("static {");
     _builder.newLine();
     _builder.append("\t\t");
     String _objectifyRegistryQName = this.objectifyRegistryQName();

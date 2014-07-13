@@ -1,16 +1,17 @@
 package org.yazgel.hermes.codegenerator.template
 
-import java.util.Set
+import java.util.List
 import org.eclipse.xtext.generator.IFileSystemAccess
 import org.yazgel.hermes.Entity
+import org.yazgel.hermes.Package
 
-class ObjectifyRegistryGenerator extends BaseGenerator{
-	
-	def generateFile(IFileSystemAccess fsa) {
-		fsa.generateFile(objectifyRegistryQName.replace('.', '/') + '.java', objectifyRegistryContent(entityList))
+class ObjectifyRegistryGenerator extends BaseGenerator {
+
+	def generateFile(Package p, IFileSystemAccess fsa) {
+		fsa.generateFile(objectifyRegistryQName.replace('.', '/') + '.java', objectifyRegistryContent(p.allEntities))
 	}
-	
-	def objectifyRegistryContent(Set<Entity> entities) '''
+
+	def objectifyRegistryContent(List<Entity> entities) '''
 		package «objectifyRegistryPackage»;
 		
 		public class «objectifyRegistryName» {

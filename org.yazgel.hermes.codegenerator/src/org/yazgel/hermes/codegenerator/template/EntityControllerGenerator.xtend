@@ -14,7 +14,7 @@ class EntityControllerGenerator extends BaseGenerator {
 		
 		public class «e.controllername» {
 			
-			static{
+			static {
 				«objectifyRegistryQName».register();
 			}
 		}
