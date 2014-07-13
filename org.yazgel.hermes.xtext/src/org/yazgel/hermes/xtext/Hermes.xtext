@@ -18,10 +18,10 @@ Feature returns Feature:
 
 Entity returns Entity:
 	{Entity}
+	('@' annotations+= EntityAnnotation ('@' annotations+= EntityAnnotation)*)?
 	'Entity'
 	name = ID (':' superEntity=[Entity|ID])? 
 	'{'
-		(annotations+=EntityAnnotation (annotations+=EntityAnnotation)*)? 
 		(ownedFeature+=Feature (ownedFeature+=Feature)*)?
 	'}';
 
@@ -32,22 +32,22 @@ enum FetureAnnotation returns FetureAnnotation:
 				Index = 'Index' | Id = 'Id' | Load = 'Load' | Ignore = 'Ignore';
 
 Ref returns Ref:
+	{Ref}
+	('@' annotations+= FetureAnnotation ('@' annotations+= FetureAnnotation)*)?
 	'var'
 	name=ID
 	refTo=[Entity|ID]
 	many?=('[]')?
-	'{'
-		(annotations+=FetureAnnotation (annotations+=FetureAnnotation)*)?	
-	'}';
+	;
 
 DataType returns DataType:
+	{DataType}
+	('@' annotations+= FetureAnnotation ('@' annotations+= FetureAnnotation)*)?
 	'var'
 	name=ID
 	type=DataTypes	
 	many?=('[]')?
-	'{'
-		(annotations+=FetureAnnotation (annotations+=FetureAnnotation)*)?
-	'}';
+	;
 
 enum DataTypes returns DataTypes:
 				String = 'String' | Integer = 'Integer' | Boolean = 'Boolean' | Long = 'Long' | Double = 'Double' | Object = 'Object';

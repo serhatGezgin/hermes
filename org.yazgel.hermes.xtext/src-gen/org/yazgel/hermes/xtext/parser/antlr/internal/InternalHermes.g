@@ -253,15 +253,59 @@ ruleEntity returns [EObject current=null]
             grammarAccess.getEntityAccess().getEntityAction_0(),
             $current);
     }
-)	otherlv_1='Entity' 
+)(	otherlv_1='@' 
     {
-    	newLeafNode(otherlv_1, grammarAccess.getEntityAccess().getEntityKeyword_1());
+    	newLeafNode(otherlv_1, grammarAccess.getEntityAccess().getCommercialAtKeyword_1_0());
     }
 (
 (
-		lv_name_2_0=RULE_ID
+		{ 
+	        newCompositeNode(grammarAccess.getEntityAccess().getAnnotationsEntityAnnotationEnumRuleCall_1_1_0()); 
+	    }
+		lv_annotations_2_0=ruleEntityAnnotation		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getEntityRule());
+	        }
+       		add(
+       			$current, 
+       			"annotations",
+        		lv_annotations_2_0, 
+        		"EntityAnnotation");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)(	otherlv_3='@' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getEntityAccess().getCommercialAtKeyword_1_2_0());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getEntityAccess().getAnnotationsEntityAnnotationEnumRuleCall_1_2_1_0()); 
+	    }
+		lv_annotations_4_0=ruleEntityAnnotation		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getEntityRule());
+	        }
+       		add(
+       			$current, 
+       			"annotations",
+        		lv_annotations_4_0, 
+        		"EntityAnnotation");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))*)?	otherlv_5='Entity' 
+    {
+    	newLeafNode(otherlv_5, grammarAccess.getEntityAccess().getEntityKeyword_2());
+    }
+(
+(
+		lv_name_6_0=RULE_ID
 		{
-			newLeafNode(lv_name_2_0, grammarAccess.getEntityAccess().getNameIDTerminalRuleCall_2_0()); 
+			newLeafNode(lv_name_6_0, grammarAccess.getEntityAccess().getNameIDTerminalRuleCall_3_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -270,14 +314,14 @@ ruleEntity returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"name",
-        		lv_name_2_0, 
+        		lv_name_6_0, 
         		"ID");
 	    }
 
 )
-)(	otherlv_3=':' 
+)(	otherlv_7=':' 
     {
-    	newLeafNode(otherlv_3, grammarAccess.getEntityAccess().getColonKeyword_3_0());
+    	newLeafNode(otherlv_7, grammarAccess.getEntityAccess().getColonKeyword_4_0());
     }
 (
 (
@@ -286,65 +330,29 @@ ruleEntity returns [EObject current=null]
 	            $current = createModelElement(grammarAccess.getEntityRule());
 	        }
         }
-	otherlv_4=RULE_ID
+	otherlv_8=RULE_ID
 	{
-		newLeafNode(otherlv_4, grammarAccess.getEntityAccess().getSuperEntityEntityCrossReference_3_1_0()); 
+		newLeafNode(otherlv_8, grammarAccess.getEntityAccess().getSuperEntityEntityCrossReference_4_1_0()); 
 	}
 
 )
-))?	otherlv_5='{' 
+))?	otherlv_9='{' 
     {
-    	newLeafNode(otherlv_5, grammarAccess.getEntityAccess().getLeftCurlyBracketKeyword_4());
+    	newLeafNode(otherlv_9, grammarAccess.getEntityAccess().getLeftCurlyBracketKeyword_5());
     }
 ((
 (
 		{ 
-	        newCompositeNode(grammarAccess.getEntityAccess().getAnnotationsEntityAnnotationEnumRuleCall_5_0_0()); 
-	    }
-		lv_annotations_6_0=ruleEntityAnnotation		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getEntityRule());
-	        }
-       		add(
-       			$current, 
-       			"annotations",
-        		lv_annotations_6_0, 
-        		"EntityAnnotation");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-)(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getEntityAccess().getAnnotationsEntityAnnotationEnumRuleCall_5_1_0()); 
-	    }
-		lv_annotations_7_0=ruleEntityAnnotation		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getEntityRule());
-	        }
-       		add(
-       			$current, 
-       			"annotations",
-        		lv_annotations_7_0, 
-        		"EntityAnnotation");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-)*)?((
-(
-		{ 
 	        newCompositeNode(grammarAccess.getEntityAccess().getOwnedFeatureFeatureParserRuleCall_6_0_0()); 
 	    }
-		lv_ownedFeature_8_0=ruleFeature		{
+		lv_ownedFeature_10_0=ruleFeature		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getEntityRule());
 	        }
        		add(
        			$current, 
        			"ownedFeature",
-        		lv_ownedFeature_8_0, 
+        		lv_ownedFeature_10_0, 
         		"Feature");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -355,22 +363,22 @@ ruleEntity returns [EObject current=null]
 		{ 
 	        newCompositeNode(grammarAccess.getEntityAccess().getOwnedFeatureFeatureParserRuleCall_6_1_0()); 
 	    }
-		lv_ownedFeature_9_0=ruleFeature		{
+		lv_ownedFeature_11_0=ruleFeature		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getEntityRule());
 	        }
        		add(
        			$current, 
        			"ownedFeature",
-        		lv_ownedFeature_9_0, 
+        		lv_ownedFeature_11_0, 
         		"Feature");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)*)?	otherlv_10='}' 
+)*)?	otherlv_12='}' 
     {
-    	newLeafNode(otherlv_10, grammarAccess.getEntityAccess().getRightCurlyBracketKeyword_7());
+    	newLeafNode(otherlv_12, grammarAccess.getEntityAccess().getRightCurlyBracketKeyword_7());
     }
 )
 ;
@@ -393,15 +401,65 @@ ruleRef returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(	otherlv_0='var' 
+((
     {
-    	newLeafNode(otherlv_0, grammarAccess.getRefAccess().getVarKeyword_0());
+        $current = forceCreateModelElement(
+            grammarAccess.getRefAccess().getRefAction_0(),
+            $current);
+    }
+)(	otherlv_1='@' 
+    {
+    	newLeafNode(otherlv_1, grammarAccess.getRefAccess().getCommercialAtKeyword_1_0());
     }
 (
 (
-		lv_name_1_0=RULE_ID
+		{ 
+	        newCompositeNode(grammarAccess.getRefAccess().getAnnotationsFetureAnnotationEnumRuleCall_1_1_0()); 
+	    }
+		lv_annotations_2_0=ruleFetureAnnotation		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getRefRule());
+	        }
+       		add(
+       			$current, 
+       			"annotations",
+        		lv_annotations_2_0, 
+        		"FetureAnnotation");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)(	otherlv_3='@' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getRefAccess().getCommercialAtKeyword_1_2_0());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getRefAccess().getAnnotationsFetureAnnotationEnumRuleCall_1_2_1_0()); 
+	    }
+		lv_annotations_4_0=ruleFetureAnnotation		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getRefRule());
+	        }
+       		add(
+       			$current, 
+       			"annotations",
+        		lv_annotations_4_0, 
+        		"FetureAnnotation");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))*)?	otherlv_5='var' 
+    {
+    	newLeafNode(otherlv_5, grammarAccess.getRefAccess().getVarKeyword_2());
+    }
+(
+(
+		lv_name_6_0=RULE_ID
 		{
-			newLeafNode(lv_name_1_0, grammarAccess.getRefAccess().getNameIDTerminalRuleCall_1_0()); 
+			newLeafNode(lv_name_6_0, grammarAccess.getRefAccess().getNameIDTerminalRuleCall_3_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -410,7 +468,7 @@ ruleRef returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"name",
-        		lv_name_1_0, 
+        		lv_name_6_0, 
         		"ID");
 	    }
 
@@ -422,17 +480,17 @@ ruleRef returns [EObject current=null]
 	            $current = createModelElement(grammarAccess.getRefRule());
 	        }
         }
-	otherlv_2=RULE_ID
+	otherlv_7=RULE_ID
 	{
-		newLeafNode(otherlv_2, grammarAccess.getRefAccess().getRefToEntityCrossReference_2_0()); 
+		newLeafNode(otherlv_7, grammarAccess.getRefAccess().getRefToEntityCrossReference_4_0()); 
 	}
 
 )
 )(
 (
-		lv_many_3_0=	'[]' 
+		lv_many_8_0=	'[]' 
     {
-        newLeafNode(lv_many_3_0, grammarAccess.getRefAccess().getManyLeftSquareBracketRightSquareBracketKeyword_3_0());
+        newLeafNode(lv_many_8_0, grammarAccess.getRefAccess().getManyLeftSquareBracketRightSquareBracketKeyword_5_0());
     }
  
 	    {
@@ -443,51 +501,7 @@ ruleRef returns [EObject current=null]
 	    }
 
 )
-)?	otherlv_4='{' 
-    {
-    	newLeafNode(otherlv_4, grammarAccess.getRefAccess().getLeftCurlyBracketKeyword_4());
-    }
-((
-(
-		{ 
-	        newCompositeNode(grammarAccess.getRefAccess().getAnnotationsFetureAnnotationEnumRuleCall_5_0_0()); 
-	    }
-		lv_annotations_5_0=ruleFetureAnnotation		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getRefRule());
-	        }
-       		add(
-       			$current, 
-       			"annotations",
-        		lv_annotations_5_0, 
-        		"FetureAnnotation");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-)(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getRefAccess().getAnnotationsFetureAnnotationEnumRuleCall_5_1_0()); 
-	    }
-		lv_annotations_6_0=ruleFetureAnnotation		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getRefRule());
-	        }
-       		add(
-       			$current, 
-       			"annotations",
-        		lv_annotations_6_0, 
-        		"FetureAnnotation");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-)*)?	otherlv_7='}' 
-    {
-    	newLeafNode(otherlv_7, grammarAccess.getRefAccess().getRightCurlyBracketKeyword_6());
-    }
-)
+)?)
 ;
 
 
@@ -508,15 +522,65 @@ ruleDataType returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(	otherlv_0='var' 
+((
     {
-    	newLeafNode(otherlv_0, grammarAccess.getDataTypeAccess().getVarKeyword_0());
+        $current = forceCreateModelElement(
+            grammarAccess.getDataTypeAccess().getDataTypeAction_0(),
+            $current);
+    }
+)(	otherlv_1='@' 
+    {
+    	newLeafNode(otherlv_1, grammarAccess.getDataTypeAccess().getCommercialAtKeyword_1_0());
     }
 (
 (
-		lv_name_1_0=RULE_ID
+		{ 
+	        newCompositeNode(grammarAccess.getDataTypeAccess().getAnnotationsFetureAnnotationEnumRuleCall_1_1_0()); 
+	    }
+		lv_annotations_2_0=ruleFetureAnnotation		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getDataTypeRule());
+	        }
+       		add(
+       			$current, 
+       			"annotations",
+        		lv_annotations_2_0, 
+        		"FetureAnnotation");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)(	otherlv_3='@' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getDataTypeAccess().getCommercialAtKeyword_1_2_0());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getDataTypeAccess().getAnnotationsFetureAnnotationEnumRuleCall_1_2_1_0()); 
+	    }
+		lv_annotations_4_0=ruleFetureAnnotation		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getDataTypeRule());
+	        }
+       		add(
+       			$current, 
+       			"annotations",
+        		lv_annotations_4_0, 
+        		"FetureAnnotation");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))*)?	otherlv_5='var' 
+    {
+    	newLeafNode(otherlv_5, grammarAccess.getDataTypeAccess().getVarKeyword_2());
+    }
+(
+(
+		lv_name_6_0=RULE_ID
 		{
-			newLeafNode(lv_name_1_0, grammarAccess.getDataTypeAccess().getNameIDTerminalRuleCall_1_0()); 
+			newLeafNode(lv_name_6_0, grammarAccess.getDataTypeAccess().getNameIDTerminalRuleCall_3_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -525,7 +589,7 @@ ruleDataType returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"name",
-        		lv_name_1_0, 
+        		lv_name_6_0, 
         		"ID");
 	    }
 
@@ -533,16 +597,16 @@ ruleDataType returns [EObject current=null]
 )(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getDataTypeAccess().getTypeDataTypesEnumRuleCall_2_0()); 
+	        newCompositeNode(grammarAccess.getDataTypeAccess().getTypeDataTypesEnumRuleCall_4_0()); 
 	    }
-		lv_type_2_0=ruleDataTypes		{
+		lv_type_7_0=ruleDataTypes		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getDataTypeRule());
 	        }
        		set(
        			$current, 
        			"type",
-        		lv_type_2_0, 
+        		lv_type_7_0, 
         		"DataTypes");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -550,9 +614,9 @@ ruleDataType returns [EObject current=null]
 )
 )(
 (
-		lv_many_3_0=	'[]' 
+		lv_many_8_0=	'[]' 
     {
-        newLeafNode(lv_many_3_0, grammarAccess.getDataTypeAccess().getManyLeftSquareBracketRightSquareBracketKeyword_3_0());
+        newLeafNode(lv_many_8_0, grammarAccess.getDataTypeAccess().getManyLeftSquareBracketRightSquareBracketKeyword_5_0());
     }
  
 	    {
@@ -563,51 +627,7 @@ ruleDataType returns [EObject current=null]
 	    }
 
 )
-)?	otherlv_4='{' 
-    {
-    	newLeafNode(otherlv_4, grammarAccess.getDataTypeAccess().getLeftCurlyBracketKeyword_4());
-    }
-((
-(
-		{ 
-	        newCompositeNode(grammarAccess.getDataTypeAccess().getAnnotationsFetureAnnotationEnumRuleCall_5_0_0()); 
-	    }
-		lv_annotations_5_0=ruleFetureAnnotation		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getDataTypeRule());
-	        }
-       		add(
-       			$current, 
-       			"annotations",
-        		lv_annotations_5_0, 
-        		"FetureAnnotation");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-)(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getDataTypeAccess().getAnnotationsFetureAnnotationEnumRuleCall_5_1_0()); 
-	    }
-		lv_annotations_6_0=ruleFetureAnnotation		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getDataTypeRule());
-	        }
-       		add(
-       			$current, 
-       			"annotations",
-        		lv_annotations_6_0, 
-        		"FetureAnnotation");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-)*)?	otherlv_7='}' 
-    {
-    	newLeafNode(otherlv_7, grammarAccess.getDataTypeAccess().getRightCurlyBracketKeyword_6());
-    }
-)
+)?)
 ;
 
 

@@ -120,20 +120,23 @@ public class HermesGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Entity");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cEntityAction_0 = (Action)cGroup.eContents().get(0);
-		private final Keyword cEntityKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cNameIDTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cColonKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Assignment cSuperEntityAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final CrossReference cSuperEntityEntityCrossReference_3_1_0 = (CrossReference)cSuperEntityAssignment_3_1.eContents().get(0);
-		private final RuleCall cSuperEntityEntityIDTerminalRuleCall_3_1_0_1 = (RuleCall)cSuperEntityEntityCrossReference_3_1_0.eContents().get(1);
-		private final Keyword cLeftCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
-		private final Assignment cAnnotationsAssignment_5_0 = (Assignment)cGroup_5.eContents().get(0);
-		private final RuleCall cAnnotationsEntityAnnotationEnumRuleCall_5_0_0 = (RuleCall)cAnnotationsAssignment_5_0.eContents().get(0);
-		private final Assignment cAnnotationsAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
-		private final RuleCall cAnnotationsEntityAnnotationEnumRuleCall_5_1_0 = (RuleCall)cAnnotationsAssignment_5_1.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cCommercialAtKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Assignment cAnnotationsAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cAnnotationsEntityAnnotationEnumRuleCall_1_1_0 = (RuleCall)cAnnotationsAssignment_1_1.eContents().get(0);
+		private final Group cGroup_1_2 = (Group)cGroup_1.eContents().get(2);
+		private final Keyword cCommercialAtKeyword_1_2_0 = (Keyword)cGroup_1_2.eContents().get(0);
+		private final Assignment cAnnotationsAssignment_1_2_1 = (Assignment)cGroup_1_2.eContents().get(1);
+		private final RuleCall cAnnotationsEntityAnnotationEnumRuleCall_1_2_1_0 = (RuleCall)cAnnotationsAssignment_1_2_1.eContents().get(0);
+		private final Keyword cEntityKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cNameAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cNameIDTerminalRuleCall_3_0 = (RuleCall)cNameAssignment_3.eContents().get(0);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cColonKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Assignment cSuperEntityAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final CrossReference cSuperEntityEntityCrossReference_4_1_0 = (CrossReference)cSuperEntityAssignment_4_1.eContents().get(0);
+		private final RuleCall cSuperEntityEntityIDTerminalRuleCall_4_1_0_1 = (RuleCall)cSuperEntityEntityCrossReference_4_1_0.eContents().get(1);
+		private final Keyword cLeftCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
 		private final Assignment cOwnedFeatureAssignment_6_0 = (Assignment)cGroup_6.eContents().get(0);
 		private final RuleCall cOwnedFeatureFeatureParserRuleCall_6_0_0 = (RuleCall)cOwnedFeatureAssignment_6_0.eContents().get(0);
@@ -142,58 +145,67 @@ public class HermesGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
 		//Entity:
-		//	{Entity} "Entity" name=ID (":" superEntity=[Entity])? "{" (annotations+=EntityAnnotation
-		//	annotations+=EntityAnnotation*)? (ownedFeature+=Feature ownedFeature+=Feature*)? "}";
+		//	{Entity} ("@" annotations+=EntityAnnotation ("@" annotations+=EntityAnnotation)*)? "Entity" name=ID (":"
+		//	superEntity=[Entity])? "{" (ownedFeature+=Feature ownedFeature+=Feature*)? "}";
 		public ParserRule getRule() { return rule; }
 
-		//{Entity} "Entity" name=ID (":" superEntity=[Entity])? "{" (annotations+=EntityAnnotation
-		//annotations+=EntityAnnotation*)? (ownedFeature+=Feature ownedFeature+=Feature*)? "}"
+		//{Entity} ("@" annotations+=EntityAnnotation ("@" annotations+=EntityAnnotation)*)? "Entity" name=ID (":"
+		//superEntity=[Entity])? "{" (ownedFeature+=Feature ownedFeature+=Feature*)? "}"
 		public Group getGroup() { return cGroup; }
 
 		//{Entity}
 		public Action getEntityAction_0() { return cEntityAction_0; }
 
-		//"Entity"
-		public Keyword getEntityKeyword_1() { return cEntityKeyword_1; }
+		//("@" annotations+=EntityAnnotation ("@" annotations+=EntityAnnotation)*)?
+		public Group getGroup_1() { return cGroup_1; }
 
-		//name=ID
-		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
-
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_2_0() { return cNameIDTerminalRuleCall_2_0; }
-
-		//(":" superEntity=[Entity])?
-		public Group getGroup_3() { return cGroup_3; }
-
-		//":"
-		public Keyword getColonKeyword_3_0() { return cColonKeyword_3_0; }
-
-		//superEntity=[Entity]
-		public Assignment getSuperEntityAssignment_3_1() { return cSuperEntityAssignment_3_1; }
-
-		//[Entity]
-		public CrossReference getSuperEntityEntityCrossReference_3_1_0() { return cSuperEntityEntityCrossReference_3_1_0; }
-
-		//ID
-		public RuleCall getSuperEntityEntityIDTerminalRuleCall_3_1_0_1() { return cSuperEntityEntityIDTerminalRuleCall_3_1_0_1; }
-
-		//"{"
-		public Keyword getLeftCurlyBracketKeyword_4() { return cLeftCurlyBracketKeyword_4; }
-
-		//(annotations+=EntityAnnotation annotations+=EntityAnnotation*)?
-		public Group getGroup_5() { return cGroup_5; }
+		//"@"
+		public Keyword getCommercialAtKeyword_1_0() { return cCommercialAtKeyword_1_0; }
 
 		//annotations+=EntityAnnotation
-		public Assignment getAnnotationsAssignment_5_0() { return cAnnotationsAssignment_5_0; }
+		public Assignment getAnnotationsAssignment_1_1() { return cAnnotationsAssignment_1_1; }
 
 		//EntityAnnotation
-		public RuleCall getAnnotationsEntityAnnotationEnumRuleCall_5_0_0() { return cAnnotationsEntityAnnotationEnumRuleCall_5_0_0; }
+		public RuleCall getAnnotationsEntityAnnotationEnumRuleCall_1_1_0() { return cAnnotationsEntityAnnotationEnumRuleCall_1_1_0; }
 
-		//annotations+=EntityAnnotation*
-		public Assignment getAnnotationsAssignment_5_1() { return cAnnotationsAssignment_5_1; }
+		//("@" annotations+=EntityAnnotation)*
+		public Group getGroup_1_2() { return cGroup_1_2; }
+
+		//"@"
+		public Keyword getCommercialAtKeyword_1_2_0() { return cCommercialAtKeyword_1_2_0; }
+
+		//annotations+=EntityAnnotation
+		public Assignment getAnnotationsAssignment_1_2_1() { return cAnnotationsAssignment_1_2_1; }
 
 		//EntityAnnotation
-		public RuleCall getAnnotationsEntityAnnotationEnumRuleCall_5_1_0() { return cAnnotationsEntityAnnotationEnumRuleCall_5_1_0; }
+		public RuleCall getAnnotationsEntityAnnotationEnumRuleCall_1_2_1_0() { return cAnnotationsEntityAnnotationEnumRuleCall_1_2_1_0; }
+
+		//"Entity"
+		public Keyword getEntityKeyword_2() { return cEntityKeyword_2; }
+
+		//name=ID
+		public Assignment getNameAssignment_3() { return cNameAssignment_3; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_3_0() { return cNameIDTerminalRuleCall_3_0; }
+
+		//(":" superEntity=[Entity])?
+		public Group getGroup_4() { return cGroup_4; }
+
+		//":"
+		public Keyword getColonKeyword_4_0() { return cColonKeyword_4_0; }
+
+		//superEntity=[Entity]
+		public Assignment getSuperEntityAssignment_4_1() { return cSuperEntityAssignment_4_1; }
+
+		//[Entity]
+		public CrossReference getSuperEntityEntityCrossReference_4_1_0() { return cSuperEntityEntityCrossReference_4_1_0; }
+
+		//ID
+		public RuleCall getSuperEntityEntityIDTerminalRuleCall_4_1_0_1() { return cSuperEntityEntityIDTerminalRuleCall_4_1_0_1; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_5() { return cLeftCurlyBracketKeyword_5; }
 
 		//(ownedFeature+=Feature ownedFeature+=Feature*)?
 		public Group getGroup_6() { return cGroup_6; }
@@ -217,141 +229,160 @@ public class HermesGrammarAccess extends AbstractGrammarElementFinder {
 	public class RefElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Ref");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cVarKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Assignment cRefToAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final CrossReference cRefToEntityCrossReference_2_0 = (CrossReference)cRefToAssignment_2.eContents().get(0);
-		private final RuleCall cRefToEntityIDTerminalRuleCall_2_0_1 = (RuleCall)cRefToEntityCrossReference_2_0.eContents().get(1);
-		private final Assignment cManyAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final Keyword cManyLeftSquareBracketRightSquareBracketKeyword_3_0 = (Keyword)cManyAssignment_3.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
-		private final Assignment cAnnotationsAssignment_5_0 = (Assignment)cGroup_5.eContents().get(0);
-		private final RuleCall cAnnotationsFetureAnnotationEnumRuleCall_5_0_0 = (RuleCall)cAnnotationsAssignment_5_0.eContents().get(0);
-		private final Assignment cAnnotationsAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
-		private final RuleCall cAnnotationsFetureAnnotationEnumRuleCall_5_1_0 = (RuleCall)cAnnotationsAssignment_5_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Action cRefAction_0 = (Action)cGroup.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cCommercialAtKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Assignment cAnnotationsAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cAnnotationsFetureAnnotationEnumRuleCall_1_1_0 = (RuleCall)cAnnotationsAssignment_1_1.eContents().get(0);
+		private final Group cGroup_1_2 = (Group)cGroup_1.eContents().get(2);
+		private final Keyword cCommercialAtKeyword_1_2_0 = (Keyword)cGroup_1_2.eContents().get(0);
+		private final Assignment cAnnotationsAssignment_1_2_1 = (Assignment)cGroup_1_2.eContents().get(1);
+		private final RuleCall cAnnotationsFetureAnnotationEnumRuleCall_1_2_1_0 = (RuleCall)cAnnotationsAssignment_1_2_1.eContents().get(0);
+		private final Keyword cVarKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cNameAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cNameIDTerminalRuleCall_3_0 = (RuleCall)cNameAssignment_3.eContents().get(0);
+		private final Assignment cRefToAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final CrossReference cRefToEntityCrossReference_4_0 = (CrossReference)cRefToAssignment_4.eContents().get(0);
+		private final RuleCall cRefToEntityIDTerminalRuleCall_4_0_1 = (RuleCall)cRefToEntityCrossReference_4_0.eContents().get(1);
+		private final Assignment cManyAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final Keyword cManyLeftSquareBracketRightSquareBracketKeyword_5_0 = (Keyword)cManyAssignment_5.eContents().get(0);
 		
 		//Ref:
-		//	"var" name=ID refTo=[Entity] many?="[]"? "{" (annotations+=FetureAnnotation annotations+=FetureAnnotation*)? "}";
+		//	{Ref} ("@" annotations+=FetureAnnotation ("@" annotations+=FetureAnnotation)*)? "var" name=ID refTo=[Entity]
+		//	many?="[]"?;
 		public ParserRule getRule() { return rule; }
 
-		//"var" name=ID refTo=[Entity] many?="[]"? "{" (annotations+=FetureAnnotation annotations+=FetureAnnotation*)? "}"
+		//{Ref} ("@" annotations+=FetureAnnotation ("@" annotations+=FetureAnnotation)*)? "var" name=ID refTo=[Entity] many?="[]"?
 		public Group getGroup() { return cGroup; }
 
-		//"var"
-		public Keyword getVarKeyword_0() { return cVarKeyword_0; }
+		//{Ref}
+		public Action getRefAction_0() { return cRefAction_0; }
 
-		//name=ID
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+		//("@" annotations+=FetureAnnotation ("@" annotations+=FetureAnnotation)*)?
+		public Group getGroup_1() { return cGroup_1; }
 
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
-
-		//refTo=[Entity]
-		public Assignment getRefToAssignment_2() { return cRefToAssignment_2; }
-
-		//[Entity]
-		public CrossReference getRefToEntityCrossReference_2_0() { return cRefToEntityCrossReference_2_0; }
-
-		//ID
-		public RuleCall getRefToEntityIDTerminalRuleCall_2_0_1() { return cRefToEntityIDTerminalRuleCall_2_0_1; }
-
-		//many?="[]"?
-		public Assignment getManyAssignment_3() { return cManyAssignment_3; }
-
-		//"[]"
-		public Keyword getManyLeftSquareBracketRightSquareBracketKeyword_3_0() { return cManyLeftSquareBracketRightSquareBracketKeyword_3_0; }
-
-		//"{"
-		public Keyword getLeftCurlyBracketKeyword_4() { return cLeftCurlyBracketKeyword_4; }
-
-		//(annotations+=FetureAnnotation annotations+=FetureAnnotation*)?
-		public Group getGroup_5() { return cGroup_5; }
+		//"@"
+		public Keyword getCommercialAtKeyword_1_0() { return cCommercialAtKeyword_1_0; }
 
 		//annotations+=FetureAnnotation
-		public Assignment getAnnotationsAssignment_5_0() { return cAnnotationsAssignment_5_0; }
+		public Assignment getAnnotationsAssignment_1_1() { return cAnnotationsAssignment_1_1; }
 
 		//FetureAnnotation
-		public RuleCall getAnnotationsFetureAnnotationEnumRuleCall_5_0_0() { return cAnnotationsFetureAnnotationEnumRuleCall_5_0_0; }
+		public RuleCall getAnnotationsFetureAnnotationEnumRuleCall_1_1_0() { return cAnnotationsFetureAnnotationEnumRuleCall_1_1_0; }
 
-		//annotations+=FetureAnnotation*
-		public Assignment getAnnotationsAssignment_5_1() { return cAnnotationsAssignment_5_1; }
+		//("@" annotations+=FetureAnnotation)*
+		public Group getGroup_1_2() { return cGroup_1_2; }
+
+		//"@"
+		public Keyword getCommercialAtKeyword_1_2_0() { return cCommercialAtKeyword_1_2_0; }
+
+		//annotations+=FetureAnnotation
+		public Assignment getAnnotationsAssignment_1_2_1() { return cAnnotationsAssignment_1_2_1; }
 
 		//FetureAnnotation
-		public RuleCall getAnnotationsFetureAnnotationEnumRuleCall_5_1_0() { return cAnnotationsFetureAnnotationEnumRuleCall_5_1_0; }
+		public RuleCall getAnnotationsFetureAnnotationEnumRuleCall_1_2_1_0() { return cAnnotationsFetureAnnotationEnumRuleCall_1_2_1_0; }
 
-		//"}"
-		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
+		//"var"
+		public Keyword getVarKeyword_2() { return cVarKeyword_2; }
+
+		//name=ID
+		public Assignment getNameAssignment_3() { return cNameAssignment_3; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_3_0() { return cNameIDTerminalRuleCall_3_0; }
+
+		//refTo=[Entity]
+		public Assignment getRefToAssignment_4() { return cRefToAssignment_4; }
+
+		//[Entity]
+		public CrossReference getRefToEntityCrossReference_4_0() { return cRefToEntityCrossReference_4_0; }
+
+		//ID
+		public RuleCall getRefToEntityIDTerminalRuleCall_4_0_1() { return cRefToEntityIDTerminalRuleCall_4_0_1; }
+
+		//many?="[]"?
+		public Assignment getManyAssignment_5() { return cManyAssignment_5; }
+
+		//"[]"
+		public Keyword getManyLeftSquareBracketRightSquareBracketKeyword_5_0() { return cManyLeftSquareBracketRightSquareBracketKeyword_5_0; }
 	}
 
 	public class DataTypeElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "DataType");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cVarKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Assignment cTypeAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cTypeDataTypesEnumRuleCall_2_0 = (RuleCall)cTypeAssignment_2.eContents().get(0);
-		private final Assignment cManyAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final Keyword cManyLeftSquareBracketRightSquareBracketKeyword_3_0 = (Keyword)cManyAssignment_3.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
-		private final Assignment cAnnotationsAssignment_5_0 = (Assignment)cGroup_5.eContents().get(0);
-		private final RuleCall cAnnotationsFetureAnnotationEnumRuleCall_5_0_0 = (RuleCall)cAnnotationsAssignment_5_0.eContents().get(0);
-		private final Assignment cAnnotationsAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
-		private final RuleCall cAnnotationsFetureAnnotationEnumRuleCall_5_1_0 = (RuleCall)cAnnotationsAssignment_5_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Action cDataTypeAction_0 = (Action)cGroup.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cCommercialAtKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Assignment cAnnotationsAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cAnnotationsFetureAnnotationEnumRuleCall_1_1_0 = (RuleCall)cAnnotationsAssignment_1_1.eContents().get(0);
+		private final Group cGroup_1_2 = (Group)cGroup_1.eContents().get(2);
+		private final Keyword cCommercialAtKeyword_1_2_0 = (Keyword)cGroup_1_2.eContents().get(0);
+		private final Assignment cAnnotationsAssignment_1_2_1 = (Assignment)cGroup_1_2.eContents().get(1);
+		private final RuleCall cAnnotationsFetureAnnotationEnumRuleCall_1_2_1_0 = (RuleCall)cAnnotationsAssignment_1_2_1.eContents().get(0);
+		private final Keyword cVarKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cNameAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cNameIDTerminalRuleCall_3_0 = (RuleCall)cNameAssignment_3.eContents().get(0);
+		private final Assignment cTypeAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cTypeDataTypesEnumRuleCall_4_0 = (RuleCall)cTypeAssignment_4.eContents().get(0);
+		private final Assignment cManyAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final Keyword cManyLeftSquareBracketRightSquareBracketKeyword_5_0 = (Keyword)cManyAssignment_5.eContents().get(0);
 		
 		//DataType:
-		//	"var" name=ID type=DataTypes many?="[]"? "{" (annotations+=FetureAnnotation annotations+=FetureAnnotation*)? "}";
+		//	{DataType} ("@" annotations+=FetureAnnotation ("@" annotations+=FetureAnnotation)*)? "var" name=ID type=DataTypes
+		//	many?="[]"?;
 		public ParserRule getRule() { return rule; }
 
-		//"var" name=ID type=DataTypes many?="[]"? "{" (annotations+=FetureAnnotation annotations+=FetureAnnotation*)? "}"
+		//{DataType} ("@" annotations+=FetureAnnotation ("@" annotations+=FetureAnnotation)*)? "var" name=ID type=DataTypes
+		//many?="[]"?
 		public Group getGroup() { return cGroup; }
 
-		//"var"
-		public Keyword getVarKeyword_0() { return cVarKeyword_0; }
+		//{DataType}
+		public Action getDataTypeAction_0() { return cDataTypeAction_0; }
 
-		//name=ID
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+		//("@" annotations+=FetureAnnotation ("@" annotations+=FetureAnnotation)*)?
+		public Group getGroup_1() { return cGroup_1; }
 
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
-
-		//type=DataTypes
-		public Assignment getTypeAssignment_2() { return cTypeAssignment_2; }
-
-		//DataTypes
-		public RuleCall getTypeDataTypesEnumRuleCall_2_0() { return cTypeDataTypesEnumRuleCall_2_0; }
-
-		//many?="[]"?
-		public Assignment getManyAssignment_3() { return cManyAssignment_3; }
-
-		//"[]"
-		public Keyword getManyLeftSquareBracketRightSquareBracketKeyword_3_0() { return cManyLeftSquareBracketRightSquareBracketKeyword_3_0; }
-
-		//"{"
-		public Keyword getLeftCurlyBracketKeyword_4() { return cLeftCurlyBracketKeyword_4; }
-
-		//(annotations+=FetureAnnotation annotations+=FetureAnnotation*)?
-		public Group getGroup_5() { return cGroup_5; }
+		//"@"
+		public Keyword getCommercialAtKeyword_1_0() { return cCommercialAtKeyword_1_0; }
 
 		//annotations+=FetureAnnotation
-		public Assignment getAnnotationsAssignment_5_0() { return cAnnotationsAssignment_5_0; }
+		public Assignment getAnnotationsAssignment_1_1() { return cAnnotationsAssignment_1_1; }
 
 		//FetureAnnotation
-		public RuleCall getAnnotationsFetureAnnotationEnumRuleCall_5_0_0() { return cAnnotationsFetureAnnotationEnumRuleCall_5_0_0; }
+		public RuleCall getAnnotationsFetureAnnotationEnumRuleCall_1_1_0() { return cAnnotationsFetureAnnotationEnumRuleCall_1_1_0; }
 
-		//annotations+=FetureAnnotation*
-		public Assignment getAnnotationsAssignment_5_1() { return cAnnotationsAssignment_5_1; }
+		//("@" annotations+=FetureAnnotation)*
+		public Group getGroup_1_2() { return cGroup_1_2; }
+
+		//"@"
+		public Keyword getCommercialAtKeyword_1_2_0() { return cCommercialAtKeyword_1_2_0; }
+
+		//annotations+=FetureAnnotation
+		public Assignment getAnnotationsAssignment_1_2_1() { return cAnnotationsAssignment_1_2_1; }
 
 		//FetureAnnotation
-		public RuleCall getAnnotationsFetureAnnotationEnumRuleCall_5_1_0() { return cAnnotationsFetureAnnotationEnumRuleCall_5_1_0; }
+		public RuleCall getAnnotationsFetureAnnotationEnumRuleCall_1_2_1_0() { return cAnnotationsFetureAnnotationEnumRuleCall_1_2_1_0; }
 
-		//"}"
-		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
+		//"var"
+		public Keyword getVarKeyword_2() { return cVarKeyword_2; }
+
+		//name=ID
+		public Assignment getNameAssignment_3() { return cNameAssignment_3; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_3_0() { return cNameIDTerminalRuleCall_3_0; }
+
+		//type=DataTypes
+		public Assignment getTypeAssignment_4() { return cTypeAssignment_4; }
+
+		//DataTypes
+		public RuleCall getTypeDataTypesEnumRuleCall_4_0() { return cTypeDataTypesEnumRuleCall_4_0; }
+
+		//many?="[]"?
+		public Assignment getManyAssignment_5() { return cManyAssignment_5; }
+
+		//"[]"
+		public Keyword getManyLeftSquareBracketRightSquareBracketKeyword_5_0() { return cManyLeftSquareBracketRightSquareBracketKeyword_5_0; }
 	}
 	
 	
@@ -544,8 +575,8 @@ public class HermesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Entity:
-	//	{Entity} "Entity" name=ID (":" superEntity=[Entity])? "{" (annotations+=EntityAnnotation
-	//	annotations+=EntityAnnotation*)? (ownedFeature+=Feature ownedFeature+=Feature*)? "}";
+	//	{Entity} ("@" annotations+=EntityAnnotation ("@" annotations+=EntityAnnotation)*)? "Entity" name=ID (":"
+	//	superEntity=[Entity])? "{" (ownedFeature+=Feature ownedFeature+=Feature*)? "}";
 	public EntityElements getEntityAccess() {
 		return (pEntity != null) ? pEntity : (pEntity = new EntityElements());
 	}
@@ -575,7 +606,8 @@ public class HermesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Ref:
-	//	"var" name=ID refTo=[Entity] many?="[]"? "{" (annotations+=FetureAnnotation annotations+=FetureAnnotation*)? "}";
+	//	{Ref} ("@" annotations+=FetureAnnotation ("@" annotations+=FetureAnnotation)*)? "var" name=ID refTo=[Entity]
+	//	many?="[]"?;
 	public RefElements getRefAccess() {
 		return (pRef != null) ? pRef : (pRef = new RefElements());
 	}
@@ -585,7 +617,8 @@ public class HermesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//DataType:
-	//	"var" name=ID type=DataTypes many?="[]"? "{" (annotations+=FetureAnnotation annotations+=FetureAnnotation*)? "}";
+	//	{DataType} ("@" annotations+=FetureAnnotation ("@" annotations+=FetureAnnotation)*)? "var" name=ID type=DataTypes
+	//	many?="[]"?;
 	public DataTypeElements getDataTypeAccess() {
 		return (pDataType != null) ? pDataType : (pDataType = new DataTypeElements());
 	}
