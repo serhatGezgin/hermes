@@ -58,4 +58,4 @@ DataType returns DataType:
 	;
 
 enum DataTypes returns DataTypes:
-				String = 'String' | Integer = 'Integer' | Boolean = 'Boolean' | Long = 'Long' | Double = 'Double' | Object = 'Object';
+	String = 'String' | Integer = 'Integer' | Boolean = 'Boolean' | Long = 'Long' | Double = 'Double' | Object = 'Object';
