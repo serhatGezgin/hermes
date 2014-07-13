@@ -12,11 +12,15 @@ class EntityGenerator extends BaseGenerator {
 	}
 
 	def filename(Entity e) {
-		e.packageNameList.join('/') + '/' + e.name + '.java'
+		val p = e.packageNameList
+		p.add('model')
+		p.join('/') + '/' + e.name + '.java'
 	}
 
 	def packagename(Entity e) {
-		e.packageNameList.join('.')
+		val p = e.packageNameList
+		p.add('model')
+		p.join('.')
 	}
 
 	def private packageNameList(Entity e) {
