@@ -19,16 +19,25 @@ class EntityControllerGenerator extends BaseGenerator {
 				«objectifyRegistryQName».register();
 			}
 			
-			«e.insertMethod»
+			«e.methodInsert»
+			
+			«e.methodGet»
+			
+			«e.methodDelete»
 		}
 	'''
 
-	def insertMethod(Entity e) '''
-		public static «e.qualifiedname» insert(«e.insertParams») throws Exception{
+	def methodInsert(Entity e) '''
+		public static «e.qualifiedname» insert(«e.insertParams»){
+			/* Create new instance. */
 			«e.qualifiedname» «e.variablename» = new «e.qualifiedname»();
+			
+			/* Set properties. */
 			«FOR f : e.ownedFeature.filter(DataType)»
 				«e.variablename».«f.settername»(«f.name»);
 			«ENDFOR»
+			
+			/* Save object. */
 			com.googlecode.objectify.ObjectifyService.ofy().save().entity(«e.variablename»).now();
 			
 			return «e.variablename»;
@@ -44,4 +53,20 @@ class EntityControllerGenerator extends BaseGenerator {
 
 		sb.join(',')
 	}
+
+	def methodGet(Entity e) '''
+		public static «e.qualifiedname» get(Long id) {
+			if (id == null) {
+				return null;
+			}
+		
+			return com.googlecode.objectify.ObjectifyService.ofy().load().type(«e.qualifiedname».class).id(id).now();
+		}
+	'''
+
+	def methodDelete(Entity e) '''
+		public void delete(Long id) {
+			com.googlecode.objectify.ObjectifyService.ofy().delete().type(«e.qualifiedname».class).id(id).now();
+		}
+	'''
 }

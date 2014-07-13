@@ -51,15 +51,27 @@ public class EntityControllerGenerator extends BaseGenerator {
     _builder.append("\t");
     _builder.newLine();
     _builder.append("\t");
-    CharSequence _insertMethod = this.insertMethod(e);
-    _builder.append(_insertMethod, "\t");
+    CharSequence _methodInsert = this.methodInsert(e);
+    _builder.append(_methodInsert, "\t");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t");
+    _builder.newLine();
+    _builder.append("\t");
+    CharSequence _methodGet = this.methodGet(e);
+    _builder.append(_methodGet, "\t");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t");
+    _builder.newLine();
+    _builder.append("\t");
+    CharSequence _methodDelete = this.methodDelete(e);
+    _builder.append(_methodDelete, "\t");
     _builder.newLineIfNotEmpty();
     _builder.append("}");
     _builder.newLine();
     return _builder;
   }
   
-  public CharSequence insertMethod(final Entity e) {
+  public CharSequence methodInsert(final Entity e) {
     StringConcatenation _builder = new StringConcatenation();
     _builder.append("public static ");
     String _qualifiedname = this.qualifiedname(e);
@@ -67,8 +79,11 @@ public class EntityControllerGenerator extends BaseGenerator {
     _builder.append(" insert(");
     String _insertParams = this.insertParams(e);
     _builder.append(_insertParams, "");
-    _builder.append(") throws Exception{");
+    _builder.append("){");
     _builder.newLineIfNotEmpty();
+    _builder.append("\t");
+    _builder.append("/* Create new instance. */");
+    _builder.newLine();
     _builder.append("\t");
     String _qualifiedname_1 = this.qualifiedname(e);
     _builder.append(_qualifiedname_1, "\t");
@@ -80,6 +95,11 @@ public class EntityControllerGenerator extends BaseGenerator {
     _builder.append(_qualifiedname_2, "\t");
     _builder.append("();");
     _builder.newLineIfNotEmpty();
+    _builder.append("\t");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("/* Set properties. */");
+    _builder.newLine();
     {
       EList<Feature> _ownedFeature = e.getOwnedFeature();
       Iterable<DataType> _filter = Iterables.<DataType>filter(_ownedFeature, DataType.class);
@@ -97,6 +117,11 @@ public class EntityControllerGenerator extends BaseGenerator {
         _builder.newLineIfNotEmpty();
       }
     }
+    _builder.append("\t");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("/* Save object. */");
+    _builder.newLine();
     _builder.append("\t");
     _builder.append("com.googlecode.objectify.ObjectifyService.ofy().save().entity(");
     String _variablename_2 = this.variablename(e);
@@ -135,5 +160,48 @@ public class EntityControllerGenerator extends BaseGenerator {
       _xblockexpression = IterableExtensions.join(sb, ",");
     }
     return _xblockexpression;
+  }
+  
+  public CharSequence methodGet(final Entity e) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("public static ");
+    String _qualifiedname = this.qualifiedname(e);
+    _builder.append(_qualifiedname, "");
+    _builder.append(" get(Long id) {");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t");
+    _builder.append("if (id == null) {");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("return null;");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("}");
+    _builder.newLine();
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("return com.googlecode.objectify.ObjectifyService.ofy().load().type(");
+    String _qualifiedname_1 = this.qualifiedname(e);
+    _builder.append(_qualifiedname_1, "\t");
+    _builder.append(".class).id(id).now();");
+    _builder.newLineIfNotEmpty();
+    _builder.append("}");
+    _builder.newLine();
+    return _builder;
+  }
+  
+  public CharSequence methodDelete(final Entity e) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("public void delete(Long id) {");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("com.googlecode.objectify.ObjectifyService.ofy().delete().type(");
+    String _qualifiedname = this.qualifiedname(e);
+    _builder.append(_qualifiedname, "\t");
+    _builder.append(".class).id(id).now();");
+    _builder.newLineIfNotEmpty();
+    _builder.append("}");
+    _builder.newLine();
+    return _builder;
   }
 }
