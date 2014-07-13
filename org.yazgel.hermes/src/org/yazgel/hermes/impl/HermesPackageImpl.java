@@ -283,17 +283,8 @@ public class HermesPackageImpl extends EPackageImpl implements HermesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getRef_Source() {
-		return (EReference)refEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getRef_RefTo() {
-		return (EReference)refEClass.getEStructuralFeatures().get(1);
+		return (EReference)refEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -387,7 +378,6 @@ public class HermesPackageImpl extends EPackageImpl implements HermesPackage {
 		createEAttribute(featureEClass, FEATURE__ANNOTATIONS);
 
 		refEClass = createEClass(REF);
-		createEReference(refEClass, REF__SOURCE);
 		createEReference(refEClass, REF__REF_TO);
 
 		dataTypeEClass = createEClass(DATA_TYPE);
@@ -452,7 +442,6 @@ public class HermesPackageImpl extends EPackageImpl implements HermesPackage {
 		initEAttribute(getFeature_Annotations(), this.getFetureAnnotation(), "annotations", null, 0, -1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(refEClass, Ref.class, "Ref", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRef_Source(), this.getEntity(), null, "source", null, 1, 1, Ref.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRef_RefTo(), this.getEntity(), null, "refTo", null, 1, 1, Ref.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dataTypeEClass, DataType.class, "DataType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

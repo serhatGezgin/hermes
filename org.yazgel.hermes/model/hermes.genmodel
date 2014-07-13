@@ -42,7 +42,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hermes.ecore#//Feature/annotations"/>
     </genClasses>
     <genClasses ecoreClass="hermes.ecore#//Ref">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hermes.ecore#//Ref/source"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hermes.ecore#//Ref/refTo"/>
     </genClasses>
     <genClasses ecoreClass="hermes.ecore#//DataType">

@@ -315,22 +315,13 @@ public interface HermesPackage extends EPackage {
 	int REF__ANNOTATIONS = FEATURE__ANNOTATIONS;
 
 	/**
-	 * The feature id for the '<em><b>Source</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REF__SOURCE = FEATURE_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Ref To</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REF__REF_TO = FEATURE_FEATURE_COUNT + 1;
+	int REF__REF_TO = FEATURE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Ref</em>' class.
@@ -339,7 +330,7 @@ public interface HermesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REF_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 2;
+	int REF_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link org.yazgel.hermes.impl.DataTypeImpl <em>Data Type</em>}' class.
@@ -586,17 +577,6 @@ public interface HermesPackage extends EPackage {
 	EClass getRef();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.yazgel.hermes.Ref#getSource <em>Source</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Source</em>'.
-	 * @see org.yazgel.hermes.Ref#getSource()
-	 * @see #getRef()
-	 * @generated
-	 */
-	EReference getRef_Source();
-
-	/**
 	 * Returns the meta object for the reference '{@link org.yazgel.hermes.Ref#getRefTo <em>Ref To</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -801,14 +781,6 @@ public interface HermesPackage extends EPackage {
 		 * @generated
 		 */
 		EClass REF = eINSTANCE.getRef();
-
-		/**
-		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference REF__SOURCE = eINSTANCE.getRef_Source();
 
 		/**
 		 * The meta object literal for the '<em><b>Ref To</b></em>' reference feature.

@@ -20,7 +20,6 @@ import org.yazgel.hermes.Ref;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.yazgel.hermes.impl.RefImpl#getSource <em>Source</em>}</li>
  *   <li>{@link org.yazgel.hermes.impl.RefImpl#getRefTo <em>Ref To</em>}</li>
  * </ul>
  * </p>
@@ -28,16 +27,6 @@ import org.yazgel.hermes.Ref;
  * @generated
  */
 public class RefImpl extends FeatureImpl implements Ref {
-	/**
-	 * The cached value of the '{@link #getSource() <em>Source</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSource()
-	 * @generated
-	 * @ordered
-	 */
-	protected Entity source;
-
 	/**
 	 * The cached value of the '{@link #getRefTo() <em>Ref To</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -65,44 +54,6 @@ public class RefImpl extends FeatureImpl implements Ref {
 	@Override
 	protected EClass eStaticClass() {
 		return HermesPackage.Literals.REF;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Entity getSource() {
-		if (source != null && source.eIsProxy()) {
-			InternalEObject oldSource = (InternalEObject)source;
-			source = (Entity)eResolveProxy(oldSource);
-			if (source != oldSource) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, HermesPackage.REF__SOURCE, oldSource, source));
-			}
-		}
-		return source;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Entity basicGetSource() {
-		return source;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setSource(Entity newSource) {
-		Entity oldSource = source;
-		source = newSource;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, HermesPackage.REF__SOURCE, oldSource, source));
 	}
 
 	/**
@@ -151,9 +102,6 @@ public class RefImpl extends FeatureImpl implements Ref {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case HermesPackage.REF__SOURCE:
-				if (resolve) return getSource();
-				return basicGetSource();
 			case HermesPackage.REF__REF_TO:
 				if (resolve) return getRefTo();
 				return basicGetRefTo();
@@ -169,9 +117,6 @@ public class RefImpl extends FeatureImpl implements Ref {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case HermesPackage.REF__SOURCE:
-				setSource((Entity)newValue);
-				return;
 			case HermesPackage.REF__REF_TO:
 				setRefTo((Entity)newValue);
 				return;
@@ -187,9 +132,6 @@ public class RefImpl extends FeatureImpl implements Ref {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case HermesPackage.REF__SOURCE:
-				setSource((Entity)null);
-				return;
 			case HermesPackage.REF__REF_TO:
 				setRefTo((Entity)null);
 				return;
@@ -205,8 +147,6 @@ public class RefImpl extends FeatureImpl implements Ref {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case HermesPackage.REF__SOURCE:
-				return source != null;
 			case HermesPackage.REF__REF_TO:
 				return refTo != null;
 		}

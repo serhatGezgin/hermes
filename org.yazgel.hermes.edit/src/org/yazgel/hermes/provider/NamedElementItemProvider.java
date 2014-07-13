@@ -165,7 +165,7 @@ public class NamedElementItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return HermesEditPlugin.INSTANCE;
+		return EntityEditPlugin.INSTANCE;
 	}
 
 }

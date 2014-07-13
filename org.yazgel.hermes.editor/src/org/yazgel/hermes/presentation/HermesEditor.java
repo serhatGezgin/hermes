@@ -530,7 +530,7 @@ public class HermesEditor
 					}
 				}
 				catch (CoreException exception) {
-					HermesEditorPlugin.INSTANCE.log(exception);
+					EntityEditorPlugin.INSTANCE.log(exception);
 				}
 			}
 		};
@@ -646,7 +646,7 @@ public class HermesEditor
 					showTabs();
 				}
 				catch (PartInitException exception) {
-					HermesEditorPlugin.INSTANCE.log(exception);
+					EntityEditorPlugin.INSTANCE.log(exception);
 				}
 			}
 
@@ -657,7 +657,7 @@ public class HermesEditor
 						markerHelper.createMarkers(diagnostic);
 					}
 					catch (CoreException exception) {
-						HermesEditorPlugin.INSTANCE.log(exception);
+						EntityEditorPlugin.INSTANCE.log(exception);
 					}
 				}
 			}
@@ -1522,7 +1522,7 @@ public class HermesEditor
 		catch (Exception exception) {
 			// Something went wrong that shouldn't.
 			//
-			HermesEditorPlugin.INSTANCE.log(exception);
+			EntityEditorPlugin.INSTANCE.log(exception);
 		}
 		updateProblemIndication = true;
 		updateProblemIndication();
@@ -1726,7 +1726,7 @@ public class HermesEditor
 	 * @generated
 	 */
 	private static String getString(String key) {
-		return HermesEditorPlugin.INSTANCE.getString(key);
+		return EntityEditorPlugin.INSTANCE.getString(key);
 	}
 
 	/**
@@ -1736,7 +1736,7 @@ public class HermesEditor
 	 * @generated
 	 */
 	private static String getString(String key, Object s1) {
-		return HermesEditorPlugin.INSTANCE.getString(key, new Object [] { s1 });
+		return EntityEditorPlugin.INSTANCE.getString(key, new Object [] { s1 });
 	}
 
 	/**

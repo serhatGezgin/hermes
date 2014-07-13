@@ -41,7 +41,6 @@ Ref returns Ref:
 	'{'
 		('description' description=STRING)?
 		(annotations+=FetureAnnotation (annotations+=FetureAnnotation)*)?	
-		'source' '=' source=[Entity|ID]
 	'}';
 
 DataType returns DataType:
