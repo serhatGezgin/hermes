@@ -74,7 +74,6 @@ public class HermesParser extends AbstractContentAssistParser {
 					put(grammarAccess.getRefAccess().getDescriptionAssignment_5_1(), "rule__Ref__DescriptionAssignment_5_1");
 					put(grammarAccess.getRefAccess().getAnnotationsAssignment_6_0(), "rule__Ref__AnnotationsAssignment_6_0");
 					put(grammarAccess.getRefAccess().getAnnotationsAssignment_6_1(), "rule__Ref__AnnotationsAssignment_6_1");
-					put(grammarAccess.getRefAccess().getSourceAssignment_9(), "rule__Ref__SourceAssignment_9");
 					put(grammarAccess.getDataTypeAccess().getNameAssignment_1(), "rule__DataType__NameAssignment_1");
 					put(grammarAccess.getDataTypeAccess().getTypeAssignment_2(), "rule__DataType__TypeAssignment_2");
 					put(grammarAccess.getDataTypeAccess().getManyAssignment_3(), "rule__DataType__ManyAssignment_3");

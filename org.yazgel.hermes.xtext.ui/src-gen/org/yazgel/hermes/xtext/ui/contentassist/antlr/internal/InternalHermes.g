@@ -1589,7 +1589,6 @@ rule__Ref__Group__7
     }
 :
 	rule__Ref__Group__7__Impl
-	rule__Ref__Group__8
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -1601,113 +1600,17 @@ rule__Ref__Group__7__Impl
     }
 :
 (
-{ before(grammarAccess.getRefAccess().getSourceKeyword_7()); }
-
-	'source' 
-
-{ after(grammarAccess.getRefAccess().getSourceKeyword_7()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-rule__Ref__Group__8
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-	rule__Ref__Group__8__Impl
-	rule__Ref__Group__9
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Ref__Group__8__Impl
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getRefAccess().getEqualsSignKeyword_8()); }
-
-	'=' 
-
-{ after(grammarAccess.getRefAccess().getEqualsSignKeyword_8()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-rule__Ref__Group__9
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-	rule__Ref__Group__9__Impl
-	rule__Ref__Group__10
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Ref__Group__9__Impl
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getRefAccess().getSourceAssignment_9()); }
-(rule__Ref__SourceAssignment_9)
-{ after(grammarAccess.getRefAccess().getSourceAssignment_9()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-rule__Ref__Group__10
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-	rule__Ref__Group__10__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Ref__Group__10__Impl
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getRefAccess().getRightCurlyBracketKeyword_10()); }
+{ before(grammarAccess.getRefAccess().getRightCurlyBracketKeyword_7()); }
 
 	'}' 
 
-{ after(grammarAccess.getRefAccess().getRightCurlyBracketKeyword_10()); }
+{ after(grammarAccess.getRefAccess().getRightCurlyBracketKeyword_7()); }
 )
 
 ;
 finally {
 	restoreStackSize(stackSize);
 }
-
-
-
-
-
-
 
 
 
@@ -2522,25 +2425,6 @@ rule__Ref__AnnotationsAssignment_6_1
 (
 { before(grammarAccess.getRefAccess().getAnnotationsFetureAnnotationEnumRuleCall_6_1_0()); }
 	ruleFetureAnnotation{ after(grammarAccess.getRefAccess().getAnnotationsFetureAnnotationEnumRuleCall_6_1_0()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Ref__SourceAssignment_9
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getRefAccess().getSourceEntityCrossReference_9_0()); }
-(
-{ before(grammarAccess.getRefAccess().getSourceEntityIDTerminalRuleCall_9_0_1()); }
-	RULE_ID{ after(grammarAccess.getRefAccess().getSourceEntityIDTerminalRuleCall_9_0_1()); }
-)
-{ after(grammarAccess.getRefAccess().getSourceEntityCrossReference_9_0()); }
 )
 
 ;

@@ -553,30 +553,9 @@ ruleRef returns [EObject current=null]
 	    }
 
 )
-)*)?	otherlv_9='source' 
+)*)?	otherlv_9='}' 
     {
-    	newLeafNode(otherlv_9, grammarAccess.getRefAccess().getSourceKeyword_7());
-    }
-	otherlv_10='=' 
-    {
-    	newLeafNode(otherlv_10, grammarAccess.getRefAccess().getEqualsSignKeyword_8());
-    }
-(
-(
-		{
-			if ($current==null) {
-	            $current = createModelElement(grammarAccess.getRefRule());
-	        }
-        }
-	otherlv_11=RULE_ID
-	{
-		newLeafNode(otherlv_11, grammarAccess.getRefAccess().getSourceEntityCrossReference_9_0()); 
-	}
-
-)
-)	otherlv_12='}' 
-    {
-    	newLeafNode(otherlv_12, grammarAccess.getRefAccess().getRightCurlyBracketKeyword_10());
+    	newLeafNode(otherlv_9, grammarAccess.getRefAccess().getRightCurlyBracketKeyword_7());
     }
 )
 ;

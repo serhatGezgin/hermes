@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalHermesParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Cache'", "'Index'", "'Id'", "'Load'", "'Ignore'", "'String'", "'Integer'", "'Boolean'", "'Long'", "'Double'", "'Object'", "'Package'", "'{'", "'}'", "'description'", "'Entity'", "':'", "'='", "'Ref'", "'source'", "'DataType'", "'[]'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Cache'", "'Index'", "'Id'", "'Load'", "'Ignore'", "'String'", "'Integer'", "'Boolean'", "'Long'", "'Double'", "'Object'", "'Package'", "'{'", "'}'", "'description'", "'Entity'", "':'", "'='", "'Ref'", "'DataType'", "'[]'"
     };
     public static final int RULE_STRING=5;
     public static final int RULE_SL_COMMENT=8;
@@ -38,7 +38,6 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
     public static final int EOF=-1;
     public static final int T__30=30;
     public static final int T__31=31;
-    public static final int T__32=32;
     public static final int RULE_ID=4;
     public static final int RULE_WS=9;
     public static final int RULE_ANY_OTHER=10;
@@ -628,7 +627,7 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
             if ( (LA1_0==29) ) {
                 alt1=1;
             }
-            else if ( (LA1_0==31) ) {
+            else if ( (LA1_0==30) ) {
                 alt1=2;
             }
             else {
@@ -2866,7 +2865,7 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
             int alt12=2;
             int LA12_0 = input.LA(1);
 
-            if ( (LA12_0==29||LA12_0==31) ) {
+            if ( ((LA12_0>=29 && LA12_0<=30)) ) {
                 alt12=1;
             }
             switch (alt12) {
@@ -3682,7 +3681,7 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
                 int alt14=2;
                 int LA14_0 = input.LA(1);
 
-                if ( (LA14_0==29||LA14_0==31) ) {
+                if ( ((LA14_0>=29 && LA14_0<=30)) ) {
                     alt14=1;
                 }
 
@@ -4028,7 +4027,7 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
             int alt15=2;
             int LA15_0 = input.LA(1);
 
-            if ( (LA15_0==32) ) {
+            if ( (LA15_0==31) ) {
                 alt15=1;
             }
             switch (alt15) {
@@ -4336,22 +4335,17 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Ref__Group__7"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1586:1: rule__Ref__Group__7 : rule__Ref__Group__7__Impl rule__Ref__Group__8 ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1586:1: rule__Ref__Group__7 : rule__Ref__Group__7__Impl ;
     public final void rule__Ref__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1590:1: ( rule__Ref__Group__7__Impl rule__Ref__Group__8 )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1591:2: rule__Ref__Group__7__Impl rule__Ref__Group__8
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1590:1: ( rule__Ref__Group__7__Impl )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1591:2: rule__Ref__Group__7__Impl
             {
             pushFollow(FollowSets000.FOLLOW_rule__Ref__Group__7__Impl_in_rule__Ref__Group__73185);
             rule__Ref__Group__7__Impl();
-
-            state._fsp--;
-
-            pushFollow(FollowSets000.FOLLOW_rule__Ref__Group__8_in_rule__Ref__Group__73188);
-            rule__Ref__Group__8();
 
             state._fsp--;
 
@@ -4374,21 +4368,21 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Ref__Group__7__Impl"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1598:1: rule__Ref__Group__7__Impl : ( 'source' ) ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1597:1: rule__Ref__Group__7__Impl : ( '}' ) ;
     public final void rule__Ref__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1602:1: ( ( 'source' ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1603:1: ( 'source' )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1601:1: ( ( '}' ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1602:1: ( '}' )
             {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1603:1: ( 'source' )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1604:1: 'source'
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1602:1: ( '}' )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1603:1: '}'
             {
-             before(grammarAccess.getRefAccess().getSourceKeyword_7()); 
-            match(input,30,FollowSets000.FOLLOW_30_in_rule__Ref__Group__7__Impl3216); 
-             after(grammarAccess.getRefAccess().getSourceKeyword_7()); 
+             before(grammarAccess.getRefAccess().getRightCurlyBracketKeyword_7()); 
+            match(input,24,FollowSets000.FOLLOW_24_in_rule__Ref__Group__7__Impl3213); 
+             after(grammarAccess.getRefAccess().getRightCurlyBracketKeyword_7()); 
 
             }
 
@@ -4410,252 +4404,22 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Ref__Group__7__Impl"
 
 
-    // $ANTLR start "rule__Ref__Group__8"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1617:1: rule__Ref__Group__8 : rule__Ref__Group__8__Impl rule__Ref__Group__9 ;
-    public final void rule__Ref__Group__8() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1621:1: ( rule__Ref__Group__8__Impl rule__Ref__Group__9 )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1622:2: rule__Ref__Group__8__Impl rule__Ref__Group__9
-            {
-            pushFollow(FollowSets000.FOLLOW_rule__Ref__Group__8__Impl_in_rule__Ref__Group__83247);
-            rule__Ref__Group__8__Impl();
-
-            state._fsp--;
-
-            pushFollow(FollowSets000.FOLLOW_rule__Ref__Group__9_in_rule__Ref__Group__83250);
-            rule__Ref__Group__9();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Ref__Group__8"
-
-
-    // $ANTLR start "rule__Ref__Group__8__Impl"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1629:1: rule__Ref__Group__8__Impl : ( '=' ) ;
-    public final void rule__Ref__Group__8__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1633:1: ( ( '=' ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1634:1: ( '=' )
-            {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1634:1: ( '=' )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1635:1: '='
-            {
-             before(grammarAccess.getRefAccess().getEqualsSignKeyword_8()); 
-            match(input,28,FollowSets000.FOLLOW_28_in_rule__Ref__Group__8__Impl3278); 
-             after(grammarAccess.getRefAccess().getEqualsSignKeyword_8()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Ref__Group__8__Impl"
-
-
-    // $ANTLR start "rule__Ref__Group__9"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1648:1: rule__Ref__Group__9 : rule__Ref__Group__9__Impl rule__Ref__Group__10 ;
-    public final void rule__Ref__Group__9() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1652:1: ( rule__Ref__Group__9__Impl rule__Ref__Group__10 )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1653:2: rule__Ref__Group__9__Impl rule__Ref__Group__10
-            {
-            pushFollow(FollowSets000.FOLLOW_rule__Ref__Group__9__Impl_in_rule__Ref__Group__93309);
-            rule__Ref__Group__9__Impl();
-
-            state._fsp--;
-
-            pushFollow(FollowSets000.FOLLOW_rule__Ref__Group__10_in_rule__Ref__Group__93312);
-            rule__Ref__Group__10();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Ref__Group__9"
-
-
-    // $ANTLR start "rule__Ref__Group__9__Impl"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1660:1: rule__Ref__Group__9__Impl : ( ( rule__Ref__SourceAssignment_9 ) ) ;
-    public final void rule__Ref__Group__9__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1664:1: ( ( ( rule__Ref__SourceAssignment_9 ) ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1665:1: ( ( rule__Ref__SourceAssignment_9 ) )
-            {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1665:1: ( ( rule__Ref__SourceAssignment_9 ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1666:1: ( rule__Ref__SourceAssignment_9 )
-            {
-             before(grammarAccess.getRefAccess().getSourceAssignment_9()); 
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1667:1: ( rule__Ref__SourceAssignment_9 )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1667:2: rule__Ref__SourceAssignment_9
-            {
-            pushFollow(FollowSets000.FOLLOW_rule__Ref__SourceAssignment_9_in_rule__Ref__Group__9__Impl3339);
-            rule__Ref__SourceAssignment_9();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getRefAccess().getSourceAssignment_9()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Ref__Group__9__Impl"
-
-
-    // $ANTLR start "rule__Ref__Group__10"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1677:1: rule__Ref__Group__10 : rule__Ref__Group__10__Impl ;
-    public final void rule__Ref__Group__10() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1681:1: ( rule__Ref__Group__10__Impl )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1682:2: rule__Ref__Group__10__Impl
-            {
-            pushFollow(FollowSets000.FOLLOW_rule__Ref__Group__10__Impl_in_rule__Ref__Group__103369);
-            rule__Ref__Group__10__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Ref__Group__10"
-
-
-    // $ANTLR start "rule__Ref__Group__10__Impl"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1688:1: rule__Ref__Group__10__Impl : ( '}' ) ;
-    public final void rule__Ref__Group__10__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1692:1: ( ( '}' ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1693:1: ( '}' )
-            {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1693:1: ( '}' )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1694:1: '}'
-            {
-             before(grammarAccess.getRefAccess().getRightCurlyBracketKeyword_10()); 
-            match(input,24,FollowSets000.FOLLOW_24_in_rule__Ref__Group__10__Impl3397); 
-             after(grammarAccess.getRefAccess().getRightCurlyBracketKeyword_10()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Ref__Group__10__Impl"
-
-
     // $ANTLR start "rule__Ref__Group_5__0"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1729:1: rule__Ref__Group_5__0 : rule__Ref__Group_5__0__Impl rule__Ref__Group_5__1 ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1632:1: rule__Ref__Group_5__0 : rule__Ref__Group_5__0__Impl rule__Ref__Group_5__1 ;
     public final void rule__Ref__Group_5__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1733:1: ( rule__Ref__Group_5__0__Impl rule__Ref__Group_5__1 )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1734:2: rule__Ref__Group_5__0__Impl rule__Ref__Group_5__1
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1636:1: ( rule__Ref__Group_5__0__Impl rule__Ref__Group_5__1 )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1637:2: rule__Ref__Group_5__0__Impl rule__Ref__Group_5__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Ref__Group_5__0__Impl_in_rule__Ref__Group_5__03450);
+            pushFollow(FollowSets000.FOLLOW_rule__Ref__Group_5__0__Impl_in_rule__Ref__Group_5__03260);
             rule__Ref__Group_5__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Ref__Group_5__1_in_rule__Ref__Group_5__03453);
+            pushFollow(FollowSets000.FOLLOW_rule__Ref__Group_5__1_in_rule__Ref__Group_5__03263);
             rule__Ref__Group_5__1();
 
             state._fsp--;
@@ -4679,20 +4443,20 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Ref__Group_5__0__Impl"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1741:1: rule__Ref__Group_5__0__Impl : ( 'description' ) ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1644:1: rule__Ref__Group_5__0__Impl : ( 'description' ) ;
     public final void rule__Ref__Group_5__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1745:1: ( ( 'description' ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1746:1: ( 'description' )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1648:1: ( ( 'description' ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1649:1: ( 'description' )
             {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1746:1: ( 'description' )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1747:1: 'description'
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1649:1: ( 'description' )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1650:1: 'description'
             {
              before(grammarAccess.getRefAccess().getDescriptionKeyword_5_0()); 
-            match(input,25,FollowSets000.FOLLOW_25_in_rule__Ref__Group_5__0__Impl3481); 
+            match(input,25,FollowSets000.FOLLOW_25_in_rule__Ref__Group_5__0__Impl3291); 
              after(grammarAccess.getRefAccess().getDescriptionKeyword_5_0()); 
 
             }
@@ -4716,16 +4480,16 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Ref__Group_5__1"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1760:1: rule__Ref__Group_5__1 : rule__Ref__Group_5__1__Impl ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1663:1: rule__Ref__Group_5__1 : rule__Ref__Group_5__1__Impl ;
     public final void rule__Ref__Group_5__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1764:1: ( rule__Ref__Group_5__1__Impl )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1765:2: rule__Ref__Group_5__1__Impl
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1667:1: ( rule__Ref__Group_5__1__Impl )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1668:2: rule__Ref__Group_5__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Ref__Group_5__1__Impl_in_rule__Ref__Group_5__13512);
+            pushFollow(FollowSets000.FOLLOW_rule__Ref__Group_5__1__Impl_in_rule__Ref__Group_5__13322);
             rule__Ref__Group_5__1__Impl();
 
             state._fsp--;
@@ -4749,23 +4513,23 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Ref__Group_5__1__Impl"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1771:1: rule__Ref__Group_5__1__Impl : ( ( rule__Ref__DescriptionAssignment_5_1 ) ) ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1674:1: rule__Ref__Group_5__1__Impl : ( ( rule__Ref__DescriptionAssignment_5_1 ) ) ;
     public final void rule__Ref__Group_5__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1775:1: ( ( ( rule__Ref__DescriptionAssignment_5_1 ) ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1776:1: ( ( rule__Ref__DescriptionAssignment_5_1 ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1678:1: ( ( ( rule__Ref__DescriptionAssignment_5_1 ) ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1679:1: ( ( rule__Ref__DescriptionAssignment_5_1 ) )
             {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1776:1: ( ( rule__Ref__DescriptionAssignment_5_1 ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1777:1: ( rule__Ref__DescriptionAssignment_5_1 )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1679:1: ( ( rule__Ref__DescriptionAssignment_5_1 ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1680:1: ( rule__Ref__DescriptionAssignment_5_1 )
             {
              before(grammarAccess.getRefAccess().getDescriptionAssignment_5_1()); 
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1778:1: ( rule__Ref__DescriptionAssignment_5_1 )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1778:2: rule__Ref__DescriptionAssignment_5_1
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1681:1: ( rule__Ref__DescriptionAssignment_5_1 )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1681:2: rule__Ref__DescriptionAssignment_5_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Ref__DescriptionAssignment_5_1_in_rule__Ref__Group_5__1__Impl3539);
+            pushFollow(FollowSets000.FOLLOW_rule__Ref__DescriptionAssignment_5_1_in_rule__Ref__Group_5__1__Impl3349);
             rule__Ref__DescriptionAssignment_5_1();
 
             state._fsp--;
@@ -4796,21 +4560,21 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Ref__Group_6__0"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1792:1: rule__Ref__Group_6__0 : rule__Ref__Group_6__0__Impl rule__Ref__Group_6__1 ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1695:1: rule__Ref__Group_6__0 : rule__Ref__Group_6__0__Impl rule__Ref__Group_6__1 ;
     public final void rule__Ref__Group_6__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1796:1: ( rule__Ref__Group_6__0__Impl rule__Ref__Group_6__1 )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1797:2: rule__Ref__Group_6__0__Impl rule__Ref__Group_6__1
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1699:1: ( rule__Ref__Group_6__0__Impl rule__Ref__Group_6__1 )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1700:2: rule__Ref__Group_6__0__Impl rule__Ref__Group_6__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Ref__Group_6__0__Impl_in_rule__Ref__Group_6__03573);
+            pushFollow(FollowSets000.FOLLOW_rule__Ref__Group_6__0__Impl_in_rule__Ref__Group_6__03383);
             rule__Ref__Group_6__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Ref__Group_6__1_in_rule__Ref__Group_6__03576);
+            pushFollow(FollowSets000.FOLLOW_rule__Ref__Group_6__1_in_rule__Ref__Group_6__03386);
             rule__Ref__Group_6__1();
 
             state._fsp--;
@@ -4834,23 +4598,23 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Ref__Group_6__0__Impl"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1804:1: rule__Ref__Group_6__0__Impl : ( ( rule__Ref__AnnotationsAssignment_6_0 ) ) ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1707:1: rule__Ref__Group_6__0__Impl : ( ( rule__Ref__AnnotationsAssignment_6_0 ) ) ;
     public final void rule__Ref__Group_6__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1808:1: ( ( ( rule__Ref__AnnotationsAssignment_6_0 ) ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1809:1: ( ( rule__Ref__AnnotationsAssignment_6_0 ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1711:1: ( ( ( rule__Ref__AnnotationsAssignment_6_0 ) ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1712:1: ( ( rule__Ref__AnnotationsAssignment_6_0 ) )
             {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1809:1: ( ( rule__Ref__AnnotationsAssignment_6_0 ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1810:1: ( rule__Ref__AnnotationsAssignment_6_0 )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1712:1: ( ( rule__Ref__AnnotationsAssignment_6_0 ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1713:1: ( rule__Ref__AnnotationsAssignment_6_0 )
             {
              before(grammarAccess.getRefAccess().getAnnotationsAssignment_6_0()); 
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1811:1: ( rule__Ref__AnnotationsAssignment_6_0 )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1811:2: rule__Ref__AnnotationsAssignment_6_0
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1714:1: ( rule__Ref__AnnotationsAssignment_6_0 )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1714:2: rule__Ref__AnnotationsAssignment_6_0
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Ref__AnnotationsAssignment_6_0_in_rule__Ref__Group_6__0__Impl3603);
+            pushFollow(FollowSets000.FOLLOW_rule__Ref__AnnotationsAssignment_6_0_in_rule__Ref__Group_6__0__Impl3413);
             rule__Ref__AnnotationsAssignment_6_0();
 
             state._fsp--;
@@ -4881,16 +4645,16 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Ref__Group_6__1"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1821:1: rule__Ref__Group_6__1 : rule__Ref__Group_6__1__Impl ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1724:1: rule__Ref__Group_6__1 : rule__Ref__Group_6__1__Impl ;
     public final void rule__Ref__Group_6__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1825:1: ( rule__Ref__Group_6__1__Impl )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1826:2: rule__Ref__Group_6__1__Impl
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1728:1: ( rule__Ref__Group_6__1__Impl )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1729:2: rule__Ref__Group_6__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Ref__Group_6__1__Impl_in_rule__Ref__Group_6__13633);
+            pushFollow(FollowSets000.FOLLOW_rule__Ref__Group_6__1__Impl_in_rule__Ref__Group_6__13443);
             rule__Ref__Group_6__1__Impl();
 
             state._fsp--;
@@ -4914,20 +4678,20 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Ref__Group_6__1__Impl"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1832:1: rule__Ref__Group_6__1__Impl : ( ( rule__Ref__AnnotationsAssignment_6_1 )* ) ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1735:1: rule__Ref__Group_6__1__Impl : ( ( rule__Ref__AnnotationsAssignment_6_1 )* ) ;
     public final void rule__Ref__Group_6__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1836:1: ( ( ( rule__Ref__AnnotationsAssignment_6_1 )* ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1837:1: ( ( rule__Ref__AnnotationsAssignment_6_1 )* )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1739:1: ( ( ( rule__Ref__AnnotationsAssignment_6_1 )* ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1740:1: ( ( rule__Ref__AnnotationsAssignment_6_1 )* )
             {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1837:1: ( ( rule__Ref__AnnotationsAssignment_6_1 )* )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1838:1: ( rule__Ref__AnnotationsAssignment_6_1 )*
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1740:1: ( ( rule__Ref__AnnotationsAssignment_6_1 )* )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1741:1: ( rule__Ref__AnnotationsAssignment_6_1 )*
             {
              before(grammarAccess.getRefAccess().getAnnotationsAssignment_6_1()); 
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1839:1: ( rule__Ref__AnnotationsAssignment_6_1 )*
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1742:1: ( rule__Ref__AnnotationsAssignment_6_1 )*
             loop18:
             do {
                 int alt18=2;
@@ -4940,9 +4704,9 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
                 switch (alt18) {
             	case 1 :
-            	    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1839:2: rule__Ref__AnnotationsAssignment_6_1
+            	    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1742:2: rule__Ref__AnnotationsAssignment_6_1
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_rule__Ref__AnnotationsAssignment_6_1_in_rule__Ref__Group_6__1__Impl3660);
+            	    pushFollow(FollowSets000.FOLLOW_rule__Ref__AnnotationsAssignment_6_1_in_rule__Ref__Group_6__1__Impl3470);
             	    rule__Ref__AnnotationsAssignment_6_1();
 
             	    state._fsp--;
@@ -4979,21 +4743,21 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DataType__Group__0"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1853:1: rule__DataType__Group__0 : rule__DataType__Group__0__Impl rule__DataType__Group__1 ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1756:1: rule__DataType__Group__0 : rule__DataType__Group__0__Impl rule__DataType__Group__1 ;
     public final void rule__DataType__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1857:1: ( rule__DataType__Group__0__Impl rule__DataType__Group__1 )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1858:2: rule__DataType__Group__0__Impl rule__DataType__Group__1
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1760:1: ( rule__DataType__Group__0__Impl rule__DataType__Group__1 )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1761:2: rule__DataType__Group__0__Impl rule__DataType__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__DataType__Group__0__Impl_in_rule__DataType__Group__03695);
+            pushFollow(FollowSets000.FOLLOW_rule__DataType__Group__0__Impl_in_rule__DataType__Group__03505);
             rule__DataType__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__DataType__Group__1_in_rule__DataType__Group__03698);
+            pushFollow(FollowSets000.FOLLOW_rule__DataType__Group__1_in_rule__DataType__Group__03508);
             rule__DataType__Group__1();
 
             state._fsp--;
@@ -5017,20 +4781,20 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DataType__Group__0__Impl"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1865:1: rule__DataType__Group__0__Impl : ( 'DataType' ) ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1768:1: rule__DataType__Group__0__Impl : ( 'DataType' ) ;
     public final void rule__DataType__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1869:1: ( ( 'DataType' ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1870:1: ( 'DataType' )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1772:1: ( ( 'DataType' ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1773:1: ( 'DataType' )
             {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1870:1: ( 'DataType' )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1871:1: 'DataType'
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1773:1: ( 'DataType' )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1774:1: 'DataType'
             {
              before(grammarAccess.getDataTypeAccess().getDataTypeKeyword_0()); 
-            match(input,31,FollowSets000.FOLLOW_31_in_rule__DataType__Group__0__Impl3726); 
+            match(input,30,FollowSets000.FOLLOW_30_in_rule__DataType__Group__0__Impl3536); 
              after(grammarAccess.getDataTypeAccess().getDataTypeKeyword_0()); 
 
             }
@@ -5054,21 +4818,21 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DataType__Group__1"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1884:1: rule__DataType__Group__1 : rule__DataType__Group__1__Impl rule__DataType__Group__2 ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1787:1: rule__DataType__Group__1 : rule__DataType__Group__1__Impl rule__DataType__Group__2 ;
     public final void rule__DataType__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1888:1: ( rule__DataType__Group__1__Impl rule__DataType__Group__2 )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1889:2: rule__DataType__Group__1__Impl rule__DataType__Group__2
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1791:1: ( rule__DataType__Group__1__Impl rule__DataType__Group__2 )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1792:2: rule__DataType__Group__1__Impl rule__DataType__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__DataType__Group__1__Impl_in_rule__DataType__Group__13757);
+            pushFollow(FollowSets000.FOLLOW_rule__DataType__Group__1__Impl_in_rule__DataType__Group__13567);
             rule__DataType__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__DataType__Group__2_in_rule__DataType__Group__13760);
+            pushFollow(FollowSets000.FOLLOW_rule__DataType__Group__2_in_rule__DataType__Group__13570);
             rule__DataType__Group__2();
 
             state._fsp--;
@@ -5092,23 +4856,23 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DataType__Group__1__Impl"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1896:1: rule__DataType__Group__1__Impl : ( ( rule__DataType__NameAssignment_1 ) ) ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1799:1: rule__DataType__Group__1__Impl : ( ( rule__DataType__NameAssignment_1 ) ) ;
     public final void rule__DataType__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1900:1: ( ( ( rule__DataType__NameAssignment_1 ) ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1901:1: ( ( rule__DataType__NameAssignment_1 ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1803:1: ( ( ( rule__DataType__NameAssignment_1 ) ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1804:1: ( ( rule__DataType__NameAssignment_1 ) )
             {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1901:1: ( ( rule__DataType__NameAssignment_1 ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1902:1: ( rule__DataType__NameAssignment_1 )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1804:1: ( ( rule__DataType__NameAssignment_1 ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1805:1: ( rule__DataType__NameAssignment_1 )
             {
              before(grammarAccess.getDataTypeAccess().getNameAssignment_1()); 
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1903:1: ( rule__DataType__NameAssignment_1 )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1903:2: rule__DataType__NameAssignment_1
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1806:1: ( rule__DataType__NameAssignment_1 )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1806:2: rule__DataType__NameAssignment_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__DataType__NameAssignment_1_in_rule__DataType__Group__1__Impl3787);
+            pushFollow(FollowSets000.FOLLOW_rule__DataType__NameAssignment_1_in_rule__DataType__Group__1__Impl3597);
             rule__DataType__NameAssignment_1();
 
             state._fsp--;
@@ -5139,21 +4903,21 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DataType__Group__2"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1913:1: rule__DataType__Group__2 : rule__DataType__Group__2__Impl rule__DataType__Group__3 ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1816:1: rule__DataType__Group__2 : rule__DataType__Group__2__Impl rule__DataType__Group__3 ;
     public final void rule__DataType__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1917:1: ( rule__DataType__Group__2__Impl rule__DataType__Group__3 )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1918:2: rule__DataType__Group__2__Impl rule__DataType__Group__3
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1820:1: ( rule__DataType__Group__2__Impl rule__DataType__Group__3 )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1821:2: rule__DataType__Group__2__Impl rule__DataType__Group__3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__DataType__Group__2__Impl_in_rule__DataType__Group__23817);
+            pushFollow(FollowSets000.FOLLOW_rule__DataType__Group__2__Impl_in_rule__DataType__Group__23627);
             rule__DataType__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__DataType__Group__3_in_rule__DataType__Group__23820);
+            pushFollow(FollowSets000.FOLLOW_rule__DataType__Group__3_in_rule__DataType__Group__23630);
             rule__DataType__Group__3();
 
             state._fsp--;
@@ -5177,23 +4941,23 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DataType__Group__2__Impl"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1925:1: rule__DataType__Group__2__Impl : ( ( rule__DataType__TypeAssignment_2 ) ) ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1828:1: rule__DataType__Group__2__Impl : ( ( rule__DataType__TypeAssignment_2 ) ) ;
     public final void rule__DataType__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1929:1: ( ( ( rule__DataType__TypeAssignment_2 ) ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1930:1: ( ( rule__DataType__TypeAssignment_2 ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1832:1: ( ( ( rule__DataType__TypeAssignment_2 ) ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1833:1: ( ( rule__DataType__TypeAssignment_2 ) )
             {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1930:1: ( ( rule__DataType__TypeAssignment_2 ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1931:1: ( rule__DataType__TypeAssignment_2 )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1833:1: ( ( rule__DataType__TypeAssignment_2 ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1834:1: ( rule__DataType__TypeAssignment_2 )
             {
              before(grammarAccess.getDataTypeAccess().getTypeAssignment_2()); 
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1932:1: ( rule__DataType__TypeAssignment_2 )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1932:2: rule__DataType__TypeAssignment_2
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1835:1: ( rule__DataType__TypeAssignment_2 )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1835:2: rule__DataType__TypeAssignment_2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__DataType__TypeAssignment_2_in_rule__DataType__Group__2__Impl3847);
+            pushFollow(FollowSets000.FOLLOW_rule__DataType__TypeAssignment_2_in_rule__DataType__Group__2__Impl3657);
             rule__DataType__TypeAssignment_2();
 
             state._fsp--;
@@ -5224,21 +4988,21 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DataType__Group__3"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1942:1: rule__DataType__Group__3 : rule__DataType__Group__3__Impl rule__DataType__Group__4 ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1845:1: rule__DataType__Group__3 : rule__DataType__Group__3__Impl rule__DataType__Group__4 ;
     public final void rule__DataType__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1946:1: ( rule__DataType__Group__3__Impl rule__DataType__Group__4 )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1947:2: rule__DataType__Group__3__Impl rule__DataType__Group__4
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1849:1: ( rule__DataType__Group__3__Impl rule__DataType__Group__4 )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1850:2: rule__DataType__Group__3__Impl rule__DataType__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_rule__DataType__Group__3__Impl_in_rule__DataType__Group__33877);
+            pushFollow(FollowSets000.FOLLOW_rule__DataType__Group__3__Impl_in_rule__DataType__Group__33687);
             rule__DataType__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__DataType__Group__4_in_rule__DataType__Group__33880);
+            pushFollow(FollowSets000.FOLLOW_rule__DataType__Group__4_in_rule__DataType__Group__33690);
             rule__DataType__Group__4();
 
             state._fsp--;
@@ -5262,31 +5026,31 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DataType__Group__3__Impl"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1954:1: rule__DataType__Group__3__Impl : ( ( rule__DataType__ManyAssignment_3 )? ) ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1857:1: rule__DataType__Group__3__Impl : ( ( rule__DataType__ManyAssignment_3 )? ) ;
     public final void rule__DataType__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1958:1: ( ( ( rule__DataType__ManyAssignment_3 )? ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1959:1: ( ( rule__DataType__ManyAssignment_3 )? )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1861:1: ( ( ( rule__DataType__ManyAssignment_3 )? ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1862:1: ( ( rule__DataType__ManyAssignment_3 )? )
             {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1959:1: ( ( rule__DataType__ManyAssignment_3 )? )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1960:1: ( rule__DataType__ManyAssignment_3 )?
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1862:1: ( ( rule__DataType__ManyAssignment_3 )? )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1863:1: ( rule__DataType__ManyAssignment_3 )?
             {
              before(grammarAccess.getDataTypeAccess().getManyAssignment_3()); 
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1961:1: ( rule__DataType__ManyAssignment_3 )?
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1864:1: ( rule__DataType__ManyAssignment_3 )?
             int alt19=2;
             int LA19_0 = input.LA(1);
 
-            if ( (LA19_0==32) ) {
+            if ( (LA19_0==31) ) {
                 alt19=1;
             }
             switch (alt19) {
                 case 1 :
-                    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1961:2: rule__DataType__ManyAssignment_3
+                    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1864:2: rule__DataType__ManyAssignment_3
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__DataType__ManyAssignment_3_in_rule__DataType__Group__3__Impl3907);
+                    pushFollow(FollowSets000.FOLLOW_rule__DataType__ManyAssignment_3_in_rule__DataType__Group__3__Impl3717);
                     rule__DataType__ManyAssignment_3();
 
                     state._fsp--;
@@ -5320,21 +5084,21 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DataType__Group__4"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1971:1: rule__DataType__Group__4 : rule__DataType__Group__4__Impl rule__DataType__Group__5 ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1874:1: rule__DataType__Group__4 : rule__DataType__Group__4__Impl rule__DataType__Group__5 ;
     public final void rule__DataType__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1975:1: ( rule__DataType__Group__4__Impl rule__DataType__Group__5 )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1976:2: rule__DataType__Group__4__Impl rule__DataType__Group__5
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1878:1: ( rule__DataType__Group__4__Impl rule__DataType__Group__5 )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1879:2: rule__DataType__Group__4__Impl rule__DataType__Group__5
             {
-            pushFollow(FollowSets000.FOLLOW_rule__DataType__Group__4__Impl_in_rule__DataType__Group__43938);
+            pushFollow(FollowSets000.FOLLOW_rule__DataType__Group__4__Impl_in_rule__DataType__Group__43748);
             rule__DataType__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__DataType__Group__5_in_rule__DataType__Group__43941);
+            pushFollow(FollowSets000.FOLLOW_rule__DataType__Group__5_in_rule__DataType__Group__43751);
             rule__DataType__Group__5();
 
             state._fsp--;
@@ -5358,20 +5122,20 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DataType__Group__4__Impl"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1983:1: rule__DataType__Group__4__Impl : ( '{' ) ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1886:1: rule__DataType__Group__4__Impl : ( '{' ) ;
     public final void rule__DataType__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1987:1: ( ( '{' ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1988:1: ( '{' )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1890:1: ( ( '{' ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1891:1: ( '{' )
             {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1988:1: ( '{' )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1989:1: '{'
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1891:1: ( '{' )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1892:1: '{'
             {
              before(grammarAccess.getDataTypeAccess().getLeftCurlyBracketKeyword_4()); 
-            match(input,23,FollowSets000.FOLLOW_23_in_rule__DataType__Group__4__Impl3969); 
+            match(input,23,FollowSets000.FOLLOW_23_in_rule__DataType__Group__4__Impl3779); 
              after(grammarAccess.getDataTypeAccess().getLeftCurlyBracketKeyword_4()); 
 
             }
@@ -5395,21 +5159,21 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DataType__Group__5"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2002:1: rule__DataType__Group__5 : rule__DataType__Group__5__Impl rule__DataType__Group__6 ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1905:1: rule__DataType__Group__5 : rule__DataType__Group__5__Impl rule__DataType__Group__6 ;
     public final void rule__DataType__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2006:1: ( rule__DataType__Group__5__Impl rule__DataType__Group__6 )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2007:2: rule__DataType__Group__5__Impl rule__DataType__Group__6
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1909:1: ( rule__DataType__Group__5__Impl rule__DataType__Group__6 )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1910:2: rule__DataType__Group__5__Impl rule__DataType__Group__6
             {
-            pushFollow(FollowSets000.FOLLOW_rule__DataType__Group__5__Impl_in_rule__DataType__Group__54000);
+            pushFollow(FollowSets000.FOLLOW_rule__DataType__Group__5__Impl_in_rule__DataType__Group__53810);
             rule__DataType__Group__5__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__DataType__Group__6_in_rule__DataType__Group__54003);
+            pushFollow(FollowSets000.FOLLOW_rule__DataType__Group__6_in_rule__DataType__Group__53813);
             rule__DataType__Group__6();
 
             state._fsp--;
@@ -5433,20 +5197,20 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DataType__Group__5__Impl"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2014:1: rule__DataType__Group__5__Impl : ( ( rule__DataType__Group_5__0 )? ) ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1917:1: rule__DataType__Group__5__Impl : ( ( rule__DataType__Group_5__0 )? ) ;
     public final void rule__DataType__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2018:1: ( ( ( rule__DataType__Group_5__0 )? ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2019:1: ( ( rule__DataType__Group_5__0 )? )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1921:1: ( ( ( rule__DataType__Group_5__0 )? ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1922:1: ( ( rule__DataType__Group_5__0 )? )
             {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2019:1: ( ( rule__DataType__Group_5__0 )? )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2020:1: ( rule__DataType__Group_5__0 )?
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1922:1: ( ( rule__DataType__Group_5__0 )? )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1923:1: ( rule__DataType__Group_5__0 )?
             {
              before(grammarAccess.getDataTypeAccess().getGroup_5()); 
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2021:1: ( rule__DataType__Group_5__0 )?
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1924:1: ( rule__DataType__Group_5__0 )?
             int alt20=2;
             int LA20_0 = input.LA(1);
 
@@ -5455,9 +5219,9 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
             }
             switch (alt20) {
                 case 1 :
-                    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2021:2: rule__DataType__Group_5__0
+                    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1924:2: rule__DataType__Group_5__0
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__DataType__Group_5__0_in_rule__DataType__Group__5__Impl4030);
+                    pushFollow(FollowSets000.FOLLOW_rule__DataType__Group_5__0_in_rule__DataType__Group__5__Impl3840);
                     rule__DataType__Group_5__0();
 
                     state._fsp--;
@@ -5491,21 +5255,21 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DataType__Group__6"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2031:1: rule__DataType__Group__6 : rule__DataType__Group__6__Impl rule__DataType__Group__7 ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1934:1: rule__DataType__Group__6 : rule__DataType__Group__6__Impl rule__DataType__Group__7 ;
     public final void rule__DataType__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2035:1: ( rule__DataType__Group__6__Impl rule__DataType__Group__7 )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2036:2: rule__DataType__Group__6__Impl rule__DataType__Group__7
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1938:1: ( rule__DataType__Group__6__Impl rule__DataType__Group__7 )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1939:2: rule__DataType__Group__6__Impl rule__DataType__Group__7
             {
-            pushFollow(FollowSets000.FOLLOW_rule__DataType__Group__6__Impl_in_rule__DataType__Group__64061);
+            pushFollow(FollowSets000.FOLLOW_rule__DataType__Group__6__Impl_in_rule__DataType__Group__63871);
             rule__DataType__Group__6__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__DataType__Group__7_in_rule__DataType__Group__64064);
+            pushFollow(FollowSets000.FOLLOW_rule__DataType__Group__7_in_rule__DataType__Group__63874);
             rule__DataType__Group__7();
 
             state._fsp--;
@@ -5529,20 +5293,20 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DataType__Group__6__Impl"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2043:1: rule__DataType__Group__6__Impl : ( ( rule__DataType__Group_6__0 )? ) ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1946:1: rule__DataType__Group__6__Impl : ( ( rule__DataType__Group_6__0 )? ) ;
     public final void rule__DataType__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2047:1: ( ( ( rule__DataType__Group_6__0 )? ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2048:1: ( ( rule__DataType__Group_6__0 )? )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1950:1: ( ( ( rule__DataType__Group_6__0 )? ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1951:1: ( ( rule__DataType__Group_6__0 )? )
             {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2048:1: ( ( rule__DataType__Group_6__0 )? )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2049:1: ( rule__DataType__Group_6__0 )?
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1951:1: ( ( rule__DataType__Group_6__0 )? )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1952:1: ( rule__DataType__Group_6__0 )?
             {
              before(grammarAccess.getDataTypeAccess().getGroup_6()); 
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2050:1: ( rule__DataType__Group_6__0 )?
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1953:1: ( rule__DataType__Group_6__0 )?
             int alt21=2;
             int LA21_0 = input.LA(1);
 
@@ -5551,9 +5315,9 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
             }
             switch (alt21) {
                 case 1 :
-                    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2050:2: rule__DataType__Group_6__0
+                    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1953:2: rule__DataType__Group_6__0
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__DataType__Group_6__0_in_rule__DataType__Group__6__Impl4091);
+                    pushFollow(FollowSets000.FOLLOW_rule__DataType__Group_6__0_in_rule__DataType__Group__6__Impl3901);
                     rule__DataType__Group_6__0();
 
                     state._fsp--;
@@ -5587,16 +5351,16 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DataType__Group__7"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2060:1: rule__DataType__Group__7 : rule__DataType__Group__7__Impl ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1963:1: rule__DataType__Group__7 : rule__DataType__Group__7__Impl ;
     public final void rule__DataType__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2064:1: ( rule__DataType__Group__7__Impl )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2065:2: rule__DataType__Group__7__Impl
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1967:1: ( rule__DataType__Group__7__Impl )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1968:2: rule__DataType__Group__7__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__DataType__Group__7__Impl_in_rule__DataType__Group__74122);
+            pushFollow(FollowSets000.FOLLOW_rule__DataType__Group__7__Impl_in_rule__DataType__Group__73932);
             rule__DataType__Group__7__Impl();
 
             state._fsp--;
@@ -5620,20 +5384,20 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DataType__Group__7__Impl"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2071:1: rule__DataType__Group__7__Impl : ( '}' ) ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1974:1: rule__DataType__Group__7__Impl : ( '}' ) ;
     public final void rule__DataType__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2075:1: ( ( '}' ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2076:1: ( '}' )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1978:1: ( ( '}' ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1979:1: ( '}' )
             {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2076:1: ( '}' )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2077:1: '}'
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1979:1: ( '}' )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:1980:1: '}'
             {
              before(grammarAccess.getDataTypeAccess().getRightCurlyBracketKeyword_7()); 
-            match(input,24,FollowSets000.FOLLOW_24_in_rule__DataType__Group__7__Impl4150); 
+            match(input,24,FollowSets000.FOLLOW_24_in_rule__DataType__Group__7__Impl3960); 
              after(grammarAccess.getDataTypeAccess().getRightCurlyBracketKeyword_7()); 
 
             }
@@ -5657,21 +5421,21 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DataType__Group_5__0"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2106:1: rule__DataType__Group_5__0 : rule__DataType__Group_5__0__Impl rule__DataType__Group_5__1 ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2009:1: rule__DataType__Group_5__0 : rule__DataType__Group_5__0__Impl rule__DataType__Group_5__1 ;
     public final void rule__DataType__Group_5__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2110:1: ( rule__DataType__Group_5__0__Impl rule__DataType__Group_5__1 )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2111:2: rule__DataType__Group_5__0__Impl rule__DataType__Group_5__1
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2013:1: ( rule__DataType__Group_5__0__Impl rule__DataType__Group_5__1 )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2014:2: rule__DataType__Group_5__0__Impl rule__DataType__Group_5__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__DataType__Group_5__0__Impl_in_rule__DataType__Group_5__04197);
+            pushFollow(FollowSets000.FOLLOW_rule__DataType__Group_5__0__Impl_in_rule__DataType__Group_5__04007);
             rule__DataType__Group_5__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__DataType__Group_5__1_in_rule__DataType__Group_5__04200);
+            pushFollow(FollowSets000.FOLLOW_rule__DataType__Group_5__1_in_rule__DataType__Group_5__04010);
             rule__DataType__Group_5__1();
 
             state._fsp--;
@@ -5695,20 +5459,20 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DataType__Group_5__0__Impl"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2118:1: rule__DataType__Group_5__0__Impl : ( 'description' ) ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2021:1: rule__DataType__Group_5__0__Impl : ( 'description' ) ;
     public final void rule__DataType__Group_5__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2122:1: ( ( 'description' ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2123:1: ( 'description' )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2025:1: ( ( 'description' ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2026:1: ( 'description' )
             {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2123:1: ( 'description' )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2124:1: 'description'
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2026:1: ( 'description' )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2027:1: 'description'
             {
              before(grammarAccess.getDataTypeAccess().getDescriptionKeyword_5_0()); 
-            match(input,25,FollowSets000.FOLLOW_25_in_rule__DataType__Group_5__0__Impl4228); 
+            match(input,25,FollowSets000.FOLLOW_25_in_rule__DataType__Group_5__0__Impl4038); 
              after(grammarAccess.getDataTypeAccess().getDescriptionKeyword_5_0()); 
 
             }
@@ -5732,16 +5496,16 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DataType__Group_5__1"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2137:1: rule__DataType__Group_5__1 : rule__DataType__Group_5__1__Impl ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2040:1: rule__DataType__Group_5__1 : rule__DataType__Group_5__1__Impl ;
     public final void rule__DataType__Group_5__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2141:1: ( rule__DataType__Group_5__1__Impl )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2142:2: rule__DataType__Group_5__1__Impl
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2044:1: ( rule__DataType__Group_5__1__Impl )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2045:2: rule__DataType__Group_5__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__DataType__Group_5__1__Impl_in_rule__DataType__Group_5__14259);
+            pushFollow(FollowSets000.FOLLOW_rule__DataType__Group_5__1__Impl_in_rule__DataType__Group_5__14069);
             rule__DataType__Group_5__1__Impl();
 
             state._fsp--;
@@ -5765,23 +5529,23 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DataType__Group_5__1__Impl"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2148:1: rule__DataType__Group_5__1__Impl : ( ( rule__DataType__DescriptionAssignment_5_1 ) ) ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2051:1: rule__DataType__Group_5__1__Impl : ( ( rule__DataType__DescriptionAssignment_5_1 ) ) ;
     public final void rule__DataType__Group_5__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2152:1: ( ( ( rule__DataType__DescriptionAssignment_5_1 ) ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2153:1: ( ( rule__DataType__DescriptionAssignment_5_1 ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2055:1: ( ( ( rule__DataType__DescriptionAssignment_5_1 ) ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2056:1: ( ( rule__DataType__DescriptionAssignment_5_1 ) )
             {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2153:1: ( ( rule__DataType__DescriptionAssignment_5_1 ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2154:1: ( rule__DataType__DescriptionAssignment_5_1 )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2056:1: ( ( rule__DataType__DescriptionAssignment_5_1 ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2057:1: ( rule__DataType__DescriptionAssignment_5_1 )
             {
              before(grammarAccess.getDataTypeAccess().getDescriptionAssignment_5_1()); 
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2155:1: ( rule__DataType__DescriptionAssignment_5_1 )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2155:2: rule__DataType__DescriptionAssignment_5_1
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2058:1: ( rule__DataType__DescriptionAssignment_5_1 )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2058:2: rule__DataType__DescriptionAssignment_5_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__DataType__DescriptionAssignment_5_1_in_rule__DataType__Group_5__1__Impl4286);
+            pushFollow(FollowSets000.FOLLOW_rule__DataType__DescriptionAssignment_5_1_in_rule__DataType__Group_5__1__Impl4096);
             rule__DataType__DescriptionAssignment_5_1();
 
             state._fsp--;
@@ -5812,21 +5576,21 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DataType__Group_6__0"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2169:1: rule__DataType__Group_6__0 : rule__DataType__Group_6__0__Impl rule__DataType__Group_6__1 ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2072:1: rule__DataType__Group_6__0 : rule__DataType__Group_6__0__Impl rule__DataType__Group_6__1 ;
     public final void rule__DataType__Group_6__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2173:1: ( rule__DataType__Group_6__0__Impl rule__DataType__Group_6__1 )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2174:2: rule__DataType__Group_6__0__Impl rule__DataType__Group_6__1
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2076:1: ( rule__DataType__Group_6__0__Impl rule__DataType__Group_6__1 )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2077:2: rule__DataType__Group_6__0__Impl rule__DataType__Group_6__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__DataType__Group_6__0__Impl_in_rule__DataType__Group_6__04320);
+            pushFollow(FollowSets000.FOLLOW_rule__DataType__Group_6__0__Impl_in_rule__DataType__Group_6__04130);
             rule__DataType__Group_6__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__DataType__Group_6__1_in_rule__DataType__Group_6__04323);
+            pushFollow(FollowSets000.FOLLOW_rule__DataType__Group_6__1_in_rule__DataType__Group_6__04133);
             rule__DataType__Group_6__1();
 
             state._fsp--;
@@ -5850,23 +5614,23 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DataType__Group_6__0__Impl"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2181:1: rule__DataType__Group_6__0__Impl : ( ( rule__DataType__AnnotationsAssignment_6_0 ) ) ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2084:1: rule__DataType__Group_6__0__Impl : ( ( rule__DataType__AnnotationsAssignment_6_0 ) ) ;
     public final void rule__DataType__Group_6__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2185:1: ( ( ( rule__DataType__AnnotationsAssignment_6_0 ) ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2186:1: ( ( rule__DataType__AnnotationsAssignment_6_0 ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2088:1: ( ( ( rule__DataType__AnnotationsAssignment_6_0 ) ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2089:1: ( ( rule__DataType__AnnotationsAssignment_6_0 ) )
             {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2186:1: ( ( rule__DataType__AnnotationsAssignment_6_0 ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2187:1: ( rule__DataType__AnnotationsAssignment_6_0 )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2089:1: ( ( rule__DataType__AnnotationsAssignment_6_0 ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2090:1: ( rule__DataType__AnnotationsAssignment_6_0 )
             {
              before(grammarAccess.getDataTypeAccess().getAnnotationsAssignment_6_0()); 
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2188:1: ( rule__DataType__AnnotationsAssignment_6_0 )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2188:2: rule__DataType__AnnotationsAssignment_6_0
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2091:1: ( rule__DataType__AnnotationsAssignment_6_0 )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2091:2: rule__DataType__AnnotationsAssignment_6_0
             {
-            pushFollow(FollowSets000.FOLLOW_rule__DataType__AnnotationsAssignment_6_0_in_rule__DataType__Group_6__0__Impl4350);
+            pushFollow(FollowSets000.FOLLOW_rule__DataType__AnnotationsAssignment_6_0_in_rule__DataType__Group_6__0__Impl4160);
             rule__DataType__AnnotationsAssignment_6_0();
 
             state._fsp--;
@@ -5897,16 +5661,16 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DataType__Group_6__1"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2198:1: rule__DataType__Group_6__1 : rule__DataType__Group_6__1__Impl ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2101:1: rule__DataType__Group_6__1 : rule__DataType__Group_6__1__Impl ;
     public final void rule__DataType__Group_6__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2202:1: ( rule__DataType__Group_6__1__Impl )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2203:2: rule__DataType__Group_6__1__Impl
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2105:1: ( rule__DataType__Group_6__1__Impl )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2106:2: rule__DataType__Group_6__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__DataType__Group_6__1__Impl_in_rule__DataType__Group_6__14380);
+            pushFollow(FollowSets000.FOLLOW_rule__DataType__Group_6__1__Impl_in_rule__DataType__Group_6__14190);
             rule__DataType__Group_6__1__Impl();
 
             state._fsp--;
@@ -5930,20 +5694,20 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DataType__Group_6__1__Impl"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2209:1: rule__DataType__Group_6__1__Impl : ( ( rule__DataType__AnnotationsAssignment_6_1 )* ) ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2112:1: rule__DataType__Group_6__1__Impl : ( ( rule__DataType__AnnotationsAssignment_6_1 )* ) ;
     public final void rule__DataType__Group_6__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2213:1: ( ( ( rule__DataType__AnnotationsAssignment_6_1 )* ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2214:1: ( ( rule__DataType__AnnotationsAssignment_6_1 )* )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2116:1: ( ( ( rule__DataType__AnnotationsAssignment_6_1 )* ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2117:1: ( ( rule__DataType__AnnotationsAssignment_6_1 )* )
             {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2214:1: ( ( rule__DataType__AnnotationsAssignment_6_1 )* )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2215:1: ( rule__DataType__AnnotationsAssignment_6_1 )*
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2117:1: ( ( rule__DataType__AnnotationsAssignment_6_1 )* )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2118:1: ( rule__DataType__AnnotationsAssignment_6_1 )*
             {
              before(grammarAccess.getDataTypeAccess().getAnnotationsAssignment_6_1()); 
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2216:1: ( rule__DataType__AnnotationsAssignment_6_1 )*
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2119:1: ( rule__DataType__AnnotationsAssignment_6_1 )*
             loop22:
             do {
                 int alt22=2;
@@ -5956,9 +5720,9 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
                 switch (alt22) {
             	case 1 :
-            	    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2216:2: rule__DataType__AnnotationsAssignment_6_1
+            	    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2119:2: rule__DataType__AnnotationsAssignment_6_1
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_rule__DataType__AnnotationsAssignment_6_1_in_rule__DataType__Group_6__1__Impl4407);
+            	    pushFollow(FollowSets000.FOLLOW_rule__DataType__AnnotationsAssignment_6_1_in_rule__DataType__Group_6__1__Impl4217);
             	    rule__DataType__AnnotationsAssignment_6_1();
 
             	    state._fsp--;
@@ -5995,20 +5759,20 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Package__NameAssignment_2"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2231:1: rule__Package__NameAssignment_2 : ( RULE_ID ) ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2134:1: rule__Package__NameAssignment_2 : ( RULE_ID ) ;
     public final void rule__Package__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2235:1: ( ( RULE_ID ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2236:1: ( RULE_ID )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2138:1: ( ( RULE_ID ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2139:1: ( RULE_ID )
             {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2236:1: ( RULE_ID )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2237:1: RULE_ID
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2139:1: ( RULE_ID )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2140:1: RULE_ID
             {
              before(grammarAccess.getPackageAccess().getNameIDTerminalRuleCall_2_0()); 
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__Package__NameAssignment_24447); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__Package__NameAssignment_24257); 
              after(grammarAccess.getPackageAccess().getNameIDTerminalRuleCall_2_0()); 
 
             }
@@ -6032,20 +5796,20 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Package__DescriptionAssignment_4_1"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2246:1: rule__Package__DescriptionAssignment_4_1 : ( RULE_STRING ) ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2149:1: rule__Package__DescriptionAssignment_4_1 : ( RULE_STRING ) ;
     public final void rule__Package__DescriptionAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2250:1: ( ( RULE_STRING ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2251:1: ( RULE_STRING )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2153:1: ( ( RULE_STRING ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2154:1: ( RULE_STRING )
             {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2251:1: ( RULE_STRING )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2252:1: RULE_STRING
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2154:1: ( RULE_STRING )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2155:1: RULE_STRING
             {
              before(grammarAccess.getPackageAccess().getDescriptionSTRINGTerminalRuleCall_4_1_0()); 
-            match(input,RULE_STRING,FollowSets000.FOLLOW_RULE_STRING_in_rule__Package__DescriptionAssignment_4_14478); 
+            match(input,RULE_STRING,FollowSets000.FOLLOW_RULE_STRING_in_rule__Package__DescriptionAssignment_4_14288); 
              after(grammarAccess.getPackageAccess().getDescriptionSTRINGTerminalRuleCall_4_1_0()); 
 
             }
@@ -6069,20 +5833,20 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Package__OwnedEntityAssignment_5_0"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2261:1: rule__Package__OwnedEntityAssignment_5_0 : ( ruleEntity ) ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2164:1: rule__Package__OwnedEntityAssignment_5_0 : ( ruleEntity ) ;
     public final void rule__Package__OwnedEntityAssignment_5_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2265:1: ( ( ruleEntity ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2266:1: ( ruleEntity )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2168:1: ( ( ruleEntity ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2169:1: ( ruleEntity )
             {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2266:1: ( ruleEntity )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2267:1: ruleEntity
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2169:1: ( ruleEntity )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2170:1: ruleEntity
             {
              before(grammarAccess.getPackageAccess().getOwnedEntityEntityParserRuleCall_5_0_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEntity_in_rule__Package__OwnedEntityAssignment_5_04509);
+            pushFollow(FollowSets000.FOLLOW_ruleEntity_in_rule__Package__OwnedEntityAssignment_5_04319);
             ruleEntity();
 
             state._fsp--;
@@ -6110,20 +5874,20 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Package__OwnedEntityAssignment_5_1"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2276:1: rule__Package__OwnedEntityAssignment_5_1 : ( ruleEntity ) ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2179:1: rule__Package__OwnedEntityAssignment_5_1 : ( ruleEntity ) ;
     public final void rule__Package__OwnedEntityAssignment_5_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2280:1: ( ( ruleEntity ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2281:1: ( ruleEntity )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2183:1: ( ( ruleEntity ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2184:1: ( ruleEntity )
             {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2281:1: ( ruleEntity )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2282:1: ruleEntity
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2184:1: ( ruleEntity )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2185:1: ruleEntity
             {
              before(grammarAccess.getPackageAccess().getOwnedEntityEntityParserRuleCall_5_1_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEntity_in_rule__Package__OwnedEntityAssignment_5_14540);
+            pushFollow(FollowSets000.FOLLOW_ruleEntity_in_rule__Package__OwnedEntityAssignment_5_14350);
             ruleEntity();
 
             state._fsp--;
@@ -6151,20 +5915,20 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Package__SubPackageAssignment_6_0"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2291:1: rule__Package__SubPackageAssignment_6_0 : ( rulePackage ) ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2194:1: rule__Package__SubPackageAssignment_6_0 : ( rulePackage ) ;
     public final void rule__Package__SubPackageAssignment_6_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2295:1: ( ( rulePackage ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2296:1: ( rulePackage )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2198:1: ( ( rulePackage ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2199:1: ( rulePackage )
             {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2296:1: ( rulePackage )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2297:1: rulePackage
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2199:1: ( rulePackage )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2200:1: rulePackage
             {
              before(grammarAccess.getPackageAccess().getSubPackagePackageParserRuleCall_6_0_0()); 
-            pushFollow(FollowSets000.FOLLOW_rulePackage_in_rule__Package__SubPackageAssignment_6_04571);
+            pushFollow(FollowSets000.FOLLOW_rulePackage_in_rule__Package__SubPackageAssignment_6_04381);
             rulePackage();
 
             state._fsp--;
@@ -6192,20 +5956,20 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Package__SubPackageAssignment_6_1"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2306:1: rule__Package__SubPackageAssignment_6_1 : ( rulePackage ) ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2209:1: rule__Package__SubPackageAssignment_6_1 : ( rulePackage ) ;
     public final void rule__Package__SubPackageAssignment_6_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2310:1: ( ( rulePackage ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2311:1: ( rulePackage )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2213:1: ( ( rulePackage ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2214:1: ( rulePackage )
             {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2311:1: ( rulePackage )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2312:1: rulePackage
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2214:1: ( rulePackage )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2215:1: rulePackage
             {
              before(grammarAccess.getPackageAccess().getSubPackagePackageParserRuleCall_6_1_0()); 
-            pushFollow(FollowSets000.FOLLOW_rulePackage_in_rule__Package__SubPackageAssignment_6_14602);
+            pushFollow(FollowSets000.FOLLOW_rulePackage_in_rule__Package__SubPackageAssignment_6_14412);
             rulePackage();
 
             state._fsp--;
@@ -6233,20 +5997,20 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Entity__NameAssignment_2"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2321:1: rule__Entity__NameAssignment_2 : ( RULE_ID ) ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2224:1: rule__Entity__NameAssignment_2 : ( RULE_ID ) ;
     public final void rule__Entity__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2325:1: ( ( RULE_ID ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2326:1: ( RULE_ID )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2228:1: ( ( RULE_ID ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2229:1: ( RULE_ID )
             {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2326:1: ( RULE_ID )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2327:1: RULE_ID
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2229:1: ( RULE_ID )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2230:1: RULE_ID
             {
              before(grammarAccess.getEntityAccess().getNameIDTerminalRuleCall_2_0()); 
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__Entity__NameAssignment_24633); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__Entity__NameAssignment_24443); 
              after(grammarAccess.getEntityAccess().getNameIDTerminalRuleCall_2_0()); 
 
             }
@@ -6270,24 +6034,24 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Entity__SuperEntityAssignment_3_1"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2336:1: rule__Entity__SuperEntityAssignment_3_1 : ( ( RULE_ID ) ) ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2239:1: rule__Entity__SuperEntityAssignment_3_1 : ( ( RULE_ID ) ) ;
     public final void rule__Entity__SuperEntityAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2340:1: ( ( ( RULE_ID ) ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2341:1: ( ( RULE_ID ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2243:1: ( ( ( RULE_ID ) ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2244:1: ( ( RULE_ID ) )
             {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2341:1: ( ( RULE_ID ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2342:1: ( RULE_ID )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2244:1: ( ( RULE_ID ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2245:1: ( RULE_ID )
             {
              before(grammarAccess.getEntityAccess().getSuperEntityEntityCrossReference_3_1_0()); 
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2343:1: ( RULE_ID )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2344:1: RULE_ID
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2246:1: ( RULE_ID )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2247:1: RULE_ID
             {
              before(grammarAccess.getEntityAccess().getSuperEntityEntityIDTerminalRuleCall_3_1_0_1()); 
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__Entity__SuperEntityAssignment_3_14668); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__Entity__SuperEntityAssignment_3_14478); 
              after(grammarAccess.getEntityAccess().getSuperEntityEntityIDTerminalRuleCall_3_1_0_1()); 
 
             }
@@ -6315,20 +6079,20 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Entity__DescriptionAssignment_5_2"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2355:1: rule__Entity__DescriptionAssignment_5_2 : ( RULE_STRING ) ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2258:1: rule__Entity__DescriptionAssignment_5_2 : ( RULE_STRING ) ;
     public final void rule__Entity__DescriptionAssignment_5_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2359:1: ( ( RULE_STRING ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2360:1: ( RULE_STRING )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2262:1: ( ( RULE_STRING ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2263:1: ( RULE_STRING )
             {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2360:1: ( RULE_STRING )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2361:1: RULE_STRING
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2263:1: ( RULE_STRING )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2264:1: RULE_STRING
             {
              before(grammarAccess.getEntityAccess().getDescriptionSTRINGTerminalRuleCall_5_2_0()); 
-            match(input,RULE_STRING,FollowSets000.FOLLOW_RULE_STRING_in_rule__Entity__DescriptionAssignment_5_24703); 
+            match(input,RULE_STRING,FollowSets000.FOLLOW_RULE_STRING_in_rule__Entity__DescriptionAssignment_5_24513); 
              after(grammarAccess.getEntityAccess().getDescriptionSTRINGTerminalRuleCall_5_2_0()); 
 
             }
@@ -6352,20 +6116,20 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Entity__AnnotationsAssignment_6_0"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2370:1: rule__Entity__AnnotationsAssignment_6_0 : ( ruleEntityAnnotation ) ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2273:1: rule__Entity__AnnotationsAssignment_6_0 : ( ruleEntityAnnotation ) ;
     public final void rule__Entity__AnnotationsAssignment_6_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2374:1: ( ( ruleEntityAnnotation ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2375:1: ( ruleEntityAnnotation )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2277:1: ( ( ruleEntityAnnotation ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2278:1: ( ruleEntityAnnotation )
             {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2375:1: ( ruleEntityAnnotation )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2376:1: ruleEntityAnnotation
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2278:1: ( ruleEntityAnnotation )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2279:1: ruleEntityAnnotation
             {
              before(grammarAccess.getEntityAccess().getAnnotationsEntityAnnotationEnumRuleCall_6_0_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEntityAnnotation_in_rule__Entity__AnnotationsAssignment_6_04734);
+            pushFollow(FollowSets000.FOLLOW_ruleEntityAnnotation_in_rule__Entity__AnnotationsAssignment_6_04544);
             ruleEntityAnnotation();
 
             state._fsp--;
@@ -6393,20 +6157,20 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Entity__AnnotationsAssignment_6_1"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2385:1: rule__Entity__AnnotationsAssignment_6_1 : ( ruleEntityAnnotation ) ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2288:1: rule__Entity__AnnotationsAssignment_6_1 : ( ruleEntityAnnotation ) ;
     public final void rule__Entity__AnnotationsAssignment_6_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2389:1: ( ( ruleEntityAnnotation ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2390:1: ( ruleEntityAnnotation )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2292:1: ( ( ruleEntityAnnotation ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2293:1: ( ruleEntityAnnotation )
             {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2390:1: ( ruleEntityAnnotation )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2391:1: ruleEntityAnnotation
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2293:1: ( ruleEntityAnnotation )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2294:1: ruleEntityAnnotation
             {
              before(grammarAccess.getEntityAccess().getAnnotationsEntityAnnotationEnumRuleCall_6_1_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEntityAnnotation_in_rule__Entity__AnnotationsAssignment_6_14765);
+            pushFollow(FollowSets000.FOLLOW_ruleEntityAnnotation_in_rule__Entity__AnnotationsAssignment_6_14575);
             ruleEntityAnnotation();
 
             state._fsp--;
@@ -6434,20 +6198,20 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Entity__OwnedFeatureAssignment_7_0"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2400:1: rule__Entity__OwnedFeatureAssignment_7_0 : ( ruleFeature ) ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2303:1: rule__Entity__OwnedFeatureAssignment_7_0 : ( ruleFeature ) ;
     public final void rule__Entity__OwnedFeatureAssignment_7_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2404:1: ( ( ruleFeature ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2405:1: ( ruleFeature )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2307:1: ( ( ruleFeature ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2308:1: ( ruleFeature )
             {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2405:1: ( ruleFeature )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2406:1: ruleFeature
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2308:1: ( ruleFeature )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2309:1: ruleFeature
             {
              before(grammarAccess.getEntityAccess().getOwnedFeatureFeatureParserRuleCall_7_0_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleFeature_in_rule__Entity__OwnedFeatureAssignment_7_04796);
+            pushFollow(FollowSets000.FOLLOW_ruleFeature_in_rule__Entity__OwnedFeatureAssignment_7_04606);
             ruleFeature();
 
             state._fsp--;
@@ -6475,20 +6239,20 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Entity__OwnedFeatureAssignment_7_1"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2415:1: rule__Entity__OwnedFeatureAssignment_7_1 : ( ruleFeature ) ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2318:1: rule__Entity__OwnedFeatureAssignment_7_1 : ( ruleFeature ) ;
     public final void rule__Entity__OwnedFeatureAssignment_7_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2419:1: ( ( ruleFeature ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2420:1: ( ruleFeature )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2322:1: ( ( ruleFeature ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2323:1: ( ruleFeature )
             {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2420:1: ( ruleFeature )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2421:1: ruleFeature
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2323:1: ( ruleFeature )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2324:1: ruleFeature
             {
              before(grammarAccess.getEntityAccess().getOwnedFeatureFeatureParserRuleCall_7_1_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleFeature_in_rule__Entity__OwnedFeatureAssignment_7_14827);
+            pushFollow(FollowSets000.FOLLOW_ruleFeature_in_rule__Entity__OwnedFeatureAssignment_7_14637);
             ruleFeature();
 
             state._fsp--;
@@ -6516,20 +6280,20 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Ref__NameAssignment_1"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2430:1: rule__Ref__NameAssignment_1 : ( RULE_ID ) ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2333:1: rule__Ref__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__Ref__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2434:1: ( ( RULE_ID ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2435:1: ( RULE_ID )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2337:1: ( ( RULE_ID ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2338:1: ( RULE_ID )
             {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2435:1: ( RULE_ID )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2436:1: RULE_ID
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2338:1: ( RULE_ID )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2339:1: RULE_ID
             {
              before(grammarAccess.getRefAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__Ref__NameAssignment_14858); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__Ref__NameAssignment_14668); 
              after(grammarAccess.getRefAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -6553,24 +6317,24 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Ref__RefToAssignment_2"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2445:1: rule__Ref__RefToAssignment_2 : ( ( RULE_ID ) ) ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2348:1: rule__Ref__RefToAssignment_2 : ( ( RULE_ID ) ) ;
     public final void rule__Ref__RefToAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2449:1: ( ( ( RULE_ID ) ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2450:1: ( ( RULE_ID ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2352:1: ( ( ( RULE_ID ) ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2353:1: ( ( RULE_ID ) )
             {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2450:1: ( ( RULE_ID ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2451:1: ( RULE_ID )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2353:1: ( ( RULE_ID ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2354:1: ( RULE_ID )
             {
              before(grammarAccess.getRefAccess().getRefToEntityCrossReference_2_0()); 
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2452:1: ( RULE_ID )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2453:1: RULE_ID
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2355:1: ( RULE_ID )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2356:1: RULE_ID
             {
              before(grammarAccess.getRefAccess().getRefToEntityIDTerminalRuleCall_2_0_1()); 
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__Ref__RefToAssignment_24893); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__Ref__RefToAssignment_24703); 
              after(grammarAccess.getRefAccess().getRefToEntityIDTerminalRuleCall_2_0_1()); 
 
             }
@@ -6598,24 +6362,24 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Ref__ManyAssignment_3"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2464:1: rule__Ref__ManyAssignment_3 : ( ( '[]' ) ) ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2367:1: rule__Ref__ManyAssignment_3 : ( ( '[]' ) ) ;
     public final void rule__Ref__ManyAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2468:1: ( ( ( '[]' ) ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2469:1: ( ( '[]' ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2371:1: ( ( ( '[]' ) ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2372:1: ( ( '[]' ) )
             {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2469:1: ( ( '[]' ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2470:1: ( '[]' )
-            {
-             before(grammarAccess.getRefAccess().getManyLeftSquareBracketRightSquareBracketKeyword_3_0()); 
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2471:1: ( '[]' )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2472:1: '[]'
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2372:1: ( ( '[]' ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2373:1: ( '[]' )
             {
              before(grammarAccess.getRefAccess().getManyLeftSquareBracketRightSquareBracketKeyword_3_0()); 
-            match(input,32,FollowSets000.FOLLOW_32_in_rule__Ref__ManyAssignment_34933); 
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2374:1: ( '[]' )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2375:1: '[]'
+            {
+             before(grammarAccess.getRefAccess().getManyLeftSquareBracketRightSquareBracketKeyword_3_0()); 
+            match(input,31,FollowSets000.FOLLOW_31_in_rule__Ref__ManyAssignment_34743); 
              after(grammarAccess.getRefAccess().getManyLeftSquareBracketRightSquareBracketKeyword_3_0()); 
 
             }
@@ -6643,20 +6407,20 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Ref__DescriptionAssignment_5_1"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2487:1: rule__Ref__DescriptionAssignment_5_1 : ( RULE_STRING ) ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2390:1: rule__Ref__DescriptionAssignment_5_1 : ( RULE_STRING ) ;
     public final void rule__Ref__DescriptionAssignment_5_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2491:1: ( ( RULE_STRING ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2492:1: ( RULE_STRING )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2394:1: ( ( RULE_STRING ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2395:1: ( RULE_STRING )
             {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2492:1: ( RULE_STRING )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2493:1: RULE_STRING
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2395:1: ( RULE_STRING )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2396:1: RULE_STRING
             {
              before(grammarAccess.getRefAccess().getDescriptionSTRINGTerminalRuleCall_5_1_0()); 
-            match(input,RULE_STRING,FollowSets000.FOLLOW_RULE_STRING_in_rule__Ref__DescriptionAssignment_5_14972); 
+            match(input,RULE_STRING,FollowSets000.FOLLOW_RULE_STRING_in_rule__Ref__DescriptionAssignment_5_14782); 
              after(grammarAccess.getRefAccess().getDescriptionSTRINGTerminalRuleCall_5_1_0()); 
 
             }
@@ -6680,20 +6444,20 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Ref__AnnotationsAssignment_6_0"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2502:1: rule__Ref__AnnotationsAssignment_6_0 : ( ruleFetureAnnotation ) ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2405:1: rule__Ref__AnnotationsAssignment_6_0 : ( ruleFetureAnnotation ) ;
     public final void rule__Ref__AnnotationsAssignment_6_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2506:1: ( ( ruleFetureAnnotation ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2507:1: ( ruleFetureAnnotation )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2409:1: ( ( ruleFetureAnnotation ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2410:1: ( ruleFetureAnnotation )
             {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2507:1: ( ruleFetureAnnotation )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2508:1: ruleFetureAnnotation
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2410:1: ( ruleFetureAnnotation )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2411:1: ruleFetureAnnotation
             {
              before(grammarAccess.getRefAccess().getAnnotationsFetureAnnotationEnumRuleCall_6_0_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleFetureAnnotation_in_rule__Ref__AnnotationsAssignment_6_05003);
+            pushFollow(FollowSets000.FOLLOW_ruleFetureAnnotation_in_rule__Ref__AnnotationsAssignment_6_04813);
             ruleFetureAnnotation();
 
             state._fsp--;
@@ -6721,20 +6485,20 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Ref__AnnotationsAssignment_6_1"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2517:1: rule__Ref__AnnotationsAssignment_6_1 : ( ruleFetureAnnotation ) ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2420:1: rule__Ref__AnnotationsAssignment_6_1 : ( ruleFetureAnnotation ) ;
     public final void rule__Ref__AnnotationsAssignment_6_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2521:1: ( ( ruleFetureAnnotation ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2522:1: ( ruleFetureAnnotation )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2424:1: ( ( ruleFetureAnnotation ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2425:1: ( ruleFetureAnnotation )
             {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2522:1: ( ruleFetureAnnotation )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2523:1: ruleFetureAnnotation
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2425:1: ( ruleFetureAnnotation )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2426:1: ruleFetureAnnotation
             {
              before(grammarAccess.getRefAccess().getAnnotationsFetureAnnotationEnumRuleCall_6_1_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleFetureAnnotation_in_rule__Ref__AnnotationsAssignment_6_15034);
+            pushFollow(FollowSets000.FOLLOW_ruleFetureAnnotation_in_rule__Ref__AnnotationsAssignment_6_14844);
             ruleFetureAnnotation();
 
             state._fsp--;
@@ -6761,66 +6525,21 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Ref__AnnotationsAssignment_6_1"
 
 
-    // $ANTLR start "rule__Ref__SourceAssignment_9"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2532:1: rule__Ref__SourceAssignment_9 : ( ( RULE_ID ) ) ;
-    public final void rule__Ref__SourceAssignment_9() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2536:1: ( ( ( RULE_ID ) ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2537:1: ( ( RULE_ID ) )
-            {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2537:1: ( ( RULE_ID ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2538:1: ( RULE_ID )
-            {
-             before(grammarAccess.getRefAccess().getSourceEntityCrossReference_9_0()); 
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2539:1: ( RULE_ID )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2540:1: RULE_ID
-            {
-             before(grammarAccess.getRefAccess().getSourceEntityIDTerminalRuleCall_9_0_1()); 
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__Ref__SourceAssignment_95069); 
-             after(grammarAccess.getRefAccess().getSourceEntityIDTerminalRuleCall_9_0_1()); 
-
-            }
-
-             after(grammarAccess.getRefAccess().getSourceEntityCrossReference_9_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Ref__SourceAssignment_9"
-
-
     // $ANTLR start "rule__DataType__NameAssignment_1"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2551:1: rule__DataType__NameAssignment_1 : ( RULE_ID ) ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2435:1: rule__DataType__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__DataType__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2555:1: ( ( RULE_ID ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2556:1: ( RULE_ID )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2439:1: ( ( RULE_ID ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2440:1: ( RULE_ID )
             {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2556:1: ( RULE_ID )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2557:1: RULE_ID
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2440:1: ( RULE_ID )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2441:1: RULE_ID
             {
              before(grammarAccess.getDataTypeAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__DataType__NameAssignment_15104); 
+            match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_rule__DataType__NameAssignment_14875); 
              after(grammarAccess.getDataTypeAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -6844,20 +6563,20 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DataType__TypeAssignment_2"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2566:1: rule__DataType__TypeAssignment_2 : ( ruleDataTypes ) ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2450:1: rule__DataType__TypeAssignment_2 : ( ruleDataTypes ) ;
     public final void rule__DataType__TypeAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2570:1: ( ( ruleDataTypes ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2571:1: ( ruleDataTypes )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2454:1: ( ( ruleDataTypes ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2455:1: ( ruleDataTypes )
             {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2571:1: ( ruleDataTypes )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2572:1: ruleDataTypes
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2455:1: ( ruleDataTypes )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2456:1: ruleDataTypes
             {
              before(grammarAccess.getDataTypeAccess().getTypeDataTypesEnumRuleCall_2_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleDataTypes_in_rule__DataType__TypeAssignment_25135);
+            pushFollow(FollowSets000.FOLLOW_ruleDataTypes_in_rule__DataType__TypeAssignment_24906);
             ruleDataTypes();
 
             state._fsp--;
@@ -6885,24 +6604,24 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DataType__ManyAssignment_3"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2581:1: rule__DataType__ManyAssignment_3 : ( ( '[]' ) ) ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2465:1: rule__DataType__ManyAssignment_3 : ( ( '[]' ) ) ;
     public final void rule__DataType__ManyAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2585:1: ( ( ( '[]' ) ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2586:1: ( ( '[]' ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2469:1: ( ( ( '[]' ) ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2470:1: ( ( '[]' ) )
             {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2586:1: ( ( '[]' ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2587:1: ( '[]' )
-            {
-             before(grammarAccess.getDataTypeAccess().getManyLeftSquareBracketRightSquareBracketKeyword_3_0()); 
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2588:1: ( '[]' )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2589:1: '[]'
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2470:1: ( ( '[]' ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2471:1: ( '[]' )
             {
              before(grammarAccess.getDataTypeAccess().getManyLeftSquareBracketRightSquareBracketKeyword_3_0()); 
-            match(input,32,FollowSets000.FOLLOW_32_in_rule__DataType__ManyAssignment_35171); 
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2472:1: ( '[]' )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2473:1: '[]'
+            {
+             before(grammarAccess.getDataTypeAccess().getManyLeftSquareBracketRightSquareBracketKeyword_3_0()); 
+            match(input,31,FollowSets000.FOLLOW_31_in_rule__DataType__ManyAssignment_34942); 
              after(grammarAccess.getDataTypeAccess().getManyLeftSquareBracketRightSquareBracketKeyword_3_0()); 
 
             }
@@ -6930,20 +6649,20 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DataType__DescriptionAssignment_5_1"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2604:1: rule__DataType__DescriptionAssignment_5_1 : ( RULE_STRING ) ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2488:1: rule__DataType__DescriptionAssignment_5_1 : ( RULE_STRING ) ;
     public final void rule__DataType__DescriptionAssignment_5_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2608:1: ( ( RULE_STRING ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2609:1: ( RULE_STRING )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2492:1: ( ( RULE_STRING ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2493:1: ( RULE_STRING )
             {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2609:1: ( RULE_STRING )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2610:1: RULE_STRING
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2493:1: ( RULE_STRING )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2494:1: RULE_STRING
             {
              before(grammarAccess.getDataTypeAccess().getDescriptionSTRINGTerminalRuleCall_5_1_0()); 
-            match(input,RULE_STRING,FollowSets000.FOLLOW_RULE_STRING_in_rule__DataType__DescriptionAssignment_5_15210); 
+            match(input,RULE_STRING,FollowSets000.FOLLOW_RULE_STRING_in_rule__DataType__DescriptionAssignment_5_14981); 
              after(grammarAccess.getDataTypeAccess().getDescriptionSTRINGTerminalRuleCall_5_1_0()); 
 
             }
@@ -6967,20 +6686,20 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DataType__AnnotationsAssignment_6_0"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2619:1: rule__DataType__AnnotationsAssignment_6_0 : ( ruleFetureAnnotation ) ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2503:1: rule__DataType__AnnotationsAssignment_6_0 : ( ruleFetureAnnotation ) ;
     public final void rule__DataType__AnnotationsAssignment_6_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2623:1: ( ( ruleFetureAnnotation ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2624:1: ( ruleFetureAnnotation )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2507:1: ( ( ruleFetureAnnotation ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2508:1: ( ruleFetureAnnotation )
             {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2624:1: ( ruleFetureAnnotation )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2625:1: ruleFetureAnnotation
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2508:1: ( ruleFetureAnnotation )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2509:1: ruleFetureAnnotation
             {
              before(grammarAccess.getDataTypeAccess().getAnnotationsFetureAnnotationEnumRuleCall_6_0_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleFetureAnnotation_in_rule__DataType__AnnotationsAssignment_6_05241);
+            pushFollow(FollowSets000.FOLLOW_ruleFetureAnnotation_in_rule__DataType__AnnotationsAssignment_6_05012);
             ruleFetureAnnotation();
 
             state._fsp--;
@@ -7008,20 +6727,20 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DataType__AnnotationsAssignment_6_1"
-    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2634:1: rule__DataType__AnnotationsAssignment_6_1 : ( ruleFetureAnnotation ) ;
+    // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2518:1: rule__DataType__AnnotationsAssignment_6_1 : ( ruleFetureAnnotation ) ;
     public final void rule__DataType__AnnotationsAssignment_6_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2638:1: ( ( ruleFetureAnnotation ) )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2639:1: ( ruleFetureAnnotation )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2522:1: ( ( ruleFetureAnnotation ) )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2523:1: ( ruleFetureAnnotation )
             {
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2639:1: ( ruleFetureAnnotation )
-            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2640:1: ruleFetureAnnotation
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2523:1: ( ruleFetureAnnotation )
+            // ../org.yazgel.hermes.xtext.ui/src-gen/org/yazgel/hermes/xtext/ui/contentassist/antlr/internal/InternalHermes.g:2524:1: ruleFetureAnnotation
             {
              before(grammarAccess.getDataTypeAccess().getAnnotationsFetureAnnotationEnumRuleCall_6_1_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleFetureAnnotation_in_rule__DataType__AnnotationsAssignment_6_15272);
+            pushFollow(FollowSets000.FOLLOW_ruleFetureAnnotation_in_rule__DataType__AnnotationsAssignment_6_15043);
             ruleFetureAnnotation();
 
             state._fsp--;
@@ -7132,16 +6851,16 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
         public static final BitSet FOLLOW_rule__Entity__Group__3__Impl_in_rule__Entity__Group__31821 = new BitSet(new long[]{0x0000000008800000L});
         public static final BitSet FOLLOW_rule__Entity__Group__4_in_rule__Entity__Group__31824 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Entity__Group_3__0_in_rule__Entity__Group__3__Impl1851 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Entity__Group__4__Impl_in_rule__Entity__Group__41882 = new BitSet(new long[]{0x00000000A3000800L});
+        public static final BitSet FOLLOW_rule__Entity__Group__4__Impl_in_rule__Entity__Group__41882 = new BitSet(new long[]{0x0000000063000800L});
         public static final BitSet FOLLOW_rule__Entity__Group__5_in_rule__Entity__Group__41885 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_23_in_rule__Entity__Group__4__Impl1913 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Entity__Group__5__Impl_in_rule__Entity__Group__51944 = new BitSet(new long[]{0x00000000A3000800L});
+        public static final BitSet FOLLOW_rule__Entity__Group__5__Impl_in_rule__Entity__Group__51944 = new BitSet(new long[]{0x0000000063000800L});
         public static final BitSet FOLLOW_rule__Entity__Group__6_in_rule__Entity__Group__51947 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Entity__Group_5__0_in_rule__Entity__Group__5__Impl1974 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Entity__Group__6__Impl_in_rule__Entity__Group__62005 = new BitSet(new long[]{0x00000000A3000800L});
+        public static final BitSet FOLLOW_rule__Entity__Group__6__Impl_in_rule__Entity__Group__62005 = new BitSet(new long[]{0x0000000063000800L});
         public static final BitSet FOLLOW_rule__Entity__Group__7_in_rule__Entity__Group__62008 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Entity__Group_6__0_in_rule__Entity__Group__6__Impl2035 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Entity__Group__7__Impl_in_rule__Entity__Group__72066 = new BitSet(new long[]{0x00000000A3000800L});
+        public static final BitSet FOLLOW_rule__Entity__Group__7__Impl_in_rule__Entity__Group__72066 = new BitSet(new long[]{0x0000000063000800L});
         public static final BitSet FOLLOW_rule__Entity__Group__8_in_rule__Entity__Group__72069 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Entity__Group_7__0_in_rule__Entity__Group__7__Impl2096 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Entity__Group__8__Impl_in_rule__Entity__Group__82127 = new BitSet(new long[]{0x0000000000000002L});
@@ -7164,112 +6883,102 @@ public class InternalHermesParser extends AbstractInternalContentAssistParser {
         public static final BitSet FOLLOW_rule__Entity__AnnotationsAssignment_6_0_in_rule__Entity__Group_6__0__Impl2544 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Entity__Group_6__1__Impl_in_rule__Entity__Group_6__12574 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Entity__AnnotationsAssignment_6_1_in_rule__Entity__Group_6__1__Impl2601 = new BitSet(new long[]{0x0000000000000802L});
-        public static final BitSet FOLLOW_rule__Entity__Group_7__0__Impl_in_rule__Entity__Group_7__02636 = new BitSet(new long[]{0x00000000A0000000L});
+        public static final BitSet FOLLOW_rule__Entity__Group_7__0__Impl_in_rule__Entity__Group_7__02636 = new BitSet(new long[]{0x0000000060000000L});
         public static final BitSet FOLLOW_rule__Entity__Group_7__1_in_rule__Entity__Group_7__02639 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Entity__OwnedFeatureAssignment_7_0_in_rule__Entity__Group_7__0__Impl2666 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Entity__Group_7__1__Impl_in_rule__Entity__Group_7__12696 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Entity__OwnedFeatureAssignment_7_1_in_rule__Entity__Group_7__1__Impl2723 = new BitSet(new long[]{0x00000000A0000002L});
+        public static final BitSet FOLLOW_rule__Entity__OwnedFeatureAssignment_7_1_in_rule__Entity__Group_7__1__Impl2723 = new BitSet(new long[]{0x0000000060000002L});
         public static final BitSet FOLLOW_rule__Ref__Group__0__Impl_in_rule__Ref__Group__02758 = new BitSet(new long[]{0x0000000000000010L});
         public static final BitSet FOLLOW_rule__Ref__Group__1_in_rule__Ref__Group__02761 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_29_in_rule__Ref__Group__0__Impl2789 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Ref__Group__1__Impl_in_rule__Ref__Group__12820 = new BitSet(new long[]{0x0000000000000010L});
         public static final BitSet FOLLOW_rule__Ref__Group__2_in_rule__Ref__Group__12823 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Ref__NameAssignment_1_in_rule__Ref__Group__1__Impl2850 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Ref__Group__2__Impl_in_rule__Ref__Group__22880 = new BitSet(new long[]{0x0000000100800000L});
+        public static final BitSet FOLLOW_rule__Ref__Group__2__Impl_in_rule__Ref__Group__22880 = new BitSet(new long[]{0x0000000080800000L});
         public static final BitSet FOLLOW_rule__Ref__Group__3_in_rule__Ref__Group__22883 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Ref__RefToAssignment_2_in_rule__Ref__Group__2__Impl2910 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Ref__Group__3__Impl_in_rule__Ref__Group__32940 = new BitSet(new long[]{0x0000000100800000L});
+        public static final BitSet FOLLOW_rule__Ref__Group__3__Impl_in_rule__Ref__Group__32940 = new BitSet(new long[]{0x0000000080800000L});
         public static final BitSet FOLLOW_rule__Ref__Group__4_in_rule__Ref__Group__32943 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Ref__ManyAssignment_3_in_rule__Ref__Group__3__Impl2970 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Ref__Group__4__Impl_in_rule__Ref__Group__43001 = new BitSet(new long[]{0x000000004200F000L});
+        public static final BitSet FOLLOW_rule__Ref__Group__4__Impl_in_rule__Ref__Group__43001 = new BitSet(new long[]{0x000000000300F000L});
         public static final BitSet FOLLOW_rule__Ref__Group__5_in_rule__Ref__Group__43004 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_23_in_rule__Ref__Group__4__Impl3032 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Ref__Group__5__Impl_in_rule__Ref__Group__53063 = new BitSet(new long[]{0x000000004200F000L});
+        public static final BitSet FOLLOW_rule__Ref__Group__5__Impl_in_rule__Ref__Group__53063 = new BitSet(new long[]{0x000000000300F000L});
         public static final BitSet FOLLOW_rule__Ref__Group__6_in_rule__Ref__Group__53066 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Ref__Group_5__0_in_rule__Ref__Group__5__Impl3093 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Ref__Group__6__Impl_in_rule__Ref__Group__63124 = new BitSet(new long[]{0x000000004200F000L});
+        public static final BitSet FOLLOW_rule__Ref__Group__6__Impl_in_rule__Ref__Group__63124 = new BitSet(new long[]{0x000000000300F000L});
         public static final BitSet FOLLOW_rule__Ref__Group__7_in_rule__Ref__Group__63127 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__Ref__Group_6__0_in_rule__Ref__Group__6__Impl3154 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Ref__Group__7__Impl_in_rule__Ref__Group__73185 = new BitSet(new long[]{0x0000000010000000L});
-        public static final BitSet FOLLOW_rule__Ref__Group__8_in_rule__Ref__Group__73188 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_30_in_rule__Ref__Group__7__Impl3216 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Ref__Group__8__Impl_in_rule__Ref__Group__83247 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_rule__Ref__Group__9_in_rule__Ref__Group__83250 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_28_in_rule__Ref__Group__8__Impl3278 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Ref__Group__9__Impl_in_rule__Ref__Group__93309 = new BitSet(new long[]{0x0000000001000000L});
-        public static final BitSet FOLLOW_rule__Ref__Group__10_in_rule__Ref__Group__93312 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Ref__SourceAssignment_9_in_rule__Ref__Group__9__Impl3339 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Ref__Group__10__Impl_in_rule__Ref__Group__103369 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_24_in_rule__Ref__Group__10__Impl3397 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Ref__Group_5__0__Impl_in_rule__Ref__Group_5__03450 = new BitSet(new long[]{0x0000000000000020L});
-        public static final BitSet FOLLOW_rule__Ref__Group_5__1_in_rule__Ref__Group_5__03453 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_25_in_rule__Ref__Group_5__0__Impl3481 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Ref__Group_5__1__Impl_in_rule__Ref__Group_5__13512 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Ref__DescriptionAssignment_5_1_in_rule__Ref__Group_5__1__Impl3539 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Ref__Group_6__0__Impl_in_rule__Ref__Group_6__03573 = new BitSet(new long[]{0x000000000000F000L});
-        public static final BitSet FOLLOW_rule__Ref__Group_6__1_in_rule__Ref__Group_6__03576 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Ref__AnnotationsAssignment_6_0_in_rule__Ref__Group_6__0__Impl3603 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Ref__Group_6__1__Impl_in_rule__Ref__Group_6__13633 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Ref__AnnotationsAssignment_6_1_in_rule__Ref__Group_6__1__Impl3660 = new BitSet(new long[]{0x000000000000F002L});
-        public static final BitSet FOLLOW_rule__DataType__Group__0__Impl_in_rule__DataType__Group__03695 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_rule__DataType__Group__1_in_rule__DataType__Group__03698 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_31_in_rule__DataType__Group__0__Impl3726 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__DataType__Group__1__Impl_in_rule__DataType__Group__13757 = new BitSet(new long[]{0x00000000003F0000L});
-        public static final BitSet FOLLOW_rule__DataType__Group__2_in_rule__DataType__Group__13760 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__DataType__NameAssignment_1_in_rule__DataType__Group__1__Impl3787 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__DataType__Group__2__Impl_in_rule__DataType__Group__23817 = new BitSet(new long[]{0x0000000100800000L});
-        public static final BitSet FOLLOW_rule__DataType__Group__3_in_rule__DataType__Group__23820 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__DataType__TypeAssignment_2_in_rule__DataType__Group__2__Impl3847 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__DataType__Group__3__Impl_in_rule__DataType__Group__33877 = new BitSet(new long[]{0x0000000100800000L});
-        public static final BitSet FOLLOW_rule__DataType__Group__4_in_rule__DataType__Group__33880 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__DataType__ManyAssignment_3_in_rule__DataType__Group__3__Impl3907 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__DataType__Group__4__Impl_in_rule__DataType__Group__43938 = new BitSet(new long[]{0x000000000300F000L});
-        public static final BitSet FOLLOW_rule__DataType__Group__5_in_rule__DataType__Group__43941 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_23_in_rule__DataType__Group__4__Impl3969 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__DataType__Group__5__Impl_in_rule__DataType__Group__54000 = new BitSet(new long[]{0x000000000300F000L});
-        public static final BitSet FOLLOW_rule__DataType__Group__6_in_rule__DataType__Group__54003 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__DataType__Group_5__0_in_rule__DataType__Group__5__Impl4030 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__DataType__Group__6__Impl_in_rule__DataType__Group__64061 = new BitSet(new long[]{0x000000000300F000L});
-        public static final BitSet FOLLOW_rule__DataType__Group__7_in_rule__DataType__Group__64064 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__DataType__Group_6__0_in_rule__DataType__Group__6__Impl4091 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__DataType__Group__7__Impl_in_rule__DataType__Group__74122 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_24_in_rule__DataType__Group__7__Impl4150 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__DataType__Group_5__0__Impl_in_rule__DataType__Group_5__04197 = new BitSet(new long[]{0x0000000000000020L});
-        public static final BitSet FOLLOW_rule__DataType__Group_5__1_in_rule__DataType__Group_5__04200 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_25_in_rule__DataType__Group_5__0__Impl4228 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__DataType__Group_5__1__Impl_in_rule__DataType__Group_5__14259 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__DataType__DescriptionAssignment_5_1_in_rule__DataType__Group_5__1__Impl4286 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__DataType__Group_6__0__Impl_in_rule__DataType__Group_6__04320 = new BitSet(new long[]{0x000000000000F000L});
-        public static final BitSet FOLLOW_rule__DataType__Group_6__1_in_rule__DataType__Group_6__04323 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__DataType__AnnotationsAssignment_6_0_in_rule__DataType__Group_6__0__Impl4350 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__DataType__Group_6__1__Impl_in_rule__DataType__Group_6__14380 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__DataType__AnnotationsAssignment_6_1_in_rule__DataType__Group_6__1__Impl4407 = new BitSet(new long[]{0x000000000000F002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Package__NameAssignment_24447 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_STRING_in_rule__Package__DescriptionAssignment_4_14478 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEntity_in_rule__Package__OwnedEntityAssignment_5_04509 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEntity_in_rule__Package__OwnedEntityAssignment_5_14540 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulePackage_in_rule__Package__SubPackageAssignment_6_04571 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulePackage_in_rule__Package__SubPackageAssignment_6_14602 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Entity__NameAssignment_24633 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Entity__SuperEntityAssignment_3_14668 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_STRING_in_rule__Entity__DescriptionAssignment_5_24703 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEntityAnnotation_in_rule__Entity__AnnotationsAssignment_6_04734 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEntityAnnotation_in_rule__Entity__AnnotationsAssignment_6_14765 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleFeature_in_rule__Entity__OwnedFeatureAssignment_7_04796 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleFeature_in_rule__Entity__OwnedFeatureAssignment_7_14827 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Ref__NameAssignment_14858 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Ref__RefToAssignment_24893 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_32_in_rule__Ref__ManyAssignment_34933 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_STRING_in_rule__Ref__DescriptionAssignment_5_14972 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleFetureAnnotation_in_rule__Ref__AnnotationsAssignment_6_05003 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleFetureAnnotation_in_rule__Ref__AnnotationsAssignment_6_15034 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__Ref__SourceAssignment_95069 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_ID_in_rule__DataType__NameAssignment_15104 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleDataTypes_in_rule__DataType__TypeAssignment_25135 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_32_in_rule__DataType__ManyAssignment_35171 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_RULE_STRING_in_rule__DataType__DescriptionAssignment_5_15210 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleFetureAnnotation_in_rule__DataType__AnnotationsAssignment_6_05241 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleFetureAnnotation_in_rule__DataType__AnnotationsAssignment_6_15272 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Ref__Group__7__Impl_in_rule__Ref__Group__73185 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_24_in_rule__Ref__Group__7__Impl3213 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Ref__Group_5__0__Impl_in_rule__Ref__Group_5__03260 = new BitSet(new long[]{0x0000000000000020L});
+        public static final BitSet FOLLOW_rule__Ref__Group_5__1_in_rule__Ref__Group_5__03263 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_25_in_rule__Ref__Group_5__0__Impl3291 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Ref__Group_5__1__Impl_in_rule__Ref__Group_5__13322 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Ref__DescriptionAssignment_5_1_in_rule__Ref__Group_5__1__Impl3349 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Ref__Group_6__0__Impl_in_rule__Ref__Group_6__03383 = new BitSet(new long[]{0x000000000000F000L});
+        public static final BitSet FOLLOW_rule__Ref__Group_6__1_in_rule__Ref__Group_6__03386 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Ref__AnnotationsAssignment_6_0_in_rule__Ref__Group_6__0__Impl3413 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Ref__Group_6__1__Impl_in_rule__Ref__Group_6__13443 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Ref__AnnotationsAssignment_6_1_in_rule__Ref__Group_6__1__Impl3470 = new BitSet(new long[]{0x000000000000F002L});
+        public static final BitSet FOLLOW_rule__DataType__Group__0__Impl_in_rule__DataType__Group__03505 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_rule__DataType__Group__1_in_rule__DataType__Group__03508 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_30_in_rule__DataType__Group__0__Impl3536 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__DataType__Group__1__Impl_in_rule__DataType__Group__13567 = new BitSet(new long[]{0x00000000003F0000L});
+        public static final BitSet FOLLOW_rule__DataType__Group__2_in_rule__DataType__Group__13570 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__DataType__NameAssignment_1_in_rule__DataType__Group__1__Impl3597 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__DataType__Group__2__Impl_in_rule__DataType__Group__23627 = new BitSet(new long[]{0x0000000080800000L});
+        public static final BitSet FOLLOW_rule__DataType__Group__3_in_rule__DataType__Group__23630 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__DataType__TypeAssignment_2_in_rule__DataType__Group__2__Impl3657 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__DataType__Group__3__Impl_in_rule__DataType__Group__33687 = new BitSet(new long[]{0x0000000080800000L});
+        public static final BitSet FOLLOW_rule__DataType__Group__4_in_rule__DataType__Group__33690 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__DataType__ManyAssignment_3_in_rule__DataType__Group__3__Impl3717 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__DataType__Group__4__Impl_in_rule__DataType__Group__43748 = new BitSet(new long[]{0x000000000300F000L});
+        public static final BitSet FOLLOW_rule__DataType__Group__5_in_rule__DataType__Group__43751 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_23_in_rule__DataType__Group__4__Impl3779 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__DataType__Group__5__Impl_in_rule__DataType__Group__53810 = new BitSet(new long[]{0x000000000300F000L});
+        public static final BitSet FOLLOW_rule__DataType__Group__6_in_rule__DataType__Group__53813 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__DataType__Group_5__0_in_rule__DataType__Group__5__Impl3840 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__DataType__Group__6__Impl_in_rule__DataType__Group__63871 = new BitSet(new long[]{0x000000000300F000L});
+        public static final BitSet FOLLOW_rule__DataType__Group__7_in_rule__DataType__Group__63874 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__DataType__Group_6__0_in_rule__DataType__Group__6__Impl3901 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__DataType__Group__7__Impl_in_rule__DataType__Group__73932 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_24_in_rule__DataType__Group__7__Impl3960 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__DataType__Group_5__0__Impl_in_rule__DataType__Group_5__04007 = new BitSet(new long[]{0x0000000000000020L});
+        public static final BitSet FOLLOW_rule__DataType__Group_5__1_in_rule__DataType__Group_5__04010 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_25_in_rule__DataType__Group_5__0__Impl4038 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__DataType__Group_5__1__Impl_in_rule__DataType__Group_5__14069 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__DataType__DescriptionAssignment_5_1_in_rule__DataType__Group_5__1__Impl4096 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__DataType__Group_6__0__Impl_in_rule__DataType__Group_6__04130 = new BitSet(new long[]{0x000000000000F000L});
+        public static final BitSet FOLLOW_rule__DataType__Group_6__1_in_rule__DataType__Group_6__04133 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__DataType__AnnotationsAssignment_6_0_in_rule__DataType__Group_6__0__Impl4160 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__DataType__Group_6__1__Impl_in_rule__DataType__Group_6__14190 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__DataType__AnnotationsAssignment_6_1_in_rule__DataType__Group_6__1__Impl4217 = new BitSet(new long[]{0x000000000000F002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Package__NameAssignment_24257 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_STRING_in_rule__Package__DescriptionAssignment_4_14288 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEntity_in_rule__Package__OwnedEntityAssignment_5_04319 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEntity_in_rule__Package__OwnedEntityAssignment_5_14350 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulePackage_in_rule__Package__SubPackageAssignment_6_04381 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulePackage_in_rule__Package__SubPackageAssignment_6_14412 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Entity__NameAssignment_24443 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Entity__SuperEntityAssignment_3_14478 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_STRING_in_rule__Entity__DescriptionAssignment_5_24513 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEntityAnnotation_in_rule__Entity__AnnotationsAssignment_6_04544 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEntityAnnotation_in_rule__Entity__AnnotationsAssignment_6_14575 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleFeature_in_rule__Entity__OwnedFeatureAssignment_7_04606 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleFeature_in_rule__Entity__OwnedFeatureAssignment_7_14637 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Ref__NameAssignment_14668 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__Ref__RefToAssignment_24703 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_31_in_rule__Ref__ManyAssignment_34743 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_STRING_in_rule__Ref__DescriptionAssignment_5_14782 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleFetureAnnotation_in_rule__Ref__AnnotationsAssignment_6_04813 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleFetureAnnotation_in_rule__Ref__AnnotationsAssignment_6_14844 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_ID_in_rule__DataType__NameAssignment_14875 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleDataTypes_in_rule__DataType__TypeAssignment_24906 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_31_in_rule__DataType__ManyAssignment_34942 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_STRING_in_rule__DataType__DescriptionAssignment_5_14981 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleFetureAnnotation_in_rule__DataType__AnnotationsAssignment_6_05012 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleFetureAnnotation_in_rule__DataType__AnnotationsAssignment_6_15043 = new BitSet(new long[]{0x0000000000000002L});
     }
 
 

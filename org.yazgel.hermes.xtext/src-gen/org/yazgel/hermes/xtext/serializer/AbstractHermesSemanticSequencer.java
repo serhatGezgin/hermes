@@ -89,14 +89,7 @@ public abstract class AbstractHermesSemanticSequencer extends AbstractDelegating
 	
 	/**
 	 * Constraint:
-	 *     (
-	 *         name=ID 
-	 *         refTo=[Entity|ID] 
-	 *         many?='[]'? 
-	 *         description=STRING? 
-	 *         (annotations+=FetureAnnotation annotations+=FetureAnnotation*)? 
-	 *         source=[Entity|ID]
-	 *     )
+	 *     (name=ID refTo=[Entity|ID] many?='[]'? description=STRING? (annotations+=FetureAnnotation annotations+=FetureAnnotation*)?)
 	 */
 	protected void sequence_Ref(EObject context, Ref semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalHermesParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Package'", "'{'", "'description'", "'}'", "'Entity'", "':'", "'='", "'Ref'", "'[]'", "'source'", "'DataType'", "'Cache'", "'Index'", "'Id'", "'Load'", "'Ignore'", "'String'", "'Integer'", "'Boolean'", "'Long'", "'Double'", "'Object'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Package'", "'{'", "'description'", "'}'", "'Entity'", "':'", "'='", "'Ref'", "'[]'", "'DataType'", "'Cache'", "'Index'", "'Id'", "'Load'", "'Ignore'", "'String'", "'Integer'", "'Boolean'", "'Long'", "'Double'", "'Object'"
     };
     public static final int RULE_STRING=5;
     public static final int RULE_SL_COMMENT=8;
@@ -38,7 +38,6 @@ public class InternalHermesParser extends AbstractInternalAntlrParser {
     public static final int EOF=-1;
     public static final int T__30=30;
     public static final int T__31=31;
-    public static final int T__32=32;
     public static final int RULE_ID=4;
     public static final int RULE_WS=9;
     public static final int RULE_ANY_OTHER=10;
@@ -527,7 +526,7 @@ public class InternalHermesParser extends AbstractInternalAntlrParser {
             if ( (LA6_0==18) ) {
                 alt6=1;
             }
-            else if ( (LA6_0==21) ) {
+            else if ( (LA6_0==20) ) {
                 alt6=2;
             }
             else {
@@ -803,7 +802,7 @@ public class InternalHermesParser extends AbstractInternalAntlrParser {
             int alt10=2;
             int LA10_0 = input.LA(1);
 
-            if ( (LA10_0==22) ) {
+            if ( (LA10_0==21) ) {
                 alt10=1;
             }
             switch (alt10) {
@@ -847,7 +846,7 @@ public class InternalHermesParser extends AbstractInternalAntlrParser {
                         int alt9=2;
                         int LA9_0 = input.LA(1);
 
-                        if ( (LA9_0==22) ) {
+                        if ( (LA9_0==21) ) {
                             alt9=1;
                         }
 
@@ -900,7 +899,7 @@ public class InternalHermesParser extends AbstractInternalAntlrParser {
             int alt12=2;
             int LA12_0 = input.LA(1);
 
-            if ( (LA12_0==18||LA12_0==21) ) {
+            if ( (LA12_0==18||LA12_0==20) ) {
                 alt12=1;
             }
             switch (alt12) {
@@ -944,7 +943,7 @@ public class InternalHermesParser extends AbstractInternalAntlrParser {
                         int alt11=2;
                         int LA11_0 = input.LA(1);
 
-                        if ( (LA11_0==18||LA11_0==21) ) {
+                        if ( (LA11_0==18||LA11_0==20) ) {
                             alt11=1;
                         }
 
@@ -1054,7 +1053,7 @@ public class InternalHermesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRef"
-    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:440:1: ruleRef returns [EObject current=null] : (otherlv_0= 'Ref' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= RULE_ID ) ) ( (lv_many_3_0= '[]' ) )? otherlv_4= '{' (otherlv_5= 'description' ( (lv_description_6_0= RULE_STRING ) ) )? ( ( (lv_annotations_7_0= ruleFetureAnnotation ) ) ( (lv_annotations_8_0= ruleFetureAnnotation ) )* )? otherlv_9= 'source' otherlv_10= '=' ( (otherlv_11= RULE_ID ) ) otherlv_12= '}' ) ;
+    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:440:1: ruleRef returns [EObject current=null] : (otherlv_0= 'Ref' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= RULE_ID ) ) ( (lv_many_3_0= '[]' ) )? otherlv_4= '{' (otherlv_5= 'description' ( (lv_description_6_0= RULE_STRING ) ) )? ( ( (lv_annotations_7_0= ruleFetureAnnotation ) ) ( (lv_annotations_8_0= ruleFetureAnnotation ) )* )? otherlv_9= '}' ) ;
     public final EObject ruleRef() throws RecognitionException {
         EObject current = null;
 
@@ -1066,9 +1065,6 @@ public class InternalHermesParser extends AbstractInternalAntlrParser {
         Token otherlv_5=null;
         Token lv_description_6_0=null;
         Token otherlv_9=null;
-        Token otherlv_10=null;
-        Token otherlv_11=null;
-        Token otherlv_12=null;
         Enumerator lv_annotations_7_0 = null;
 
         Enumerator lv_annotations_8_0 = null;
@@ -1077,11 +1073,11 @@ public class InternalHermesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:443:28: ( (otherlv_0= 'Ref' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= RULE_ID ) ) ( (lv_many_3_0= '[]' ) )? otherlv_4= '{' (otherlv_5= 'description' ( (lv_description_6_0= RULE_STRING ) ) )? ( ( (lv_annotations_7_0= ruleFetureAnnotation ) ) ( (lv_annotations_8_0= ruleFetureAnnotation ) )* )? otherlv_9= 'source' otherlv_10= '=' ( (otherlv_11= RULE_ID ) ) otherlv_12= '}' ) )
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:444:1: (otherlv_0= 'Ref' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= RULE_ID ) ) ( (lv_many_3_0= '[]' ) )? otherlv_4= '{' (otherlv_5= 'description' ( (lv_description_6_0= RULE_STRING ) ) )? ( ( (lv_annotations_7_0= ruleFetureAnnotation ) ) ( (lv_annotations_8_0= ruleFetureAnnotation ) )* )? otherlv_9= 'source' otherlv_10= '=' ( (otherlv_11= RULE_ID ) ) otherlv_12= '}' )
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:443:28: ( (otherlv_0= 'Ref' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= RULE_ID ) ) ( (lv_many_3_0= '[]' ) )? otherlv_4= '{' (otherlv_5= 'description' ( (lv_description_6_0= RULE_STRING ) ) )? ( ( (lv_annotations_7_0= ruleFetureAnnotation ) ) ( (lv_annotations_8_0= ruleFetureAnnotation ) )* )? otherlv_9= '}' ) )
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:444:1: (otherlv_0= 'Ref' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= RULE_ID ) ) ( (lv_many_3_0= '[]' ) )? otherlv_4= '{' (otherlv_5= 'description' ( (lv_description_6_0= RULE_STRING ) ) )? ( ( (lv_annotations_7_0= ruleFetureAnnotation ) ) ( (lv_annotations_8_0= ruleFetureAnnotation ) )* )? otherlv_9= '}' )
             {
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:444:1: (otherlv_0= 'Ref' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= RULE_ID ) ) ( (lv_many_3_0= '[]' ) )? otherlv_4= '{' (otherlv_5= 'description' ( (lv_description_6_0= RULE_STRING ) ) )? ( ( (lv_annotations_7_0= ruleFetureAnnotation ) ) ( (lv_annotations_8_0= ruleFetureAnnotation ) )* )? otherlv_9= 'source' otherlv_10= '=' ( (otherlv_11= RULE_ID ) ) otherlv_12= '}' )
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:444:3: otherlv_0= 'Ref' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= RULE_ID ) ) ( (lv_many_3_0= '[]' ) )? otherlv_4= '{' (otherlv_5= 'description' ( (lv_description_6_0= RULE_STRING ) ) )? ( ( (lv_annotations_7_0= ruleFetureAnnotation ) ) ( (lv_annotations_8_0= ruleFetureAnnotation ) )* )? otherlv_9= 'source' otherlv_10= '=' ( (otherlv_11= RULE_ID ) ) otherlv_12= '}'
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:444:1: (otherlv_0= 'Ref' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= RULE_ID ) ) ( (lv_many_3_0= '[]' ) )? otherlv_4= '{' (otherlv_5= 'description' ( (lv_description_6_0= RULE_STRING ) ) )? ( ( (lv_annotations_7_0= ruleFetureAnnotation ) ) ( (lv_annotations_8_0= ruleFetureAnnotation ) )* )? otherlv_9= '}' )
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:444:3: otherlv_0= 'Ref' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= RULE_ID ) ) ( (lv_many_3_0= '[]' ) )? otherlv_4= '{' (otherlv_5= 'description' ( (lv_description_6_0= RULE_STRING ) ) )? ( ( (lv_annotations_7_0= ruleFetureAnnotation ) ) ( (lv_annotations_8_0= ruleFetureAnnotation ) )* )? otherlv_9= '}'
             {
             otherlv_0=(Token)match(input,18,FollowSets000.FOLLOW_18_in_ruleRef822); 
 
@@ -1222,7 +1218,7 @@ public class InternalHermesParser extends AbstractInternalAntlrParser {
             int alt16=2;
             int LA16_0 = input.LA(1);
 
-            if ( ((LA16_0>=23 && LA16_0<=26)) ) {
+            if ( ((LA16_0>=22 && LA16_0<=25)) ) {
                 alt16=1;
             }
             switch (alt16) {
@@ -1266,7 +1262,7 @@ public class InternalHermesParser extends AbstractInternalAntlrParser {
                         int alt15=2;
                         int LA15_0 = input.LA(1);
 
-                        if ( ((LA15_0>=23 && LA15_0<=26)) ) {
+                        if ( ((LA15_0>=22 && LA15_0<=25)) ) {
                             alt15=1;
                         }
 
@@ -1315,38 +1311,9 @@ public class InternalHermesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_9=(Token)match(input,20,FollowSets000.FOLLOW_20_in_ruleRef1003); 
+            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_14_in_ruleRef1003); 
 
-                	newLeafNode(otherlv_9, grammarAccess.getRefAccess().getSourceKeyword_7());
-                
-            otherlv_10=(Token)match(input,17,FollowSets000.FOLLOW_17_in_ruleRef1015); 
-
-                	newLeafNode(otherlv_10, grammarAccess.getRefAccess().getEqualsSignKeyword_8());
-                
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:564:1: ( (otherlv_11= RULE_ID ) )
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:565:1: (otherlv_11= RULE_ID )
-            {
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:565:1: (otherlv_11= RULE_ID )
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:566:3: otherlv_11= RULE_ID
-            {
-
-            			if (current==null) {
-            	            current = createModelElement(grammarAccess.getRefRule());
-            	        }
-                    
-            otherlv_11=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleRef1035); 
-
-            		newLeafNode(otherlv_11, grammarAccess.getRefAccess().getSourceEntityCrossReference_9_0()); 
-            	
-
-            }
-
-
-            }
-
-            otherlv_12=(Token)match(input,14,FollowSets000.FOLLOW_14_in_ruleRef1047); 
-
-                	newLeafNode(otherlv_12, grammarAccess.getRefAccess().getRightCurlyBracketKeyword_10());
+                	newLeafNode(otherlv_9, grammarAccess.getRefAccess().getRightCurlyBracketKeyword_7());
                 
 
             }
@@ -1369,7 +1336,7 @@ public class InternalHermesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDataType"
-    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:589:1: entryRuleDataType returns [EObject current=null] : iv_ruleDataType= ruleDataType EOF ;
+    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:568:1: entryRuleDataType returns [EObject current=null] : iv_ruleDataType= ruleDataType EOF ;
     public final EObject entryRuleDataType() throws RecognitionException {
         EObject current = null;
 
@@ -1377,17 +1344,17 @@ public class InternalHermesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:590:2: (iv_ruleDataType= ruleDataType EOF )
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:591:2: iv_ruleDataType= ruleDataType EOF
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:569:2: (iv_ruleDataType= ruleDataType EOF )
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:570:2: iv_ruleDataType= ruleDataType EOF
             {
              newCompositeNode(grammarAccess.getDataTypeRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleDataType_in_entryRuleDataType1083);
+            pushFollow(FollowSets000.FOLLOW_ruleDataType_in_entryRuleDataType1039);
             iv_ruleDataType=ruleDataType();
 
             state._fsp--;
 
              current =iv_ruleDataType; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleDataType1093); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleDataType1049); 
 
             }
 
@@ -1405,7 +1372,7 @@ public class InternalHermesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDataType"
-    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:598:1: ruleDataType returns [EObject current=null] : (otherlv_0= 'DataType' ( (lv_name_1_0= RULE_ID ) ) ( (lv_type_2_0= ruleDataTypes ) ) ( (lv_many_3_0= '[]' ) )? otherlv_4= '{' (otherlv_5= 'description' ( (lv_description_6_0= RULE_STRING ) ) )? ( ( (lv_annotations_7_0= ruleFetureAnnotation ) ) ( (lv_annotations_8_0= ruleFetureAnnotation ) )* )? otherlv_9= '}' ) ;
+    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:577:1: ruleDataType returns [EObject current=null] : (otherlv_0= 'DataType' ( (lv_name_1_0= RULE_ID ) ) ( (lv_type_2_0= ruleDataTypes ) ) ( (lv_many_3_0= '[]' ) )? otherlv_4= '{' (otherlv_5= 'description' ( (lv_description_6_0= RULE_STRING ) ) )? ( ( (lv_annotations_7_0= ruleFetureAnnotation ) ) ( (lv_annotations_8_0= ruleFetureAnnotation ) )* )? otherlv_9= '}' ) ;
     public final EObject ruleDataType() throws RecognitionException {
         EObject current = null;
 
@@ -1426,23 +1393,23 @@ public class InternalHermesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:601:28: ( (otherlv_0= 'DataType' ( (lv_name_1_0= RULE_ID ) ) ( (lv_type_2_0= ruleDataTypes ) ) ( (lv_many_3_0= '[]' ) )? otherlv_4= '{' (otherlv_5= 'description' ( (lv_description_6_0= RULE_STRING ) ) )? ( ( (lv_annotations_7_0= ruleFetureAnnotation ) ) ( (lv_annotations_8_0= ruleFetureAnnotation ) )* )? otherlv_9= '}' ) )
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:602:1: (otherlv_0= 'DataType' ( (lv_name_1_0= RULE_ID ) ) ( (lv_type_2_0= ruleDataTypes ) ) ( (lv_many_3_0= '[]' ) )? otherlv_4= '{' (otherlv_5= 'description' ( (lv_description_6_0= RULE_STRING ) ) )? ( ( (lv_annotations_7_0= ruleFetureAnnotation ) ) ( (lv_annotations_8_0= ruleFetureAnnotation ) )* )? otherlv_9= '}' )
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:580:28: ( (otherlv_0= 'DataType' ( (lv_name_1_0= RULE_ID ) ) ( (lv_type_2_0= ruleDataTypes ) ) ( (lv_many_3_0= '[]' ) )? otherlv_4= '{' (otherlv_5= 'description' ( (lv_description_6_0= RULE_STRING ) ) )? ( ( (lv_annotations_7_0= ruleFetureAnnotation ) ) ( (lv_annotations_8_0= ruleFetureAnnotation ) )* )? otherlv_9= '}' ) )
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:581:1: (otherlv_0= 'DataType' ( (lv_name_1_0= RULE_ID ) ) ( (lv_type_2_0= ruleDataTypes ) ) ( (lv_many_3_0= '[]' ) )? otherlv_4= '{' (otherlv_5= 'description' ( (lv_description_6_0= RULE_STRING ) ) )? ( ( (lv_annotations_7_0= ruleFetureAnnotation ) ) ( (lv_annotations_8_0= ruleFetureAnnotation ) )* )? otherlv_9= '}' )
             {
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:602:1: (otherlv_0= 'DataType' ( (lv_name_1_0= RULE_ID ) ) ( (lv_type_2_0= ruleDataTypes ) ) ( (lv_many_3_0= '[]' ) )? otherlv_4= '{' (otherlv_5= 'description' ( (lv_description_6_0= RULE_STRING ) ) )? ( ( (lv_annotations_7_0= ruleFetureAnnotation ) ) ( (lv_annotations_8_0= ruleFetureAnnotation ) )* )? otherlv_9= '}' )
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:602:3: otherlv_0= 'DataType' ( (lv_name_1_0= RULE_ID ) ) ( (lv_type_2_0= ruleDataTypes ) ) ( (lv_many_3_0= '[]' ) )? otherlv_4= '{' (otherlv_5= 'description' ( (lv_description_6_0= RULE_STRING ) ) )? ( ( (lv_annotations_7_0= ruleFetureAnnotation ) ) ( (lv_annotations_8_0= ruleFetureAnnotation ) )* )? otherlv_9= '}'
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:581:1: (otherlv_0= 'DataType' ( (lv_name_1_0= RULE_ID ) ) ( (lv_type_2_0= ruleDataTypes ) ) ( (lv_many_3_0= '[]' ) )? otherlv_4= '{' (otherlv_5= 'description' ( (lv_description_6_0= RULE_STRING ) ) )? ( ( (lv_annotations_7_0= ruleFetureAnnotation ) ) ( (lv_annotations_8_0= ruleFetureAnnotation ) )* )? otherlv_9= '}' )
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:581:3: otherlv_0= 'DataType' ( (lv_name_1_0= RULE_ID ) ) ( (lv_type_2_0= ruleDataTypes ) ) ( (lv_many_3_0= '[]' ) )? otherlv_4= '{' (otherlv_5= 'description' ( (lv_description_6_0= RULE_STRING ) ) )? ( ( (lv_annotations_7_0= ruleFetureAnnotation ) ) ( (lv_annotations_8_0= ruleFetureAnnotation ) )* )? otherlv_9= '}'
             {
-            otherlv_0=(Token)match(input,21,FollowSets000.FOLLOW_21_in_ruleDataType1130); 
+            otherlv_0=(Token)match(input,20,FollowSets000.FOLLOW_20_in_ruleDataType1086); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getDataTypeAccess().getDataTypeKeyword_0());
                 
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:606:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:607:1: (lv_name_1_0= RULE_ID )
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:585:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:586:1: (lv_name_1_0= RULE_ID )
             {
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:607:1: (lv_name_1_0= RULE_ID )
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:608:3: lv_name_1_0= RULE_ID
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:586:1: (lv_name_1_0= RULE_ID )
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:587:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleDataType1147); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_RULE_ID_in_ruleDataType1103); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getDataTypeAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -1462,16 +1429,16 @@ public class InternalHermesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:624:2: ( (lv_type_2_0= ruleDataTypes ) )
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:625:1: (lv_type_2_0= ruleDataTypes )
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:603:2: ( (lv_type_2_0= ruleDataTypes ) )
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:604:1: (lv_type_2_0= ruleDataTypes )
             {
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:625:1: (lv_type_2_0= ruleDataTypes )
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:626:3: lv_type_2_0= ruleDataTypes
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:604:1: (lv_type_2_0= ruleDataTypes )
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:605:3: lv_type_2_0= ruleDataTypes
             {
              
             	        newCompositeNode(grammarAccess.getDataTypeAccess().getTypeDataTypesEnumRuleCall_2_0()); 
             	    
-            pushFollow(FollowSets000.FOLLOW_ruleDataTypes_in_ruleDataType1173);
+            pushFollow(FollowSets000.FOLLOW_ruleDataTypes_in_ruleDataType1129);
             lv_type_2_0=ruleDataTypes();
 
             state._fsp--;
@@ -1493,7 +1460,7 @@ public class InternalHermesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:642:2: ( (lv_many_3_0= '[]' ) )?
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:621:2: ( (lv_many_3_0= '[]' ) )?
             int alt17=2;
             int LA17_0 = input.LA(1);
 
@@ -1502,12 +1469,12 @@ public class InternalHermesParser extends AbstractInternalAntlrParser {
             }
             switch (alt17) {
                 case 1 :
-                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:643:1: (lv_many_3_0= '[]' )
+                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:622:1: (lv_many_3_0= '[]' )
                     {
-                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:643:1: (lv_many_3_0= '[]' )
-                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:644:3: lv_many_3_0= '[]'
+                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:622:1: (lv_many_3_0= '[]' )
+                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:623:3: lv_many_3_0= '[]'
                     {
-                    lv_many_3_0=(Token)match(input,19,FollowSets000.FOLLOW_19_in_ruleDataType1191); 
+                    lv_many_3_0=(Token)match(input,19,FollowSets000.FOLLOW_19_in_ruleDataType1147); 
 
                             newLeafNode(lv_many_3_0, grammarAccess.getDataTypeAccess().getManyLeftSquareBracketRightSquareBracketKeyword_3_0());
                         
@@ -1526,11 +1493,11 @@ public class InternalHermesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleDataType1217); 
+            otherlv_4=(Token)match(input,12,FollowSets000.FOLLOW_12_in_ruleDataType1173); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getDataTypeAccess().getLeftCurlyBracketKeyword_4());
                 
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:661:1: (otherlv_5= 'description' ( (lv_description_6_0= RULE_STRING ) ) )?
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:640:1: (otherlv_5= 'description' ( (lv_description_6_0= RULE_STRING ) ) )?
             int alt18=2;
             int LA18_0 = input.LA(1);
 
@@ -1539,19 +1506,19 @@ public class InternalHermesParser extends AbstractInternalAntlrParser {
             }
             switch (alt18) {
                 case 1 :
-                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:661:3: otherlv_5= 'description' ( (lv_description_6_0= RULE_STRING ) )
+                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:640:3: otherlv_5= 'description' ( (lv_description_6_0= RULE_STRING ) )
                     {
-                    otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_13_in_ruleDataType1230); 
+                    otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_13_in_ruleDataType1186); 
 
                         	newLeafNode(otherlv_5, grammarAccess.getDataTypeAccess().getDescriptionKeyword_5_0());
                         
-                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:665:1: ( (lv_description_6_0= RULE_STRING ) )
-                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:666:1: (lv_description_6_0= RULE_STRING )
+                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:644:1: ( (lv_description_6_0= RULE_STRING ) )
+                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:645:1: (lv_description_6_0= RULE_STRING )
                     {
-                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:666:1: (lv_description_6_0= RULE_STRING )
-                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:667:3: lv_description_6_0= RULE_STRING
+                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:645:1: (lv_description_6_0= RULE_STRING )
+                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:646:3: lv_description_6_0= RULE_STRING
                     {
-                    lv_description_6_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_RULE_STRING_in_ruleDataType1247); 
+                    lv_description_6_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_RULE_STRING_in_ruleDataType1203); 
 
                     			newLeafNode(lv_description_6_0, grammarAccess.getDataTypeAccess().getDescriptionSTRINGTerminalRuleCall_5_1_0()); 
                     		
@@ -1577,27 +1544,27 @@ public class InternalHermesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:683:4: ( ( (lv_annotations_7_0= ruleFetureAnnotation ) ) ( (lv_annotations_8_0= ruleFetureAnnotation ) )* )?
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:662:4: ( ( (lv_annotations_7_0= ruleFetureAnnotation ) ) ( (lv_annotations_8_0= ruleFetureAnnotation ) )* )?
             int alt20=2;
             int LA20_0 = input.LA(1);
 
-            if ( ((LA20_0>=23 && LA20_0<=26)) ) {
+            if ( ((LA20_0>=22 && LA20_0<=25)) ) {
                 alt20=1;
             }
             switch (alt20) {
                 case 1 :
-                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:683:5: ( (lv_annotations_7_0= ruleFetureAnnotation ) ) ( (lv_annotations_8_0= ruleFetureAnnotation ) )*
+                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:662:5: ( (lv_annotations_7_0= ruleFetureAnnotation ) ) ( (lv_annotations_8_0= ruleFetureAnnotation ) )*
                     {
-                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:683:5: ( (lv_annotations_7_0= ruleFetureAnnotation ) )
-                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:684:1: (lv_annotations_7_0= ruleFetureAnnotation )
+                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:662:5: ( (lv_annotations_7_0= ruleFetureAnnotation ) )
+                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:663:1: (lv_annotations_7_0= ruleFetureAnnotation )
                     {
-                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:684:1: (lv_annotations_7_0= ruleFetureAnnotation )
-                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:685:3: lv_annotations_7_0= ruleFetureAnnotation
+                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:663:1: (lv_annotations_7_0= ruleFetureAnnotation )
+                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:664:3: lv_annotations_7_0= ruleFetureAnnotation
                     {
                      
                     	        newCompositeNode(grammarAccess.getDataTypeAccess().getAnnotationsFetureAnnotationEnumRuleCall_6_0_0()); 
                     	    
-                    pushFollow(FollowSets000.FOLLOW_ruleFetureAnnotation_in_ruleDataType1276);
+                    pushFollow(FollowSets000.FOLLOW_ruleFetureAnnotation_in_ruleDataType1232);
                     lv_annotations_7_0=ruleFetureAnnotation();
 
                     state._fsp--;
@@ -1619,28 +1586,28 @@ public class InternalHermesParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:701:2: ( (lv_annotations_8_0= ruleFetureAnnotation ) )*
+                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:680:2: ( (lv_annotations_8_0= ruleFetureAnnotation ) )*
                     loop19:
                     do {
                         int alt19=2;
                         int LA19_0 = input.LA(1);
 
-                        if ( ((LA19_0>=23 && LA19_0<=26)) ) {
+                        if ( ((LA19_0>=22 && LA19_0<=25)) ) {
                             alt19=1;
                         }
 
 
                         switch (alt19) {
                     	case 1 :
-                    	    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:702:1: (lv_annotations_8_0= ruleFetureAnnotation )
+                    	    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:681:1: (lv_annotations_8_0= ruleFetureAnnotation )
                     	    {
-                    	    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:702:1: (lv_annotations_8_0= ruleFetureAnnotation )
-                    	    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:703:3: lv_annotations_8_0= ruleFetureAnnotation
+                    	    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:681:1: (lv_annotations_8_0= ruleFetureAnnotation )
+                    	    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:682:3: lv_annotations_8_0= ruleFetureAnnotation
                     	    {
                     	     
                     	    	        newCompositeNode(grammarAccess.getDataTypeAccess().getAnnotationsFetureAnnotationEnumRuleCall_6_1_0()); 
                     	    	    
-                    	    pushFollow(FollowSets000.FOLLOW_ruleFetureAnnotation_in_ruleDataType1297);
+                    	    pushFollow(FollowSets000.FOLLOW_ruleFetureAnnotation_in_ruleDataType1253);
                     	    lv_annotations_8_0=ruleFetureAnnotation();
 
                     	    state._fsp--;
@@ -1674,7 +1641,7 @@ public class InternalHermesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_14_in_ruleDataType1312); 
+            otherlv_9=(Token)match(input,14,FollowSets000.FOLLOW_14_in_ruleDataType1268); 
 
                 	newLeafNode(otherlv_9, grammarAccess.getDataTypeAccess().getRightCurlyBracketKeyword_7());
                 
@@ -1699,7 +1666,7 @@ public class InternalHermesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEntityAnnotation"
-    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:731:1: ruleEntityAnnotation returns [Enumerator current=null] : (enumLiteral_0= 'Cache' ) ;
+    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:710:1: ruleEntityAnnotation returns [Enumerator current=null] : (enumLiteral_0= 'Cache' ) ;
     public final Enumerator ruleEntityAnnotation() throws RecognitionException {
         Enumerator current = null;
 
@@ -1707,13 +1674,13 @@ public class InternalHermesParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:733:28: ( (enumLiteral_0= 'Cache' ) )
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:734:1: (enumLiteral_0= 'Cache' )
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:712:28: ( (enumLiteral_0= 'Cache' ) )
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:713:1: (enumLiteral_0= 'Cache' )
             {
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:734:1: (enumLiteral_0= 'Cache' )
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:734:3: enumLiteral_0= 'Cache'
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:713:1: (enumLiteral_0= 'Cache' )
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:713:3: enumLiteral_0= 'Cache'
             {
-            enumLiteral_0=(Token)match(input,22,FollowSets000.FOLLOW_22_in_ruleEntityAnnotation1361); 
+            enumLiteral_0=(Token)match(input,21,FollowSets000.FOLLOW_21_in_ruleEntityAnnotation1317); 
 
                     current = grammarAccess.getEntityAnnotationAccess().getCacheEnumLiteralDeclaration().getEnumLiteral().getInstance();
                     newLeafNode(enumLiteral_0, grammarAccess.getEntityAnnotationAccess().getCacheEnumLiteralDeclaration()); 
@@ -1739,7 +1706,7 @@ public class InternalHermesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFetureAnnotation"
-    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:744:1: ruleFetureAnnotation returns [Enumerator current=null] : ( (enumLiteral_0= 'Index' ) | (enumLiteral_1= 'Id' ) | (enumLiteral_2= 'Load' ) | (enumLiteral_3= 'Ignore' ) ) ;
+    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:723:1: ruleFetureAnnotation returns [Enumerator current=null] : ( (enumLiteral_0= 'Index' ) | (enumLiteral_1= 'Id' ) | (enumLiteral_2= 'Load' ) | (enumLiteral_3= 'Ignore' ) ) ;
     public final Enumerator ruleFetureAnnotation() throws RecognitionException {
         Enumerator current = null;
 
@@ -1750,28 +1717,28 @@ public class InternalHermesParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:746:28: ( ( (enumLiteral_0= 'Index' ) | (enumLiteral_1= 'Id' ) | (enumLiteral_2= 'Load' ) | (enumLiteral_3= 'Ignore' ) ) )
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:747:1: ( (enumLiteral_0= 'Index' ) | (enumLiteral_1= 'Id' ) | (enumLiteral_2= 'Load' ) | (enumLiteral_3= 'Ignore' ) )
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:725:28: ( ( (enumLiteral_0= 'Index' ) | (enumLiteral_1= 'Id' ) | (enumLiteral_2= 'Load' ) | (enumLiteral_3= 'Ignore' ) ) )
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:726:1: ( (enumLiteral_0= 'Index' ) | (enumLiteral_1= 'Id' ) | (enumLiteral_2= 'Load' ) | (enumLiteral_3= 'Ignore' ) )
             {
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:747:1: ( (enumLiteral_0= 'Index' ) | (enumLiteral_1= 'Id' ) | (enumLiteral_2= 'Load' ) | (enumLiteral_3= 'Ignore' ) )
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:726:1: ( (enumLiteral_0= 'Index' ) | (enumLiteral_1= 'Id' ) | (enumLiteral_2= 'Load' ) | (enumLiteral_3= 'Ignore' ) )
             int alt21=4;
             switch ( input.LA(1) ) {
-            case 23:
+            case 22:
                 {
                 alt21=1;
                 }
                 break;
-            case 24:
+            case 23:
                 {
                 alt21=2;
                 }
                 break;
-            case 25:
+            case 24:
                 {
                 alt21=3;
                 }
                 break;
-            case 26:
+            case 25:
                 {
                 alt21=4;
                 }
@@ -1785,12 +1752,12 @@ public class InternalHermesParser extends AbstractInternalAntlrParser {
 
             switch (alt21) {
                 case 1 :
-                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:747:2: (enumLiteral_0= 'Index' )
+                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:726:2: (enumLiteral_0= 'Index' )
                     {
-                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:747:2: (enumLiteral_0= 'Index' )
-                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:747:4: enumLiteral_0= 'Index'
+                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:726:2: (enumLiteral_0= 'Index' )
+                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:726:4: enumLiteral_0= 'Index'
                     {
-                    enumLiteral_0=(Token)match(input,23,FollowSets000.FOLLOW_23_in_ruleFetureAnnotation1405); 
+                    enumLiteral_0=(Token)match(input,22,FollowSets000.FOLLOW_22_in_ruleFetureAnnotation1361); 
 
                             current = grammarAccess.getFetureAnnotationAccess().getIndexEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getFetureAnnotationAccess().getIndexEnumLiteralDeclaration_0()); 
@@ -1802,12 +1769,12 @@ public class InternalHermesParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:753:6: (enumLiteral_1= 'Id' )
+                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:732:6: (enumLiteral_1= 'Id' )
                     {
-                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:753:6: (enumLiteral_1= 'Id' )
-                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:753:8: enumLiteral_1= 'Id'
+                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:732:6: (enumLiteral_1= 'Id' )
+                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:732:8: enumLiteral_1= 'Id'
                     {
-                    enumLiteral_1=(Token)match(input,24,FollowSets000.FOLLOW_24_in_ruleFetureAnnotation1422); 
+                    enumLiteral_1=(Token)match(input,23,FollowSets000.FOLLOW_23_in_ruleFetureAnnotation1378); 
 
                             current = grammarAccess.getFetureAnnotationAccess().getIdEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getFetureAnnotationAccess().getIdEnumLiteralDeclaration_1()); 
@@ -1819,12 +1786,12 @@ public class InternalHermesParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:759:6: (enumLiteral_2= 'Load' )
+                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:738:6: (enumLiteral_2= 'Load' )
                     {
-                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:759:6: (enumLiteral_2= 'Load' )
-                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:759:8: enumLiteral_2= 'Load'
+                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:738:6: (enumLiteral_2= 'Load' )
+                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:738:8: enumLiteral_2= 'Load'
                     {
-                    enumLiteral_2=(Token)match(input,25,FollowSets000.FOLLOW_25_in_ruleFetureAnnotation1439); 
+                    enumLiteral_2=(Token)match(input,24,FollowSets000.FOLLOW_24_in_ruleFetureAnnotation1395); 
 
                             current = grammarAccess.getFetureAnnotationAccess().getLoadEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_2, grammarAccess.getFetureAnnotationAccess().getLoadEnumLiteralDeclaration_2()); 
@@ -1836,12 +1803,12 @@ public class InternalHermesParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:765:6: (enumLiteral_3= 'Ignore' )
+                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:744:6: (enumLiteral_3= 'Ignore' )
                     {
-                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:765:6: (enumLiteral_3= 'Ignore' )
-                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:765:8: enumLiteral_3= 'Ignore'
+                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:744:6: (enumLiteral_3= 'Ignore' )
+                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:744:8: enumLiteral_3= 'Ignore'
                     {
-                    enumLiteral_3=(Token)match(input,26,FollowSets000.FOLLOW_26_in_ruleFetureAnnotation1456); 
+                    enumLiteral_3=(Token)match(input,25,FollowSets000.FOLLOW_25_in_ruleFetureAnnotation1412); 
 
                             current = grammarAccess.getFetureAnnotationAccess().getIgnoreEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_3, grammarAccess.getFetureAnnotationAccess().getIgnoreEnumLiteralDeclaration_3()); 
@@ -1873,7 +1840,7 @@ public class InternalHermesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDataTypes"
-    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:775:1: ruleDataTypes returns [Enumerator current=null] : ( (enumLiteral_0= 'String' ) | (enumLiteral_1= 'Integer' ) | (enumLiteral_2= 'Boolean' ) | (enumLiteral_3= 'Long' ) | (enumLiteral_4= 'Double' ) | (enumLiteral_5= 'Object' ) ) ;
+    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:754:1: ruleDataTypes returns [Enumerator current=null] : ( (enumLiteral_0= 'String' ) | (enumLiteral_1= 'Integer' ) | (enumLiteral_2= 'Boolean' ) | (enumLiteral_3= 'Long' ) | (enumLiteral_4= 'Double' ) | (enumLiteral_5= 'Object' ) ) ;
     public final Enumerator ruleDataTypes() throws RecognitionException {
         Enumerator current = null;
 
@@ -1886,38 +1853,38 @@ public class InternalHermesParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:777:28: ( ( (enumLiteral_0= 'String' ) | (enumLiteral_1= 'Integer' ) | (enumLiteral_2= 'Boolean' ) | (enumLiteral_3= 'Long' ) | (enumLiteral_4= 'Double' ) | (enumLiteral_5= 'Object' ) ) )
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:778:1: ( (enumLiteral_0= 'String' ) | (enumLiteral_1= 'Integer' ) | (enumLiteral_2= 'Boolean' ) | (enumLiteral_3= 'Long' ) | (enumLiteral_4= 'Double' ) | (enumLiteral_5= 'Object' ) )
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:756:28: ( ( (enumLiteral_0= 'String' ) | (enumLiteral_1= 'Integer' ) | (enumLiteral_2= 'Boolean' ) | (enumLiteral_3= 'Long' ) | (enumLiteral_4= 'Double' ) | (enumLiteral_5= 'Object' ) ) )
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:757:1: ( (enumLiteral_0= 'String' ) | (enumLiteral_1= 'Integer' ) | (enumLiteral_2= 'Boolean' ) | (enumLiteral_3= 'Long' ) | (enumLiteral_4= 'Double' ) | (enumLiteral_5= 'Object' ) )
             {
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:778:1: ( (enumLiteral_0= 'String' ) | (enumLiteral_1= 'Integer' ) | (enumLiteral_2= 'Boolean' ) | (enumLiteral_3= 'Long' ) | (enumLiteral_4= 'Double' ) | (enumLiteral_5= 'Object' ) )
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:757:1: ( (enumLiteral_0= 'String' ) | (enumLiteral_1= 'Integer' ) | (enumLiteral_2= 'Boolean' ) | (enumLiteral_3= 'Long' ) | (enumLiteral_4= 'Double' ) | (enumLiteral_5= 'Object' ) )
             int alt22=6;
             switch ( input.LA(1) ) {
-            case 27:
+            case 26:
                 {
                 alt22=1;
                 }
                 break;
-            case 28:
+            case 27:
                 {
                 alt22=2;
                 }
                 break;
-            case 29:
+            case 28:
                 {
                 alt22=3;
                 }
                 break;
-            case 30:
+            case 29:
                 {
                 alt22=4;
                 }
                 break;
-            case 31:
+            case 30:
                 {
                 alt22=5;
                 }
                 break;
-            case 32:
+            case 31:
                 {
                 alt22=6;
                 }
@@ -1931,12 +1898,12 @@ public class InternalHermesParser extends AbstractInternalAntlrParser {
 
             switch (alt22) {
                 case 1 :
-                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:778:2: (enumLiteral_0= 'String' )
+                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:757:2: (enumLiteral_0= 'String' )
                     {
-                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:778:2: (enumLiteral_0= 'String' )
-                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:778:4: enumLiteral_0= 'String'
+                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:757:2: (enumLiteral_0= 'String' )
+                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:757:4: enumLiteral_0= 'String'
                     {
-                    enumLiteral_0=(Token)match(input,27,FollowSets000.FOLLOW_27_in_ruleDataTypes1501); 
+                    enumLiteral_0=(Token)match(input,26,FollowSets000.FOLLOW_26_in_ruleDataTypes1457); 
 
                             current = grammarAccess.getDataTypesAccess().getStringEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getDataTypesAccess().getStringEnumLiteralDeclaration_0()); 
@@ -1948,12 +1915,12 @@ public class InternalHermesParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:784:6: (enumLiteral_1= 'Integer' )
+                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:763:6: (enumLiteral_1= 'Integer' )
                     {
-                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:784:6: (enumLiteral_1= 'Integer' )
-                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:784:8: enumLiteral_1= 'Integer'
+                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:763:6: (enumLiteral_1= 'Integer' )
+                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:763:8: enumLiteral_1= 'Integer'
                     {
-                    enumLiteral_1=(Token)match(input,28,FollowSets000.FOLLOW_28_in_ruleDataTypes1518); 
+                    enumLiteral_1=(Token)match(input,27,FollowSets000.FOLLOW_27_in_ruleDataTypes1474); 
 
                             current = grammarAccess.getDataTypesAccess().getIntegerEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getDataTypesAccess().getIntegerEnumLiteralDeclaration_1()); 
@@ -1965,12 +1932,12 @@ public class InternalHermesParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:790:6: (enumLiteral_2= 'Boolean' )
+                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:769:6: (enumLiteral_2= 'Boolean' )
                     {
-                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:790:6: (enumLiteral_2= 'Boolean' )
-                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:790:8: enumLiteral_2= 'Boolean'
+                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:769:6: (enumLiteral_2= 'Boolean' )
+                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:769:8: enumLiteral_2= 'Boolean'
                     {
-                    enumLiteral_2=(Token)match(input,29,FollowSets000.FOLLOW_29_in_ruleDataTypes1535); 
+                    enumLiteral_2=(Token)match(input,28,FollowSets000.FOLLOW_28_in_ruleDataTypes1491); 
 
                             current = grammarAccess.getDataTypesAccess().getBooleanEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_2, grammarAccess.getDataTypesAccess().getBooleanEnumLiteralDeclaration_2()); 
@@ -1982,12 +1949,12 @@ public class InternalHermesParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:796:6: (enumLiteral_3= 'Long' )
+                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:775:6: (enumLiteral_3= 'Long' )
                     {
-                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:796:6: (enumLiteral_3= 'Long' )
-                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:796:8: enumLiteral_3= 'Long'
+                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:775:6: (enumLiteral_3= 'Long' )
+                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:775:8: enumLiteral_3= 'Long'
                     {
-                    enumLiteral_3=(Token)match(input,30,FollowSets000.FOLLOW_30_in_ruleDataTypes1552); 
+                    enumLiteral_3=(Token)match(input,29,FollowSets000.FOLLOW_29_in_ruleDataTypes1508); 
 
                             current = grammarAccess.getDataTypesAccess().getLongEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_3, grammarAccess.getDataTypesAccess().getLongEnumLiteralDeclaration_3()); 
@@ -1999,12 +1966,12 @@ public class InternalHermesParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:802:6: (enumLiteral_4= 'Double' )
+                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:781:6: (enumLiteral_4= 'Double' )
                     {
-                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:802:6: (enumLiteral_4= 'Double' )
-                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:802:8: enumLiteral_4= 'Double'
+                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:781:6: (enumLiteral_4= 'Double' )
+                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:781:8: enumLiteral_4= 'Double'
                     {
-                    enumLiteral_4=(Token)match(input,31,FollowSets000.FOLLOW_31_in_ruleDataTypes1569); 
+                    enumLiteral_4=(Token)match(input,30,FollowSets000.FOLLOW_30_in_ruleDataTypes1525); 
 
                             current = grammarAccess.getDataTypesAccess().getDoubleEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_4, grammarAccess.getDataTypesAccess().getDoubleEnumLiteralDeclaration_4()); 
@@ -2016,12 +1983,12 @@ public class InternalHermesParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:808:6: (enumLiteral_5= 'Object' )
+                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:787:6: (enumLiteral_5= 'Object' )
                     {
-                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:808:6: (enumLiteral_5= 'Object' )
-                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:808:8: enumLiteral_5= 'Object'
+                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:787:6: (enumLiteral_5= 'Object' )
+                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:787:8: enumLiteral_5= 'Object'
                     {
-                    enumLiteral_5=(Token)match(input,32,FollowSets000.FOLLOW_32_in_ruleDataTypes1586); 
+                    enumLiteral_5=(Token)match(input,31,FollowSets000.FOLLOW_31_in_ruleDataTypes1542); 
 
                             current = grammarAccess.getDataTypesAccess().getObjectEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_5, grammarAccess.getDataTypesAccess().getObjectEnumLiteralDeclaration_5()); 
@@ -2080,14 +2047,14 @@ public class InternalHermesParser extends AbstractInternalAntlrParser {
         public static final BitSet FOLLOW_RULE_ID_in_ruleEntity534 = new BitSet(new long[]{0x0000000000011000L});
         public static final BitSet FOLLOW_16_in_ruleEntity552 = new BitSet(new long[]{0x0000000000000010L});
         public static final BitSet FOLLOW_RULE_ID_in_ruleEntity572 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_12_in_ruleEntity586 = new BitSet(new long[]{0x0000000000646000L});
+        public static final BitSet FOLLOW_12_in_ruleEntity586 = new BitSet(new long[]{0x0000000000346000L});
         public static final BitSet FOLLOW_13_in_ruleEntity599 = new BitSet(new long[]{0x0000000000020000L});
         public static final BitSet FOLLOW_17_in_ruleEntity611 = new BitSet(new long[]{0x0000000000000020L});
-        public static final BitSet FOLLOW_RULE_STRING_in_ruleEntity628 = new BitSet(new long[]{0x0000000000644000L});
-        public static final BitSet FOLLOW_ruleEntityAnnotation_in_ruleEntity657 = new BitSet(new long[]{0x0000000000644000L});
-        public static final BitSet FOLLOW_ruleEntityAnnotation_in_ruleEntity678 = new BitSet(new long[]{0x0000000000644000L});
-        public static final BitSet FOLLOW_ruleFeature_in_ruleEntity703 = new BitSet(new long[]{0x0000000000244000L});
-        public static final BitSet FOLLOW_ruleFeature_in_ruleEntity724 = new BitSet(new long[]{0x0000000000244000L});
+        public static final BitSet FOLLOW_RULE_STRING_in_ruleEntity628 = new BitSet(new long[]{0x0000000000344000L});
+        public static final BitSet FOLLOW_ruleEntityAnnotation_in_ruleEntity657 = new BitSet(new long[]{0x0000000000344000L});
+        public static final BitSet FOLLOW_ruleEntityAnnotation_in_ruleEntity678 = new BitSet(new long[]{0x0000000000344000L});
+        public static final BitSet FOLLOW_ruleFeature_in_ruleEntity703 = new BitSet(new long[]{0x0000000000144000L});
+        public static final BitSet FOLLOW_ruleFeature_in_ruleEntity724 = new BitSet(new long[]{0x0000000000144000L});
         public static final BitSet FOLLOW_14_in_ruleEntity739 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleRef_in_entryRuleRef775 = new BitSet(new long[]{0x0000000000000000L});
         public static final BitSet FOLLOW_EOF_in_entryRuleRef785 = new BitSet(new long[]{0x0000000000000002L});
@@ -2095,38 +2062,35 @@ public class InternalHermesParser extends AbstractInternalAntlrParser {
         public static final BitSet FOLLOW_RULE_ID_in_ruleRef839 = new BitSet(new long[]{0x0000000000000010L});
         public static final BitSet FOLLOW_RULE_ID_in_ruleRef864 = new BitSet(new long[]{0x0000000000081000L});
         public static final BitSet FOLLOW_19_in_ruleRef882 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_12_in_ruleRef908 = new BitSet(new long[]{0x0000000007902000L});
+        public static final BitSet FOLLOW_12_in_ruleRef908 = new BitSet(new long[]{0x0000000003C06000L});
         public static final BitSet FOLLOW_13_in_ruleRef921 = new BitSet(new long[]{0x0000000000000020L});
-        public static final BitSet FOLLOW_RULE_STRING_in_ruleRef938 = new BitSet(new long[]{0x0000000007900000L});
-        public static final BitSet FOLLOW_ruleFetureAnnotation_in_ruleRef967 = new BitSet(new long[]{0x0000000007900000L});
-        public static final BitSet FOLLOW_ruleFetureAnnotation_in_ruleRef988 = new BitSet(new long[]{0x0000000007900000L});
-        public static final BitSet FOLLOW_20_in_ruleRef1003 = new BitSet(new long[]{0x0000000000020000L});
-        public static final BitSet FOLLOW_17_in_ruleRef1015 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleRef1035 = new BitSet(new long[]{0x0000000000004000L});
-        public static final BitSet FOLLOW_14_in_ruleRef1047 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleDataType_in_entryRuleDataType1083 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleDataType1093 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_21_in_ruleDataType1130 = new BitSet(new long[]{0x0000000000000010L});
-        public static final BitSet FOLLOW_RULE_ID_in_ruleDataType1147 = new BitSet(new long[]{0x00000001F8000000L});
-        public static final BitSet FOLLOW_ruleDataTypes_in_ruleDataType1173 = new BitSet(new long[]{0x0000000000081000L});
-        public static final BitSet FOLLOW_19_in_ruleDataType1191 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_12_in_ruleDataType1217 = new BitSet(new long[]{0x0000000007806000L});
-        public static final BitSet FOLLOW_13_in_ruleDataType1230 = new BitSet(new long[]{0x0000000000000020L});
-        public static final BitSet FOLLOW_RULE_STRING_in_ruleDataType1247 = new BitSet(new long[]{0x0000000007804000L});
-        public static final BitSet FOLLOW_ruleFetureAnnotation_in_ruleDataType1276 = new BitSet(new long[]{0x0000000007804000L});
-        public static final BitSet FOLLOW_ruleFetureAnnotation_in_ruleDataType1297 = new BitSet(new long[]{0x0000000007804000L});
-        public static final BitSet FOLLOW_14_in_ruleDataType1312 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_22_in_ruleEntityAnnotation1361 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_23_in_ruleFetureAnnotation1405 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_24_in_ruleFetureAnnotation1422 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_25_in_ruleFetureAnnotation1439 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_26_in_ruleFetureAnnotation1456 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_27_in_ruleDataTypes1501 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_28_in_ruleDataTypes1518 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_29_in_ruleDataTypes1535 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_30_in_ruleDataTypes1552 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_31_in_ruleDataTypes1569 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_32_in_ruleDataTypes1586 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_RULE_STRING_in_ruleRef938 = new BitSet(new long[]{0x0000000003C04000L});
+        public static final BitSet FOLLOW_ruleFetureAnnotation_in_ruleRef967 = new BitSet(new long[]{0x0000000003C04000L});
+        public static final BitSet FOLLOW_ruleFetureAnnotation_in_ruleRef988 = new BitSet(new long[]{0x0000000003C04000L});
+        public static final BitSet FOLLOW_14_in_ruleRef1003 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleDataType_in_entryRuleDataType1039 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleDataType1049 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_20_in_ruleDataType1086 = new BitSet(new long[]{0x0000000000000010L});
+        public static final BitSet FOLLOW_RULE_ID_in_ruleDataType1103 = new BitSet(new long[]{0x00000000FC000000L});
+        public static final BitSet FOLLOW_ruleDataTypes_in_ruleDataType1129 = new BitSet(new long[]{0x0000000000081000L});
+        public static final BitSet FOLLOW_19_in_ruleDataType1147 = new BitSet(new long[]{0x0000000000001000L});
+        public static final BitSet FOLLOW_12_in_ruleDataType1173 = new BitSet(new long[]{0x0000000003C06000L});
+        public static final BitSet FOLLOW_13_in_ruleDataType1186 = new BitSet(new long[]{0x0000000000000020L});
+        public static final BitSet FOLLOW_RULE_STRING_in_ruleDataType1203 = new BitSet(new long[]{0x0000000003C04000L});
+        public static final BitSet FOLLOW_ruleFetureAnnotation_in_ruleDataType1232 = new BitSet(new long[]{0x0000000003C04000L});
+        public static final BitSet FOLLOW_ruleFetureAnnotation_in_ruleDataType1253 = new BitSet(new long[]{0x0000000003C04000L});
+        public static final BitSet FOLLOW_14_in_ruleDataType1268 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_21_in_ruleEntityAnnotation1317 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_22_in_ruleFetureAnnotation1361 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_23_in_ruleFetureAnnotation1378 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_24_in_ruleFetureAnnotation1395 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_25_in_ruleFetureAnnotation1412 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_26_in_ruleDataTypes1457 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_27_in_ruleDataTypes1474 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_28_in_ruleDataTypes1491 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_29_in_ruleDataTypes1508 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_30_in_ruleDataTypes1525 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_31_in_ruleDataTypes1542 = new BitSet(new long[]{0x0000000000000002L});
     }
 
 
