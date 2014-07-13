@@ -13,6 +13,7 @@ import org.eclipse.xtext.serializer.sequencer.ITransientValueService;
 import org.yazgel.hermes.DataType;
 import org.yazgel.hermes.Entity;
 import org.yazgel.hermes.HermesPackage;
+import org.yazgel.hermes.Module;
 import org.yazgel.hermes.Ref;
 import org.yazgel.hermes.xtext.services.HermesGrammarAccess;
 
@@ -34,6 +35,12 @@ public abstract class AbstractHermesSemanticSequencer extends AbstractDelegating
 			case HermesPackage.ENTITY:
 				if(context == grammarAccess.getEntityRule()) {
 					sequence_Entity(context, (Entity) semanticObject); 
+					return; 
+				}
+				else break;
+			case HermesPackage.MODULE:
+				if(context == grammarAccess.getModuleRule()) {
+					sequence_Module(context, (Module) semanticObject); 
 					return; 
 				}
 				else break;
@@ -79,7 +86,16 @@ public abstract class AbstractHermesSemanticSequencer extends AbstractDelegating
 	
 	/**
 	 * Constraint:
-	 *     (name=ID (ownedEntity+=Entity ownedEntity+=Entity*)? (subPackage+=Package subPackage+=Package*)?)
+	 *     (name=ID (packages+=Package packages+=Package*)?)
+	 */
+	protected void sequence_Module(EObject context, Module semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (superPackage=[Package|ID]? name=ID (ownedEntity+=Entity ownedEntity+=Entity*)?)
 	 */
 	protected void sequence_Package(EObject context, org.yazgel.hermes.Package semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

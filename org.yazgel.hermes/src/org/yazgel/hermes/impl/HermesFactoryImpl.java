@@ -18,6 +18,7 @@ import org.yazgel.hermes.EntityAnnotation;
 import org.yazgel.hermes.FetureAnnotation;
 import org.yazgel.hermes.HermesFactory;
 import org.yazgel.hermes.HermesPackage;
+import org.yazgel.hermes.Module;
 import org.yazgel.hermes.Ref;
 
 /**
@@ -64,6 +65,7 @@ public class HermesFactoryImpl extends EFactoryImpl implements HermesFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
+			case HermesPackage.MODULE: return createModule();
 			case HermesPackage.PACKAGE: return createPackage();
 			case HermesPackage.ENTITY: return createEntity();
 			case HermesPackage.REF: return createRef();
@@ -109,6 +111,16 @@ public class HermesFactoryImpl extends EFactoryImpl implements HermesFactory {
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Module createModule() {
+		ModuleImpl module = new ModuleImpl();
+		return module;
 	}
 
 	/**

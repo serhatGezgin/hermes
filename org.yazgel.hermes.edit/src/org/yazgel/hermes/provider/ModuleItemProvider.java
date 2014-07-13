@@ -9,29 +9,38 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.util.ResourceLocator;
+
 import org.eclipse.emf.ecore.EStructuralFeature;
 
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
+import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
+import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.IItemPropertySource;
+import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
+import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.yazgel.hermes.HermesFactory;
 import org.yazgel.hermes.HermesPackage;
+import org.yazgel.hermes.Module;
 
 /**
- * This is the item provider adapter for a {@link org.yazgel.hermes.Package} object.
+ * This is the item provider adapter for a {@link org.yazgel.hermes.Module} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class PackageItemProvider extends NamedElementItemProvider {
+public class ModuleItemProvider 
+	extends NamedElementItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PackageItemProvider(AdapterFactory adapterFactory) {
+	public ModuleItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -46,31 +55,8 @@ public class PackageItemProvider extends NamedElementItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addSuperPackagePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Super Package feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addSuperPackagePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Package_superPackage_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Package_superPackage_feature", "_UI_Package_type"),
-				 HermesPackage.Literals.PACKAGE__SUPER_PACKAGE,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
 	}
 
 	/**
@@ -85,7 +71,7 @@ public class PackageItemProvider extends NamedElementItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(HermesPackage.Literals.PACKAGE__OWNED_ENTITY);
+			childrenFeatures.add(HermesPackage.Literals.MODULE__PACKAGES);
 		}
 		return childrenFeatures;
 	}
@@ -104,14 +90,14 @@ public class PackageItemProvider extends NamedElementItemProvider {
 	}
 
 	/**
-	 * This returns Package.gif.
+	 * This returns Module.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Package"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Module"));
 	}
 
 	/**
@@ -122,10 +108,10 @@ public class PackageItemProvider extends NamedElementItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((org.yazgel.hermes.Package)object).getName();
+		String label = ((Module)object).getName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_Package_type") :
-			getString("_UI_Package_type") + " " + label;
+			getString("_UI_Module_type") :
+			getString("_UI_Module_type") + " " + label;
 	}
 	
 
@@ -140,8 +126,8 @@ public class PackageItemProvider extends NamedElementItemProvider {
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(org.yazgel.hermes.Package.class)) {
-			case HermesPackage.PACKAGE__OWNED_ENTITY:
+		switch (notification.getFeatureID(Module.class)) {
+			case HermesPackage.MODULE__PACKAGES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -161,8 +147,8 @@ public class PackageItemProvider extends NamedElementItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(HermesPackage.Literals.PACKAGE__OWNED_ENTITY,
-				 HermesFactory.eINSTANCE.createEntity()));
+				(HermesPackage.Literals.MODULE__PACKAGES,
+				 HermesFactory.eINSTANCE.createPackage()));
 	}
 
 }

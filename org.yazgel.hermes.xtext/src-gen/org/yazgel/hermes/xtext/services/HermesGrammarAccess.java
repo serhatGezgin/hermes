@@ -18,33 +18,79 @@ import org.eclipse.xtext.common.services.TerminalsGrammarAccess;
 public class HermesGrammarAccess extends AbstractGrammarElementFinder {
 	
 	
+	public class ModuleElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Module");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Action cModuleAction_0 = (Action)cGroup.eContents().get(0);
+		private final Keyword cModuleKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cNameIDTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Assignment cPackagesAssignment_3_0 = (Assignment)cGroup_3.eContents().get(0);
+		private final RuleCall cPackagesPackageParserRuleCall_3_0_0 = (RuleCall)cPackagesAssignment_3_0.eContents().get(0);
+		private final Assignment cPackagesAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cPackagesPackageParserRuleCall_3_1_0 = (RuleCall)cPackagesAssignment_3_1.eContents().get(0);
+		
+		//Module:
+		//	{Module} "Module" name=ID (packages+=Package packages+=Package*)?;
+		public ParserRule getRule() { return rule; }
+
+		//{Module} "Module" name=ID (packages+=Package packages+=Package*)?
+		public Group getGroup() { return cGroup; }
+
+		//{Module}
+		public Action getModuleAction_0() { return cModuleAction_0; }
+
+		//"Module"
+		public Keyword getModuleKeyword_1() { return cModuleKeyword_1; }
+
+		//name=ID
+		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_2_0() { return cNameIDTerminalRuleCall_2_0; }
+
+		//(packages+=Package packages+=Package*)?
+		public Group getGroup_3() { return cGroup_3; }
+
+		//packages+=Package
+		public Assignment getPackagesAssignment_3_0() { return cPackagesAssignment_3_0; }
+
+		//Package
+		public RuleCall getPackagesPackageParserRuleCall_3_0_0() { return cPackagesPackageParserRuleCall_3_0_0; }
+
+		//packages+=Package*
+		public Assignment getPackagesAssignment_3_1() { return cPackagesAssignment_3_1; }
+
+		//Package
+		public RuleCall getPackagesPackageParserRuleCall_3_1_0() { return cPackagesPackageParserRuleCall_3_1_0; }
+	}
+
 	public class PackageElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Package");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cPackageAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cPackageKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cNameIDTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
-		private final Assignment cOwnedEntityAssignment_4_0 = (Assignment)cGroup_4.eContents().get(0);
-		private final RuleCall cOwnedEntityEntityParserRuleCall_4_0_0 = (RuleCall)cOwnedEntityAssignment_4_0.eContents().get(0);
-		private final Assignment cOwnedEntityAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
-		private final RuleCall cOwnedEntityEntityParserRuleCall_4_1_0 = (RuleCall)cOwnedEntityAssignment_4_1.eContents().get(0);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Assignment cSuperPackageAssignment_2_0 = (Assignment)cGroup_2.eContents().get(0);
+		private final CrossReference cSuperPackagePackageCrossReference_2_0_0 = (CrossReference)cSuperPackageAssignment_2_0.eContents().get(0);
+		private final RuleCall cSuperPackagePackageIDTerminalRuleCall_2_0_0_1 = (RuleCall)cSuperPackagePackageCrossReference_2_0_0.eContents().get(1);
+		private final Keyword cFullStopKeyword_2_1 = (Keyword)cGroup_2.eContents().get(1);
+		private final Assignment cNameAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cNameIDTerminalRuleCall_3_0 = (RuleCall)cNameAssignment_3.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
-		private final Assignment cSubPackageAssignment_5_0 = (Assignment)cGroup_5.eContents().get(0);
-		private final RuleCall cSubPackagePackageParserRuleCall_5_0_0 = (RuleCall)cSubPackageAssignment_5_0.eContents().get(0);
-		private final Assignment cSubPackageAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
-		private final RuleCall cSubPackagePackageParserRuleCall_5_1_0 = (RuleCall)cSubPackageAssignment_5_1.eContents().get(0);
+		private final Assignment cOwnedEntityAssignment_5_0 = (Assignment)cGroup_5.eContents().get(0);
+		private final RuleCall cOwnedEntityEntityParserRuleCall_5_0_0 = (RuleCall)cOwnedEntityAssignment_5_0.eContents().get(0);
+		private final Assignment cOwnedEntityAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
+		private final RuleCall cOwnedEntityEntityParserRuleCall_5_1_0 = (RuleCall)cOwnedEntityAssignment_5_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//Package:
-		//	{Package} "Package" name=ID "{" (ownedEntity+=Entity ownedEntity+=Entity*)? (subPackage+=Package
-		//	subPackage+=Package*)? "}";
+		//	{Package} "Package" (superPackage=[Package] ".")? name=ID "{" (ownedEntity+=Entity ownedEntity+=Entity*)? "}";
 		public ParserRule getRule() { return rule; }
 
-		//{Package} "Package" name=ID "{" (ownedEntity+=Entity ownedEntity+=Entity*)? (subPackage+=Package subPackage+=Package*)?
-		//"}"
+		//{Package} "Package" (superPackage=[Package] ".")? name=ID "{" (ownedEntity+=Entity ownedEntity+=Entity*)? "}"
 		public Group getGroup() { return cGroup; }
 
 		//{Package}
@@ -53,44 +99,44 @@ public class HermesGrammarAccess extends AbstractGrammarElementFinder {
 		//"Package"
 		public Keyword getPackageKeyword_1() { return cPackageKeyword_1; }
 
-		//name=ID
-		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
+		//(superPackage=[Package] ".")?
+		public Group getGroup_2() { return cGroup_2; }
+
+		//superPackage=[Package]
+		public Assignment getSuperPackageAssignment_2_0() { return cSuperPackageAssignment_2_0; }
+
+		//[Package]
+		public CrossReference getSuperPackagePackageCrossReference_2_0_0() { return cSuperPackagePackageCrossReference_2_0_0; }
 
 		//ID
-		public RuleCall getNameIDTerminalRuleCall_2_0() { return cNameIDTerminalRuleCall_2_0; }
+		public RuleCall getSuperPackagePackageIDTerminalRuleCall_2_0_0_1() { return cSuperPackagePackageIDTerminalRuleCall_2_0_0_1; }
+
+		//"."
+		public Keyword getFullStopKeyword_2_1() { return cFullStopKeyword_2_1; }
+
+		//name=ID
+		public Assignment getNameAssignment_3() { return cNameAssignment_3; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_3_0() { return cNameIDTerminalRuleCall_3_0; }
 
 		//"{"
-		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
+		public Keyword getLeftCurlyBracketKeyword_4() { return cLeftCurlyBracketKeyword_4; }
 
 		//(ownedEntity+=Entity ownedEntity+=Entity*)?
-		public Group getGroup_4() { return cGroup_4; }
-
-		//ownedEntity+=Entity
-		public Assignment getOwnedEntityAssignment_4_0() { return cOwnedEntityAssignment_4_0; }
-
-		//Entity
-		public RuleCall getOwnedEntityEntityParserRuleCall_4_0_0() { return cOwnedEntityEntityParserRuleCall_4_0_0; }
-
-		//ownedEntity+=Entity*
-		public Assignment getOwnedEntityAssignment_4_1() { return cOwnedEntityAssignment_4_1; }
-
-		//Entity
-		public RuleCall getOwnedEntityEntityParserRuleCall_4_1_0() { return cOwnedEntityEntityParserRuleCall_4_1_0; }
-
-		//(subPackage+=Package subPackage+=Package*)?
 		public Group getGroup_5() { return cGroup_5; }
 
-		//subPackage+=Package
-		public Assignment getSubPackageAssignment_5_0() { return cSubPackageAssignment_5_0; }
+		//ownedEntity+=Entity
+		public Assignment getOwnedEntityAssignment_5_0() { return cOwnedEntityAssignment_5_0; }
 
-		//Package
-		public RuleCall getSubPackagePackageParserRuleCall_5_0_0() { return cSubPackagePackageParserRuleCall_5_0_0; }
+		//Entity
+		public RuleCall getOwnedEntityEntityParserRuleCall_5_0_0() { return cOwnedEntityEntityParserRuleCall_5_0_0; }
 
-		//subPackage+=Package*
-		public Assignment getSubPackageAssignment_5_1() { return cSubPackageAssignment_5_1; }
+		//ownedEntity+=Entity*
+		public Assignment getOwnedEntityAssignment_5_1() { return cOwnedEntityAssignment_5_1; }
 
-		//Package
-		public RuleCall getSubPackagePackageParserRuleCall_5_1_0() { return cSubPackagePackageParserRuleCall_5_1_0; }
+		//Entity
+		public RuleCall getOwnedEntityEntityParserRuleCall_5_1_0() { return cOwnedEntityEntityParserRuleCall_5_1_0; }
 
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
@@ -506,6 +552,7 @@ public class HermesGrammarAccess extends AbstractGrammarElementFinder {
 		public Keyword getObjectObjectKeyword_5_0() { return cObjectObjectKeyword_5_0; }
 	}
 	
+	private ModuleElements pModule;
 	private PackageElements pPackage;
 	private FeatureElements pFeature;
 	private EntityElements pEntity;
@@ -553,9 +600,18 @@ public class HermesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	
+	//Module:
+	//	{Module} "Module" name=ID (packages+=Package packages+=Package*)?;
+	public ModuleElements getModuleAccess() {
+		return (pModule != null) ? pModule : (pModule = new ModuleElements());
+	}
+	
+	public ParserRule getModuleRule() {
+		return getModuleAccess().getRule();
+	}
+
 	//Package:
-	//	{Package} "Package" name=ID "{" (ownedEntity+=Entity ownedEntity+=Entity*)? (subPackage+=Package
-	//	subPackage+=Package*)? "}";
+	//	{Package} "Package" (superPackage=[Package] ".")? name=ID "{" (ownedEntity+=Entity ownedEntity+=Entity*)? "}";
 	public PackageElements getPackageAccess() {
 		return (pPackage != null) ? pPackage : (pPackage = new PackageElements());
 	}

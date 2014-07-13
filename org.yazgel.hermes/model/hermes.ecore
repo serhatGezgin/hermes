@@ -4,6 +4,10 @@
   <eAnnotations source="gmf">
     <details key="foo" value="bar"/>
   </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="Module" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="packages" upperBound="-1"
+        eType="#//Package" containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Package" eSuperTypes="#//NamedElement">
     <eAnnotations source="gmf.diagram">
       <details key="foo" value="bar"/>
@@ -19,8 +23,7 @@
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ownedEntity" upperBound="-1"
         eType="#//Entity" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="subPackage" upperBound="-1"
-        eType="#//Package" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="superPackage" eType="#//Package"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NamedElement" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

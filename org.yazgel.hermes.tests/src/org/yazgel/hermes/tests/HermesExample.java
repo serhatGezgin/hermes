@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 
 import org.yazgel.hermes.HermesFactory;
 import org.yazgel.hermes.HermesPackage;
+import org.yazgel.hermes.Module;
 
 /**
  * <!-- begin-user-doc -->
@@ -59,7 +60,7 @@ public class HermesExample {
 			System.out.println("Enter a list of file paths or URIs that have content like this:");
 			try {
 				Resource resource = resourceSet.createResource(URI.createURI("http:///My.hermes"));
-				org.yazgel.hermes.Package root = HermesFactory.eINSTANCE.createPackage();
+				Module root = HermesFactory.eINSTANCE.createModule();
 				resource.getContents().add(root);
 				resource.save(System.out, null);
 			}

@@ -18,6 +18,7 @@ import org.yazgel.hermes.Feature;
 import org.yazgel.hermes.FetureAnnotation;
 import org.yazgel.hermes.HermesFactory;
 import org.yazgel.hermes.HermesPackage;
+import org.yazgel.hermes.Module;
 import org.yazgel.hermes.NamedElement;
 import org.yazgel.hermes.Ref;
 
@@ -28,6 +29,13 @@ import org.yazgel.hermes.Ref;
  * @generated
  */
 public class HermesPackageImpl extends EPackageImpl implements HermesPackage {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass moduleEClass = null;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -157,6 +165,24 @@ public class HermesPackageImpl extends EPackageImpl implements HermesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getModule() {
+		return moduleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getModule_Packages() {
+		return (EReference)moduleEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getPackage() {
 		return packageEClass;
 	}
@@ -175,7 +201,7 @@ public class HermesPackageImpl extends EPackageImpl implements HermesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPackage_SubPackage() {
+	public EReference getPackage_SuperPackage() {
 		return (EReference)packageEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -351,9 +377,12 @@ public class HermesPackageImpl extends EPackageImpl implements HermesPackage {
 		isCreated = true;
 
 		// Create classes and their features
+		moduleEClass = createEClass(MODULE);
+		createEReference(moduleEClass, MODULE__PACKAGES);
+
 		packageEClass = createEClass(PACKAGE);
 		createEReference(packageEClass, PACKAGE__OWNED_ENTITY);
-		createEReference(packageEClass, PACKAGE__SUB_PACKAGE);
+		createEReference(packageEClass, PACKAGE__SUPER_PACKAGE);
 
 		namedElementEClass = createEClass(NAMED_ELEMENT);
 		createEAttribute(namedElementEClass, NAMED_ELEMENT__NAME);
@@ -407,6 +436,7 @@ public class HermesPackageImpl extends EPackageImpl implements HermesPackage {
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		moduleEClass.getESuperTypes().add(this.getNamedElement());
 		packageEClass.getESuperTypes().add(this.getNamedElement());
 		entityEClass.getESuperTypes().add(this.getNamedElement());
 		featureEClass.getESuperTypes().add(this.getNamedElement());
@@ -414,9 +444,12 @@ public class HermesPackageImpl extends EPackageImpl implements HermesPackage {
 		dataTypeEClass.getESuperTypes().add(this.getFeature());
 
 		// Initialize classes and features; add operations and parameters
+		initEClass(moduleEClass, Module.class, "Module", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getModule_Packages(), this.getPackage(), null, "packages", null, 0, -1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(packageEClass, org.yazgel.hermes.Package.class, "Package", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPackage_OwnedEntity(), this.getEntity(), null, "ownedEntity", null, 0, -1, org.yazgel.hermes.Package.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPackage_SubPackage(), this.getPackage(), null, "subPackage", null, 0, -1, org.yazgel.hermes.Package.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPackage_SuperPackage(), this.getPackage(), null, "superPackage", null, 0, 1, org.yazgel.hermes.Package.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(namedElementEClass, NamedElement.class, "NamedElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getNamedElement_Name(), ecorePackage.getEString(), "name", null, 1, 1, NamedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

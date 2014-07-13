@@ -11,6 +11,7 @@ import org.yazgel.hermes.DataType;
 import org.yazgel.hermes.Entity;
 import org.yazgel.hermes.Feature;
 import org.yazgel.hermes.HermesPackage;
+import org.yazgel.hermes.Module;
 import org.yazgel.hermes.NamedElement;
 import org.yazgel.hermes.Ref;
 
@@ -71,6 +72,13 @@ public class HermesSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
+			case HermesPackage.MODULE: {
+				Module module = (Module)theEObject;
+				T result = caseModule(module);
+				if (result == null) result = caseNamedElement(module);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case HermesPackage.PACKAGE: {
 				org.yazgel.hermes.Package package_ = (org.yazgel.hermes.Package)theEObject;
 				T result = casePackage(package_);
@@ -116,6 +124,21 @@ public class HermesSwitch<T> extends Switch<T> {
 			}
 			default: return defaultCase(theEObject);
 		}
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Module</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Module</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseModule(Module object) {
+		return null;
 	}
 
 	/**

@@ -22,6 +22,15 @@ public interface HermesFactory extends EFactory {
 	HermesFactory eINSTANCE = org.yazgel.hermes.impl.HermesFactoryImpl.init();
 
 	/**
+	 * Returns a new object of class '<em>Module</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Module</em>'.
+	 * @generated
+	 */
+	Module createModule();
+
+	/**
 	 * Returns a new object of class '<em>Package</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

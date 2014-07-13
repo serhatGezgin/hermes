@@ -13,7 +13,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.yazgel.hermes.Package#getOwnedEntity <em>Owned Entity</em>}</li>
- *   <li>{@link org.yazgel.hermes.Package#getSubPackage <em>Sub Package</em>}</li>
+ *   <li>{@link org.yazgel.hermes.Package#getSuperPackage <em>Super Package</em>}</li>
  * </ul>
  * </p>
  *
@@ -40,19 +40,29 @@ public interface Package extends NamedElement {
 	EList<Entity> getOwnedEntity();
 
 	/**
-	 * Returns the value of the '<em><b>Sub Package</b></em>' containment reference list.
-	 * The list contents are of type {@link org.yazgel.hermes.Package}.
+	 * Returns the value of the '<em><b>Super Package</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Sub Package</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Super Package</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Sub Package</em>' containment reference list.
-	 * @see org.yazgel.hermes.HermesPackage#getPackage_SubPackage()
-	 * @model containment="true"
+	 * @return the value of the '<em>Super Package</em>' reference.
+	 * @see #setSuperPackage(Package)
+	 * @see org.yazgel.hermes.HermesPackage#getPackage_SuperPackage()
+	 * @model
 	 * @generated
 	 */
-	EList<Package> getSubPackage();
+	Package getSuperPackage();
+
+	/**
+	 * Sets the value of the '{@link org.yazgel.hermes.Package#getSuperPackage <em>Super Package</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Super Package</em>' reference.
+	 * @see #getSuperPackage()
+	 * @generated
+	 */
+	void setSuperPackage(Package value);
 
 } // Package

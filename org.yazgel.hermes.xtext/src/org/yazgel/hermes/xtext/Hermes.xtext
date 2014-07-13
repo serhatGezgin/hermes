@@ -3,13 +3,20 @@ grammar org.yazgel.hermes.xtext.Hermes with org.eclipse.xtext.common.Terminals
 
 import "platform:/resource/org.yazgel.hermes/model/hermes.ecore" 
 
+Module returns Module:
+	{Module}
+	'Module'
+	name=ID
+	(packages+=Package (packages+=Package)*)?
+;
+
+
 Package returns Package:
 	{Package}
 	'Package'
-	name=ID
+	(superPackage=[Package|ID] '.')? name=ID 
 	'{'
 		(ownedEntity+=Entity (ownedEntity+=Entity)*)?
-		(subPackage+=Package (subPackage+=Package)*)?
 	'}';
 
 

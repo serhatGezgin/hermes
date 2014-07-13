@@ -13,6 +13,7 @@ import org.yazgel.hermes.DataType;
 import org.yazgel.hermes.Entity;
 import org.yazgel.hermes.Feature;
 import org.yazgel.hermes.HermesPackage;
+import org.yazgel.hermes.Module;
 import org.yazgel.hermes.NamedElement;
 import org.yazgel.hermes.Ref;
 
@@ -73,6 +74,10 @@ public class HermesAdapterFactory extends AdapterFactoryImpl {
 	protected HermesSwitch<Adapter> modelSwitch =
 		new HermesSwitch<Adapter>() {
 			@Override
+			public Adapter caseModule(Module object) {
+				return createModuleAdapter();
+			}
+			@Override
 			public Adapter casePackage(org.yazgel.hermes.Package object) {
 				return createPackageAdapter();
 			}
@@ -115,6 +120,20 @@ public class HermesAdapterFactory extends AdapterFactoryImpl {
 		return modelSwitch.doSwitch((EObject)target);
 	}
 
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.yazgel.hermes.Module <em>Module</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.yazgel.hermes.Module
+	 * @generated
+	 */
+	public Adapter createModuleAdapter() {
+		return null;
+	}
 
 	/**
 	 * Creates a new adapter for an object of class '{@link org.yazgel.hermes.Package <em>Package</em>}'.

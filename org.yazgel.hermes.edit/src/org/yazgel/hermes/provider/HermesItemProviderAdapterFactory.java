@@ -72,6 +72,29 @@ public class HermesItemProviderAdapterFactory extends HermesAdapterFactory imple
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.yazgel.hermes.Module} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ModuleItemProvider moduleItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.yazgel.hermes.Module}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createModuleAdapter() {
+		if (moduleItemProvider == null) {
+			moduleItemProvider = new ModuleItemProvider(this);
+		}
+
+		return moduleItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.yazgel.hermes.Package} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -262,6 +285,7 @@ public class HermesItemProviderAdapterFactory extends HermesAdapterFactory imple
 	 * @generated
 	 */
 	public void dispose() {
+		if (moduleItemProvider != null) moduleItemProvider.dispose();
 		if (packageItemProvider != null) packageItemProvider.dispose();
 		if (entityItemProvider != null) entityItemProvider.dispose();
 		if (refItemProvider != null) refItemProvider.dispose();

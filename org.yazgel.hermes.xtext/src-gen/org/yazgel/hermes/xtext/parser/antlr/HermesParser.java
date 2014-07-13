@@ -25,7 +25,7 @@ public class HermesParser extends org.eclipse.xtext.parser.antlr.AbstractAntlrPa
 	
 	@Override 
 	protected String getDefaultRuleName() {
-		return "Package";
+		return "Module";
 	}
 	
 	public HermesGrammarAccess getGrammarAccess() {
