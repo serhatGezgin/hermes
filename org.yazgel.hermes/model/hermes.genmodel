@@ -29,7 +29,6 @@
     </genClasses>
     <genClasses ecoreClass="hermes.ecore#//Package">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hermes.ecore#//Package/ownedEntity"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hermes.ecore#//Package/superPackage"/>
     </genClasses>
     <genClasses image="false" ecoreClass="hermes.ecore#//NamedElement">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hermes.ecore#//NamedElement/name"/>

@@ -28,7 +28,6 @@ import org.yazgel.hermes.HermesPackage;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.yazgel.hermes.impl.PackageImpl#getOwnedEntity <em>Owned Entity</em>}</li>
- *   <li>{@link org.yazgel.hermes.impl.PackageImpl#getSuperPackage <em>Super Package</em>}</li>
  * </ul>
  * </p>
  *
@@ -44,16 +43,6 @@ public class PackageImpl extends NamedElementImpl implements org.yazgel.hermes.P
 	 * @ordered
 	 */
 	protected EList<Entity> ownedEntity;
-
-	/**
-	 * The cached value of the '{@link #getSuperPackage() <em>Super Package</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSuperPackage()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<org.yazgel.hermes.Package> superPackage;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -91,18 +80,6 @@ public class PackageImpl extends NamedElementImpl implements org.yazgel.hermes.P
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<org.yazgel.hermes.Package> getSuperPackage() {
-		if (superPackage == null) {
-			superPackage = new EObjectResolvingEList<org.yazgel.hermes.Package>(org.yazgel.hermes.Package.class, this, HermesPackage.PACKAGE__SUPER_PACKAGE);
-		}
-		return superPackage;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -122,8 +99,6 @@ public class PackageImpl extends NamedElementImpl implements org.yazgel.hermes.P
 		switch (featureID) {
 			case HermesPackage.PACKAGE__OWNED_ENTITY:
 				return getOwnedEntity();
-			case HermesPackage.PACKAGE__SUPER_PACKAGE:
-				return getSuperPackage();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -141,10 +116,6 @@ public class PackageImpl extends NamedElementImpl implements org.yazgel.hermes.P
 				getOwnedEntity().clear();
 				getOwnedEntity().addAll((Collection<? extends Entity>)newValue);
 				return;
-			case HermesPackage.PACKAGE__SUPER_PACKAGE:
-				getSuperPackage().clear();
-				getSuperPackage().addAll((Collection<? extends org.yazgel.hermes.Package>)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -160,9 +131,6 @@ public class PackageImpl extends NamedElementImpl implements org.yazgel.hermes.P
 			case HermesPackage.PACKAGE__OWNED_ENTITY:
 				getOwnedEntity().clear();
 				return;
-			case HermesPackage.PACKAGE__SUPER_PACKAGE:
-				getSuperPackage().clear();
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -177,8 +145,6 @@ public class PackageImpl extends NamedElementImpl implements org.yazgel.hermes.P
 		switch (featureID) {
 			case HermesPackage.PACKAGE__OWNED_ENTITY:
 				return ownedEntity != null && !ownedEntity.isEmpty();
-			case HermesPackage.PACKAGE__SUPER_PACKAGE:
-				return superPackage != null && !superPackage.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

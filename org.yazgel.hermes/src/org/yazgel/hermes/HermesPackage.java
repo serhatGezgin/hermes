@@ -151,22 +151,13 @@ public interface HermesPackage extends EPackage {
 	int PACKAGE__OWNED_ENTITY = NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Super Package</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PACKAGE__SUPER_PACKAGE = NAMED_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
 	 * The number of structural features of the '<em>Package</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PACKAGE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 2;
+	int PACKAGE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link org.yazgel.hermes.impl.EntityImpl <em>Entity</em>}' class.
@@ -453,17 +444,6 @@ public interface HermesPackage extends EPackage {
 	EReference getPackage_OwnedEntity();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.yazgel.hermes.Package#getSuperPackage <em>Super Package</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Super Package</em>'.
-	 * @see org.yazgel.hermes.Package#getSuperPackage()
-	 * @see #getPackage()
-	 * @generated
-	 */
-	EReference getPackage_SuperPackage();
-
-	/**
 	 * Returns the meta object for class '{@link org.yazgel.hermes.NamedElement <em>Named Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -688,14 +668,6 @@ public interface HermesPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PACKAGE__OWNED_ENTITY = eINSTANCE.getPackage_OwnedEntity();
-
-		/**
-		 * The meta object literal for the '<em><b>Super Package</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PACKAGE__SUPER_PACKAGE = eINSTANCE.getPackage_SuperPackage();
 
 		/**
 		 * The meta object literal for the '{@link org.yazgel.hermes.impl.NamedElementImpl <em>Named Element</em>}' class.

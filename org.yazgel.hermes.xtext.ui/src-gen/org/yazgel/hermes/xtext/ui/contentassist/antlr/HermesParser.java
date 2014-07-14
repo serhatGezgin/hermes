@@ -43,9 +43,7 @@ public class HermesParser extends AbstractContentAssistParser {
 					put(grammarAccess.getModuleAccess().getGroup(), "rule__Module__Group__0");
 					put(grammarAccess.getModuleAccess().getGroup_3(), "rule__Module__Group_3__0");
 					put(grammarAccess.getPackageAccess().getGroup(), "rule__Package__Group__0");
-					put(grammarAccess.getPackageAccess().getGroup_2(), "rule__Package__Group_2__0");
-					put(grammarAccess.getPackageAccess().getGroup_2_2(), "rule__Package__Group_2_2__0");
-					put(grammarAccess.getPackageAccess().getGroup_5(), "rule__Package__Group_5__0");
+					put(grammarAccess.getPackageAccess().getGroup_4(), "rule__Package__Group_4__0");
 					put(grammarAccess.getEntityAccess().getGroup(), "rule__Entity__Group__0");
 					put(grammarAccess.getEntityAccess().getGroup_1(), "rule__Entity__Group_1__0");
 					put(grammarAccess.getEntityAccess().getGroup_1_2(), "rule__Entity__Group_1_2__0");
@@ -60,11 +58,9 @@ public class HermesParser extends AbstractContentAssistParser {
 					put(grammarAccess.getModuleAccess().getNameAssignment_2(), "rule__Module__NameAssignment_2");
 					put(grammarAccess.getModuleAccess().getPackagesAssignment_3_0(), "rule__Module__PackagesAssignment_3_0");
 					put(grammarAccess.getModuleAccess().getPackagesAssignment_3_1(), "rule__Module__PackagesAssignment_3_1");
-					put(grammarAccess.getPackageAccess().getSuperPackageAssignment_2_0(), "rule__Package__SuperPackageAssignment_2_0");
-					put(grammarAccess.getPackageAccess().getSuperPackageAssignment_2_2_0(), "rule__Package__SuperPackageAssignment_2_2_0");
-					put(grammarAccess.getPackageAccess().getNameAssignment_3(), "rule__Package__NameAssignment_3");
-					put(grammarAccess.getPackageAccess().getOwnedEntityAssignment_5_0(), "rule__Package__OwnedEntityAssignment_5_0");
-					put(grammarAccess.getPackageAccess().getOwnedEntityAssignment_5_1(), "rule__Package__OwnedEntityAssignment_5_1");
+					put(grammarAccess.getPackageAccess().getNameAssignment_2(), "rule__Package__NameAssignment_2");
+					put(grammarAccess.getPackageAccess().getOwnedEntityAssignment_4_0(), "rule__Package__OwnedEntityAssignment_4_0");
+					put(grammarAccess.getPackageAccess().getOwnedEntityAssignment_4_1(), "rule__Package__OwnedEntityAssignment_4_1");
 					put(grammarAccess.getEntityAccess().getAnnotationsAssignment_1_1(), "rule__Entity__AnnotationsAssignment_1_1");
 					put(grammarAccess.getEntityAccess().getAnnotationsAssignment_1_2_1(), "rule__Entity__AnnotationsAssignment_1_2_1");
 					put(grammarAccess.getEntityAccess().getNameAssignment_3(), "rule__Entity__NameAssignment_3");
