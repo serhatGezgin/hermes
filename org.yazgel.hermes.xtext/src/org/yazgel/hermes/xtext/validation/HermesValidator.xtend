@@ -3,9 +3,13 @@
  */
 package org.yazgel.hermes.xtext.validation
 
+import static extension java.lang.Character.*
+
 import org.eclipse.xtext.validation.Check
 import org.yazgel.hermes.Entity
 import org.yazgel.hermes.HermesPackage
+import org.yazgel.hermes.Ref
+import org.yazgel.hermes.DataType
 
 /**
  * Custom validation rules. 
@@ -30,5 +34,23 @@ class HermesValidator extends AbstractHermesValidator {
 			visitedEntities.add(current)
 			current = current.superEntity
 		}
+	}
+
+	@Check
+	def checkEntityNameStartsWithCapital(Entity entity) {
+		if (entity.name.charAt(0).lowerCase)
+			warning("Entity name should start with a capital", HermesPackage::eINSTANCE.namedElement_Name)
+	}
+
+	@Check
+	def checkReferenceNameStartsWithLowercase(Ref attr) {
+		if (attr.name.charAt(0).upperCase)
+			warning("Reference name should start with a lowercase", HermesPackage::eINSTANCE.namedElement_Name)
+	}
+
+	@Check
+	def checkAttributeNameStartsWithLowercase(DataType attr) {
+		if (attr.name.charAt(0).upperCase)
+			warning("DataType name should start with a lowercase", HermesPackage::eINSTANCE.namedElement_Name)
 	}
 }
