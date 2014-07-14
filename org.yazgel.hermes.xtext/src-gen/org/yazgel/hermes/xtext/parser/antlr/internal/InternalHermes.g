@@ -90,19 +90,19 @@ ruleModule returns [EObject current=null]
     }
 (
 (
-		lv_name_2_0=RULE_ID
-		{
-			newLeafNode(lv_name_2_0, grammarAccess.getModuleAccess().getNameIDTerminalRuleCall_2_0()); 
-		}
-		{
+		{ 
+	        newCompositeNode(grammarAccess.getModuleAccess().getNameQUALIFIED_NAMEParserRuleCall_2_0()); 
+	    }
+		lv_name_2_0=ruleQUALIFIED_NAME		{
 	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getModuleRule());
+	            $current = createModelElementForParent(grammarAccess.getModuleRule());
 	        }
-       		setWithLastConsumed(
+       		set(
        			$current, 
        			"name",
         		lv_name_2_0, 
-        		"ID");
+        		"QUALIFIED_NAME");
+	        afterParserOrEnumRuleCall();
 	    }
 
 )
@@ -175,19 +175,19 @@ rulePackage returns [EObject current=null]
     }
 (
 (
-		lv_name_2_0=RULE_ID
-		{
-			newLeafNode(lv_name_2_0, grammarAccess.getPackageAccess().getNameIDTerminalRuleCall_2_0()); 
-		}
-		{
+		{ 
+	        newCompositeNode(grammarAccess.getPackageAccess().getNameQUALIFIED_NAMEParserRuleCall_2_0()); 
+	    }
+		lv_name_2_0=ruleQUALIFIED_NAME		{
 	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getPackageRule());
+	            $current = createModelElementForParent(grammarAccess.getPackageRule());
 	        }
-       		setWithLastConsumed(
+       		set(
        			$current, 
        			"name",
         		lv_name_2_0, 
-        		"ID");
+        		"QUALIFIED_NAME");
+	        afterParserOrEnumRuleCall();
 	    }
 
 )
@@ -678,6 +678,47 @@ ruleDataType returns [EObject current=null]
 )
 )?)
 ;
+
+
+
+
+
+// Entry rule entryRuleQUALIFIED_NAME
+entryRuleQUALIFIED_NAME returns [String current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getQUALIFIED_NAMERule()); } 
+	 iv_ruleQUALIFIED_NAME=ruleQUALIFIED_NAME 
+	 { $current=$iv_ruleQUALIFIED_NAME.current.getText(); }  
+	 EOF 
+;
+
+// Rule QUALIFIED_NAME
+ruleQUALIFIED_NAME returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(    this_ID_0=RULE_ID    {
+		$current.merge(this_ID_0);
+    }
+
+    { 
+    newLeafNode(this_ID_0, grammarAccess.getQUALIFIED_NAMEAccess().getIDTerminalRuleCall_0()); 
+    }
+(
+	kw='.' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getQUALIFIED_NAMEAccess().getFullStopKeyword_1_0()); 
+    }
+    this_ID_2=RULE_ID    {
+		$current.merge(this_ID_2);
+    }
+
+    { 
+    newLeafNode(this_ID_2, grammarAccess.getQUALIFIED_NAMEAccess().getIDTerminalRuleCall_1_1()); 
+    }
+)*)
+    ;
 
 
 

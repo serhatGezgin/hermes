@@ -6,15 +6,14 @@ import "platform:/resource/org.yazgel.hermes/model/hermes.ecore"
 Module returns Module:
 	{Module}
 	'Module'
-	name=ID
+	name=QUALIFIED_NAME
 	(packages+=Package (packages+=Package)*)?
 ;
-
 
 Package returns Package:
 	{Package}
 	'Package'
-	 name=ID 
+	 name=QUALIFIED_NAME 
 	'{'
 		(ownedEntity+=Entity (ownedEntity+=Entity)*)?
 	'}';
@@ -58,3 +57,7 @@ DataType returns DataType:
 
 enum DataTypes returns DataTypes:
 	String = 'String' | Integer = 'Integer' | Boolean = 'Boolean' | Long = 'Long' | Double = 'Double' | Object = 'Object';
+
+QUALIFIED_NAME:
+	ID('.'ID)*
+;

@@ -24,7 +24,7 @@ public class HermesGrammarAccess extends AbstractGrammarElementFinder {
 		private final Action cModuleAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cModuleKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cNameIDTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
+		private final RuleCall cNameQUALIFIED_NAMEParserRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
 		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
 		private final Assignment cPackagesAssignment_3_0 = (Assignment)cGroup_3.eContents().get(0);
 		private final RuleCall cPackagesPackageParserRuleCall_3_0_0 = (RuleCall)cPackagesAssignment_3_0.eContents().get(0);
@@ -32,10 +32,10 @@ public class HermesGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cPackagesPackageParserRuleCall_3_1_0 = (RuleCall)cPackagesAssignment_3_1.eContents().get(0);
 		
 		//Module:
-		//	{Module} "Module" name=ID (packages+=Package packages+=Package*)?;
+		//	{Module} "Module" name=QUALIFIED_NAME (packages+=Package packages+=Package*)?;
 		public ParserRule getRule() { return rule; }
 
-		//{Module} "Module" name=ID (packages+=Package packages+=Package*)?
+		//{Module} "Module" name=QUALIFIED_NAME (packages+=Package packages+=Package*)?
 		public Group getGroup() { return cGroup; }
 
 		//{Module}
@@ -44,11 +44,11 @@ public class HermesGrammarAccess extends AbstractGrammarElementFinder {
 		//"Module"
 		public Keyword getModuleKeyword_1() { return cModuleKeyword_1; }
 
-		//name=ID
+		//name=QUALIFIED_NAME
 		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
 
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_2_0() { return cNameIDTerminalRuleCall_2_0; }
+		//QUALIFIED_NAME
+		public RuleCall getNameQUALIFIED_NAMEParserRuleCall_2_0() { return cNameQUALIFIED_NAMEParserRuleCall_2_0; }
 
 		//(packages+=Package packages+=Package*)?
 		public Group getGroup_3() { return cGroup_3; }
@@ -72,7 +72,7 @@ public class HermesGrammarAccess extends AbstractGrammarElementFinder {
 		private final Action cPackageAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cPackageKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cNameIDTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
+		private final RuleCall cNameQUALIFIED_NAMEParserRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
 		private final Assignment cOwnedEntityAssignment_4_0 = (Assignment)cGroup_4.eContents().get(0);
@@ -82,10 +82,10 @@ public class HermesGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//Package:
-		//	{Package} "Package" name=ID "{" (ownedEntity+=Entity ownedEntity+=Entity*)? "}";
+		//	{Package} "Package" name=QUALIFIED_NAME "{" (ownedEntity+=Entity ownedEntity+=Entity*)? "}";
 		public ParserRule getRule() { return rule; }
 
-		//{Package} "Package" name=ID "{" (ownedEntity+=Entity ownedEntity+=Entity*)? "}"
+		//{Package} "Package" name=QUALIFIED_NAME "{" (ownedEntity+=Entity ownedEntity+=Entity*)? "}"
 		public Group getGroup() { return cGroup; }
 
 		//{Package}
@@ -94,11 +94,11 @@ public class HermesGrammarAccess extends AbstractGrammarElementFinder {
 		//"Package"
 		public Keyword getPackageKeyword_1() { return cPackageKeyword_1; }
 
-		//name=ID
+		//name=QUALIFIED_NAME
 		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
 
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_2_0() { return cNameIDTerminalRuleCall_2_0; }
+		//QUALIFIED_NAME
+		public RuleCall getNameQUALIFIED_NAMEParserRuleCall_2_0() { return cNameQUALIFIED_NAMEParserRuleCall_2_0; }
 
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
@@ -410,6 +410,34 @@ public class HermesGrammarAccess extends AbstractGrammarElementFinder {
 		//"[]"
 		public Keyword getManyLeftSquareBracketRightSquareBracketKeyword_5_0() { return cManyLeftSquareBracketRightSquareBracketKeyword_5_0; }
 	}
+
+	public class QUALIFIED_NAMEElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "QUALIFIED_NAME");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final RuleCall cIDTerminalRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cFullStopKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final RuleCall cIDTerminalRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
+		
+		//QUALIFIED_NAME:
+		//	ID ("." ID)*;
+		public ParserRule getRule() { return rule; }
+
+		//ID ("." ID)*
+		public Group getGroup() { return cGroup; }
+
+		//ID
+		public RuleCall getIDTerminalRuleCall_0() { return cIDTerminalRuleCall_0; }
+
+		//("." ID)*
+		public Group getGroup_1() { return cGroup_1; }
+
+		//"."
+		public Keyword getFullStopKeyword_1_0() { return cFullStopKeyword_1_0; }
+
+		//ID
+		public RuleCall getIDTerminalRuleCall_1_1() { return cIDTerminalRuleCall_1_1; }
+	}
 	
 	
 	public class EntityAnnotationElements extends AbstractEnumRuleElementFinder {
@@ -541,6 +569,7 @@ public class HermesGrammarAccess extends AbstractGrammarElementFinder {
 	private RefElements pRef;
 	private DataTypeElements pDataType;
 	private DataTypesElements unknownRuleDataTypes;
+	private QUALIFIED_NAMEElements pQUALIFIED_NAME;
 	
 	private final Grammar grammar;
 
@@ -581,7 +610,7 @@ public class HermesGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//Module:
-	//	{Module} "Module" name=ID (packages+=Package packages+=Package*)?;
+	//	{Module} "Module" name=QUALIFIED_NAME (packages+=Package packages+=Package*)?;
 	public ModuleElements getModuleAccess() {
 		return (pModule != null) ? pModule : (pModule = new ModuleElements());
 	}
@@ -591,7 +620,7 @@ public class HermesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Package:
-	//	{Package} "Package" name=ID "{" (ownedEntity+=Entity ownedEntity+=Entity*)? "}";
+	//	{Package} "Package" name=QUALIFIED_NAME "{" (ownedEntity+=Entity ownedEntity+=Entity*)? "}";
 	public PackageElements getPackageAccess() {
 		return (pPackage != null) ? pPackage : (pPackage = new PackageElements());
 	}
@@ -671,6 +700,16 @@ public class HermesGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public EnumRule getDataTypesRule() {
 		return getDataTypesAccess().getRule();
+	}
+
+	//QUALIFIED_NAME:
+	//	ID ("." ID)*;
+	public QUALIFIED_NAMEElements getQUALIFIED_NAMEAccess() {
+		return (pQUALIFIED_NAME != null) ? pQUALIFIED_NAME : (pQUALIFIED_NAME = new QUALIFIED_NAMEElements());
+	}
+	
+	public ParserRule getQUALIFIED_NAMERule() {
+		return getQUALIFIED_NAMEAccess().getRule();
 	}
 
 	//terminal ID:
