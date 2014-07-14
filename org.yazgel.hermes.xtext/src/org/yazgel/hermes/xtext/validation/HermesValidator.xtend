@@ -18,6 +18,11 @@ import org.yazgel.hermes.DataType
  */
 class HermesValidator extends AbstractHermesValidator {
 
+	public static val HIERARCHY_CYCLE = "org.example.entities.HierarchyCycle";
+	public static val INVALID_ENTITY_NAME = "org.example.entities.InvalidEntityName";
+	public static val INVALID_REFERENCE_NAME = "org.example.entities.InvalidReferenceName";
+	public static val INVALID_DATATYPE_NAME = "org.example.entities.InvalidDataTypeName";
+
 	@Check
 	def checkNoCycleInEntityHierarchy(Entity entity) {
 		if (entity.superEntity == null)
@@ -28,7 +33,7 @@ class HermesValidator extends AbstractHermesValidator {
 		while (current != null) {
 			if (visitedEntities.contains(current)) {
 				error("cycle in hierarchy of entity '" + current.name + "'",
-					HermesPackage::eINSTANCE.entity_SuperEntity)
+					HermesPackage::eINSTANCE.entity_SuperEntity, HIERARCHY_CYCLE, current.superEntity.name)
 				return
 			}
 			visitedEntities.add(current)
@@ -39,18 +44,21 @@ class HermesValidator extends AbstractHermesValidator {
 	@Check
 	def checkEntityNameStartsWithCapital(Entity entity) {
 		if (entity.name.charAt(0).lowerCase)
-			warning("Entity name should start with a capital", HermesPackage::eINSTANCE.namedElement_Name)
+			warning("Entity name should start with a capital letter", HermesPackage::eINSTANCE.namedElement_Name,
+				INVALID_ENTITY_NAME, entity.name)
 	}
 
 	@Check
-	def checkReferenceNameStartsWithLowercase(Ref attr) {
-		if (attr.name.charAt(0).upperCase)
-			warning("Reference name should start with a lowercase", HermesPackage::eINSTANCE.namedElement_Name)
+	def checkReferenceNameStartsWithLowercase(Ref ref) {
+		if (ref.name.charAt(0).upperCase)
+			warning("Reference name should start with a lowercase", HermesPackage::eINSTANCE.namedElement_Name,
+				INVALID_REFERENCE_NAME, ref.name)
 	}
 
 	@Check
-	def checkAttributeNameStartsWithLowercase(DataType attr) {
-		if (attr.name.charAt(0).upperCase)
-			warning("DataType name should start with a lowercase", HermesPackage::eINSTANCE.namedElement_Name)
+	def checkAttributeNameStartsWithLowercase(DataType data) {
+		if (data.name.charAt(0).upperCase)
+			warning("Datatype name should start with a lowercase", HermesPackage::eINSTANCE.namedElement_Name,
+				INVALID_DATATYPE_NAME, data.name)
 	}
 }
