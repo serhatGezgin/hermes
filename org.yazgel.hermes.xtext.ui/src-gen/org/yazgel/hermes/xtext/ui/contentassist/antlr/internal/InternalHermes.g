@@ -378,42 +378,42 @@ rule__DataTypes__Alternatives
 :
 (
 { before(grammarAccess.getDataTypesAccess().getStringEnumLiteralDeclaration_0()); }
-(	'String' 
+(	'string' 
 )
 { after(grammarAccess.getDataTypesAccess().getStringEnumLiteralDeclaration_0()); }
 )
 
     |(
 { before(grammarAccess.getDataTypesAccess().getIntegerEnumLiteralDeclaration_1()); }
-(	'Integer' 
+(	'integer' 
 )
 { after(grammarAccess.getDataTypesAccess().getIntegerEnumLiteralDeclaration_1()); }
 )
 
     |(
 { before(grammarAccess.getDataTypesAccess().getBooleanEnumLiteralDeclaration_2()); }
-(	'Boolean' 
+(	'boolean' 
 )
 { after(grammarAccess.getDataTypesAccess().getBooleanEnumLiteralDeclaration_2()); }
 )
 
     |(
 { before(grammarAccess.getDataTypesAccess().getLongEnumLiteralDeclaration_3()); }
-(	'Long' 
+(	'long' 
 )
 { after(grammarAccess.getDataTypesAccess().getLongEnumLiteralDeclaration_3()); }
 )
 
     |(
 { before(grammarAccess.getDataTypesAccess().getDoubleEnumLiteralDeclaration_4()); }
-(	'Double' 
+(	'double' 
 )
 { after(grammarAccess.getDataTypesAccess().getDoubleEnumLiteralDeclaration_4()); }
 )
 
     |(
 { before(grammarAccess.getDataTypesAccess().getObjectEnumLiteralDeclaration_5()); }
-(	'Object' 
+(	'object' 
 )
 { after(grammarAccess.getDataTypesAccess().getObjectEnumLiteralDeclaration_5()); }
 )
@@ -476,7 +476,7 @@ rule__Module__Group__1__Impl
 (
 { before(grammarAccess.getModuleAccess().getModuleKeyword_1()); }
 
-	'Module' 
+	'module' 
 
 { after(grammarAccess.getModuleAccess().getModuleKeyword_1()); }
 )
@@ -664,7 +664,7 @@ rule__Package__Group__1__Impl
 (
 { before(grammarAccess.getPackageAccess().getPackageKeyword_1()); }
 
-	'Package' 
+	'package' 
 
 { after(grammarAccess.getPackageAccess().getPackageKeyword_1()); }
 )
@@ -947,7 +947,7 @@ rule__Entity__Group__2__Impl
 (
 { before(grammarAccess.getEntityAccess().getEntityKeyword_2()); }
 
-	'Entity' 
+	'entity' 
 
 { after(grammarAccess.getEntityAccess().getEntityKeyword_2()); }
 )

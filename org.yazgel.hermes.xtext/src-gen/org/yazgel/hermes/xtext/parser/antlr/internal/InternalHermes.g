@@ -84,7 +84,7 @@ ruleModule returns [EObject current=null]
             grammarAccess.getModuleAccess().getModuleAction_0(),
             $current);
     }
-)	otherlv_1='Module' 
+)	otherlv_1='module' 
     {
     	newLeafNode(otherlv_1, grammarAccess.getModuleAccess().getModuleKeyword_1());
     }
@@ -169,7 +169,7 @@ rulePackage returns [EObject current=null]
             grammarAccess.getPackageAccess().getPackageAction_0(),
             $current);
     }
-)	otherlv_1='Package' 
+)	otherlv_1='package' 
     {
     	newLeafNode(otherlv_1, grammarAccess.getPackageAccess().getPackageKeyword_1());
     }
@@ -338,7 +338,7 @@ ruleEntity returns [EObject current=null]
 	    }
 
 )
-)*)?	otherlv_3='Entity' 
+)*)?	otherlv_3='entity' 
     {
     	newLeafNode(otherlv_3, grammarAccess.getEntityAccess().getEntityKeyword_2());
     }
@@ -748,37 +748,37 @@ ruleFetureAnnotation returns [Enumerator current=null]
 ruleDataTypes returns [Enumerator current=null] 
     @init { enterRule(); }
     @after { leaveRule(); }:
-((	enumLiteral_0='String' 
+((	enumLiteral_0='string' 
 	{
         $current = grammarAccess.getDataTypesAccess().getStringEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
         newLeafNode(enumLiteral_0, grammarAccess.getDataTypesAccess().getStringEnumLiteralDeclaration_0()); 
     }
 )
-    |(	enumLiteral_1='Integer' 
+    |(	enumLiteral_1='integer' 
 	{
         $current = grammarAccess.getDataTypesAccess().getIntegerEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
         newLeafNode(enumLiteral_1, grammarAccess.getDataTypesAccess().getIntegerEnumLiteralDeclaration_1()); 
     }
 )
-    |(	enumLiteral_2='Boolean' 
+    |(	enumLiteral_2='boolean' 
 	{
         $current = grammarAccess.getDataTypesAccess().getBooleanEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
         newLeafNode(enumLiteral_2, grammarAccess.getDataTypesAccess().getBooleanEnumLiteralDeclaration_2()); 
     }
 )
-    |(	enumLiteral_3='Long' 
+    |(	enumLiteral_3='long' 
 	{
         $current = grammarAccess.getDataTypesAccess().getLongEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
         newLeafNode(enumLiteral_3, grammarAccess.getDataTypesAccess().getLongEnumLiteralDeclaration_3()); 
     }
 )
-    |(	enumLiteral_4='Double' 
+    |(	enumLiteral_4='double' 
 	{
         $current = grammarAccess.getDataTypesAccess().getDoubleEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
         newLeafNode(enumLiteral_4, grammarAccess.getDataTypesAccess().getDoubleEnumLiteralDeclaration_4()); 
     }
 )
-    |(	enumLiteral_5='Object' 
+    |(	enumLiteral_5='object' 
 	{
         $current = grammarAccess.getDataTypesAccess().getObjectEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
         newLeafNode(enumLiteral_5, grammarAccess.getDataTypesAccess().getObjectEnumLiteralDeclaration_5()); 

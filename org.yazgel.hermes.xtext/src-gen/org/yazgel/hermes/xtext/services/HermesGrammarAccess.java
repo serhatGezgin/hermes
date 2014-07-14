@@ -32,16 +32,16 @@ public class HermesGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cPackagesPackageParserRuleCall_3_1_0 = (RuleCall)cPackagesAssignment_3_1.eContents().get(0);
 		
 		//Module:
-		//	{Module} "Module" name=QUALIFIED_NAME (packages+=Package packages+=Package*)?;
+		//	{Module} "module" name=QUALIFIED_NAME (packages+=Package packages+=Package*)?;
 		public ParserRule getRule() { return rule; }
 
-		//{Module} "Module" name=QUALIFIED_NAME (packages+=Package packages+=Package*)?
+		//{Module} "module" name=QUALIFIED_NAME (packages+=Package packages+=Package*)?
 		public Group getGroup() { return cGroup; }
 
 		//{Module}
 		public Action getModuleAction_0() { return cModuleAction_0; }
 
-		//"Module"
+		//"module"
 		public Keyword getModuleKeyword_1() { return cModuleKeyword_1; }
 
 		//name=QUALIFIED_NAME
@@ -82,16 +82,16 @@ public class HermesGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//Package:
-		//	{Package} "Package" name=QUALIFIED_NAME "{" (ownedEntity+=Entity ownedEntity+=Entity*)? "}";
+		//	{Package} "package" name=QUALIFIED_NAME "{" (ownedEntity+=Entity ownedEntity+=Entity*)? "}";
 		public ParserRule getRule() { return rule; }
 
-		//{Package} "Package" name=QUALIFIED_NAME "{" (ownedEntity+=Entity ownedEntity+=Entity*)? "}"
+		//{Package} "package" name=QUALIFIED_NAME "{" (ownedEntity+=Entity ownedEntity+=Entity*)? "}"
 		public Group getGroup() { return cGroup; }
 
 		//{Package}
 		public Action getPackageAction_0() { return cPackageAction_0; }
 
-		//"Package"
+		//"package"
 		public Keyword getPackageKeyword_1() { return cPackageKeyword_1; }
 
 		//name=QUALIFIED_NAME
@@ -168,11 +168,11 @@ public class HermesGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
 		//Entity:
-		//	{Entity} (annotations+=EntityAnnotation annotations+=EntityAnnotation*)? "Entity" name=ID (":" superEntity=[Entity])?
+		//	{Entity} (annotations+=EntityAnnotation annotations+=EntityAnnotation*)? "entity" name=ID (":" superEntity=[Entity])?
 		//	"{" (ownedFeature+=Feature ownedFeature+=Feature*)? "}";
 		public ParserRule getRule() { return rule; }
 
-		//{Entity} (annotations+=EntityAnnotation annotations+=EntityAnnotation*)? "Entity" name=ID (":" superEntity=[Entity])?
+		//{Entity} (annotations+=EntityAnnotation annotations+=EntityAnnotation*)? "entity" name=ID (":" superEntity=[Entity])?
 		//"{" (ownedFeature+=Feature ownedFeature+=Feature*)? "}"
 		public Group getGroup() { return cGroup; }
 
@@ -194,7 +194,7 @@ public class HermesGrammarAccess extends AbstractGrammarElementFinder {
 		//EntityAnnotation
 		public RuleCall getAnnotationsEntityAnnotationEnumRuleCall_1_1_0() { return cAnnotationsEntityAnnotationEnumRuleCall_1_1_0; }
 
-		//"Entity"
+		//"entity"
 		public Keyword getEntityKeyword_2() { return cEntityKeyword_2; }
 
 		//name=ID
@@ -478,46 +478,46 @@ public class HermesGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cObjectObjectKeyword_5_0 = (Keyword)cObjectEnumLiteralDeclaration_5.eContents().get(0);
 		
 		//enum DataTypes:
-		//	String | Integer | Boolean | Long | Double | Object;
+		//	String="string" | Integer="integer" | Boolean="boolean" | Long="long" | Double="double" | Object="object";
 		public EnumRule getRule() { return rule; }
 
-		//String | Integer | Boolean | Long | Double | Object
+		//String="string" | Integer="integer" | Boolean="boolean" | Long="long" | Double="double" | Object="object"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//String
+		//String="string"
 		public EnumLiteralDeclaration getStringEnumLiteralDeclaration_0() { return cStringEnumLiteralDeclaration_0; }
 
-		//"String"
+		//"string"
 		public Keyword getStringStringKeyword_0_0() { return cStringStringKeyword_0_0; }
 
-		//Integer
+		//Integer="integer"
 		public EnumLiteralDeclaration getIntegerEnumLiteralDeclaration_1() { return cIntegerEnumLiteralDeclaration_1; }
 
-		//"Integer"
+		//"integer"
 		public Keyword getIntegerIntegerKeyword_1_0() { return cIntegerIntegerKeyword_1_0; }
 
-		//Boolean
+		//Boolean="boolean"
 		public EnumLiteralDeclaration getBooleanEnumLiteralDeclaration_2() { return cBooleanEnumLiteralDeclaration_2; }
 
-		//"Boolean"
+		//"boolean"
 		public Keyword getBooleanBooleanKeyword_2_0() { return cBooleanBooleanKeyword_2_0; }
 
-		//Long
+		//Long="long"
 		public EnumLiteralDeclaration getLongEnumLiteralDeclaration_3() { return cLongEnumLiteralDeclaration_3; }
 
-		//"Long"
+		//"long"
 		public Keyword getLongLongKeyword_3_0() { return cLongLongKeyword_3_0; }
 
-		//Double
+		//Double="double"
 		public EnumLiteralDeclaration getDoubleEnumLiteralDeclaration_4() { return cDoubleEnumLiteralDeclaration_4; }
 
-		//"Double"
+		//"double"
 		public Keyword getDoubleDoubleKeyword_4_0() { return cDoubleDoubleKeyword_4_0; }
 
-		//Object
+		//Object="object"
 		public EnumLiteralDeclaration getObjectEnumLiteralDeclaration_5() { return cObjectEnumLiteralDeclaration_5; }
 
-		//"Object"
+		//"object"
 		public Keyword getObjectObjectKeyword_5_0() { return cObjectObjectKeyword_5_0; }
 	}
 	
@@ -571,7 +571,7 @@ public class HermesGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//Module:
-	//	{Module} "Module" name=QUALIFIED_NAME (packages+=Package packages+=Package*)?;
+	//	{Module} "module" name=QUALIFIED_NAME (packages+=Package packages+=Package*)?;
 	public ModuleElements getModuleAccess() {
 		return (pModule != null) ? pModule : (pModule = new ModuleElements());
 	}
@@ -581,7 +581,7 @@ public class HermesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Package:
-	//	{Package} "Package" name=QUALIFIED_NAME "{" (ownedEntity+=Entity ownedEntity+=Entity*)? "}";
+	//	{Package} "package" name=QUALIFIED_NAME "{" (ownedEntity+=Entity ownedEntity+=Entity*)? "}";
 	public PackageElements getPackageAccess() {
 		return (pPackage != null) ? pPackage : (pPackage = new PackageElements());
 	}
@@ -601,7 +601,7 @@ public class HermesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Entity:
-	//	{Entity} (annotations+=EntityAnnotation annotations+=EntityAnnotation*)? "Entity" name=ID (":" superEntity=[Entity])?
+	//	{Entity} (annotations+=EntityAnnotation annotations+=EntityAnnotation*)? "entity" name=ID (":" superEntity=[Entity])?
 	//	"{" (ownedFeature+=Feature ownedFeature+=Feature*)? "}";
 	public EntityElements getEntityAccess() {
 		return (pEntity != null) ? pEntity : (pEntity = new EntityElements());
@@ -652,7 +652,7 @@ public class HermesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//enum DataTypes:
-	//	String | Integer | Boolean | Long | Double | Object;
+	//	String="string" | Integer="integer" | Boolean="boolean" | Long="long" | Double="double" | Object="object";
 	public DataTypesElements getDataTypesAccess() {
 		return (unknownRuleDataTypes != null) ? unknownRuleDataTypes : (unknownRuleDataTypes = new DataTypesElements());
 	}

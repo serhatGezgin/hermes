@@ -5,14 +5,14 @@ import "platform:/resource/org.yazgel.hermes/model/hermes.ecore"
 
 Module returns Module:
 	{Module}
-	'Module'
+	'module'
 	name=QUALIFIED_NAME
 	(packages+=Package (packages+=Package)*)?
 ;
 
 Package returns Package:
 	{Package}
-	'Package'
+	'package'
 	 name=QUALIFIED_NAME 
 	'{'
 		(ownedEntity+=Entity (ownedEntity+=Entity)*)?
@@ -25,7 +25,7 @@ Feature returns Feature:
 Entity returns Entity:
 	{Entity}
 	(annotations+= EntityAnnotation (annotations+= EntityAnnotation)*)?
-	'Entity'
+	'entity'
 	name = ID (':' superEntity=[Entity|ID])? 
 	'{'
 		(ownedFeature+=Feature (ownedFeature+=Feature)*)?
@@ -56,7 +56,7 @@ DataType returns DataType:
 	;
 
 enum DataTypes returns DataTypes:
-	String = 'String' | Integer = 'Integer' | Boolean = 'Boolean' | Long = 'Long' | Double = 'Double' | Object = 'Object';
+	String = 'string' | Integer = 'integer' | Boolean = 'boolean' | Long = 'long' | Double = 'double' | Object = 'object';
 
 QUALIFIED_NAME:
 	ID('.'ID)*
