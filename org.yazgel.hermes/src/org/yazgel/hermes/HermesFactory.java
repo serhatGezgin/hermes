@@ -49,13 +49,13 @@ public interface HermesFactory extends EFactory {
 	Entity createEntity();
 
 	/**
-	 * Returns a new object of class '<em>Ref</em>'.
+	 * Returns a new object of class '<em>Reference</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Ref</em>'.
+	 * @return a new object of class '<em>Reference</em>'.
 	 * @generated
 	 */
-	Ref createRef();
+	Reference createReference();
 
 	/**
 	 * Returns a new object of class '<em>Data Type</em>'.

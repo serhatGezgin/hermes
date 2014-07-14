@@ -4,16 +4,14 @@ package org.yazgel.hermes.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.util.Switch;
-
 import org.yazgel.hermes.DataType;
 import org.yazgel.hermes.Entity;
 import org.yazgel.hermes.Feature;
 import org.yazgel.hermes.HermesPackage;
 import org.yazgel.hermes.Module;
 import org.yazgel.hermes.NamedElement;
-import org.yazgel.hermes.Ref;
+import org.yazgel.hermes.Reference;
 
 /**
  * <!-- begin-user-doc -->
@@ -106,11 +104,11 @@ public class HermesSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case HermesPackage.REF: {
-				Ref ref = (Ref)theEObject;
-				T result = caseRef(ref);
-				if (result == null) result = caseFeature(ref);
-				if (result == null) result = caseNamedElement(ref);
+			case HermesPackage.REFERENCE: {
+				Reference reference = (Reference)theEObject;
+				T result = caseReference(reference);
+				if (result == null) result = caseFeature(reference);
+				if (result == null) result = caseNamedElement(reference);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -202,17 +200,17 @@ public class HermesSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Ref</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Reference</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Ref</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Reference</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseRef(Ref object) {
+	public T caseReference(Reference object) {
 		return null;
 	}
 

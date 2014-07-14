@@ -12,7 +12,7 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.yazgel.hermes.Entity#getOwnedFeature <em>Owned Feature</em>}</li>
+ *   <li>{@link org.yazgel.hermes.Entity#getFeatures <em>Features</em>}</li>
  *   <li>{@link org.yazgel.hermes.Entity#getSuperEntity <em>Super Entity</em>}</li>
  *   <li>{@link org.yazgel.hermes.Entity#getAnnotations <em>Annotations</em>}</li>
  * </ul>
@@ -24,21 +24,21 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface Entity extends NamedElement {
 	/**
-	 * Returns the value of the '<em><b>Owned Feature</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Features</b></em>' containment reference list.
 	 * The list contents are of type {@link org.yazgel.hermes.Feature}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Owned Feature</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Features</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Owned Feature</em>' containment reference list.
-	 * @see org.yazgel.hermes.HermesPackage#getEntity_OwnedFeature()
+	 * @return the value of the '<em>Features</em>' containment reference list.
+	 * @see org.yazgel.hermes.HermesPackage#getEntity_Features()
 	 * @model containment="true"
 	 *        annotation="gmf.compartment layout='list'"
 	 * @generated
 	 */
-	EList<Feature> getOwnedFeature();
+	EList<Feature> getFeatures();
 
 	/**
 	 * Returns the value of the '<em><b>Super Entity</b></em>' reference.

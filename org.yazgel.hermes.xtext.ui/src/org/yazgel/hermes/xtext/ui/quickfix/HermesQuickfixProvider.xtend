@@ -3,16 +3,18 @@
 */
 package org.yazgel.hermes.xtext.ui.quickfix
 
+import org.eclipse.xtext.diagnostics.Diagnostic
 import org.eclipse.xtext.ui.editor.quickfix.DefaultQuickfixProvider
 import org.eclipse.xtext.ui.editor.quickfix.Fix
 import org.eclipse.xtext.ui.editor.quickfix.IssueResolutionAcceptor
 import org.eclipse.xtext.validation.Issue
 import org.yazgel.hermes.DataType
 import org.yazgel.hermes.Entity
-import org.yazgel.hermes.Ref
-import org.yazgel.hermes.xtext.validation.HermesValidator
-import org.eclipse.xtext.diagnostics.Diagnostic
 import org.yazgel.hermes.HermesFactory
+import org.yazgel.hermes.Package
+import org.yazgel.hermes.Reference
+import org.yazgel.hermes.xtext.validation.HermesValidator
+
 import static extension org.eclipse.xtext.EcoreUtil2.*
 
 /**
@@ -56,7 +58,7 @@ class HermesQuickfixProvider extends DefaultQuickfixProvider {
 			"Uncapitalize first letter of '" + issue.data.get(0) + "'", // description
 			"Reference.gif", // icon
 			[ element, context |
-				(element as Ref).name = issue.data.get(0).toFirstLower
+				(element as Reference).name = issue.data.get(0).toFirstLower
 			]
 		);
 	}
@@ -83,9 +85,9 @@ class HermesQuickfixProvider extends DefaultQuickfixProvider {
 			"Entity.gif",
 			[ element, context |
 				val currentEntity = element.getContainerOfType(typeof(Entity))
-				val model = currentEntity.eContainer as org.yazgel.hermes.Package
-				model.ownedEntity.add(
-					model.ownedEntity.indexOf(currentEntity) + 1,
+				val model = currentEntity.eContainer as Package
+				model.entities.add(
+					model.entities.indexOf(currentEntity) + 1,
 					HermesFactory::eINSTANCE.createEntity() => [
 						name = context.xtextDocument.get(issue.offset, issue.length)
 					]

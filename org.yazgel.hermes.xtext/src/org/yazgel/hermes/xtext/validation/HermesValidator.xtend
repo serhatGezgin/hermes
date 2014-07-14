@@ -3,15 +3,15 @@
  */
 package org.yazgel.hermes.xtext.validation
 
-import static extension java.lang.Character.*
-
 import org.eclipse.xtext.validation.Check
+import org.yazgel.hermes.DataType
 import org.yazgel.hermes.Entity
 import org.yazgel.hermes.HermesPackage
-import org.yazgel.hermes.Ref
-import org.yazgel.hermes.DataType
+import org.yazgel.hermes.Reference
 
-/**
+import static extension java.lang.Character.*
+
+/** 
  * Custom validation rules. 
  *
  * see http://www.eclipse.org/Xtext/documentation.html#validation
@@ -49,7 +49,7 @@ class HermesValidator extends AbstractHermesValidator {
 	}
 
 	@Check
-	def checkReferenceNameStartsWithLowercase(Ref ref) {
+	def checkReferenceNameStartsWithLowercase(Reference ref) {
 		if (ref.name.charAt(0).upperCase)
 			warning("Reference name should start with a lowercase", HermesPackage::eINSTANCE.namedElement_Name,
 				INVALID_REFERENCE_NAME, ref.name)

@@ -101,8 +101,8 @@ public class EntityControllerGenerator extends BaseGenerator {
     _builder.append("/* Set properties. */");
     _builder.newLine();
     {
-      EList<Feature> _ownedFeature = e.getOwnedFeature();
-      Iterable<DataType> _filter = Iterables.<DataType>filter(_ownedFeature, DataType.class);
+      EList<Feature> _features = e.getFeatures();
+      Iterable<DataType> _filter = Iterables.<DataType>filter(_features, DataType.class);
       for(final DataType f : _filter) {
         _builder.append("\t");
         String _variablename_1 = this.variablename(e);
@@ -145,8 +145,8 @@ public class EntityControllerGenerator extends BaseGenerator {
     String _xblockexpression = null;
     {
       final ArrayList<Object> sb = CollectionLiterals.<Object>newArrayList();
-      EList<Feature> _ownedFeature = e.getOwnedFeature();
-      Iterable<DataType> _filter = Iterables.<DataType>filter(_ownedFeature, DataType.class);
+      EList<Feature> _features = e.getFeatures();
+      Iterable<DataType> _filter = Iterables.<DataType>filter(_features, DataType.class);
       final Consumer<DataType> _function = new Consumer<DataType>() {
         public void accept(final DataType it) {
           DataTypes _type = it.getType();

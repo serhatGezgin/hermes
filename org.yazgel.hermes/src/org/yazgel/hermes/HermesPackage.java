@@ -142,13 +142,13 @@ public interface HermesPackage extends EPackage {
 	int PACKAGE__NAME = NAMED_ELEMENT__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Owned Entity</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Entities</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PACKAGE__OWNED_ENTITY = NAMED_ELEMENT_FEATURE_COUNT + 0;
+	int PACKAGE__ENTITIES = NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Package</em>' class.
@@ -179,13 +179,13 @@ public interface HermesPackage extends EPackage {
 	int ENTITY__NAME = NAMED_ELEMENT__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Owned Feature</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Features</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY__OWNED_FEATURE = NAMED_ELEMENT_FEATURE_COUNT + 0;
+	int ENTITY__FEATURES = NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Super Entity</b></em>' reference.
@@ -261,14 +261,14 @@ public interface HermesPackage extends EPackage {
 	int FEATURE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
-	 * The meta object id for the '{@link org.yazgel.hermes.impl.RefImpl <em>Ref</em>}' class.
+	 * The meta object id for the '{@link org.yazgel.hermes.impl.ReferenceImpl <em>Reference</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.yazgel.hermes.impl.RefImpl
-	 * @see org.yazgel.hermes.impl.HermesPackageImpl#getRef()
+	 * @see org.yazgel.hermes.impl.ReferenceImpl
+	 * @see org.yazgel.hermes.impl.HermesPackageImpl#getReference()
 	 * @generated
 	 */
-	int REF = 5;
+	int REFERENCE = 5;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -277,7 +277,7 @@ public interface HermesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REF__NAME = FEATURE__NAME;
+	int REFERENCE__NAME = FEATURE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Many</b></em>' attribute.
@@ -286,7 +286,7 @@ public interface HermesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REF__MANY = FEATURE__MANY;
+	int REFERENCE__MANY = FEATURE__MANY;
 
 	/**
 	 * The feature id for the '<em><b>Annotations</b></em>' attribute list.
@@ -295,25 +295,25 @@ public interface HermesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REF__ANNOTATIONS = FEATURE__ANNOTATIONS;
+	int REFERENCE__ANNOTATIONS = FEATURE__ANNOTATIONS;
 
 	/**
-	 * The feature id for the '<em><b>Ref To</b></em>' reference.
+	 * The feature id for the '<em><b>Reference</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REF__REF_TO = FEATURE_FEATURE_COUNT + 0;
+	int REFERENCE__REFERENCE = FEATURE_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Ref</em>' class.
+	 * The number of structural features of the '<em>Reference</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REF_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 1;
+	int REFERENCE_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link org.yazgel.hermes.impl.DataTypeImpl <em>Data Type</em>}' class.
@@ -433,15 +433,15 @@ public interface HermesPackage extends EPackage {
 	EClass getPackage();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.yazgel.hermes.Package#getOwnedEntity <em>Owned Entity</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.yazgel.hermes.Package#getEntities <em>Entities</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Owned Entity</em>'.
-	 * @see org.yazgel.hermes.Package#getOwnedEntity()
+	 * @return the meta object for the containment reference list '<em>Entities</em>'.
+	 * @see org.yazgel.hermes.Package#getEntities()
 	 * @see #getPackage()
 	 * @generated
 	 */
-	EReference getPackage_OwnedEntity();
+	EReference getPackage_Entities();
 
 	/**
 	 * Returns the meta object for class '{@link org.yazgel.hermes.NamedElement <em>Named Element</em>}'.
@@ -475,15 +475,15 @@ public interface HermesPackage extends EPackage {
 	EClass getEntity();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.yazgel.hermes.Entity#getOwnedFeature <em>Owned Feature</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.yazgel.hermes.Entity#getFeatures <em>Features</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Owned Feature</em>'.
-	 * @see org.yazgel.hermes.Entity#getOwnedFeature()
+	 * @return the meta object for the containment reference list '<em>Features</em>'.
+	 * @see org.yazgel.hermes.Entity#getFeatures()
 	 * @see #getEntity()
 	 * @generated
 	 */
-	EReference getEntity_OwnedFeature();
+	EReference getEntity_Features();
 
 	/**
 	 * Returns the meta object for the reference '{@link org.yazgel.hermes.Entity#getSuperEntity <em>Super Entity</em>}'.
@@ -540,25 +540,25 @@ public interface HermesPackage extends EPackage {
 	EAttribute getFeature_Annotations();
 
 	/**
-	 * Returns the meta object for class '{@link org.yazgel.hermes.Ref <em>Ref</em>}'.
+	 * Returns the meta object for class '{@link org.yazgel.hermes.Reference <em>Reference</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Ref</em>'.
-	 * @see org.yazgel.hermes.Ref
+	 * @return the meta object for class '<em>Reference</em>'.
+	 * @see org.yazgel.hermes.Reference
 	 * @generated
 	 */
-	EClass getRef();
+	EClass getReference();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.yazgel.hermes.Ref#getRefTo <em>Ref To</em>}'.
+	 * Returns the meta object for the reference '{@link org.yazgel.hermes.Reference#getReference <em>Reference</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Ref To</em>'.
-	 * @see org.yazgel.hermes.Ref#getRefTo()
-	 * @see #getRef()
+	 * @return the meta object for the reference '<em>Reference</em>'.
+	 * @see org.yazgel.hermes.Reference#getReference()
+	 * @see #getReference()
 	 * @generated
 	 */
-	EReference getRef_RefTo();
+	EReference getReference_Reference();
 
 	/**
 	 * Returns the meta object for class '{@link org.yazgel.hermes.DataType <em>Data Type</em>}'.
@@ -662,12 +662,12 @@ public interface HermesPackage extends EPackage {
 		EClass PACKAGE = eINSTANCE.getPackage();
 
 		/**
-		 * The meta object literal for the '<em><b>Owned Entity</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Entities</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PACKAGE__OWNED_ENTITY = eINSTANCE.getPackage_OwnedEntity();
+		EReference PACKAGE__ENTITIES = eINSTANCE.getPackage_Entities();
 
 		/**
 		 * The meta object literal for the '{@link org.yazgel.hermes.impl.NamedElementImpl <em>Named Element</em>}' class.
@@ -698,12 +698,12 @@ public interface HermesPackage extends EPackage {
 		EClass ENTITY = eINSTANCE.getEntity();
 
 		/**
-		 * The meta object literal for the '<em><b>Owned Feature</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Features</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ENTITY__OWNED_FEATURE = eINSTANCE.getEntity_OwnedFeature();
+		EReference ENTITY__FEATURES = eINSTANCE.getEntity_Features();
 
 		/**
 		 * The meta object literal for the '<em><b>Super Entity</b></em>' reference feature.
@@ -748,22 +748,22 @@ public interface HermesPackage extends EPackage {
 		EAttribute FEATURE__ANNOTATIONS = eINSTANCE.getFeature_Annotations();
 
 		/**
-		 * The meta object literal for the '{@link org.yazgel.hermes.impl.RefImpl <em>Ref</em>}' class.
+		 * The meta object literal for the '{@link org.yazgel.hermes.impl.ReferenceImpl <em>Reference</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.yazgel.hermes.impl.RefImpl
-		 * @see org.yazgel.hermes.impl.HermesPackageImpl#getRef()
+		 * @see org.yazgel.hermes.impl.ReferenceImpl
+		 * @see org.yazgel.hermes.impl.HermesPackageImpl#getReference()
 		 * @generated
 		 */
-		EClass REF = eINSTANCE.getRef();
+		EClass REFERENCE = eINSTANCE.getReference();
 
 		/**
-		 * The meta object literal for the '<em><b>Ref To</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Reference</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference REF__REF_TO = eINSTANCE.getRef_RefTo();
+		EReference REFERENCE__REFERENCE = eINSTANCE.getReference_Reference();
 
 		/**
 		 * The meta object literal for the '{@link org.yazgel.hermes.impl.DataTypeImpl <em>Data Type</em>}' class.

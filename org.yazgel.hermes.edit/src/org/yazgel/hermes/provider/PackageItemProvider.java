@@ -62,7 +62,7 @@ public class PackageItemProvider extends NamedElementItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(HermesPackage.Literals.PACKAGE__OWNED_ENTITY);
+			childrenFeatures.add(HermesPackage.Literals.PACKAGE__ENTITIES);
 		}
 		return childrenFeatures;
 	}
@@ -118,7 +118,7 @@ public class PackageItemProvider extends NamedElementItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(org.yazgel.hermes.Package.class)) {
-			case HermesPackage.PACKAGE__OWNED_ENTITY:
+			case HermesPackage.PACKAGE__ENTITIES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -138,7 +138,7 @@ public class PackageItemProvider extends NamedElementItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(HermesPackage.Literals.PACKAGE__OWNED_ENTITY,
+				(HermesPackage.Literals.PACKAGE__ENTITIES,
 				 HermesFactory.eINSTANCE.createEntity()));
 	}
 

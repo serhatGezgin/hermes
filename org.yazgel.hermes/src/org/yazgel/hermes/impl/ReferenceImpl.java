@@ -11,38 +11,38 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.yazgel.hermes.Entity;
 import org.yazgel.hermes.HermesPackage;
-import org.yazgel.hermes.Ref;
+import org.yazgel.hermes.Reference;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Ref</b></em>'.
+ * An implementation of the model object '<em><b>Reference</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.yazgel.hermes.impl.RefImpl#getRefTo <em>Ref To</em>}</li>
+ *   <li>{@link org.yazgel.hermes.impl.ReferenceImpl#getReference <em>Reference</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class RefImpl extends FeatureImpl implements Ref {
+public class ReferenceImpl extends FeatureImpl implements Reference {
 	/**
-	 * The cached value of the '{@link #getRefTo() <em>Ref To</em>}' reference.
+	 * The cached value of the '{@link #getReference() <em>Reference</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRefTo()
+	 * @see #getReference()
 	 * @generated
 	 * @ordered
 	 */
-	protected Entity refTo;
+	protected Entity reference;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected RefImpl() {
+	protected ReferenceImpl() {
 		super();
 	}
 
@@ -53,7 +53,7 @@ public class RefImpl extends FeatureImpl implements Ref {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return HermesPackage.Literals.REF;
+		return HermesPackage.Literals.REFERENCE;
 	}
 
 	/**
@@ -61,16 +61,16 @@ public class RefImpl extends FeatureImpl implements Ref {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Entity getRefTo() {
-		if (refTo != null && refTo.eIsProxy()) {
-			InternalEObject oldRefTo = (InternalEObject)refTo;
-			refTo = (Entity)eResolveProxy(oldRefTo);
-			if (refTo != oldRefTo) {
+	public Entity getReference() {
+		if (reference != null && reference.eIsProxy()) {
+			InternalEObject oldReference = (InternalEObject)reference;
+			reference = (Entity)eResolveProxy(oldReference);
+			if (reference != oldReference) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, HermesPackage.REF__REF_TO, oldRefTo, refTo));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, HermesPackage.REFERENCE__REFERENCE, oldReference, reference));
 			}
 		}
-		return refTo;
+		return reference;
 	}
 
 	/**
@@ -78,8 +78,8 @@ public class RefImpl extends FeatureImpl implements Ref {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Entity basicGetRefTo() {
-		return refTo;
+	public Entity basicGetReference() {
+		return reference;
 	}
 
 	/**
@@ -87,11 +87,11 @@ public class RefImpl extends FeatureImpl implements Ref {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRefTo(Entity newRefTo) {
-		Entity oldRefTo = refTo;
-		refTo = newRefTo;
+	public void setReference(Entity newReference) {
+		Entity oldReference = reference;
+		reference = newReference;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, HermesPackage.REF__REF_TO, oldRefTo, refTo));
+			eNotify(new ENotificationImpl(this, Notification.SET, HermesPackage.REFERENCE__REFERENCE, oldReference, reference));
 	}
 
 	/**
@@ -102,9 +102,9 @@ public class RefImpl extends FeatureImpl implements Ref {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case HermesPackage.REF__REF_TO:
-				if (resolve) return getRefTo();
-				return basicGetRefTo();
+			case HermesPackage.REFERENCE__REFERENCE:
+				if (resolve) return getReference();
+				return basicGetReference();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -117,8 +117,8 @@ public class RefImpl extends FeatureImpl implements Ref {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case HermesPackage.REF__REF_TO:
-				setRefTo((Entity)newValue);
+			case HermesPackage.REFERENCE__REFERENCE:
+				setReference((Entity)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -132,8 +132,8 @@ public class RefImpl extends FeatureImpl implements Ref {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case HermesPackage.REF__REF_TO:
-				setRefTo((Entity)null);
+			case HermesPackage.REFERENCE__REFERENCE:
+				setReference((Entity)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -147,10 +147,10 @@ public class RefImpl extends FeatureImpl implements Ref {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case HermesPackage.REF__REF_TO:
-				return refTo != null;
+			case HermesPackage.REFERENCE__REFERENCE:
+				return reference != null;
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //RefImpl
+} //ReferenceImpl

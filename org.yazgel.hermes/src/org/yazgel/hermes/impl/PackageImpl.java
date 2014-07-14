@@ -27,7 +27,7 @@ import org.yazgel.hermes.HermesPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.yazgel.hermes.impl.PackageImpl#getOwnedEntity <em>Owned Entity</em>}</li>
+ *   <li>{@link org.yazgel.hermes.impl.PackageImpl#getEntities <em>Entities</em>}</li>
  * </ul>
  * </p>
  *
@@ -35,15 +35,14 @@ import org.yazgel.hermes.HermesPackage;
  */
 public class PackageImpl extends NamedElementImpl implements org.yazgel.hermes.Package {
 	/**
-	 * The cached value of the '{@link #getOwnedEntity() <em>Owned Entity</em>}' containment reference list.
+	 * The cached value of the '{@link #getEntities() <em>Entities</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getOwnedEntity()
+	 * @see #getEntities()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Entity> ownedEntity;
-
+	protected EList<Entity> entities;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -68,11 +67,11 @@ public class PackageImpl extends NamedElementImpl implements org.yazgel.hermes.P
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Entity> getOwnedEntity() {
-		if (ownedEntity == null) {
-			ownedEntity = new EObjectContainmentEList<Entity>(Entity.class, this, HermesPackage.PACKAGE__OWNED_ENTITY);
+	public EList<Entity> getEntities() {
+		if (entities == null) {
+			entities = new EObjectContainmentEList<Entity>(Entity.class, this, HermesPackage.PACKAGE__ENTITIES);
 		}
-		return ownedEntity;
+		return entities;
 	}
 
 	/**
@@ -83,8 +82,8 @@ public class PackageImpl extends NamedElementImpl implements org.yazgel.hermes.P
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case HermesPackage.PACKAGE__OWNED_ENTITY:
-				return ((InternalEList<?>)getOwnedEntity()).basicRemove(otherEnd, msgs);
+			case HermesPackage.PACKAGE__ENTITIES:
+				return ((InternalEList<?>)getEntities()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -97,8 +96,8 @@ public class PackageImpl extends NamedElementImpl implements org.yazgel.hermes.P
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case HermesPackage.PACKAGE__OWNED_ENTITY:
-				return getOwnedEntity();
+			case HermesPackage.PACKAGE__ENTITIES:
+				return getEntities();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -112,9 +111,9 @@ public class PackageImpl extends NamedElementImpl implements org.yazgel.hermes.P
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case HermesPackage.PACKAGE__OWNED_ENTITY:
-				getOwnedEntity().clear();
-				getOwnedEntity().addAll((Collection<? extends Entity>)newValue);
+			case HermesPackage.PACKAGE__ENTITIES:
+				getEntities().clear();
+				getEntities().addAll((Collection<? extends Entity>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -128,8 +127,8 @@ public class PackageImpl extends NamedElementImpl implements org.yazgel.hermes.P
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case HermesPackage.PACKAGE__OWNED_ENTITY:
-				getOwnedEntity().clear();
+			case HermesPackage.PACKAGE__ENTITIES:
+				getEntities().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -143,8 +142,8 @@ public class PackageImpl extends NamedElementImpl implements org.yazgel.hermes.P
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case HermesPackage.PACKAGE__OWNED_ENTITY:
-				return ownedEntity != null && !ownedEntity.isEmpty();
+			case HermesPackage.PACKAGE__ENTITIES:
+				return entities != null && !entities.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

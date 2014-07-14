@@ -33,7 +33,7 @@ class EntityControllerGenerator extends BaseGenerator {
 			«e.qualifiedname» «e.variablename» = new «e.qualifiedname»();
 			
 			/* Set properties. */
-			«FOR f : e.ownedFeature.filter(DataType)»
+			«FOR f : e.features.filter(DataType)»
 				«e.variablename».«f.settername»(«f.name»);
 			«ENDFOR»
 			
@@ -47,7 +47,7 @@ class EntityControllerGenerator extends BaseGenerator {
 	def insertParams(Entity e) {
 		val sb = newArrayList
 
-		e.ownedFeature.filter(DataType).forEach [
+		e.features.filter(DataType).forEach [
 			sb.add(it.type + ' ' + it.name)
 		]
 

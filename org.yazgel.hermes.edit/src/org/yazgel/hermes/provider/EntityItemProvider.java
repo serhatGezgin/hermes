@@ -110,7 +110,7 @@ public class EntityItemProvider extends NamedElementItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(HermesPackage.Literals.ENTITY__OWNED_FEATURE);
+			childrenFeatures.add(HermesPackage.Literals.ENTITY__FEATURES);
 		}
 		return childrenFeatures;
 	}
@@ -169,7 +169,7 @@ public class EntityItemProvider extends NamedElementItemProvider {
 			case HermesPackage.ENTITY__ANNOTATIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case HermesPackage.ENTITY__OWNED_FEATURE:
+			case HermesPackage.ENTITY__FEATURES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -189,12 +189,12 @@ public class EntityItemProvider extends NamedElementItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(HermesPackage.Literals.ENTITY__OWNED_FEATURE,
-				 HermesFactory.eINSTANCE.createRef()));
+				(HermesPackage.Literals.ENTITY__FEATURES,
+				 HermesFactory.eINSTANCE.createReference()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(HermesPackage.Literals.ENTITY__OWNED_FEATURE,
+				(HermesPackage.Literals.ENTITY__FEATURES,
 				 HermesFactory.eINSTANCE.createDataType()));
 	}
 

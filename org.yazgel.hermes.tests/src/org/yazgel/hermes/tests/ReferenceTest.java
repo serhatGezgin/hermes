@@ -5,15 +5,15 @@ package org.yazgel.hermes.tests;
 import junit.textui.TestRunner;
 
 import org.yazgel.hermes.HermesFactory;
-import org.yazgel.hermes.Ref;
+import org.yazgel.hermes.Reference;
 
 /**
  * <!-- begin-user-doc -->
- * A test case for the model object '<em><b>Ref</b></em>'.
+ * A test case for the model object '<em><b>Reference</b></em>'.
  * <!-- end-user-doc -->
  * @generated
  */
-public class RefTest extends FeatureTest {
+public class ReferenceTest extends FeatureTest {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -21,28 +21,28 @@ public class RefTest extends FeatureTest {
 	 * @generated
 	 */
 	public static void main(String[] args) {
-		TestRunner.run(RefTest.class);
+		TestRunner.run(ReferenceTest.class);
 	}
 
 	/**
-	 * Constructs a new Ref test case with the given name.
+	 * Constructs a new Reference test case with the given name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RefTest(String name) {
+	public ReferenceTest(String name) {
 		super(name);
 	}
 
 	/**
-	 * Returns the fixture for this Ref test case.
+	 * Returns the fixture for this Reference test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	protected Ref getFixture() {
-		return (Ref)fixture;
+	protected Reference getFixture() {
+		return (Reference)fixture;
 	}
 
 	/**
@@ -53,7 +53,7 @@ public class RefTest extends FeatureTest {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(HermesFactory.eINSTANCE.createRef());
+		setFixture(HermesFactory.eINSTANCE.createReference());
 	}
 
 	/**
@@ -67,4 +67,4 @@ public class RefTest extends FeatureTest {
 		setFixture(null);
 	}
 
-} //RefTest
+} //ReferenceTest

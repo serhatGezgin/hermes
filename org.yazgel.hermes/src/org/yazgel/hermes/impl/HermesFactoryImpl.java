@@ -6,11 +6,8 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
-
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-
 import org.yazgel.hermes.DataType;
 import org.yazgel.hermes.DataTypes;
 import org.yazgel.hermes.Entity;
@@ -19,7 +16,7 @@ import org.yazgel.hermes.FetureAnnotation;
 import org.yazgel.hermes.HermesFactory;
 import org.yazgel.hermes.HermesPackage;
 import org.yazgel.hermes.Module;
-import org.yazgel.hermes.Ref;
+import org.yazgel.hermes.Reference;
 
 /**
  * <!-- begin-user-doc -->
@@ -68,7 +65,7 @@ public class HermesFactoryImpl extends EFactoryImpl implements HermesFactory {
 			case HermesPackage.MODULE: return createModule();
 			case HermesPackage.PACKAGE: return createPackage();
 			case HermesPackage.ENTITY: return createEntity();
-			case HermesPackage.REF: return createRef();
+			case HermesPackage.REFERENCE: return createReference();
 			case HermesPackage.DATA_TYPE: return createDataType();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -148,9 +145,9 @@ public class HermesFactoryImpl extends EFactoryImpl implements HermesFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Ref createRef() {
-		RefImpl ref = new RefImpl();
-		return ref;
+	public Reference createReference() {
+		ReferenceImpl reference = new ReferenceImpl();
+		return reference;
 	}
 
 	/**

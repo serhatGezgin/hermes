@@ -78,7 +78,7 @@ class BaseGenerator {
 			var item = stack.pop
 
 			if (item instanceof Package) {
-				stack.addAll(item.ownedEntity)
+				stack.addAll(item.entities)
 			} else if (item instanceof Entity) {
 				list.add(item)
 			}

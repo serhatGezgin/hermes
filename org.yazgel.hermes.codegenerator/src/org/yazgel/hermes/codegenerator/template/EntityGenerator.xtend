@@ -17,11 +17,11 @@ class EntityGenerator extends BaseGenerator {
 		«e.entityAnnotations»
 		@com.googlecode.objectify.annotation.Entity
 		public class «e.name» {
-			«FOR f : e.ownedFeature»
+			«FOR f : e.features»
 				«f.generateFeature»
 			«ENDFOR»
 			
-			«FOR f : e.ownedFeature»
+			«FOR f : e.features»
 				«f.generateGetterSetter»
 			«ENDFOR»
 		}

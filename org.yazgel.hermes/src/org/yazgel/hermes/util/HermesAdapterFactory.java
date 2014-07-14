@@ -4,24 +4,21 @@ package org.yazgel.hermes.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
-
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
-
 import org.eclipse.emf.ecore.EObject;
-
 import org.yazgel.hermes.DataType;
 import org.yazgel.hermes.Entity;
 import org.yazgel.hermes.Feature;
 import org.yazgel.hermes.HermesPackage;
 import org.yazgel.hermes.Module;
 import org.yazgel.hermes.NamedElement;
-import org.yazgel.hermes.Ref;
+import org.yazgel.hermes.Reference;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
- * <!-- end-user-doc -->
+ * <!-- end-user-doc -->	
  * @see org.yazgel.hermes.HermesPackage
  * @generated
  */
@@ -94,8 +91,8 @@ public class HermesAdapterFactory extends AdapterFactoryImpl {
 				return createFeatureAdapter();
 			}
 			@Override
-			public Adapter caseRef(Ref object) {
-				return createRefAdapter();
+			public Adapter caseReference(Reference object) {
+				return createReferenceAdapter();
 			}
 			@Override
 			public Adapter caseDataType(DataType object) {
@@ -192,16 +189,16 @@ public class HermesAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.yazgel.hermes.Ref <em>Ref</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.yazgel.hermes.Reference <em>Reference</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.yazgel.hermes.Ref
+	 * @see org.yazgel.hermes.Reference
 	 * @generated
 	 */
-	public Adapter createRefAdapter() {
+	public Adapter createReferenceAdapter() {
 		return null;
 	}
 

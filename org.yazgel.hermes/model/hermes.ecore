@@ -21,7 +21,7 @@
       <details key="label.placement" value="internal"/>
       <details key="label.icon" value="true"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ownedEntity" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entities" upperBound="-1"
         eType="#//Entity" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NamedElement" abstract="true">
@@ -35,7 +35,7 @@
       <details key="border.color" value="0,0,0"/>
       <details key="color" value="249,250,217"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ownedFeature" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="features" upperBound="-1"
         eType="#//Feature" containment="true">
       <eAnnotations source="gmf.compartment">
         <details key="layout" value="list"/>
@@ -59,7 +59,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="annotations" upperBound="-1"
         eType="#//FetureAnnotation"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Ref" eSuperTypes="#//Feature">
+  <eClassifiers xsi:type="ecore:EClass" name="Reference" eSuperTypes="#//Feature">
     <eAnnotations source="gmf.link">
       <details key="label" value="name"/>
       <details key="source" value="source"/>
@@ -69,7 +69,8 @@
       <details key="width" value="1"/>
       <details key="color" value="0,0,0"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="refTo" lowerBound="1" eType="#//Entity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="reference" lowerBound="1"
+        eType="#//Entity"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DataType" eSuperTypes="#//Feature">
     <eAnnotations source="gmf.node">

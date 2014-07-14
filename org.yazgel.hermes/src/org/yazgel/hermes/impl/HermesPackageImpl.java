@@ -7,9 +7,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
 import org.yazgel.hermes.DataType;
 import org.yazgel.hermes.DataTypes;
 import org.yazgel.hermes.Entity;
@@ -20,7 +18,7 @@ import org.yazgel.hermes.HermesFactory;
 import org.yazgel.hermes.HermesPackage;
 import org.yazgel.hermes.Module;
 import org.yazgel.hermes.NamedElement;
-import org.yazgel.hermes.Ref;
+import org.yazgel.hermes.Reference;
 
 /**
  * <!-- begin-user-doc -->
@@ -69,7 +67,7 @@ public class HermesPackageImpl extends EPackageImpl implements HermesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass refEClass = null;
+	private EClass referenceEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -192,7 +190,7 @@ public class HermesPackageImpl extends EPackageImpl implements HermesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPackage_OwnedEntity() {
+	public EReference getPackage_Entities() {
 		return (EReference)packageEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -228,7 +226,7 @@ public class HermesPackageImpl extends EPackageImpl implements HermesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getEntity_OwnedFeature() {
+	public EReference getEntity_Features() {
 		return (EReference)entityEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -282,8 +280,8 @@ public class HermesPackageImpl extends EPackageImpl implements HermesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getRef() {
-		return refEClass;
+	public EClass getReference() {
+		return referenceEClass;
 	}
 
 	/**
@@ -291,8 +289,8 @@ public class HermesPackageImpl extends EPackageImpl implements HermesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getRef_RefTo() {
-		return (EReference)refEClass.getEStructuralFeatures().get(0);
+	public EReference getReference_Reference() {
+		return (EReference)referenceEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -372,13 +370,13 @@ public class HermesPackageImpl extends EPackageImpl implements HermesPackage {
 		createEReference(moduleEClass, MODULE__PACKAGES);
 
 		packageEClass = createEClass(PACKAGE);
-		createEReference(packageEClass, PACKAGE__OWNED_ENTITY);
+		createEReference(packageEClass, PACKAGE__ENTITIES);
 
 		namedElementEClass = createEClass(NAMED_ELEMENT);
 		createEAttribute(namedElementEClass, NAMED_ELEMENT__NAME);
 
 		entityEClass = createEClass(ENTITY);
-		createEReference(entityEClass, ENTITY__OWNED_FEATURE);
+		createEReference(entityEClass, ENTITY__FEATURES);
 		createEReference(entityEClass, ENTITY__SUPER_ENTITY);
 		createEAttribute(entityEClass, ENTITY__ANNOTATIONS);
 
@@ -386,8 +384,8 @@ public class HermesPackageImpl extends EPackageImpl implements HermesPackage {
 		createEAttribute(featureEClass, FEATURE__MANY);
 		createEAttribute(featureEClass, FEATURE__ANNOTATIONS);
 
-		refEClass = createEClass(REF);
-		createEReference(refEClass, REF__REF_TO);
+		referenceEClass = createEClass(REFERENCE);
+		createEReference(referenceEClass, REFERENCE__REFERENCE);
 
 		dataTypeEClass = createEClass(DATA_TYPE);
 		createEAttribute(dataTypeEClass, DATA_TYPE__TYPE);
@@ -430,7 +428,7 @@ public class HermesPackageImpl extends EPackageImpl implements HermesPackage {
 		packageEClass.getESuperTypes().add(this.getNamedElement());
 		entityEClass.getESuperTypes().add(this.getNamedElement());
 		featureEClass.getESuperTypes().add(this.getNamedElement());
-		refEClass.getESuperTypes().add(this.getFeature());
+		referenceEClass.getESuperTypes().add(this.getFeature());
 		dataTypeEClass.getESuperTypes().add(this.getFeature());
 
 		// Initialize classes and features; add operations and parameters
@@ -438,13 +436,13 @@ public class HermesPackageImpl extends EPackageImpl implements HermesPackage {
 		initEReference(getModule_Packages(), this.getPackage(), null, "packages", null, 0, -1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(packageEClass, org.yazgel.hermes.Package.class, "Package", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPackage_OwnedEntity(), this.getEntity(), null, "ownedEntity", null, 0, -1, org.yazgel.hermes.Package.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPackage_Entities(), this.getEntity(), null, "entities", null, 0, -1, org.yazgel.hermes.Package.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(namedElementEClass, NamedElement.class, "NamedElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getNamedElement_Name(), ecorePackage.getEString(), "name", null, 1, 1, NamedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(entityEClass, Entity.class, "Entity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getEntity_OwnedFeature(), this.getFeature(), null, "ownedFeature", null, 0, -1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEntity_Features(), this.getFeature(), null, "features", null, 0, -1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEntity_SuperEntity(), this.getEntity(), null, "superEntity", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEntity_Annotations(), this.getEntityAnnotation(), "annotations", null, 0, -1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -452,8 +450,8 @@ public class HermesPackageImpl extends EPackageImpl implements HermesPackage {
 		initEAttribute(getFeature_Many(), ecorePackage.getEBoolean(), "many", null, 0, 1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFeature_Annotations(), this.getFetureAnnotation(), "annotations", null, 0, -1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(refEClass, Ref.class, "Ref", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRef_RefTo(), this.getEntity(), null, "refTo", null, 1, 1, Ref.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(referenceEClass, Reference.class, "Reference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getReference_Reference(), this.getEntity(), null, "reference", null, 1, 1, Reference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dataTypeEClass, DataType.class, "DataType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDataType_Type(), this.getDataTypes(), "type", null, 1, 1, DataType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -574,7 +572,7 @@ public class HermesPackageImpl extends EPackageImpl implements HermesPackage {
 	protected void createGmf_3Annotations() {
 		String source = "gmf.compartment";	
 		addAnnotation
-		  (getEntity_OwnedFeature(), 
+		  (getEntity_Features(), 
 		   source, 
 		   new String[] {
 			 "layout", "list"
@@ -601,7 +599,7 @@ public class HermesPackageImpl extends EPackageImpl implements HermesPackage {
 			 "tool.small.path", "icons/full/obj16/Inheritance.gif"
 		   });	
 		addAnnotation
-		  (refEClass, 
+		  (referenceEClass, 
 		   source, 
 		   new String[] {
 			 "label", "name",

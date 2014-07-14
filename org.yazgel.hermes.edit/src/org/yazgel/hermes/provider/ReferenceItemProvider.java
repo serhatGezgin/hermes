@@ -13,22 +13,22 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 import org.yazgel.hermes.HermesPackage;
-import org.yazgel.hermes.Ref;
+import org.yazgel.hermes.Reference;
 
 /**
- * This is the item provider adapter for a {@link org.yazgel.hermes.Ref} object.
+ * This is the item provider adapter for a {@link org.yazgel.hermes.Reference} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class RefItemProvider extends FeatureItemProvider {
+public class ReferenceItemProvider extends FeatureItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RefItemProvider(AdapterFactory adapterFactory) {
+	public ReferenceItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -43,25 +43,25 @@ public class RefItemProvider extends FeatureItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addRefToPropertyDescriptor(object);
+			addReferencePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Ref To feature.
+	 * This adds a property descriptor for the Reference feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addRefToPropertyDescriptor(Object object) {
+	protected void addReferencePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Ref_refTo_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Ref_refTo_feature", "_UI_Ref_type"),
-				 HermesPackage.Literals.REF__REF_TO,
+				 getString("_UI_Reference_reference_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Reference_reference_feature", "_UI_Reference_type"),
+				 HermesPackage.Literals.REFERENCE__REFERENCE,
 				 true,
 				 false,
 				 true,
@@ -71,14 +71,14 @@ public class RefItemProvider extends FeatureItemProvider {
 	}
 
 	/**
-	 * This returns Ref.gif.
+	 * This returns Reference.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Ref"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Reference"));
 	}
 
 	/**
@@ -89,10 +89,10 @@ public class RefItemProvider extends FeatureItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Ref)object).getName();
+		String label = ((Reference)object).getName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_Ref_type") :
-			getString("_UI_Ref_type") + " " + label;
+			getString("_UI_Reference_type") :
+			getString("_UI_Reference_type") + " " + label;
 	}
 	
 

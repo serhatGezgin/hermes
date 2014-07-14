@@ -15,20 +15,20 @@ Package returns Package:
 	'package'
 	 name=QUALIFIED_NAME 
 	'{'
-		(ownedEntity+=Entity (ownedEntity+=Entity)*)?
+		(entities+=Entity (entities+=Entity)*)?
 	'}';
 
 
 Feature returns Feature:
-	Ref | DataType;
+	Reference | DataType;
 
 Entity returns Entity:
 	{Entity}
 	(annotations+= EntityAnnotation (annotations+= EntityAnnotation)*)?
 	'entity'
 	name = ID (':' superEntity=[Entity|ID])? 
-	'{'
-		(ownedFeature+=Feature (ownedFeature+=Feature)*)?
+	'{' 
+		(features+=Feature (features+=Feature)*)?
 	'}';
 
 enum EntityAnnotation returns EntityAnnotation:
@@ -37,12 +37,12 @@ enum EntityAnnotation returns EntityAnnotation:
 enum FetureAnnotation returns FetureAnnotation:
 	Index = '@Index' | Id = '@Id' | Load = '@Load' | Ignore = '@Ignore';
 
-Ref returns Ref:
-	{Ref}
+Reference returns Reference:
+	{Reference}
 	(annotations+= FetureAnnotation (annotations+= FetureAnnotation)*)?
 	'var'
 	name=ID
-	refTo=[Entity|ID]
+	reference=[Entity|ID]
 	many?=('[]')?
 	;
 

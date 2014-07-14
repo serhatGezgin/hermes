@@ -30,7 +30,7 @@ import org.yazgel.hermes.HermesPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.yazgel.hermes.impl.EntityImpl#getOwnedFeature <em>Owned Feature</em>}</li>
+ *   <li>{@link org.yazgel.hermes.impl.EntityImpl#getFeatures <em>Features</em>}</li>
  *   <li>{@link org.yazgel.hermes.impl.EntityImpl#getSuperEntity <em>Super Entity</em>}</li>
  *   <li>{@link org.yazgel.hermes.impl.EntityImpl#getAnnotations <em>Annotations</em>}</li>
  * </ul>
@@ -40,14 +40,14 @@ import org.yazgel.hermes.HermesPackage;
  */
 public class EntityImpl extends NamedElementImpl implements Entity {
 	/**
-	 * The cached value of the '{@link #getOwnedFeature() <em>Owned Feature</em>}' containment reference list.
+	 * The cached value of the '{@link #getFeatures() <em>Features</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getOwnedFeature()
+	 * @see #getFeatures()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Feature> ownedFeature;
+	protected EList<Feature> features;
 
 	/**
 	 * The cached value of the '{@link #getSuperEntity() <em>Super Entity</em>}' reference.
@@ -93,11 +93,11 @@ public class EntityImpl extends NamedElementImpl implements Entity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Feature> getOwnedFeature() {
-		if (ownedFeature == null) {
-			ownedFeature = new EObjectContainmentEList<Feature>(Feature.class, this, HermesPackage.ENTITY__OWNED_FEATURE);
+	public EList<Feature> getFeatures() {
+		if (features == null) {
+			features = new EObjectContainmentEList<Feature>(Feature.class, this, HermesPackage.ENTITY__FEATURES);
 		}
-		return ownedFeature;
+		return features;
 	}
 
 	/**
@@ -158,8 +158,8 @@ public class EntityImpl extends NamedElementImpl implements Entity {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case HermesPackage.ENTITY__OWNED_FEATURE:
-				return ((InternalEList<?>)getOwnedFeature()).basicRemove(otherEnd, msgs);
+			case HermesPackage.ENTITY__FEATURES:
+				return ((InternalEList<?>)getFeatures()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -172,8 +172,8 @@ public class EntityImpl extends NamedElementImpl implements Entity {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case HermesPackage.ENTITY__OWNED_FEATURE:
-				return getOwnedFeature();
+			case HermesPackage.ENTITY__FEATURES:
+				return getFeatures();
 			case HermesPackage.ENTITY__SUPER_ENTITY:
 				if (resolve) return getSuperEntity();
 				return basicGetSuperEntity();
@@ -192,9 +192,9 @@ public class EntityImpl extends NamedElementImpl implements Entity {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case HermesPackage.ENTITY__OWNED_FEATURE:
-				getOwnedFeature().clear();
-				getOwnedFeature().addAll((Collection<? extends Feature>)newValue);
+			case HermesPackage.ENTITY__FEATURES:
+				getFeatures().clear();
+				getFeatures().addAll((Collection<? extends Feature>)newValue);
 				return;
 			case HermesPackage.ENTITY__SUPER_ENTITY:
 				setSuperEntity((Entity)newValue);
@@ -215,8 +215,8 @@ public class EntityImpl extends NamedElementImpl implements Entity {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case HermesPackage.ENTITY__OWNED_FEATURE:
-				getOwnedFeature().clear();
+			case HermesPackage.ENTITY__FEATURES:
+				getFeatures().clear();
 				return;
 			case HermesPackage.ENTITY__SUPER_ENTITY:
 				setSuperEntity((Entity)null);
@@ -236,8 +236,8 @@ public class EntityImpl extends NamedElementImpl implements Entity {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case HermesPackage.ENTITY__OWNED_FEATURE:
-				return ownedFeature != null && !ownedFeature.isEmpty();
+			case HermesPackage.ENTITY__FEATURES:
+				return features != null && !features.isEmpty();
 			case HermesPackage.ENTITY__SUPER_ENTITY:
 				return superEntity != null;
 			case HermesPackage.ENTITY__ANNOTATIONS:

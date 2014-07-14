@@ -12,7 +12,7 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.yazgel.hermes.Package#getOwnedEntity <em>Owned Entity</em>}</li>
+ *   <li>{@link org.yazgel.hermes.Package#getEntities <em>Entities</em>}</li>
  * </ul>
  * </p>
  *
@@ -23,19 +23,19 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface Package extends NamedElement {
 	/**
-	 * Returns the value of the '<em><b>Owned Entity</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Entities</b></em>' containment reference list.
 	 * The list contents are of type {@link org.yazgel.hermes.Entity}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Owned Entity</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Entities</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Owned Entity</em>' containment reference list.
-	 * @see org.yazgel.hermes.HermesPackage#getPackage_OwnedEntity()
+	 * @return the value of the '<em>Entities</em>' containment reference list.
+	 * @see org.yazgel.hermes.HermesPackage#getPackage_Entities()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Entity> getOwnedEntity();
+	EList<Entity> getEntities();
 
 } // Package

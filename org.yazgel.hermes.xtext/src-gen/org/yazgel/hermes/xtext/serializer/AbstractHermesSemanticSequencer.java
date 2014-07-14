@@ -14,7 +14,7 @@ import org.yazgel.hermes.DataType;
 import org.yazgel.hermes.Entity;
 import org.yazgel.hermes.HermesPackage;
 import org.yazgel.hermes.Module;
-import org.yazgel.hermes.Ref;
+import org.yazgel.hermes.Reference;
 import org.yazgel.hermes.xtext.services.HermesGrammarAccess;
 
 @SuppressWarnings("all")
@@ -50,10 +50,10 @@ public abstract class AbstractHermesSemanticSequencer extends AbstractDelegating
 					return; 
 				}
 				else break;
-			case HermesPackage.REF:
+			case HermesPackage.REFERENCE:
 				if(context == grammarAccess.getFeatureRule() ||
-				   context == grammarAccess.getRefRule()) {
-					sequence_Ref(context, (Ref) semanticObject); 
+				   context == grammarAccess.getReferenceRule()) {
+					sequence_Reference(context, (Reference) semanticObject); 
 					return; 
 				}
 				else break;
@@ -72,12 +72,7 @@ public abstract class AbstractHermesSemanticSequencer extends AbstractDelegating
 	
 	/**
 	 * Constraint:
-	 *     (
-	 *         (annotations+=EntityAnnotation annotations+=EntityAnnotation*)? 
-	 *         name=ID 
-	 *         superEntity=[Entity|ID]? 
-	 *         (ownedFeature+=Feature ownedFeature+=Feature*)?
-	 *     )
+	 *     ((annotations+=EntityAnnotation annotations+=EntityAnnotation*)? name=ID superEntity=[Entity|ID]? (features+=Feature features+=Feature*)?)
 	 */
 	protected void sequence_Entity(EObject context, Entity semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -95,7 +90,7 @@ public abstract class AbstractHermesSemanticSequencer extends AbstractDelegating
 	
 	/**
 	 * Constraint:
-	 *     (name=QUALIFIED_NAME (ownedEntity+=Entity ownedEntity+=Entity*)?)
+	 *     (name=QUALIFIED_NAME (entities+=Entity entities+=Entity*)?)
 	 */
 	protected void sequence_Package(EObject context, org.yazgel.hermes.Package semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -104,9 +99,9 @@ public abstract class AbstractHermesSemanticSequencer extends AbstractDelegating
 	
 	/**
 	 * Constraint:
-	 *     ((annotations+=FetureAnnotation annotations+=FetureAnnotation*)? name=ID refTo=[Entity|ID] many?='[]'?)
+	 *     ((annotations+=FetureAnnotation annotations+=FetureAnnotation*)? name=ID reference=[Entity|ID] many?='[]'?)
 	 */
-	protected void sequence_Ref(EObject context, Ref semanticObject) {
+	protected void sequence_Reference(EObject context, Reference semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 }
