@@ -61,13 +61,10 @@ class BaseGenerator {
 	}
 
 	protected def packageNameList(Entity e) {
-		var list = newArrayList
+		val list = newArrayList
 		var pack = e.eContainer as Package
 
-		do {
-			list.add(0, pack.name)
-			pack = pack.eContainer as Package
-		} while (pack != null && pack instanceof Package);
+		list.addAll(pack.name.split('\\.'))
 
 		list
 	}
@@ -81,7 +78,6 @@ class BaseGenerator {
 			var item = stack.pop
 
 			if (item instanceof Package) {
-				stack.addAll(item.subPackage)
 				stack.addAll(item.ownedEntity)
 			} else if (item instanceof Entity) {
 				list.add(item)
