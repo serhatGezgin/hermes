@@ -8,6 +8,9 @@ import org.yazgel.hermes.xtext.validation.HermesValidator
 import org.eclipse.xtext.validation.Issue
 
 import org.eclipse.xtext.ui.editor.quickfix.IssueResolutionAcceptor
+import org.yazgel.hermes.Ref
+import org.yazgel.hermes.DataType
+import org.yazgel.hermes.Entity
 
 /**
  * Custom quickfixes.
@@ -16,6 +19,19 @@ import org.eclipse.xtext.ui.editor.quickfix.IssueResolutionAcceptor
  */
 class HermesQuickfixProvider extends org.eclipse.xtext.ui.editor.quickfix.DefaultQuickfixProvider {
 
+	@Fix(HermesValidator::HIERARCHY_CYCLE)
+	def void removeSuperType(Issue issue, IssueResolutionAcceptor acceptor) {
+		acceptor.accept(
+			issue,
+			"Remove super entity",
+			'''Remove super entity '«issue.data.get(0)»' ''',
+			"delete_obj.gif",
+			[ element, context |
+				(element as Entity).superEntity = null;
+			]
+		);
+	}
+
 	@Fix(HermesValidator::INVALID_ENTITY_NAME)
 	def void capitalizeEntityNameFirstLetter(Issue issue, IssueResolutionAcceptor acceptor) {
 		acceptor.accept(
@@ -23,10 +39,34 @@ class HermesQuickfixProvider extends org.eclipse.xtext.ui.editor.quickfix.Defaul
 			"Capitalize first letter", // label
 			"Capitalize first letter of '" + issue.data.get(0) + "'", // description
 			"Entity.gif", // icon
-			[ context |
-				val xtextDocument = context.xtextDocument
-				val firstLetter = xtextDocument.get(issue.offset, 1);
-				xtextDocument.replace(issue.offset, 1, firstLetter.toFirstUpper);
+			[ element, context |
+				(element as Entity).name = issue.data.get(0).toFirstUpper
+			]
+		);
+	}
+
+	@Fix(HermesValidator::INVALID_REFERENCE_NAME)
+	def void uncapitalizeReferenceNameFirstLetter(Issue issue, IssueResolutionAcceptor acceptor) {
+		acceptor.accept(
+			issue,
+			"Uncapitalize first letter", // label
+			"Uncapitalize first letter of '" + issue.data.get(0) + "'", // description
+			"Reference.gif", // icon
+			[ element, context |
+				(element as Ref).name = issue.data.get(0).toFirstLower
+			]
+		);
+	}
+
+	@Fix(HermesValidator::INVALID_DATATYPE_NAME)
+	def void uncapitalizeDataTypeNameFirstLetter(Issue issue, IssueResolutionAcceptor acceptor) {
+		acceptor.accept(
+			issue,
+			"Uncapitalize first letter", // label
+			"Uncapitalize first letter of '" + issue.data.get(0) + "'", // description
+			"Datatype.gif", // icon
+			[ element, context |
+				(element as DataType).name = issue.data.get(0).toFirstLower
 			]
 		);
 	}
