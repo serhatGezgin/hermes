@@ -147,13 +147,10 @@ public class HermesGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cEntityAction_0 = (Action)cGroup.eContents().get(0);
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final Keyword cCommercialAtKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Assignment cAnnotationsAssignment_1_0 = (Assignment)cGroup_1.eContents().get(0);
+		private final RuleCall cAnnotationsEntityAnnotationEnumRuleCall_1_0_0 = (RuleCall)cAnnotationsAssignment_1_0.eContents().get(0);
 		private final Assignment cAnnotationsAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
 		private final RuleCall cAnnotationsEntityAnnotationEnumRuleCall_1_1_0 = (RuleCall)cAnnotationsAssignment_1_1.eContents().get(0);
-		private final Group cGroup_1_2 = (Group)cGroup_1.eContents().get(2);
-		private final Keyword cCommercialAtKeyword_1_2_0 = (Keyword)cGroup_1_2.eContents().get(0);
-		private final Assignment cAnnotationsAssignment_1_2_1 = (Assignment)cGroup_1_2.eContents().get(1);
-		private final RuleCall cAnnotationsEntityAnnotationEnumRuleCall_1_2_1_0 = (RuleCall)cAnnotationsAssignment_1_2_1.eContents().get(0);
 		private final Keyword cEntityKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cNameAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cNameIDTerminalRuleCall_3_0 = (RuleCall)cNameAssignment_3.eContents().get(0);
@@ -171,40 +168,31 @@ public class HermesGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
 		//Entity:
-		//	{Entity} ("@" annotations+=EntityAnnotation ("@" annotations+=EntityAnnotation)*)? "Entity" name=ID (":"
-		//	superEntity=[Entity])? "{" (ownedFeature+=Feature ownedFeature+=Feature*)? "}";
+		//	{Entity} (annotations+=EntityAnnotation annotations+=EntityAnnotation*)? "Entity" name=ID (":" superEntity=[Entity])?
+		//	"{" (ownedFeature+=Feature ownedFeature+=Feature*)? "}";
 		public ParserRule getRule() { return rule; }
 
-		//{Entity} ("@" annotations+=EntityAnnotation ("@" annotations+=EntityAnnotation)*)? "Entity" name=ID (":"
-		//superEntity=[Entity])? "{" (ownedFeature+=Feature ownedFeature+=Feature*)? "}"
+		//{Entity} (annotations+=EntityAnnotation annotations+=EntityAnnotation*)? "Entity" name=ID (":" superEntity=[Entity])?
+		//"{" (ownedFeature+=Feature ownedFeature+=Feature*)? "}"
 		public Group getGroup() { return cGroup; }
 
 		//{Entity}
 		public Action getEntityAction_0() { return cEntityAction_0; }
 
-		//("@" annotations+=EntityAnnotation ("@" annotations+=EntityAnnotation)*)?
+		//(annotations+=EntityAnnotation annotations+=EntityAnnotation*)?
 		public Group getGroup_1() { return cGroup_1; }
 
-		//"@"
-		public Keyword getCommercialAtKeyword_1_0() { return cCommercialAtKeyword_1_0; }
-
 		//annotations+=EntityAnnotation
+		public Assignment getAnnotationsAssignment_1_0() { return cAnnotationsAssignment_1_0; }
+
+		//EntityAnnotation
+		public RuleCall getAnnotationsEntityAnnotationEnumRuleCall_1_0_0() { return cAnnotationsEntityAnnotationEnumRuleCall_1_0_0; }
+
+		//annotations+=EntityAnnotation*
 		public Assignment getAnnotationsAssignment_1_1() { return cAnnotationsAssignment_1_1; }
 
 		//EntityAnnotation
 		public RuleCall getAnnotationsEntityAnnotationEnumRuleCall_1_1_0() { return cAnnotationsEntityAnnotationEnumRuleCall_1_1_0; }
-
-		//("@" annotations+=EntityAnnotation)*
-		public Group getGroup_1_2() { return cGroup_1_2; }
-
-		//"@"
-		public Keyword getCommercialAtKeyword_1_2_0() { return cCommercialAtKeyword_1_2_0; }
-
-		//annotations+=EntityAnnotation
-		public Assignment getAnnotationsAssignment_1_2_1() { return cAnnotationsAssignment_1_2_1; }
-
-		//EntityAnnotation
-		public RuleCall getAnnotationsEntityAnnotationEnumRuleCall_1_2_1_0() { return cAnnotationsEntityAnnotationEnumRuleCall_1_2_1_0; }
 
 		//"Entity"
 		public Keyword getEntityKeyword_2() { return cEntityKeyword_2; }
@@ -257,13 +245,10 @@ public class HermesGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cRefAction_0 = (Action)cGroup.eContents().get(0);
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final Keyword cCommercialAtKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Assignment cAnnotationsAssignment_1_0 = (Assignment)cGroup_1.eContents().get(0);
+		private final RuleCall cAnnotationsFetureAnnotationEnumRuleCall_1_0_0 = (RuleCall)cAnnotationsAssignment_1_0.eContents().get(0);
 		private final Assignment cAnnotationsAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
 		private final RuleCall cAnnotationsFetureAnnotationEnumRuleCall_1_1_0 = (RuleCall)cAnnotationsAssignment_1_1.eContents().get(0);
-		private final Group cGroup_1_2 = (Group)cGroup_1.eContents().get(2);
-		private final Keyword cCommercialAtKeyword_1_2_0 = (Keyword)cGroup_1_2.eContents().get(0);
-		private final Assignment cAnnotationsAssignment_1_2_1 = (Assignment)cGroup_1_2.eContents().get(1);
-		private final RuleCall cAnnotationsFetureAnnotationEnumRuleCall_1_2_1_0 = (RuleCall)cAnnotationsAssignment_1_2_1.eContents().get(0);
 		private final Keyword cVarKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cNameAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cNameIDTerminalRuleCall_3_0 = (RuleCall)cNameAssignment_3.eContents().get(0);
@@ -274,39 +259,29 @@ public class HermesGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cManyLeftSquareBracketRightSquareBracketKeyword_5_0 = (Keyword)cManyAssignment_5.eContents().get(0);
 		
 		//Ref:
-		//	{Ref} ("@" annotations+=FetureAnnotation ("@" annotations+=FetureAnnotation)*)? "var" name=ID refTo=[Entity]
-		//	many?="[]"?;
+		//	{Ref} (annotations+=FetureAnnotation annotations+=FetureAnnotation*)? "var" name=ID refTo=[Entity] many?="[]"?;
 		public ParserRule getRule() { return rule; }
 
-		//{Ref} ("@" annotations+=FetureAnnotation ("@" annotations+=FetureAnnotation)*)? "var" name=ID refTo=[Entity] many?="[]"?
+		//{Ref} (annotations+=FetureAnnotation annotations+=FetureAnnotation*)? "var" name=ID refTo=[Entity] many?="[]"?
 		public Group getGroup() { return cGroup; }
 
 		//{Ref}
 		public Action getRefAction_0() { return cRefAction_0; }
 
-		//("@" annotations+=FetureAnnotation ("@" annotations+=FetureAnnotation)*)?
+		//(annotations+=FetureAnnotation annotations+=FetureAnnotation*)?
 		public Group getGroup_1() { return cGroup_1; }
 
-		//"@"
-		public Keyword getCommercialAtKeyword_1_0() { return cCommercialAtKeyword_1_0; }
-
 		//annotations+=FetureAnnotation
+		public Assignment getAnnotationsAssignment_1_0() { return cAnnotationsAssignment_1_0; }
+
+		//FetureAnnotation
+		public RuleCall getAnnotationsFetureAnnotationEnumRuleCall_1_0_0() { return cAnnotationsFetureAnnotationEnumRuleCall_1_0_0; }
+
+		//annotations+=FetureAnnotation*
 		public Assignment getAnnotationsAssignment_1_1() { return cAnnotationsAssignment_1_1; }
 
 		//FetureAnnotation
 		public RuleCall getAnnotationsFetureAnnotationEnumRuleCall_1_1_0() { return cAnnotationsFetureAnnotationEnumRuleCall_1_1_0; }
-
-		//("@" annotations+=FetureAnnotation)*
-		public Group getGroup_1_2() { return cGroup_1_2; }
-
-		//"@"
-		public Keyword getCommercialAtKeyword_1_2_0() { return cCommercialAtKeyword_1_2_0; }
-
-		//annotations+=FetureAnnotation
-		public Assignment getAnnotationsAssignment_1_2_1() { return cAnnotationsAssignment_1_2_1; }
-
-		//FetureAnnotation
-		public RuleCall getAnnotationsFetureAnnotationEnumRuleCall_1_2_1_0() { return cAnnotationsFetureAnnotationEnumRuleCall_1_2_1_0; }
 
 		//"var"
 		public Keyword getVarKeyword_2() { return cVarKeyword_2; }
@@ -338,13 +313,10 @@ public class HermesGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cDataTypeAction_0 = (Action)cGroup.eContents().get(0);
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final Keyword cCommercialAtKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Assignment cAnnotationsAssignment_1_0 = (Assignment)cGroup_1.eContents().get(0);
+		private final RuleCall cAnnotationsFetureAnnotationEnumRuleCall_1_0_0 = (RuleCall)cAnnotationsAssignment_1_0.eContents().get(0);
 		private final Assignment cAnnotationsAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
 		private final RuleCall cAnnotationsFetureAnnotationEnumRuleCall_1_1_0 = (RuleCall)cAnnotationsAssignment_1_1.eContents().get(0);
-		private final Group cGroup_1_2 = (Group)cGroup_1.eContents().get(2);
-		private final Keyword cCommercialAtKeyword_1_2_0 = (Keyword)cGroup_1_2.eContents().get(0);
-		private final Assignment cAnnotationsAssignment_1_2_1 = (Assignment)cGroup_1_2.eContents().get(1);
-		private final RuleCall cAnnotationsFetureAnnotationEnumRuleCall_1_2_1_0 = (RuleCall)cAnnotationsAssignment_1_2_1.eContents().get(0);
 		private final Keyword cVarKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cNameAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cNameIDTerminalRuleCall_3_0 = (RuleCall)cNameAssignment_3.eContents().get(0);
@@ -354,40 +326,29 @@ public class HermesGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cManyLeftSquareBracketRightSquareBracketKeyword_5_0 = (Keyword)cManyAssignment_5.eContents().get(0);
 		
 		//DataType:
-		//	{DataType} ("@" annotations+=FetureAnnotation ("@" annotations+=FetureAnnotation)*)? "var" name=ID type=DataTypes
-		//	many?="[]"?;
+		//	{DataType} (annotations+=FetureAnnotation annotations+=FetureAnnotation*)? "var" name=ID type=DataTypes many?="[]"?;
 		public ParserRule getRule() { return rule; }
 
-		//{DataType} ("@" annotations+=FetureAnnotation ("@" annotations+=FetureAnnotation)*)? "var" name=ID type=DataTypes
-		//many?="[]"?
+		//{DataType} (annotations+=FetureAnnotation annotations+=FetureAnnotation*)? "var" name=ID type=DataTypes many?="[]"?
 		public Group getGroup() { return cGroup; }
 
 		//{DataType}
 		public Action getDataTypeAction_0() { return cDataTypeAction_0; }
 
-		//("@" annotations+=FetureAnnotation ("@" annotations+=FetureAnnotation)*)?
+		//(annotations+=FetureAnnotation annotations+=FetureAnnotation*)?
 		public Group getGroup_1() { return cGroup_1; }
 
-		//"@"
-		public Keyword getCommercialAtKeyword_1_0() { return cCommercialAtKeyword_1_0; }
-
 		//annotations+=FetureAnnotation
+		public Assignment getAnnotationsAssignment_1_0() { return cAnnotationsAssignment_1_0; }
+
+		//FetureAnnotation
+		public RuleCall getAnnotationsFetureAnnotationEnumRuleCall_1_0_0() { return cAnnotationsFetureAnnotationEnumRuleCall_1_0_0; }
+
+		//annotations+=FetureAnnotation*
 		public Assignment getAnnotationsAssignment_1_1() { return cAnnotationsAssignment_1_1; }
 
 		//FetureAnnotation
 		public RuleCall getAnnotationsFetureAnnotationEnumRuleCall_1_1_0() { return cAnnotationsFetureAnnotationEnumRuleCall_1_1_0; }
-
-		//("@" annotations+=FetureAnnotation)*
-		public Group getGroup_1_2() { return cGroup_1_2; }
-
-		//"@"
-		public Keyword getCommercialAtKeyword_1_2_0() { return cCommercialAtKeyword_1_2_0; }
-
-		//annotations+=FetureAnnotation
-		public Assignment getAnnotationsAssignment_1_2_1() { return cAnnotationsAssignment_1_2_1; }
-
-		//FetureAnnotation
-		public RuleCall getAnnotationsFetureAnnotationEnumRuleCall_1_2_1_0() { return cAnnotationsFetureAnnotationEnumRuleCall_1_2_1_0; }
 
 		//"var"
 		public Keyword getVarKeyword_2() { return cVarKeyword_2; }
@@ -446,13 +407,13 @@ public class HermesGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cCacheCacheKeyword_0 = (Keyword)cCacheEnumLiteralDeclaration.eContents().get(0);
 		
 		//enum EntityAnnotation:
-		//	Cache;
+		//	Cache="@Cache";
 		public EnumRule getRule() { return rule; }
 
-		//Cache
+		//Cache="@Cache"
 		public EnumLiteralDeclaration getCacheEnumLiteralDeclaration() { return cCacheEnumLiteralDeclaration; }
 
-		//"Cache"
+		//"@Cache"
 		public Keyword getCacheCacheKeyword_0() { return cCacheCacheKeyword_0; }
 	}
 
@@ -469,34 +430,34 @@ public class HermesGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cIgnoreIgnoreKeyword_3_0 = (Keyword)cIgnoreEnumLiteralDeclaration_3.eContents().get(0);
 		
 		//enum FetureAnnotation:
-		//	Index | Id | Load | Ignore;
+		//	Index="@Index" | Id="@Id" | Load="@Load" | Ignore="@Ignore";
 		public EnumRule getRule() { return rule; }
 
-		//Index | Id | Load | Ignore
+		//Index="@Index" | Id="@Id" | Load="@Load" | Ignore="@Ignore"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//Index
+		//Index="@Index"
 		public EnumLiteralDeclaration getIndexEnumLiteralDeclaration_0() { return cIndexEnumLiteralDeclaration_0; }
 
-		//"Index"
+		//"@Index"
 		public Keyword getIndexIndexKeyword_0_0() { return cIndexIndexKeyword_0_0; }
 
-		//Id
+		//Id="@Id"
 		public EnumLiteralDeclaration getIdEnumLiteralDeclaration_1() { return cIdEnumLiteralDeclaration_1; }
 
-		//"Id"
+		//"@Id"
 		public Keyword getIdIdKeyword_1_0() { return cIdIdKeyword_1_0; }
 
-		//Load
+		//Load="@Load"
 		public EnumLiteralDeclaration getLoadEnumLiteralDeclaration_2() { return cLoadEnumLiteralDeclaration_2; }
 
-		//"Load"
+		//"@Load"
 		public Keyword getLoadLoadKeyword_2_0() { return cLoadLoadKeyword_2_0; }
 
-		//Ignore
+		//Ignore="@Ignore"
 		public EnumLiteralDeclaration getIgnoreEnumLiteralDeclaration_3() { return cIgnoreEnumLiteralDeclaration_3; }
 
-		//"Ignore"
+		//"@Ignore"
 		public Keyword getIgnoreIgnoreKeyword_3_0() { return cIgnoreIgnoreKeyword_3_0; }
 	}
 
@@ -640,8 +601,8 @@ public class HermesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Entity:
-	//	{Entity} ("@" annotations+=EntityAnnotation ("@" annotations+=EntityAnnotation)*)? "Entity" name=ID (":"
-	//	superEntity=[Entity])? "{" (ownedFeature+=Feature ownedFeature+=Feature*)? "}";
+	//	{Entity} (annotations+=EntityAnnotation annotations+=EntityAnnotation*)? "Entity" name=ID (":" superEntity=[Entity])?
+	//	"{" (ownedFeature+=Feature ownedFeature+=Feature*)? "}";
 	public EntityElements getEntityAccess() {
 		return (pEntity != null) ? pEntity : (pEntity = new EntityElements());
 	}
@@ -651,7 +612,7 @@ public class HermesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//enum EntityAnnotation:
-	//	Cache;
+	//	Cache="@Cache";
 	public EntityAnnotationElements getEntityAnnotationAccess() {
 		return (unknownRuleEntityAnnotation != null) ? unknownRuleEntityAnnotation : (unknownRuleEntityAnnotation = new EntityAnnotationElements());
 	}
@@ -661,7 +622,7 @@ public class HermesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//enum FetureAnnotation:
-	//	Index | Id | Load | Ignore;
+	//	Index="@Index" | Id="@Id" | Load="@Load" | Ignore="@Ignore";
 	public FetureAnnotationElements getFetureAnnotationAccess() {
 		return (unknownRuleFetureAnnotation != null) ? unknownRuleFetureAnnotation : (unknownRuleFetureAnnotation = new FetureAnnotationElements());
 	}
@@ -671,8 +632,7 @@ public class HermesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Ref:
-	//	{Ref} ("@" annotations+=FetureAnnotation ("@" annotations+=FetureAnnotation)*)? "var" name=ID refTo=[Entity]
-	//	many?="[]"?;
+	//	{Ref} (annotations+=FetureAnnotation annotations+=FetureAnnotation*)? "var" name=ID refTo=[Entity] many?="[]"?;
 	public RefElements getRefAccess() {
 		return (pRef != null) ? pRef : (pRef = new RefElements());
 	}
@@ -682,8 +642,7 @@ public class HermesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//DataType:
-	//	{DataType} ("@" annotations+=FetureAnnotation ("@" annotations+=FetureAnnotation)*)? "var" name=ID type=DataTypes
-	//	many?="[]"?;
+	//	{DataType} (annotations+=FetureAnnotation annotations+=FetureAnnotation*)? "var" name=ID type=DataTypes many?="[]"?;
 	public DataTypeElements getDataTypeAccess() {
 		return (pDataType != null) ? pDataType : (pDataType = new DataTypeElements());
 	}

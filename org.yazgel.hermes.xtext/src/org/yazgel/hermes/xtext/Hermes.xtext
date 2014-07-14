@@ -24,7 +24,7 @@ Feature returns Feature:
 
 Entity returns Entity:
 	{Entity}
-	('@' annotations+= EntityAnnotation ('@' annotations+= EntityAnnotation)*)?
+	(annotations+= EntityAnnotation (annotations+= EntityAnnotation)*)?
 	'Entity'
 	name = ID (':' superEntity=[Entity|ID])? 
 	'{'
@@ -32,14 +32,14 @@ Entity returns Entity:
 	'}';
 
 enum EntityAnnotation returns EntityAnnotation:
-	Cache = 'Cache';
+	Cache = '@Cache';
 
 enum FetureAnnotation returns FetureAnnotation:
-	Index = 'Index' | Id = 'Id' | Load = 'Load' | Ignore = 'Ignore';
+	Index = '@Index' | Id = '@Id' | Load = '@Load' | Ignore = '@Ignore';
 
 Ref returns Ref:
 	{Ref}
-	('@' annotations+= FetureAnnotation ('@' annotations+= FetureAnnotation)*)?
+	(annotations+= FetureAnnotation (annotations+= FetureAnnotation)*)?
 	'var'
 	name=ID
 	refTo=[Entity|ID]
@@ -48,7 +48,7 @@ Ref returns Ref:
 
 DataType returns DataType:
 	{DataType}
-	('@' annotations+= FetureAnnotation ('@' annotations+= FetureAnnotation)*)?
+	(annotations+= FetureAnnotation (annotations+= FetureAnnotation)*)?
 	'var'
 	name=ID
 	type=DataTypes	

@@ -25,7 +25,6 @@ public class InternalHermesLexer extends Lexer {
     public static final int T__14=14;
     public static final int EOF=-1;
     public static final int T__30=30;
-    public static final int T__31=31;
     public static final int RULE_ID=4;
     public static final int RULE_WS=9;
     public static final int RULE_ANY_OTHER=10;
@@ -142,10 +141,11 @@ public class InternalHermesLexer extends Lexer {
         try {
             int _type = T__15;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:15:7: ( '@' )
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:15:9: '@'
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:15:7: ( 'Entity' )
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:15:9: 'Entity'
             {
-            match('@'); 
+            match("Entity"); 
+
 
             }
 
@@ -162,11 +162,10 @@ public class InternalHermesLexer extends Lexer {
         try {
             int _type = T__16;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:16:7: ( 'Entity' )
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:16:9: 'Entity'
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:16:7: ( ':' )
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:16:9: ':'
             {
-            match("Entity"); 
-
+            match(':'); 
 
             }
 
@@ -183,10 +182,11 @@ public class InternalHermesLexer extends Lexer {
         try {
             int _type = T__17;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:17:7: ( ':' )
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:17:9: ':'
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:17:7: ( 'var' )
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:17:9: 'var'
             {
-            match(':'); 
+            match("var"); 
+
 
             }
 
@@ -203,10 +203,10 @@ public class InternalHermesLexer extends Lexer {
         try {
             int _type = T__18;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:18:7: ( 'var' )
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:18:9: 'var'
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:18:7: ( '[]' )
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:18:9: '[]'
             {
-            match("var"); 
+            match("[]"); 
 
 
             }
@@ -224,11 +224,10 @@ public class InternalHermesLexer extends Lexer {
         try {
             int _type = T__19;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:19:7: ( '[]' )
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:19:9: '[]'
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:19:7: ( '.' )
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:19:9: '.'
             {
-            match("[]"); 
-
+            match('.'); 
 
             }
 
@@ -245,10 +244,11 @@ public class InternalHermesLexer extends Lexer {
         try {
             int _type = T__20;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:20:7: ( '.' )
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:20:9: '.'
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:20:7: ( '@Cache' )
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:20:9: '@Cache'
             {
-            match('.'); 
+            match("@Cache"); 
+
 
             }
 
@@ -265,10 +265,10 @@ public class InternalHermesLexer extends Lexer {
         try {
             int _type = T__21;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:21:7: ( 'Cache' )
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:21:9: 'Cache'
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:21:7: ( '@Index' )
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:21:9: '@Index'
             {
-            match("Cache"); 
+            match("@Index"); 
 
 
             }
@@ -286,10 +286,10 @@ public class InternalHermesLexer extends Lexer {
         try {
             int _type = T__22;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:22:7: ( 'Index' )
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:22:9: 'Index'
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:22:7: ( '@Id' )
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:22:9: '@Id'
             {
-            match("Index"); 
+            match("@Id"); 
 
 
             }
@@ -307,10 +307,10 @@ public class InternalHermesLexer extends Lexer {
         try {
             int _type = T__23;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:23:7: ( 'Id' )
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:23:9: 'Id'
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:23:7: ( '@Load' )
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:23:9: '@Load'
             {
-            match("Id"); 
+            match("@Load"); 
 
 
             }
@@ -328,10 +328,10 @@ public class InternalHermesLexer extends Lexer {
         try {
             int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:24:7: ( 'Load' )
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:24:9: 'Load'
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:24:7: ( '@Ignore' )
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:24:9: '@Ignore'
             {
-            match("Load"); 
+            match("@Ignore"); 
 
 
             }
@@ -349,10 +349,10 @@ public class InternalHermesLexer extends Lexer {
         try {
             int _type = T__25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:25:7: ( 'Ignore' )
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:25:9: 'Ignore'
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:25:7: ( 'String' )
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:25:9: 'String'
             {
-            match("Ignore"); 
+            match("String"); 
 
 
             }
@@ -370,10 +370,10 @@ public class InternalHermesLexer extends Lexer {
         try {
             int _type = T__26;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:26:7: ( 'String' )
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:26:9: 'String'
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:26:7: ( 'Integer' )
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:26:9: 'Integer'
             {
-            match("String"); 
+            match("Integer"); 
 
 
             }
@@ -391,10 +391,10 @@ public class InternalHermesLexer extends Lexer {
         try {
             int _type = T__27;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:27:7: ( 'Integer' )
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:27:9: 'Integer'
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:27:7: ( 'Boolean' )
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:27:9: 'Boolean'
             {
-            match("Integer"); 
+            match("Boolean"); 
 
 
             }
@@ -412,10 +412,10 @@ public class InternalHermesLexer extends Lexer {
         try {
             int _type = T__28;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:28:7: ( 'Boolean' )
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:28:9: 'Boolean'
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:28:7: ( 'Long' )
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:28:9: 'Long'
             {
-            match("Boolean"); 
+            match("Long"); 
 
 
             }
@@ -433,10 +433,10 @@ public class InternalHermesLexer extends Lexer {
         try {
             int _type = T__29;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:29:7: ( 'Long' )
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:29:9: 'Long'
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:29:7: ( 'Double' )
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:29:9: 'Double'
             {
-            match("Long"); 
+            match("Double"); 
 
 
             }
@@ -454,29 +454,8 @@ public class InternalHermesLexer extends Lexer {
         try {
             int _type = T__30;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:30:7: ( 'Double' )
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:30:9: 'Double'
-            {
-            match("Double"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__30"
-
-    // $ANTLR start "T__31"
-    public final void mT__31() throws RecognitionException {
-        try {
-            int _type = T__31;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:31:7: ( 'Object' )
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:31:9: 'Object'
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:30:7: ( 'Object' )
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:30:9: 'Object'
             {
             match("Object"); 
 
@@ -489,17 +468,17 @@ public class InternalHermesLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "T__31"
+    // $ANTLR end "T__30"
 
     // $ANTLR start "RULE_ID"
     public final void mRULE_ID() throws RecognitionException {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:814:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:814:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:790:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:790:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:814:11: ( '^' )?
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:790:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -508,7 +487,7 @@ public class InternalHermesLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:814:11: '^'
+                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:790:11: '^'
                     {
                     match('^'); 
 
@@ -526,7 +505,7 @@ public class InternalHermesLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:814:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:790:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -575,10 +554,10 @@ public class InternalHermesLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:816:10: ( ( '0' .. '9' )+ )
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:816:12: ( '0' .. '9' )+
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:792:10: ( ( '0' .. '9' )+ )
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:792:12: ( '0' .. '9' )+
             {
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:816:12: ( '0' .. '9' )+
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:792:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -592,7 +571,7 @@ public class InternalHermesLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:816:13: '0' .. '9'
+            	    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:792:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -624,10 +603,10 @@ public class InternalHermesLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:818:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:818:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:794:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:794:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:818:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:794:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -645,10 +624,10 @@ public class InternalHermesLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:818:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:794:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:818:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:794:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -664,7 +643,7 @@ public class InternalHermesLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:818:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:794:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -680,7 +659,7 @@ public class InternalHermesLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:818:66: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:794:66: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -705,10 +684,10 @@ public class InternalHermesLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:818:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:794:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:818:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:794:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -724,7 +703,7 @@ public class InternalHermesLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:818:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:794:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -740,7 +719,7 @@ public class InternalHermesLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:818:137: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:794:137: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -783,12 +762,12 @@ public class InternalHermesLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:820:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:820:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:796:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:796:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:820:24: ( options {greedy=false; } : . )*
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:796:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -813,7 +792,7 @@ public class InternalHermesLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:820:52: .
+            	    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:796:52: .
             	    {
             	    matchAny(); 
 
@@ -843,12 +822,12 @@ public class InternalHermesLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:822:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:822:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:798:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:798:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:822:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:798:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -861,7 +840,7 @@ public class InternalHermesLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:822:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:798:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -881,7 +860,7 @@ public class InternalHermesLexer extends Lexer {
                 }
             } while (true);
 
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:822:40: ( ( '\\r' )? '\\n' )?
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:798:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -890,9 +869,9 @@ public class InternalHermesLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:822:41: ( '\\r' )? '\\n'
+                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:798:41: ( '\\r' )? '\\n'
                     {
-                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:822:41: ( '\\r' )?
+                    // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:798:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -901,7 +880,7 @@ public class InternalHermesLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:822:41: '\\r'
+                            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:798:41: '\\r'
                             {
                             match('\r'); 
 
@@ -933,10 +912,10 @@ public class InternalHermesLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:824:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:824:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:800:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:800:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:824:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:800:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -990,8 +969,8 @@ public class InternalHermesLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:826:16: ( . )
-            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:826:18: .
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:802:16: ( . )
+            // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:802:18: .
             {
             matchAny(); 
 
@@ -1006,8 +985,8 @@ public class InternalHermesLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:1:8: ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
-        int alt12=28;
+        // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:1:8: ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        int alt12=27;
         alt12 = dfa12.predict(input);
         switch (alt12) {
             case 1 :
@@ -1151,56 +1130,49 @@ public class InternalHermesLexer extends Lexer {
                 }
                 break;
             case 21 :
-                // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:1:130: T__31
-                {
-                mT__31(); 
-
-                }
-                break;
-            case 22 :
-                // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:1:136: RULE_ID
+                // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:1:130: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 23 :
-                // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:1:144: RULE_INT
+            case 22 :
+                // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:1:138: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
-            case 24 :
-                // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:1:153: RULE_STRING
+            case 23 :
+                // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:1:147: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 25 :
-                // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:1:165: RULE_ML_COMMENT
+            case 24 :
+                // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:1:159: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 26 :
-                // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:1:181: RULE_SL_COMMENT
+            case 25 :
+                // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:1:175: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 27 :
-                // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:1:197: RULE_WS
+            case 26 :
+                // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:1:191: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 28 :
-                // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:1:205: RULE_ANY_OTHER
+            case 27 :
+                // ../org.yazgel.hermes.xtext/src-gen/org/yazgel/hermes/xtext/parser/antlr/internal/InternalHermes.g:1:199: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -1214,70 +1186,71 @@ public class InternalHermesLexer extends Lexer {
 
     protected DFA12 dfa12 = new DFA12(this);
     static final String DFA12_eotS =
-        "\1\uffff\2\33\3\uffff\1\33\1\uffff\1\33\1\31\1\uffff\7\33\1\31"+
-        "\2\uffff\3\31\2\uffff\1\33\1\uffff\1\33\3\uffff\1\33\1\uffff\1\33"+
-        "\2\uffff\2\33\1\72\6\33\5\uffff\3\33\1\105\3\33\1\uffff\12\33\1"+
-        "\uffff\4\33\1\127\1\130\7\33\1\140\1\141\2\33\2\uffff\4\33\1\150"+
-        "\1\33\1\152\2\uffff\1\33\1\154\1\155\1\33\1\157\1\160\1\uffff\1"+
-        "\161\1\uffff\1\162\2\uffff\1\163\5\uffff";
+        "\1\uffff\2\32\2\uffff\1\32\1\uffff\1\32\1\30\1\uffff\1\30\6\32"+
+        "\1\30\2\uffff\3\30\2\uffff\1\32\1\uffff\1\32\2\uffff\1\32\1\uffff"+
+        "\1\32\5\uffff\6\32\5\uffff\3\32\1\101\3\uffff\11\32\1\uffff\3\32"+
+        "\1\116\10\32\1\uffff\2\32\1\131\1\32\1\133\1\134\2\32\1\137\1\140"+
+        "\1\uffff\1\141\2\uffff\1\142\1\143\5\uffff";
     static final String DFA12_eofS =
-        "\164\uffff";
+        "\144\uffff";
     static final String DFA12_minS =
-        "\1\0\1\157\1\141\3\uffff\1\156\1\uffff\1\141\1\135\1\uffff\1\141"+
-        "\1\144\1\157\1\164\2\157\1\142\1\101\2\uffff\2\0\1\52\2\uffff\1"+
-        "\144\1\uffff\1\143\3\uffff\1\164\1\uffff\1\162\2\uffff\1\143\1\144"+
-        "\1\60\1\156\1\141\1\162\1\157\1\165\1\152\5\uffff\1\165\1\153\1"+
-        "\151\1\60\1\150\2\145\1\uffff\1\157\1\144\1\147\1\151\1\154\1\142"+
-        "\1\145\1\154\1\141\1\164\1\uffff\1\145\1\170\1\147\1\162\2\60\1"+
-        "\156\1\145\1\154\1\143\1\145\1\147\1\171\2\60\2\145\2\uffff\1\147"+
-        "\1\141\1\145\1\164\1\60\1\145\1\60\2\uffff\1\162\2\60\1\156\2\60"+
-        "\1\uffff\1\60\1\uffff\1\60\2\uffff\1\60\5\uffff";
+        "\1\0\1\157\1\141\2\uffff\1\156\1\uffff\1\141\1\135\1\uffff\1\103"+
+        "\1\164\1\156\3\157\1\142\1\101\2\uffff\2\0\1\52\2\uffff\1\144\1"+
+        "\uffff\1\143\2\uffff\1\164\1\uffff\1\162\3\uffff\1\144\1\uffff\1"+
+        "\162\1\164\1\157\1\156\1\165\1\152\5\uffff\1\165\1\153\1\151\1\60"+
+        "\3\uffff\1\151\1\145\1\154\1\147\1\142\1\145\1\154\1\141\1\164\1"+
+        "\uffff\1\156\1\147\1\145\1\60\1\154\1\143\1\145\1\147\1\171\1\147"+
+        "\1\145\1\141\1\uffff\1\145\1\164\1\60\1\145\2\60\1\162\1\156\2\60"+
+        "\1\uffff\1\60\2\uffff\2\60\5\uffff";
     static final String DFA12_maxS =
-        "\1\uffff\1\157\1\141\3\uffff\1\156\1\uffff\1\141\1\135\1\uffff"+
-        "\1\141\1\156\1\157\1\164\2\157\1\142\1\172\2\uffff\2\uffff\1\57"+
-        "\2\uffff\1\144\1\uffff\1\143\3\uffff\1\164\1\uffff\1\162\2\uffff"+
-        "\1\143\1\164\1\172\2\156\1\162\1\157\1\165\1\152\5\uffff\1\165\1"+
-        "\153\1\151\1\172\1\150\2\145\1\uffff\1\157\1\144\1\147\1\151\1\154"+
-        "\1\142\1\145\1\154\1\141\1\164\1\uffff\1\145\1\170\1\147\1\162\2"+
-        "\172\1\156\1\145\1\154\1\143\1\145\1\147\1\171\2\172\2\145\2\uffff"+
-        "\1\147\1\141\1\145\1\164\1\172\1\145\1\172\2\uffff\1\162\2\172\1"+
-        "\156\2\172\1\uffff\1\172\1\uffff\1\172\2\uffff\1\172\5\uffff";
+        "\1\uffff\1\157\1\141\2\uffff\1\156\1\uffff\1\141\1\135\1\uffff"+
+        "\1\114\1\164\1\156\3\157\1\142\1\172\2\uffff\2\uffff\1\57\2\uffff"+
+        "\1\144\1\uffff\1\143\2\uffff\1\164\1\uffff\1\162\3\uffff\1\156\1"+
+        "\uffff\1\162\1\164\1\157\1\156\1\165\1\152\5\uffff\1\165\1\153\1"+
+        "\151\1\172\3\uffff\1\151\1\145\1\154\1\147\1\142\1\145\1\154\1\141"+
+        "\1\164\1\uffff\1\156\1\147\1\145\1\172\1\154\1\143\1\145\1\147\1"+
+        "\171\1\147\1\145\1\141\1\uffff\1\145\1\164\1\172\1\145\2\172\1\162"+
+        "\1\156\2\172\1\uffff\1\172\2\uffff\2\172\5\uffff";
     static final String DFA12_acceptS =
-        "\3\uffff\1\3\1\4\1\5\1\uffff\1\7\2\uffff\1\12\10\uffff\1\26\1\27"+
-        "\3\uffff\1\33\1\34\1\uffff\1\26\1\uffff\1\3\1\4\1\5\1\uffff\1\7"+
-        "\1\uffff\1\11\1\12\11\uffff\1\27\1\30\1\31\1\32\1\33\7\uffff\1\15"+
-        "\12\uffff\1\10\21\uffff\1\16\1\23\7\uffff\1\13\1\14\6\uffff\1\1"+
-        "\1\uffff\1\6\1\uffff\1\17\1\20\1\uffff\1\24\1\25\1\2\1\21\1\22";
+        "\3\uffff\1\3\1\4\1\uffff\1\6\2\uffff\1\11\10\uffff\1\25\1\26\3"+
+        "\uffff\1\32\1\33\1\uffff\1\25\1\uffff\1\3\1\4\1\uffff\1\6\1\uffff"+
+        "\1\10\1\11\1\12\1\uffff\1\15\6\uffff\1\26\1\27\1\30\1\31\1\32\4"+
+        "\uffff\1\13\1\14\1\16\11\uffff\1\7\14\uffff\1\22\12\uffff\1\1\1"+
+        "\uffff\1\5\1\17\2\uffff\1\23\1\24\1\2\1\20\1\21";
     static final String DFA12_specialS =
-        "\1\1\24\uffff\1\2\1\0\135\uffff}>";
+        "\1\0\23\uffff\1\1\1\2\116\uffff}>";
     static final String[] DFA12_transitionS = {
-            "\11\31\2\30\2\31\1\30\22\31\1\30\1\31\1\25\4\31\1\26\6\31\1"+
-            "\12\1\27\12\24\1\7\5\31\1\5\1\23\1\17\1\13\1\20\1\6\3\23\1\14"+
-            "\2\23\1\15\1\1\1\23\1\21\1\2\2\23\1\16\7\23\1\11\2\31\1\22\1"+
-            "\23\1\31\25\23\1\10\4\23\1\3\1\31\1\4\uff82\31",
-            "\1\32",
-            "\1\34",
+            "\11\30\2\27\2\30\1\27\22\30\1\27\1\30\1\24\4\30\1\25\6\30\1"+
+            "\11\1\26\12\23\1\6\5\30\1\12\1\22\1\15\1\22\1\17\1\5\3\22\1"+
+            "\14\2\22\1\16\1\1\1\22\1\20\1\2\2\22\1\13\7\22\1\10\2\30\1\21"+
+            "\1\22\1\30\25\22\1\7\4\22\1\3\1\30\1\4\uff82\30",
+            "\1\31",
+            "\1\33",
             "",
             "",
+            "\1\36",
             "",
             "\1\40",
+            "\1\41",
             "",
-            "\1\42",
-            "\1\43",
-            "",
-            "\1\45",
-            "\1\47\2\uffff\1\50\6\uffff\1\46",
+            "\1\43\5\uffff\1\44\2\uffff\1\45",
+            "\1\46",
+            "\1\47",
+            "\1\50",
             "\1\51",
             "\1\52",
             "\1\53",
-            "\1\54",
-            "\1\55",
-            "\32\33\4\uffff\1\33\1\uffff\32\33",
+            "\32\32\4\uffff\1\32\1\uffff\32\32",
             "",
             "",
-            "\0\57",
-            "\0\57",
-            "\1\60\4\uffff\1\61",
+            "\0\55",
+            "\0\55",
+            "\1\56\4\uffff\1\57",
+            "",
+            "",
+            "\1\61",
+            "",
+            "\1\62",
             "",
             "",
             "\1\63",
@@ -1286,85 +1259,65 @@ public class InternalHermesLexer extends Lexer {
             "",
             "",
             "",
-            "\1\65",
+            "\1\66\2\uffff\1\67\6\uffff\1\65",
             "",
-            "\1\66",
-            "",
-            "",
-            "\1\67",
-            "\1\70\17\uffff\1\71",
-            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
+            "\1\70",
+            "\1\71",
+            "\1\72",
             "\1\73",
-            "\1\74\14\uffff\1\75",
+            "\1\74",
+            "\1\75",
+            "",
+            "",
+            "",
+            "",
+            "",
             "\1\76",
             "\1\77",
             "\1\100",
-            "\1\101",
-            "",
-            "",
+            "\12\32\7\uffff\32\32\4\uffff\1\32\1\uffff\32\32",
             "",
             "",
             "",
             "\1\102",
             "\1\103",
             "\1\104",
-            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
+            "\1\105",
             "\1\106",
             "\1\107",
             "\1\110",
-            "",
             "\1\111",
             "\1\112",
+            "",
             "\1\113",
             "\1\114",
             "\1\115",
-            "\1\116",
+            "\12\32\7\uffff\32\32\4\uffff\1\32\1\uffff\32\32",
             "\1\117",
             "\1\120",
             "\1\121",
             "\1\122",
-            "",
             "\1\123",
             "\1\124",
             "\1\125",
             "\1\126",
-            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
-            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
-            "\1\131",
+            "",
+            "\1\127",
+            "\1\130",
+            "\12\32\7\uffff\32\32\4\uffff\1\32\1\uffff\32\32",
             "\1\132",
-            "\1\133",
-            "\1\134",
+            "\12\32\7\uffff\32\32\4\uffff\1\32\1\uffff\32\32",
+            "\12\32\7\uffff\32\32\4\uffff\1\32\1\uffff\32\32",
             "\1\135",
             "\1\136",
-            "\1\137",
-            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
-            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
-            "\1\142",
-            "\1\143",
+            "\12\32\7\uffff\32\32\4\uffff\1\32\1\uffff\32\32",
+            "\12\32\7\uffff\32\32\4\uffff\1\32\1\uffff\32\32",
+            "",
+            "\12\32\7\uffff\32\32\4\uffff\1\32\1\uffff\32\32",
             "",
             "",
-            "\1\144",
-            "\1\145",
-            "\1\146",
-            "\1\147",
-            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
-            "\1\151",
-            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
-            "",
-            "",
-            "\1\153",
-            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
-            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
-            "\1\156",
-            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
-            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
-            "",
-            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
-            "",
-            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
-            "",
-            "",
-            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
+            "\12\32\7\uffff\32\32\4\uffff\1\32\1\uffff\32\32",
+            "\12\32\7\uffff\32\32\4\uffff\1\32\1\uffff\32\32",
             "",
             "",
             "",
@@ -1402,23 +1355,13 @@ public class InternalHermesLexer extends Lexer {
             this.transition = DFA12_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA12_22 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA12_22>='\u0000' && LA12_22<='\uFFFF')) ) {s = 47;}
-
-                        else s = 25;
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 1 : 
                         int LA12_0 = input.LA(1);
 
                         s = -1;
@@ -1430,47 +1373,55 @@ public class InternalHermesLexer extends Lexer {
 
                         else if ( (LA12_0=='}') ) {s = 4;}
 
-                        else if ( (LA12_0=='@') ) {s = 5;}
+                        else if ( (LA12_0=='E') ) {s = 5;}
 
-                        else if ( (LA12_0=='E') ) {s = 6;}
+                        else if ( (LA12_0==':') ) {s = 6;}
 
-                        else if ( (LA12_0==':') ) {s = 7;}
+                        else if ( (LA12_0=='v') ) {s = 7;}
 
-                        else if ( (LA12_0=='v') ) {s = 8;}
+                        else if ( (LA12_0=='[') ) {s = 8;}
 
-                        else if ( (LA12_0=='[') ) {s = 9;}
+                        else if ( (LA12_0=='.') ) {s = 9;}
 
-                        else if ( (LA12_0=='.') ) {s = 10;}
+                        else if ( (LA12_0=='@') ) {s = 10;}
 
-                        else if ( (LA12_0=='C') ) {s = 11;}
+                        else if ( (LA12_0=='S') ) {s = 11;}
 
                         else if ( (LA12_0=='I') ) {s = 12;}
 
-                        else if ( (LA12_0=='L') ) {s = 13;}
+                        else if ( (LA12_0=='B') ) {s = 13;}
 
-                        else if ( (LA12_0=='S') ) {s = 14;}
+                        else if ( (LA12_0=='L') ) {s = 14;}
 
-                        else if ( (LA12_0=='B') ) {s = 15;}
+                        else if ( (LA12_0=='D') ) {s = 15;}
 
-                        else if ( (LA12_0=='D') ) {s = 16;}
+                        else if ( (LA12_0=='O') ) {s = 16;}
 
-                        else if ( (LA12_0=='O') ) {s = 17;}
+                        else if ( (LA12_0=='^') ) {s = 17;}
 
-                        else if ( (LA12_0=='^') ) {s = 18;}
+                        else if ( (LA12_0=='A'||LA12_0=='C'||(LA12_0>='F' && LA12_0<='H')||(LA12_0>='J' && LA12_0<='K')||LA12_0=='N'||(LA12_0>='Q' && LA12_0<='R')||(LA12_0>='T' && LA12_0<='Z')||LA12_0=='_'||(LA12_0>='a' && LA12_0<='u')||(LA12_0>='w' && LA12_0<='z')) ) {s = 18;}
 
-                        else if ( (LA12_0=='A'||(LA12_0>='F' && LA12_0<='H')||(LA12_0>='J' && LA12_0<='K')||LA12_0=='N'||(LA12_0>='Q' && LA12_0<='R')||(LA12_0>='T' && LA12_0<='Z')||LA12_0=='_'||(LA12_0>='a' && LA12_0<='u')||(LA12_0>='w' && LA12_0<='z')) ) {s = 19;}
+                        else if ( ((LA12_0>='0' && LA12_0<='9')) ) {s = 19;}
 
-                        else if ( ((LA12_0>='0' && LA12_0<='9')) ) {s = 20;}
+                        else if ( (LA12_0=='\"') ) {s = 20;}
 
-                        else if ( (LA12_0=='\"') ) {s = 21;}
+                        else if ( (LA12_0=='\'') ) {s = 21;}
 
-                        else if ( (LA12_0=='\'') ) {s = 22;}
+                        else if ( (LA12_0=='/') ) {s = 22;}
 
-                        else if ( (LA12_0=='/') ) {s = 23;}
+                        else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {s = 23;}
 
-                        else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {s = 24;}
+                        else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||LA12_0=='!'||(LA12_0>='#' && LA12_0<='&')||(LA12_0>='(' && LA12_0<='-')||(LA12_0>=';' && LA12_0<='?')||(LA12_0>='\\' && LA12_0<=']')||LA12_0=='`'||LA12_0=='|'||(LA12_0>='~' && LA12_0<='\uFFFF')) ) {s = 24;}
 
-                        else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||LA12_0=='!'||(LA12_0>='#' && LA12_0<='&')||(LA12_0>='(' && LA12_0<='-')||(LA12_0>=';' && LA12_0<='?')||(LA12_0>='\\' && LA12_0<=']')||LA12_0=='`'||LA12_0=='|'||(LA12_0>='~' && LA12_0<='\uFFFF')) ) {s = 25;}
+                        if ( s>=0 ) return s;
+                        break;
+                    case 1 : 
+                        int LA12_20 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA12_20>='\u0000' && LA12_20<='\uFFFF')) ) {s = 45;}
+
+                        else s = 24;
 
                         if ( s>=0 ) return s;
                         break;
@@ -1478,9 +1429,9 @@ public class InternalHermesLexer extends Lexer {
                         int LA12_21 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA12_21>='\u0000' && LA12_21<='\uFFFF')) ) {s = 47;}
+                        if ( ((LA12_21>='\u0000' && LA12_21<='\uFFFF')) ) {s = 45;}
 
-                        else s = 25;
+                        else s = 24;
 
                         if ( s>=0 ) return s;
                         break;
