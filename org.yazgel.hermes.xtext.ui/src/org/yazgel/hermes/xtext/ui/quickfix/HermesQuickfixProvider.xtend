@@ -3,21 +3,24 @@
 */
 package org.yazgel.hermes.xtext.ui.quickfix
 
+import org.eclipse.xtext.ui.editor.quickfix.DefaultQuickfixProvider
 import org.eclipse.xtext.ui.editor.quickfix.Fix
-import org.yazgel.hermes.xtext.validation.HermesValidator
-import org.eclipse.xtext.validation.Issue
-
 import org.eclipse.xtext.ui.editor.quickfix.IssueResolutionAcceptor
-import org.yazgel.hermes.Ref
+import org.eclipse.xtext.validation.Issue
 import org.yazgel.hermes.DataType
 import org.yazgel.hermes.Entity
+import org.yazgel.hermes.Ref
+import org.yazgel.hermes.xtext.validation.HermesValidator
+import org.eclipse.xtext.diagnostics.Diagnostic
+import org.yazgel.hermes.HermesFactory
+import static extension org.eclipse.xtext.EcoreUtil2.*
 
 /**
  * Custom quickfixes.
  *
  * see http://www.eclipse.org/Xtext/documentation.html#quickfixes
  */
-class HermesQuickfixProvider extends org.eclipse.xtext.ui.editor.quickfix.DefaultQuickfixProvider {
+class HermesQuickfixProvider extends DefaultQuickfixProvider {
 
 	@Fix(HermesValidator::HIERARCHY_CYCLE)
 	def void removeSuperType(Issue issue, IssueResolutionAcceptor acceptor) {
@@ -71,4 +74,23 @@ class HermesQuickfixProvider extends org.eclipse.xtext.ui.editor.quickfix.Defaul
 		);
 	}
 
+	@Fix(Diagnostic::LINKING_DIAGNOSTIC)
+	def void createMissingEntity(Issue issue, IssueResolutionAcceptor acceptor) {
+		acceptor.accept(
+			issue,
+			"Create missing entity",
+			"Create missing entity",
+			"Entity.gif",
+			[ element, context |
+				val currentEntity = element.getContainerOfType(typeof(Entity))
+				val model = currentEntity.eContainer as org.yazgel.hermes.Package
+				model.ownedEntity.add(
+					model.ownedEntity.indexOf(currentEntity) + 1,
+					HermesFactory::eINSTANCE.createEntity() => [
+						name = context.xtextDocument.get(issue.offset, issue.length)
+					]
+				)
+			]
+		);
+	}
 }
