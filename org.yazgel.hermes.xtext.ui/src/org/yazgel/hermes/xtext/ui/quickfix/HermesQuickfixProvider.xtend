@@ -3,9 +3,11 @@
 */
 package org.yazgel.hermes.xtext.ui.quickfix
 
-//import org.eclipse.xtext.ui.editor.quickfix.Fix
-//import org.eclipse.xtext.ui.editor.quickfix.IssueResolutionAcceptor
-//import org.eclipse.xtext.validation.Issue
+import org.eclipse.xtext.ui.editor.quickfix.Fix
+import org.yazgel.hermes.xtext.validation.HermesValidator
+import org.eclipse.xtext.validation.Issue
+
+import org.eclipse.xtext.ui.editor.quickfix.IssueResolutionAcceptor
 
 /**
  * Custom quickfixes.
@@ -14,13 +16,19 @@ package org.yazgel.hermes.xtext.ui.quickfix
  */
 class HermesQuickfixProvider extends org.eclipse.xtext.ui.editor.quickfix.DefaultQuickfixProvider {
 
-//	@Fix(MyDslValidator::INVALID_NAME)
-//	def capitalizeName(Issue issue, IssueResolutionAcceptor acceptor) {
-//		acceptor.accept(issue, 'Capitalize name', 'Capitalize the name.', 'upcase.png') [
-//			context |
-//			val xtextDocument = context.xtextDocument
-//			val firstLetter = xtextDocument.get(issue.offset, 1)
-//			xtextDocument.replace(issue.offset, 1, firstLetter.toUpperCase)
-//		]
-//	}
+	@Fix(HermesValidator::INVALID_ENTITY_NAME)
+	def void capitalizeEntityNameFirstLetter(Issue issue, IssueResolutionAcceptor acceptor) {
+		acceptor.accept(
+			issue,
+			"Capitalize first letter", // label
+			"Capitalize first letter of '" + issue.data.get(0) + "'", // description
+			"Entity.gif", // icon
+			[ context |
+				val xtextDocument = context.xtextDocument
+				val firstLetter = xtextDocument.get(issue.offset, 1);
+				xtextDocument.replace(issue.offset, 1, firstLetter.toFirstUpper);
+			]
+		);
+	}
+
 }
