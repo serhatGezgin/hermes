@@ -16,6 +16,7 @@ import org.yazgel.hermes.Reference
 import org.yazgel.hermes.xtext.validation.HermesValidator
 
 import static extension org.eclipse.xtext.EcoreUtil2.*
+import org.yazgel.hermes.Module
 
 /**
  * Custom quickfixes.
@@ -23,16 +24,16 @@ import static extension org.eclipse.xtext.EcoreUtil2.*
  * see http://www.eclipse.org/Xtext/documentation.html#quickfixes
  */
 class HermesQuickfixProvider extends DefaultQuickfixProvider {
-
-	@Fix(HermesValidator::HIERARCHY_CYCLE)
-	def void removeSuperType(Issue issue, IssueResolutionAcceptor acceptor) {
+	
+	@Fix(HermesValidator::INVALID_MODULE_NAME)
+	def void lowerCaseModuleName(Issue issue, IssueResolutionAcceptor acceptor) {
 		acceptor.accept(
 			issue,
-			"Remove super entity",
-			'''Remove super entity '«issue.data.get(0)»' ''',
-			"delete_obj.gif",
+			"Lowercase all letters", // label
+			"Lowercase all letters'", // description
+			"Module.gif", // icon
 			[ element, context |
-				(element as Entity).superEntity = null;
+				(element as Module).name = issue.data.get(0).toLowerCase
 			]
 		);
 	}
@@ -46,6 +47,19 @@ class HermesQuickfixProvider extends DefaultQuickfixProvider {
 			"Package.gif", // icon
 			[ element, context |
 				(element as Package).name = issue.data.get(0).toLowerCase
+			]
+		);
+	}
+	
+	@Fix(HermesValidator::HIERARCHY_CYCLE)
+	def void removeSuperType(Issue issue, IssueResolutionAcceptor acceptor) {
+		acceptor.accept(
+			issue,
+			"Remove super entity",
+			'''Remove super entity '«issue.data.get(0)»' ''',
+			"delete_obj.gif",
+			[ element, context |
+				(element as Entity).superEntity = null;
 			]
 		);
 	}
