@@ -8,8 +8,10 @@ import org.yazgel.hermes.DataType
 import org.yazgel.hermes.Entity
 import org.yazgel.hermes.HermesPackage
 import org.yazgel.hermes.Reference
+import org.yazgel.hermes.Package
 
 import static extension java.lang.Character.*
+import org.yazgel.hermes.Module
 
 /** 
  * Custom validation rules. 
@@ -20,12 +22,25 @@ class HermesValidator extends AbstractHermesValidator {
 
 	public static val HIERARCHY_CYCLE = "org.yazgel.hermes.HierarchyCycle";
 	public static val INVALID_PACKAGE_NAME = "org.yazgel.hermes.InvalidPackageName";
+	public static val INVALID_MODULE_NAME = "org.yazgel.hermes.InvalidModuleName";
 	public static val INVALID_ENTITY_NAME = "org.yazgel.hermes.InvalidEntityName";
 	public static val INVALID_REFERENCE_NAME = "org.yazgel.hermes.InvalidReferenceName";
 	public static val INVALID_DATATYPE_NAME = "org.yazgel.hermes.InvalidDataTypeName";
 
 	@Check
-	def checkPackageNameCharsLowercase(org.yazgel.hermes.Package pack) {
+	def checkModuleNameCharsLowercase(Module module) {
+		if (!module.name.toLowerCase.equals(module.name)) {
+			warning(
+				"Module name should not have uppercase letter",
+				HermesPackage::eINSTANCE.namedElement_Name,
+				INVALID_MODULE_NAME,
+				module.name
+			)
+		}
+	}
+
+	@Check
+	def checkPackageNameCharsLowercase(Package pack) {
 		if (!pack.name.toLowerCase.equals(pack.name)) {
 			warning(
 				"Package name should not have uppercase letter",
