@@ -18,10 +18,23 @@ import static extension java.lang.Character.*
  */
 class HermesValidator extends AbstractHermesValidator {
 
-	public static val HIERARCHY_CYCLE = "org.example.entities.HierarchyCycle";
-	public static val INVALID_ENTITY_NAME = "org.example.entities.InvalidEntityName";
-	public static val INVALID_REFERENCE_NAME = "org.example.entities.InvalidReferenceName";
-	public static val INVALID_DATATYPE_NAME = "org.example.entities.InvalidDataTypeName";
+	public static val HIERARCHY_CYCLE = "org.yazgel.hermes.HierarchyCycle";
+	public static val INVALID_PACKAGE_NAME = "org.yazgel.hermes.InvalidPackageName";
+	public static val INVALID_ENTITY_NAME = "org.yazgel.hermes.InvalidEntityName";
+	public static val INVALID_REFERENCE_NAME = "org.yazgel.hermes.InvalidReferenceName";
+	public static val INVALID_DATATYPE_NAME = "org.yazgel.hermes.InvalidDataTypeName";
+
+	@Check
+	def checkPackageNameCharsLowercase(org.yazgel.hermes.Package pack) {
+		if (!pack.name.toLowerCase.equals(pack.name)) {
+			warning(
+				"Package name should not have uppercase letter",
+				HermesPackage::eINSTANCE.namedElement_Name,
+				INVALID_PACKAGE_NAME,
+				pack.name
+			)
+		}
+	}
 
 	@Check
 	def checkNoCycleInEntityHierarchy(Entity entity) {
