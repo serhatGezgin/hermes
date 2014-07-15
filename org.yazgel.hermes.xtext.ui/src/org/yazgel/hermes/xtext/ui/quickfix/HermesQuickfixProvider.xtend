@@ -36,6 +36,19 @@ class HermesQuickfixProvider extends DefaultQuickfixProvider {
 			]
 		);
 	}
+	
+	@Fix(HermesValidator::INVALID_PACKAGE_NAME)
+	def void lowerCasePackageName(Issue issue, IssueResolutionAcceptor acceptor) {
+		acceptor.accept(
+			issue,
+			"Lowercase all letters", // label
+			"Lowercase all letters'", // description
+			"Package.gif", // icon
+			[ element, context |
+				(element as Package).name = issue.data.get(0).toLowerCase
+			]
+		);
+	}
 
 	@Fix(HermesValidator::INVALID_ENTITY_NAME)
 	def void capitalizeEntityNameFirstLetter(Issue issue, IssueResolutionAcceptor acceptor) {
