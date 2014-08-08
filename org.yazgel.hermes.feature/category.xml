@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/org.yazgel.hermes.feature_1.0.0.qualifier.jar" id="org.yazgel.hermes.feature" version="1.0.0.qualifier">
+      <category name="org.yazgel.hermes.category"/>
+   </feature>
+   <category-def name="org.yazgel.hermes.category" label="yazgel"/>
+</site>
